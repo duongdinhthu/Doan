@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="Dothietyeu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+</head>
+<body>
+
+<div class="d-flex">
+    <img src="../img/Nội%20dung%20đoạn%20văn%20bản%20của%20bạn.png" alt="trangchu">
+    <a href="home.html" class="btn btn-outline" style="color: white;" >Trang chủ</a>
+    <div class="dropdown mr-1">
+        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+            Trò chơi
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item" href="Trochoitreem.html">Trò chơi cho trẻ em</a>
+            <a class="dropdown-item" href="Trochoigiadinh.html">Trò chơi cho gia đình</a>
+            <a class="dropdown-item" href="Trochoinguoilon.html">Trò chơi cho người lớn</a>
+        </div>
+    </div>
+    <div class="dropdown mr-1">
+        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+            Sản phẩm
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item" href="Docanhan.html">Đồ cá nhân</a>
+            <a class="dropdown-item" href="Dothietyeu.html">Đồ thiết yếu</a>
+            <a class="dropdown-item" href="Thucpham.html">Thực phẩm dã ngoại</a>
+        </div>
+    </div>
+    <div class="dropdown mr-1">
+        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+            Dịch vụ
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item" href="Dichvutrongoi.html">Dịch vụ trọn gói</a>
+            <a class="dropdown-item" href="Dichvutour.html">Dịch vụ tour theo số người</a>
+            <a class="dropdown-item" href="Dichvutochuc.html">Dịch vụ tổ chức trò chơi</a>
+        </div>
+    </div>
+    <a href="tintuc.html" class="btn btn-outline" style="color: white;">Tin tức</a>
+    <a href="lienhe.html" class="btn btn-outline" style="color: white;">Liên hệ</a>
+    <button type="button" class="btn btn-outline" onclick="Login()">Đăng nhập</button>
+</div>
+<div class="search">
+    <label>
+        <input type="text" placeholder="Search">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </label>
+</div>
+
+<div class="all-card">
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img51.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Lều tự bung 4 người ango naturehike</h5>
+            <p class="card-text">Vải polyester 210T chống thấm , nhẹ và tiện lợi ................</p>
+            <p class="card-text"><strong>Price:</strong>$99.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img52.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Lều tự bung 4 người ango naturehike</h5>
+            <p class="card-text">Được thiết kế dựa trên phong cách lều mông cổ với hình kim tự tháp vừa hiện đại vừa mang nét cổ điển.</p>
+            <p class="card-text"><strong>Price:</strong>$299.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img53.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Lều cắm trại 6 người 2 lớp eureka teragon 8</h5>
+            <p class="card-text">Lều cắm trại Eureka Teragon 8 dành cho nhóm 5-6 người được thiết kế 2 lớp với khả năng chống nước cực tốt bạn và gia đình tự tin camping dã ngoại kể cả dưới điều kiện thời tiết khắc nghiệt</p>
+            <p class="card-text"><strong>Price:</strong>$49.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img54.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Lều glamping naturehike brighten 6.4</h5>
+            <p class="card-text">vải sợi cotton pha, lưới polyester, khóa YKK, vải PVC</p>
+            <p class="card-text"><strong>Price:</strong>$349.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img55.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Lều cắm trại bật tự động 4 người 2 lớp đa năng</h5>
+            <p class="card-text">Mẫu lều bật tự động cao cấp dành cho 4 người, dựng lều chỉ trong vòng 5 giây. Thiết kế 2 lớp chống mưa to, có thể tách rời thành lều dã ngoại siêu tiện lợi, đồng thời mẫu lều tự bung này được trang bị 2 thanh chống tạo mái giúp bạn có thể ngồi ăn uống ở phía trước lều mà không sợ nắng.</p>
+            <p class="card-text"><strong>Price:</strong>$49.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img56.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Bếp nướng gấp gọn Campingmoon Folding Burning Fire</h5>
+            <p class="card-text">Sử dụng chất liệu inox cao cấp rất bền, chắc chắn và an toàn khi sử dụng. Độ cao của vỉ nướng có thể điều chỉnh tránh thức ăn cháy khi nướng.</p>
+            <p class="card-text"><strong>Price:</strong>$64.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img57.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Bếp nướng dã ngoại Campingmoon Fold Grill</h5>
+            <p class="card-text">Thiết kế sử dụng khá đa dạng, không chỉ phù hợp dùng trong gia đình mà còn mang lại tiện ích khi đi xa. Cấu tạo sản phẩm dễ dàng được tháo rời các chi tiết, cất trữ trong túi để chuyên dùng.</p>
+            <p class="card-text"><strong>Price:</strong>$49.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img58.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Bếp ga dã ngoại ngoài trời...............</h5>
+            <p class="card-text">Sản phẩm gọn gàng tinh tế, được đóng hộp nhỏ gọn. Cất trữ trong mọi không gian mang đồ đi cắm trại cực kỳ hợp lý. Không ảnh hưởng tới nhóm đồ cắm trại khác được mang theo.</p>
+            <p class="card-text"><strong>Price:</strong>$19.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img59.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Bếp ga cắm trại Fire-Maple Camping Gas Burner</h5>
+            <p class="card-text">Bếp ga cắm trại Fire-Maple Camping Gas Burner FMS-108 - 7321 ra mắt năm 2010, là loại bếp tốt nhất đến từ thương hiệu Fire-Maple, đạt giải thưởng ISPO năm 2013.</p>
+            <p class="card-text"><strong>Price:</strong>$99.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img60.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Bếp ga gấp Fire-Maple Folding................. </h5>
+            <p class="card-text">Bếp ga gấp Fire-Maple Folding Gas Stove FMS-103 - 7320 được sản xuất từ năm 2003, thiết kế đơn giản, dễ sử dụng, phù hợp sử dụng ở những vùng núi cao.</p>
+            <p class="card-text"><strong>Price:</strong>$19.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img61.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Đèn treo lều vintage glamping...................</h5>
+            <p class="card-text">Trọng lượng: 270g, Công suất: 3.7W,Quang thông: 5-95LM,Pin 18650Pin Lithium 2000mAh</p>
+            <p class="card-text"><strong>Price:</strong>$24.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img62.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Đèn led retro wild land hemp rope lantern</h5>
+            <p class="card-text">Đèn Led dã ngoại pin sạc Retro Hemp Rope Lantern Wild Land thuộc dòng đèn vintage, sử dụng pin sạc USD để thắp sáng với thời gian sử dụng từ 4-75 tiếng, chiếc đèn này mang đến cho bạn ánh sáng tự nhiên đẹp mắt, độ sáng cao, đáp ứng được nhu cầu sử dụng trong các chuyến đi dài ngày.</p>
+            <p class="card-text"><strong>Price:</strong>$49.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img63.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Đèn pin cầm tay dã ngoại đa năng</h5>
+            <p class="card-text">2 chế độ: Sáng chiếu, sáng toả. Có tay cầm, có thể linh hoạt sử dụng như chức năng của đèn pin hoặc đèn chiếu toả dùng lúc sinh hoạt tập thể.</p>
+            <p class="card-text"><strong>Price:</strong>$5.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img64.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Đèn cắm trại dã ngoại tiện lợi và nhỏ gọn.....</h5>
+            <p class="card-text">Chiếc đèn cắm trại, dã ngoại tiện dụng với thời lượng pin lâu dài, nhiều chế độ sáng, và khả năng sạc cho các thiết bị di động qua cổng sạc USB tiêu chuẩn</p>
+            <p class="card-text"><strong>Price:</strong>$24.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img65.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Đèn sạc led treo lều cắm trại nhỏ gọn</h5>
+            <p class="card-text">Thông lượng phát sáng của sản phẩm: làm nổi bật 180LM, độ sáng trung bình 90LM, flash 70LM, Thời gian xả: đánh dấu 4 giờ, sáng 12 giờ, flash nhanh 24 giờ, Chế độ chuyển đổi: 3 chế độ: Sáng thường, sáng mạnh, SOS</p>
+            <p class="card-text"><strong>Price:</strong>$9.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img66.webp" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Bàn Alocs gấp gọn thích hợp tổ chức tiệc ............</h5>
+            <p class="card-text">Làm bằng thép không gỉ giành cho tiệc BBQ hoạt động cắm trại dã ngoại</p>
+            <p class="card-text"><strong>Price:</strong>$89.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img67.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Bàn dã ngoại Sundick gấp gọn ngoài trời</h5>
+            <p class="card-text">Bàn cắm trại gấp kết hợp với túi treo, đủ rộng rãi để chứa được nhiều đồ hơn. Có túi đựng để dễ dàng bảo quản và vận chuyển.</p>
+            <p class="card-text"><strong>Price:</strong>$49.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img68.webp" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Bàn nhôm gấp gọn dã ngoại phong cách lính</h5>
+            <p class="card-text">Bàn nhôm CampLeader gấp gọn dã ngoại,cắm trại phong cách lính, màu xanh rêu</p>
+            <p class="card-text"><strong>Price:</strong>$14.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img69.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Bàn nhôm xếp gọn chân rút màu Bạc</h5>
+            <p class="card-text">Chân bàn có thể tùy chỉnh chiều cao từng chân giúp bàn không bị chênh trên các mặt phẳng, phù hợp với các loại ghế ngồi.</p>
+            <p class="card-text"><strong>Price:</strong>$49.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img70.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Bàn xếp dã ngoại  thích hợp tổ chức tiệc ............</h5>
+            <p class="card-text">Bàn xếp dã ngoại, cắm trại mặt bàn thiết có vân nổi, sơn tĩnh điện, chịu lực lên đến 70kg</p>
+            <p class="card-text"><strong>Price:</strong>$49.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img71.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Túi ngủ Ryder Envelope Sleeping Bag D1001 Orange</h5>
+            <p class="card-text">Túi ngủ Ryder D1001 được dệt từ polyester 190T với các đặc tính ưu việt như dẻo dai bền sợi, trọng lượng nhẹ, chịu mài mòn tốt, chịu ít ảnh hưởng của độ ẩm.</p>
+            <p class="card-text"><strong>Price:</strong>$29.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img72.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Túi ngủ mùa đông 2 lớp kiểu dáng mới tiện lợi..........</h5>
+            <p class="card-text">Túi ngủ mùa đông Ryder D1005 có thiết kế dáng con nhộng với lớp ngoài chống thấm và cách nhiệt tối đa, phần lõi bông giữ nhiệt rất tốt.</p>
+            <p class="card-text"><strong>Price:</strong>$39.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img73.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Túi ngủ nỉ Northpeak Sleeping Bag</h5>
+            <p class="card-text">Túi ngủ nỉ Northpeak Sleeping Bag - 7855 được làm từ chất liệu nỉ mềm mịn, giữ nhiệt tốt, trọng lượng nhẹ, đi kèm túi đựng có dây xách tiện lợi.</p>
+            <p class="card-text"><strong>Price:</strong>$19.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img74.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Túi ngủ đôi Naturehike Ultralight Sleeping Bag</h5>
+            <p class="card-text">Êm ái và dễ chịu trong những hoạt động ngoài trời, những chuyến cắm trại qua đêm. Túi có thể linh hoạt chuyển đổi từ túi đơn sang túi đôi</p>
+            <p class="card-text"><strong>Price:</strong>$49.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img75.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Túi ngủ đôi Naturehike Thickened Cotton Warm</h5>
+            <p class="card-text">Túi ngủ đôi Naturehike NH21MSD06 có gối hơi du lịch đi kèm tích hợp sẵn trong túi. Đặc biệt là vào mùa thu, mùa đông hoặc nằm trong phòng điều hòa, máy lạnh.</p>
+            <p class="card-text"><strong>Price:</strong>$34.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img76.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Đệm hơi cắm trại air basic cho 2 người</h5>
+            <p class="card-text">Để tạo cảm giác thoải mái và duy trì tuổi thọ của đệm, không nên bơm đệm quá căng. Bạn nên cảm nhận được mặt đất khi ngồi trên đệm đã bơm. Khi nằm, áp suất không khí sẽ được phân bổ dưới toàn bộ cơ thể cho bạn cảm giác dễ chịu nhất có thể. Bạn có thể sử dụng bơm kèm theo áp kế như bơm tay 5,2 L - 7 PSI. Áp suất đề xuất là khoảng 0,3 đến 0,5 PSI.</p>
+            <p class="card-text"><strong>Price:</strong>$44.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img77.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Đêm hơi cắm trại dã ngoại Air Comfort</h5>
+            <p class="card-text">Đệm hơi cắm trại dã ngoại Air Comfort 1m4 cho 2 người có thể gấp gọn tiện dụng, siêu nhẹ. Đệm bơm hơi êm ái Quechua sẽ mang đến cho bạn giấc ngủ ngon.</p>
+            <p class="card-text"><strong>Price:</strong>$49.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img78.jpg" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Đêm hơi cắm trại dã ngoại cho 1 người</h5>
+            <p class="card-text">Đệm hơi cắm trại dã ngoại Air Basic giúp mang lại sự thoải mái cho người đi cắm trại. Đệm rộng 70cm vừa cho 1 người, gọn nhẹ có thể mang đi bất kì đâu.</p>
+            <p class="card-text"><strong>Price:</strong>$29.99</p>
+        </div>
+        <div class="card-footer">
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer1">
+        <img src="../img/Nội%20dung%20đoạn%20văn%20bản%20của%20bạn.png" alt="">
+        <div class="social">
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+        </div>
+        <p>ĐĂNG KÝ NHẬN TIN</p>
+        <label>
+            <input type="email" placeholder="Nhập địa chỉ Email">
+            <button type="submit">GỬI</button>
+        </label>
+        <div class="splpe">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>.................................</p>
+        </div>
+        <div class="splpe">
+            <i class="fa-solid fa-phone"></i>
+            <p>0910JQKA</p>
+        </div>
+        <div class="splpe">
+            <i class="fa-solid fa-headphones"></i>
+            <p>support@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer2">
+        <div class="info">
+            <div class="hotro">
+                <p>VỀ CHÚNG TÔI</p>
+                <a href="#">Trang chủ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Dịch vụ cho thuê</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Sản phẩm của Camp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="hotro">
+                <p>HỖ TRỢ KHÁCH HÀNG</p>
+                <a href="#">Trang chủ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Dịch vụ cho thuê</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Sản phẩm của Camp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="hotro">
+                <p>DỊCH VỤ</p>
+                <a href="#">Trang chủ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Dịch vụ cho thuê</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Sản phẩm của Camp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+        </div>
+        <div class="thanhtoan">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </div>
+</div>
+<script src="trangchu.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

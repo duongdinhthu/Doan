@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="Dichvutour.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+</head>
+<body>
+<div class="d-flex">
+    <img src="../img/Nội%20dung%20đoạn%20văn%20bản%20của%20bạn.png" alt="trangchu">
+    <a href="home.html" class="btn btn-outline" style="color: white;">Trang chủ</a>
+    <div class="dropdown mr-1">
+        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+            Trò chơi
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item" href="Trochoitreem.html">Trò chơi cho trẻ em</a>
+            <a class="dropdown-item" href="Trochoigiadinh.html">Trò chơi cho gia đình</a>
+            <a class="dropdown-item" href="Trochoinguoilon.html">Trò chơi cho người lớn</a>
+        </div>
+    </div>
+    <div class="dropdown mr-1">
+        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+            Sản phẩm
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item" href="Docanhan.html">Đồ cá nhân</a>
+            <a class="dropdown-item" href="Dothietyeu.html">Đồ thiết yếu</a>
+            <a class="dropdown-item" href="Thucpham.html">Thực phẩm dã ngoại</a>
+        </div>
+    </div>
+    <div class="dropdown mr-1">
+        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+            Dịch vụ
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item" href="Dichvutrongoi.html">Dịch vụ trọn gói</a>
+            <a class="dropdown-item" href="Dichvutour.html">Dịch vụ tour theo số người</a>
+            <a class="dropdown-item" href="Dichvutochuc.html">Dịch vụ tổ chức trò chơi</a>
+        </div>
+    </div>
+    <a href="tintuc.html" class="btn btn-outline" style="color: white;">Tin tức</a>
+    <a href="lienhe.html" class="btn btn-outline" style="color: white;">Liên hệ</a>
+    <button type="button" class="btn btn-outline" onclick="Login()">Đăng nhập</button>
+</div>
+<div class="search">
+    <label>
+        <input type="text" placeholder="Search">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </label>
+</div>
+
+<div class="allcard ">
+    <!-- Product 101 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img1.jpg" class="card-img-top" alt="Camping Hồ Dầu Tiếng">
+        <div class="card-body">
+            <h5 class="card-title">Camping Hồ Dầu Tiếng</h5>
+            <p class="card-text">Trải nghiệm camping tại Hồ Dầu Tiếng với không gian yên bình và hòa mình vào thiên nhiên.</p>
+            <p class="card-text">Giá: $2,000,000</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+        </div>
+    </div>
+
+    <!-- Product 102 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img2.jpg" class="card-img-top" alt="Camping Hồ Trị An">
+        <div class="card-body">
+            <h5 class="card-title">Camping Hồ Trị An</h5>
+            <p class="card-text">Trải nghiệm camping tại Hồ Trị An với không gian yên bình và hòa mình vào thiên nhiên.</p>
+            <p class="card-text">Giá: $3,000,000</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+        </div>
+    </div>
+
+    <!-- Product 103 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img3.jpg" class="card-img-top" alt="Rừng Cúc Phương">
+        <div class="card-body">
+            <h5 class="card-title">Rừng Cúc Phương</h5>
+            <p class="card-text">Khám phá hệ sinh thái đa dạng của Rừng Cúc Phương và trải nghiệm các hoạt động leo núi........</p>
+            <p class="card-text">Giá: $4,000,000</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+        </div>
+    </div>
+
+    <!-- Product 104 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img4.jpg" class="card-img-top" alt="Hồ Đồng Đò">
+        <div class="card-body">
+            <h5 class="card-title">Hồ Đồng Đò.............</h5>
+            <p class="card-text">Thư giãn tại Hồ Đồng Đò, nơi có cảnh đẹp hữu tình và không khí trong lành,dễ chịu.</p>
+            <p class="card-text">Giá: $1,800,000</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+        </div>
+    </div>
+
+    <!-- Product 105 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img5.jpg" class="card-img-top" alt="Làng văn hóa 54 Dân tộc Việt Nam">
+        <div class="card-body">
+            <h5 class="card-title">Làng văn hóa 54 Dân tộc Việt Nam</h5>
+            <p class="card-text">Trải nghiệm văn hóa truyền thống của 54 dân tộc Việt Nam tại Làng văn hóa 54.</p>
+            <p class="card-text">Giá: $5,000,000</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+        </div>
+    </div>
+
+    <!-- Product 106 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img6.jpg" class="card-img-top" alt="Hồ Cốc Bà Rịa-Vũng Tàu">
+        <div class="card-body">
+            <h5 class="card-title">Hồ Cốc Bà Rịa-Vũng Tàu</h5>
+            <p class="card-text">Khám phá Hồ Cốc Bà Rịa-Vũng Tàu với cảnh đẹp hùng vĩ và thuần khiết, thơ mộng ,nên thơ, trữ tình........................</p>
+            <p class="card-text">Giá: $3,045,000</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+        </div>
+    </div>
+
+    <!-- Product 107 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img7.jpg" class="card-img-top" alt="Hồ Suối Vàng – Cây Thông Cô Đơn">
+        <div class="card-body">
+            <h5 class="card-title">Hồ Suối Vàng – Cây Thông Cô Đơn</h5>
+            <p class="card-text">Thư giãn tại Hồ Suối Vàng và tận hưởng hương thơm của cây thông cô đơn.</p>
+            <p class="card-text">Giá: $2,800,000</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+        </div>
+    </div>
+
+    <!-- Product 108 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img8.jpg" class="card-img-top" alt="Hồ Tuyền Lâm Đà Lạt">
+        <div class="card-body">
+            <h5 class="card-title">Hồ Tuyền Lâm Đà Lạt</h5>
+            <p class="card-text">Tận hưởng khung cảnh tuyệt vời của Hồ Tuyền Lâm Đà Lạt và các hoạt động ngoại trời thú vị.</p>
+            <p class="card-text">Giá: $3,500,000</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+        </div>
+    </div>
+
+    <!-- Product 109 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img9.jpg" class="card-img-top" alt="Cắm Trại Ngắm Hoàng Hôn Vịnh Nha Phu">
+        <div class="card-body">
+            <h5 class="card-title">Cắm Trại Ngắm Hoàng Hôn Vịnh Nha Phu</h5>
+            <p class="card-text">Trải nghiệm cắm trại tại Vịnh Nha Phu và ngắm hoàng hôn tuyệt vời.</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+            <p class="card-text">Giá: $3,200,000</p>
+        </div>
+    </div>
+
+    <!-- Product 110 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img10.jpg" class="card-img-top" alt="Cắm Trại Săn Mây Núi Hòn Bồ Đà Lạt">
+        <div class="card-body">
+            <h5 class="card-title">Cắm Trại Săn Mây Núi Hòn Bồ Đà Lạt</h5>
+            <p class="card-text">Săn mây và trải nghiệm cắm trại giữa thiên nhiên tại Núi Hòn Bồ Đà Lạt.</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+            <p class="card-text">Giá: $2,900,000</p>
+        </div>
+    </div>
+
+    <!-- Product 111 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img11.jpg" class="card-img-top" alt="Cắm Trại Thung Lũng Vàng Đà Lạt">
+        <div class="card-body">
+            <h5 class="card-title">Cắm Trại Thung Lũng Vàng Đà Lạt</h5>
+            <p class="card-text">Thư giãn tại Thung Lũng Vàng Đà Lạt và tận hưởng không khí trong lành.</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+            <p class="card-text">Giá: $2,600,000</p>
+        </div>
+    </div>
+
+    <!-- Product 112 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img12.jpg" class="card-img-top" alt="Cắm Trại Đảo Ó - Đồng Trường">
+        <div class="card-body">
+            <h5 class="card-title">Cắm Trại Đảo Ó - Đồng Trường</h5>
+            <p class="card-text">Trải nghiệm cắm trại độc đáo tại Đảo Ó - Đồng Trường và khám phá vùng quê tĩnh lặng.</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+            <p class="card-text">Giá: $3,100,000</p>
+        </div>
+    </div>
+
+    <!-- Product 113 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img13.jpg" class="card-img-top" alt="Du Lịch Dã Ngoại Phan Thiết">
+        <div class="card-body">
+            <h5 class="card-title">Du Lịch Dã Ngoại Phan Thiết</h5>
+            <p class="card-text">Thư giãn và trải nghiệm du lịch dã ngoại tại Phan Thiết với bãi biển tuyệt vời.</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+            <p class="card-text">Giá: $2,300,000</p>
+        </div>
+    </div>
+
+    <!-- Product 114 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img14.jpg" class="card-img-top" alt="Du Lịch Leo Núi FanxiPan">
+        <div class="card-body">
+            <h5 class="card-title">Du Lịch Leo Núi FanxiPan</h5>
+            <p class="card-text">Thách thức bản thân với chuyến leo núi lên đỉnh FanxiPan - nóc nhà Đông Dương.</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+            <p class="card-text">Giá: 3,800,000</p>
+        </div>
+    </div>
+
+    <!-- Product 115 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img15.jpg" class="card-img-top" alt="Leo núi Hàm Lợn – “Nóc Nhà Thủ Đô”">
+        <div class="card-body">
+            <h5 class="card-title">Leo núi Hàm Lợn – “Nóc Nhà Thủ Đô”</h5>
+            <p class="card-text">Leo núi Hàm Lợn và ngắm toàn cảnh Thủ đô Hà Nội từ đỉnh núi.</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+            <p class="card-text">Giá: $4,500,000</p>
+        </div>
+    </div>
+
+    <!-- Product 116 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imageDichVu/img16.gif" class="card-img-top" alt="Hội An - Huế - Phong Nha - Bảo Tàng Phật Học - Chùa Quan Thế Âm">
+        <div class="card-body">
+            <h5 class="card-title">Hội An - Huế - Phong Nha - Bảo Tàng Phật Học - Chùa Quan Thế Âm</h5>
+            <p class="card-text">Hành trình du lịch kết hợp giữa di tích lịch sử.</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy now</a>
+            <p class="card-text">Giá: $4,800,000</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer1">
+        <img src="../img/Nội%20dung%20đoạn%20văn%20bản%20của%20bạn.png" alt="">
+        <div class="social">
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+        </div>
+        <p>ĐĂNG KÝ NHẬN TIN</p>
+        <label>
+            <input type="email" placeholder="Nhập địa chỉ Email">
+            <button type="submit">GỬI</button>
+        </label>
+        <div class="splpe">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>.................................</p>
+        </div>
+        <div class="splpe">
+            <i class="fa-solid fa-phone"></i>
+            <p>0910JQKA</p>
+        </div>
+        <div class="splpe">
+            <i class="fa-solid fa-headphones"></i>
+            <p>support@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer2">
+        <div class="info">
+            <div class="hotro">
+                <p>VỀ CHÚNG TÔI</p>
+                <a href="#">Trang chủ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Dịch vụ cho thuê</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Sản phẩm của Camp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="hotro">
+                <p>HỖ TRỢ KHÁCH HÀNG</p>
+                <a href="#">Trang chủ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Dịch vụ cho thuê</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Sản phẩm của Camp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="hotro">
+                <p>DỊCH VỤ</p>
+                <a href="#">Trang chủ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Dịch vụ cho thuê</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Sản phẩm của Camp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+        </div>
+        <div class="thanhtoan">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </div>
+</div>
+<script src="trangchu.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

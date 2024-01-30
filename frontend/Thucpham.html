@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="Thucpham.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+</head>
+<body>
+<div class="d-flex">
+    <img src="../img/Nội%20dung%20đoạn%20văn%20bản%20của%20bạn.png" alt="trangchu">
+    <a href="home.html" class="btn btn-outline" style="color: white;" >Trang chủ</a>
+    <div class="dropdown mr-1">
+        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+            Trò chơi
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item" href="Trochoitreem.html">Trò chơi cho trẻ em</a>
+            <a class="dropdown-item" href="Trochoigiadinh.html">Trò chơi cho gia đình</a>
+            <a class="dropdown-item" href="Trochoinguoilon.html">Trò chơi cho người lớn</a>
+        </div>
+    </div>
+    <div class="dropdown mr-1">
+        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+            Sản phẩm
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item" href="Docanhan.html">Đồ cá nhân</a>
+            <a class="dropdown-item" href="Dothietyeu.html">Đồ thiết yếu</a>
+            <a class="dropdown-item" href="Thucpham.html">Thực phẩm dã ngoại</a>
+        </div>
+    </div>
+    <div class="dropdown mr-1">
+        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+            Dịch vụ
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+            <a class="dropdown-item" href="Dichvutrongoi.html">Dịch vụ trọn gói</a>
+            <a class="dropdown-item" href="Dichvutour.html">Dịch vụ tour theo số người</a>
+            <a class="dropdown-item" href="Dichvutochuc.html">Dịch vụ tổ chức trò chơi</a>
+        </div>
+    </div>
+    <a href="tintuc.html" class="btn btn-outline" style="color: white;">Tin tức</a>
+    <a href="lienhe.html" class="btn btn-outline" style="color: white;">Liên hệ</a>
+    <button type="button" class="btn btn-outline" onclick="Login()">Đăng nhập</button>
+</div>
+<div class="search">
+    <label>
+        <input type="text" placeholder="Search">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </label>
+</div>
+
+<div class="AllCard">
+
+    <!-- Card cho sản phẩm 1 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img1.png" class="card-img-top" alt="Cà chua cô đặc">
+        <div class="card-body">
+            <h5 class="card-title">Cà chua cô đặc</h5>
+            <p class="card-text">Cà chua được đóng hộp cô đặc, tiện lợi cho việc sử dụng trong nấu ăn.</p>
+            <p class="card-text"><strong>Price:</strong> $2.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 2 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img2.webp" class="card-img-top" alt="Cá sốt cà">
+        <div class="card-body">
+            <h5 class="card-title">Cá sốt cà</h5>
+            <p class="card-text">Cá ngon và thơm phức với sốt cà chua đậm đà.</p>
+            <p class="card-text"><strong>Price:</strong> $4.49</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 3 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img3.jpg" class="card-img-top" alt="Chuối sấy dẻo">
+        <div class="card-body">
+            <h5 class="card-title">Chuối sấy dẻo</h5>
+            <p class="card-text">Chuối sấy giữ lại độ ngọt tự nhiên, làm snack lý tưởng.</p>
+            <p class="card-text"><strong>Price:</strong> $1.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 4 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img4.webp" class="card-img-top" alt="Đậu đỏ hữu cơ">
+        <div class="card-body">
+            <h5 class="card-title">Đậu đỏ hữu cơ</h5>
+            <p class="card-text">Đậu đỏ hữu cơ chất lượng cao, không chứa hóa chất.</p>
+            <p class="card-text"><strong>Price:</strong> $3.79</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 5 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img5.jpg" class="card-img-top" alt="Đậu hủ non">
+        <div class="card-body">
+            <h5 class="card-title">Đậu hủ non</h5>
+            <p class="card-text">Đậu hủ non tươi ngon, là nguồn protein thực vật tốt cho sức khỏe.</p>
+            <p class="card-text"><strong>Price:</strong> $2.29</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 6 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img6.webp" class="card-img-top" alt="Granola-ngũ cốc">
+        <div class="card-body">
+            <h5 class="card-title">Granola-ngũ cốc</h5>
+            <p class="card-text">Granola hỗn hợp ngũ cốc ngon miệng, giàu chất xơ.</p>
+            <p class="card-text"><strong>Price:</strong> $5.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 7 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img7.jpg" class="card-img-top" alt="Hạnh nhân rang">
+        <div class="card-body">
+            <h5 class="card-title">Hạnh nhân rang</h5>
+            <p class="card-text">Hạnh nhân rang giữ nguyên hương vị và dinh dưỡng.</p>
+            <p class="card-text"><strong>Price:</strong> $7.49</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 8 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img8.webp" class="card-img-top" alt="Hạt dẻ cười">
+        <div class="card-body">
+            <h5 class="card-title">Hạt dẻ cười</h5>
+            <p class="card-text">Hạt dẻ cười giòn ngon, làm tăng hương vị cho các món ăn.</p>
+            <p class="card-text"><strong>Price:</strong> $1.89</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 9 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img9.webp" class="card-img-top" alt="Hạt mix vị">
+        <div class="card-body">
+            <h5 class="card-title">Hạt mix vị</h5>
+            <p class="card-text">Hạt mix vị đa dạng, làm tăng hương vị cho mọi bữa ăn.</p>
+            <p class="card-text"><strong>Price:</strong> $3.29</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 10 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img10.jpg" class="card-img-top" alt="Kim chi đóng hộp">
+        <div class="card-body">
+            <h5 class="card-title">Kim chi đóng hộp</h5>
+            <p class="card-text">Kim chi truyền thống đóng hộp, giữ được hương vị tự nhiên.</p>
+            <p class="card-text"><strong>Price:</strong> $6.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 11 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img11.jpg" class="card-img-top" alt="Ngũ cốc nguyên cám">
+        <div class="card-body">
+            <h5 class="card-title">Ngũ cốc nguyên cám</h5>
+            <p class="card-text">Ngũ cốc giàu chất xơ, là lựa chọn tốt cho bữa sáng dinh dưỡng.</p>
+            <p class="card-text"><strong>Price:</strong> $4.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 12 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img12.webp" class="card-img-top" alt="Thịt heo đóng hộp">
+        <div class="card-body">
+            <h5 class="card-title">Thịt heo đóng hộp</h5>
+            <p class="card-text">Thịt heo chất lượng cao, được đóng hộp để bảo quản tốt.</p>
+            <p class="card-text"><strong>Price:</strong> $8.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 13 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img13.png" class="card-img-top" alt="Socola">
+        <div class="card-body">
+            <h5 class="card-title">Socola</h5>
+            <p class="card-text">Socola đen ngon, hỗn hợp cacao đắng và đường ngọt.</p>
+            <p class="card-text"><strong>Price:</strong> $3.49</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 14 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img14.jpg" class="card-img-top" alt="Ô mai mận">
+        <div class="card-body">
+            <h5 class="card-title">Ô mai mận</h5>
+            <p class="card-text">Ô mai mận truyền thống, hương vị đậm đà và giữ được hương thơm tự nhiên của mận.</p>
+            <p class="card-text"><strong>Price:</strong> $2.79</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 15 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img15.webp" class="card-img-top" alt="Bắp non đóng hộp">
+        <div class="card-body">
+            <h5 class="card-title">Bắp non đóng hộp</h5>
+            <p class="card-text">Bắp non tươi ngon, đóng hộp để giữ nguyên độ tươi mới.</p>
+            <p class="card-text"><strong>Price:</strong> $1.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 16 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img16.jpg" class="card-img-top" alt="Trái cây đóng hộp">
+        <div class="card-body">
+            <h5 class="card-title">Trái cây đóng hộp</h5>
+            <p class="card-text">Hỗn hợp trái cây tươi ngon, giữ được hương vị tự nhiên.</p>
+            <p class="card-text"><strong>Price:</strong> $4.29</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 33 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img41.png" class="card-img-top" alt="Bò khô">
+        <div class="card-body">
+            <h5 class="card-title">Bò khô</h5>
+            <p class="card-text">Bò khô chất lượng cao, giữ nguyên hương vị và chất dinh dưỡng.</p>
+            <p class="card-text"><strong>Price:</strong> $8.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 34 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img42.webp" class="card-img-top" alt="Chân gà">
+        <div class="card-body">
+            <h5 class="card-title">Chân gà</h5>
+            <p class="card-text">Chân gà giàu protein, làm món nhắm hoặc ăn kèm.</p>
+            <p class="card-text"><strong>Price:</strong> $6.49</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 35 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img43.jpg" class="card-img-top" alt="Kẹo dẻo">
+        <div class="card-body">
+            <h5 class="card-title">Kẹo dẻo</h5>
+            <p class="card-text">Kẹo dẻo ngon miệng, thích hợp cho giải khuây trong chuyến đi.</p>
+            <p class="card-text"><strong>Price:</strong> $2.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 36 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img44.webp" class="card-img-top" alt="Nước trái cây">
+        <div class="card-body">
+            <h5 class="card-title">Nước trái cây</h5>
+            <p class="card-text">Nước trái cây tươi ngon, làm mát và giữ sức khỏe.</p>
+            <p class="card-text"><strong>Price:</strong> $4.49</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 37 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img45.jpg" class="card-img-top" alt="Bánh mì sandwich">
+        <div class="card-body">
+            <h5 class="card-title">Bánh mì sandwich</h5>
+            <p class="card-text">Bánh mì sandwich tiện lợi, thích hợp cho bữa ăn nhanh.</p>
+            <p class="card-text"><strong>Price:</strong> $5.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 38 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img46.jpg" class="card-img-top" alt="Mứt thanh long">
+        <div class="card-body">
+            <h5 class="card-title">Mứt thanh long</h5>
+            <p class="card-text">Mứt thanh long ngọt ngon, giữ được hương vị tự nhiên.</p>
+            <p class="card-text"><strong>Price:</strong> $3.29</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 39 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img47.jpg" class="card-img-top" alt="Thịt gà đóng hộp">
+        <div class="card-body">
+            <h5 class="card-title">Thịt gà đóng hộp</h5>
+            <p class="card-text">Thịt gà chất lượng cao, được đóng hộp để bảo quản tốt.</p>
+            <p class="card-text"><strong>Price:</strong> $7.99</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Card cho sản phẩm 40 -->
+    <div class="card" style="width: 18rem;">
+        <img src="imgsanpham/img48.jpg" class="card-img-top" alt="Bánh quy mix vị">
+        <div class="card-body">
+            <h5 class="card-title">Bánh quy mix vị</h5>
+            <p class="card-text">Bánh quy mix vị đa dạng, làm tăng hương vị cho bữa ăn.</p>
+            <p class="card-text"><strong>Price:</strong> $4.49</p>
+            <a href="../backend/login.php" class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer1">
+        <img src="../img/Nội%20dung%20đoạn%20văn%20bản%20của%20bạn.png" alt="">
+        <div class="social">
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+        </div>
+        <p>ĐĂNG KÝ NHẬN TIN</p>
+        <label>
+            <input type="email" placeholder="Nhập địa chỉ Email">
+            <button type="submit">GỬI</button>
+        </label>
+        <div class="splpe">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>.................................</p>
+        </div>
+        <div class="splpe">
+            <i class="fa-solid fa-phone"></i>
+            <p>0910JQKA</p>
+        </div>
+        <div class="splpe">
+            <i class="fa-solid fa-headphones"></i>
+            <p>support@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer2">
+        <div class="info">
+            <div class="hotro">
+                <p>VỀ CHÚNG TÔI</p>
+                <a href="#">Trang chủ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Dịch vụ cho thuê</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Sản phẩm của Camp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="hotro">
+                <p>HỖ TRỢ KHÁCH HÀNG</p>
+                <a href="#">Trang chủ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Dịch vụ cho thuê</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Sản phẩm của Camp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="hotro">
+                <p>DỊCH VỤ</p>
+                <a href="#">Trang chủ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Dịch vụ cho thuê</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Sản phẩm của Camp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+        </div>
+        <div class="thanhtoan">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </div>
+</div>
+<script src="trangchu.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
