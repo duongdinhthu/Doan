@@ -33,7 +33,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-                <p>Hotline<br>8910JQKAabc</p>
+                <p>Hotline<br>8910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
