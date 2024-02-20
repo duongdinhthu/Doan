@@ -49,4 +49,39 @@
     display: block;
     margin: 10px auto;
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navbar buttons margin */
+    .btn {
+        margin-right: 5px;
+    }
+
+    /* Search bar margin */
+    .search {
+        margin: 10px;
+    }
+
+    /* Header image padding */
+    .img_header {
+        padding: 10px;
+    }
+
+    /* Footer Columns margin */
+    .footer1,
+    .footer2 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Additional styling (you can modify this section based on your design) */
+#allcard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 10px;
+}
+
 

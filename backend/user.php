@@ -5,6 +5,10 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
+include "project.php";
+$project = new projectFptHappy();
+$username = $_SESSION["username"];
+$infor=$project->inforByUserName($username);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,10 +71,47 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         <button><i class="fa-solid fa-magnifying-glass"></i></button>
     </label>
 </div>
-<form class="form-group" action="fpthappy.php" method="get">
+
+<table class="table">
+    <h1>
+        Information </h1>
+    <thead>
+    <tr>
+        <th>Your Name</th>
+        <th>Your number phone</th>
+        <th>Your address</th>
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($infor as $infor):
+        ?>
+        <tr>
+        <tr>
+
+            <td><?php echo $infor['name'] ?></td>
+            <td><?php echo $infor['phone'] ?></td>
+            <td><?php echo $infor['address'] ?></td>
+
+
+
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+
+
+
+<h2>
+    More information to become a member and receive attractive offers</h2>
+<br>
+<a href="addInfor.php" class="btn btn-primary">Add information</a>
     <a href="logout.php" class="btn btn-danger ">Log out</a>
     <a href="changePassword.php" class="btn btn-warning">changePassword</a>
 </form>
+
 <div class="footer">
     <div class="footer1">
         <img src="img/Nội%20dung%20đoạn%20văn%20bản%20của%20bạn.png" alt="">

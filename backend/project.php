@@ -413,9 +413,9 @@ class projectFptHappy
         $sql = "delete from cart where product_id = '$id' and hidden = 0";
         $this->conn->query($sql);
     }
-    public function payTheBill($username)
+    public function payTheBill($name,$phone,$address,$username)
     {
-        $sql = "update cart set hidden = 2, hidden_customer = 4 where username = '$username' and hidden = 1";
+        $sql = "update cart set hidden = 2, hidden_customer = 4,name='$name',phone='$phone',address='$address' where username = '$username' and hidden = 1";
         $this->conn->query($sql);
     }
     public function getAllPay($username)
@@ -475,6 +475,68 @@ class projectFptHappy
     }
     public function statusDelivering( $id ,$username,$delivering,$year,$month,$day){
         $sql = "update cart set status = '$delivering' where product_id = '$id' and username = '$username' and trading_day='$year-$month-$day' ";
+        $this->conn->query($sql);
+    }
+    public function inforCustomer(){
+        $customer = [];
+        $sql = "select * from account_customer
+";
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $customer[]=$row;
+            }
+        }
+        return $customer;
+    }
+    public function inforCustomerByName($name){
+        $customer = [];
+        $sql = "select * from account_customer where name='$name'";
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $customer[]=$row;
+            }
+        }
+        return $customer;
+    }
+    public function updateInforCustomer($name1,$phone1,$address1,$username)
+    {
+        $sql = "update account_customer set name='$name1',phone='$phone1',address='$address1' where username = '$username' ";
+        $this->conn->query($sql);
+
+    }
+    public function inforByUserName($username)
+    {
+        $customer = [];
+        $sql="select * from account_customer where username='$username'";
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $customer[]=$row;
+            }
+        }
+        return $customer;
+    }
+    public function updateMoney($money,$username)
+    {
+        $sql = "update account_customer set money='$money' where username='$username'";
+        $this->conn->query($sql);
+    }
+    public function inforCustomerByUser($username){
+        $customer = [];
+        $sql = "select * from account_customer where username='$username'";
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $customer[]=$row;
+            }
+        }
+        return $customer;
+    }
+    public function payTheBillShip()
+    {
+        $sql = "update cart set hidden = 2, hidden_customer = 4 where username = '$username' and hidden = 1";
         $this->conn->query($sql);
     }
 }

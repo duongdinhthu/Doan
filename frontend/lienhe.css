@@ -1,0 +1,27 @@
+.lienhe{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+.lienhe div i{
+    padding-left: 10px;
+}
+.lienhe1{
+    border-left: 1px solid darkgrey;
+    border-top: 1px solid darkgrey;
+    border-bottom: 1px solid darkgrey;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    background-color: darkgrey;
+    color: white;
+}
+.lienhe2{
+    border-radius: 0 10px 10px 0;
+    border-top: 1px solid darkgrey;
+    padding: 10px;
+    border-bottom: 1px solid darkgrey;
+    border-right: 1px solid darkgrey;
+    background-color: darkgrey;
+}

@@ -1,0 +1,199 @@
+.all-card {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.card{
+    width: 100%;
+    aspect-ratio: 1;
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+
+}
+.card:hover
+{
+    transform: scale(1.1); /* Phóng to 110% khi trỏ vào */
+}
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn-primary {
+    display: block;
+    margin: 10px auto;
+}
+
+.card-text{
+    max-height: 3em; /* Đặt chiều cao tối đa là 2 dòng */
+    overflow: hidden;
+}
+.d-flex {
+    background-color: #764740;
+    color: #ffffff;
+}
+
+#carouselExampleIndicators,
+.product-detail {
+    width: 40%;
+    box-sizing: border-box; /* Ensure padding and border are included in the total width */
+}
+
+.product-detail {
+    margin-left: 20px; /* Adjust the margin between carousel and product detail as needed */
+}
+
+.product-detail,
+#carouselExampleIndicators {
+    display: inline-block;
+    vertical-align: top; /* Align elements to the top of the line */
+}
+
+.product-detail {
+    color: rgba(79, 80, 78, 0.98) ;
+    font-family: Arial, sans-serif; /* Optional: Set the font-family as needed */
+}
+
+.product-title {
+    color: #f29f33;
+    font-weight: bold;
+    font-size: 1.2em; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Add space below the product title */
+}
+
+.price {
+    color: #f29f33;
+    font-size: 1.2em; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Add space below the price */
+}
+
+.discount-price {
+    color: rgba(79, 80, 78, 0.98) ;
+    text-decoration: line-through; /* Add strikethrough to the discount price */
+    margin-left: 10px; /* Add space to the left of the discount price */
+}
+
+.product-info p {
+    margin-bottom: 5px; /* Add space below each product info paragraph */
+}
+
+.buttons .btn {
+    background-color: #f29f33;
+    color: #ffffff; /* Set text color to white */
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em; /* Adjust the font size as needed */
+}
+
+.navigation-bar {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.navigation-bar a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #aea7b3;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.navigation-bar a:hover,
+.navigation-bar a.active {
+    color: #f29f33;
+}
+#product-info {
+    color:#f29f33 ;
+}
+
+#product-info h2,
+#product-info h3{
+    color:#f29f33;
+}
+
+#product-info ul
+{
+    color:#f29f33;
+}
+#product-info li,
+#product-info p {
+    color: rgba(79, 80, 78, 0.98) ;
+}
+
+#shipping-policy,
+#return-warranty,
+#payment-methods {
+    color: rgba(79, 80, 78, 0.98);
+}
+
+#shipping-policy h2{
+    color:#f29f33;
+}
+#shipping-policy h3,
+#shipping-policy p,
+#shipping-policy ul,
+#shipping-policy li{
+    color: rgba(79, 80, 78, 0.98);
+}
+
+#return-warranty h1{
+    color:#f29f33;
+}
+#return-warranty h2
+{color:#f29f33;}
+#return-warranty h3{
+    color:#f29f33;
+}
+#return-warranty p,
+#return-warranty ul,
+#return-warranty li,
+#payment-methods h3,
+#payment-methods li {
+    color: rgba(79, 80, 78, 0.98);
+}
+#payment-methods h1,
+#payment-methods h2{
+    color:#f29f33;
+}
+
+.navigation-bar {
+    background-color: #f29f33;
+    overflow-x: auto;  /* Cho phép cuộn ngang nếu nội dung vượt quá chiều rộng */
+    white-space: nowrap;  /* Ngăn chặn việc ngắt dòng cho các phần tử bên trong */
+    max-width: 100%;     /* Đặt chiều rộng tối đa của "navigation-bar" */
+}
+.footer{
+    background-color:#f29f33;
+}
+.navigation-bar {
+    background-color: #f29f33;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    margin-top:20px ;
+    margin-bottom: 20px; /* Thêm khoảng trắng ở dưới */
+}
+
+.navigation-bar a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #aea7b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navigation-bar a:hover,
+.navigation-bar a.active {
+    color: #f29f33;
+}
+
+
+
+
+

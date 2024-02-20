@@ -1,0 +1,39 @@
+
+.allcard {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Khoảng cách từ đỉnh trang */
+}
+
+.card {
+    width: 18rem; /* Kích thước chiều rộng của card */
+}
+
+.tour,
+.service {
+    border: 2px solid #f29f33; /* Viền màu #f29f33 */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+h2{
+    color:#f29f33;
+}
+
+h3 {
+    color: #f29f33; /* Màu chữ */
+}
+
+ul {
+    list-style-type: none; /* Loại bỏ dấu đầu dòng */
+    padding: 0;
+}
+
+ul li {
+    margin-left: 20px; /* Thụt lề cho mỗi mục */
+}
+
+/* Thêm phần tử mục chuẩn bị vào danh sách */
+.service ul ul li {
+    margin-left: 40px; /* Thụt lề sâu hơn cho mục con */
+}
+

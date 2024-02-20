@@ -1,0 +1,17 @@
+.allcard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 30%;
+    margin: 10px;
+    overflow: hidden; /* Ngăn chặn nội dung tràn ra khỏi card */
+}
+
+.card img {
+    max-width: 100%; /* Đặt chiều rộng tối đa của ảnh là 100% của ô card */
+    height: auto; /* Duy trì tỉ lệ khung hình */
+}
+

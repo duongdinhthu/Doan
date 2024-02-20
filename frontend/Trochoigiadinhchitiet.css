@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+section {
+    margin: 20px;
+}
+
+.img1 {
+    display: block;
+    margin: 0 auto; /* Căn giữa hình ảnh */
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của phần tử cha */
+    border-radius: 8px; /* Góc bo cho hình ảnh */
+}
+.rules {
+    text-align: left;
+    margin-left: 400px;
+    border-radius:10px;
+}
+
+/* CSS cho button */
+.custom-button {
+    background-color: #5e484a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.custom-button:hover {
+    background-color: #725a5b;
+}
+
+/* CSS cho link mặc định */
+.custom-button:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* CSS cho link khi được ấn */
+.custom-button:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+h1 {
+    color: #333;
+}
+
+section {
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #5e484a;
+}
+
+p {
+    line-height: 1.5;
+}
+
+strong {
+    color: #5e484a;
+}
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.star {
+    color: #ffd700;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.star:hover {
+    color: #e5d492; /* Màu vàng nhạt khi hover */
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    color: #f89007; /* Màu vàng khi được chọn */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #5e484a;
+    color: #fff;
+    padding: 10px 20px;
+    border:10px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: #7e6366;
+}

@@ -22,13 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Student List</title>
+    <title>List of sold goods</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container mt-5">
     <a href="logout.php" class="btn btn-danger">Logout</a>
-    <a href="order_status.php" class="btn btn-danger">order status</a>
+    <a href="infor_customer.php" class="btn btn-primary">customer information</a>
     <h2>
         Enter the date to search</h2>
     <form action="" method="post">

@@ -27,10 +27,11 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
 
     $deletepay = $carts->deletePay($username);
 }
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $pay = $carts->payTheBill($username);
-echo "<h1>Payment success</h1>";
-}
+
+
+
+
+$infor=$carts->inforByUserName($username);
 $updatetotalpaycart = $carts->totalPayCart($username);
 $updatetotalcart= $carts-> totalCart($username);
 $paycart = $carts->getAllPay($username);
@@ -40,6 +41,7 @@ $deletecart = $carts->getAllDeleteCart($username);
 $totalpay = $carts->totalShowPay($username);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,12 +136,22 @@ $totalpay = $carts->totalShowPay($username);
 </table>
 
 <div>
-    <h2>Total order value($): <?php echo $totalcart ?></h2>
-    <form action="" method="post">
-            <button type="submit" class="btn btn-primary btn-sm" >
-                Pay the bill
-            </button>
-    </form>
+    <?php foreach ($infor
+
+    as $infor): ?>
+    <h2><?php echo "Account money : $" .$infor['money'] ?></h2>
+    <?php endforeach; ?>
+    <h2>Total order value : <?php echo "$".$totalcart ?></h2>
+
+    <?php $a=$infor['money'] - $totalcart;
+    if($a>=0){
+        echo "<h3>Your account also has:</h3> $".$a;
+        echo "<br><a href='delivery_address.php?action=pay&money=$totalcart&money1=$a&username=$username'' class='btn btn-primary'>Pay the bill</a>";
+    }else{
+        echo"<br><a href='delivery_address.php?action=pay&money=$totalcart&username=$username' class='btn btn-warning'>
+Your account is insufficient. Payment in cash</a>";
+    }
+     ?>
 </div>
 
 <hr>
