@@ -1,9 +1,64 @@
-.allcard {
+.product-boxes{
     display: flex;
-    justify-content: start;
-    margin-top: 50px; /* Khoảng cách từ đỉnh trang */
+    padding-top: 50px;
+    padding-left: 10%;
+    background-color: #FEF7EF;
+
+}
+.product-boxes div{
+    outline: 0 !important;
+    width: 300px;
+    text-align: start;
+    border: none;
+    background-color: #FEF7EF;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+.product-boxes div img {
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.product-boxes div a{
+    text-decoration: none;
+    color: grey;
+    transition: all 0.3s ease;
+}
+.product-boxes div a:hover{
+    color: #F29F33;
+}
+.cost{
+    color: #F29F33;
+}
+.cost del{
+    color: grey;
+    padding-left: 10px;
+}
+.product-boxes button h2{
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 50px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+.product-boxes button h2:hover{
+    color: #F29F33;
+}
+.product-boxes button h2 p{
+    font-weight: lighter;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 380px;
+}
+.product-boxes button h2 p strong{
+    font-size: 16px;
+    color: white;
+}
+.product-boxes button{
+    outline: 0 !important;
+    border: none;
+    background-color: #FEF7EF;
+    text-align: center;
 }
 
-.card {
-    width: 18rem; /* Kích thước chiều rộng của card */
-}

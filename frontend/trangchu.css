@@ -131,16 +131,16 @@ body{
     font-weight: bold;
     color: #F29F33;
 }
+.outstanding-product hr{
+    height: 1px;
+    width: 150px;
+    background-color: #F29F33;
+}
 .product-boxes{
     display: flex;
     padding-top: 50px;
     padding-left: 12%;
     padding-right: 7%;
-}
-.outstanding-product hr{
-    height: 1px;
-    width: 150px;
-    background-color: #F29F33;
 }
 .product-boxes div{
     outline: 0 !important;
