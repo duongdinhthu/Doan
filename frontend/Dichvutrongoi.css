@@ -1,6 +1,6 @@
 .allcard {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     margin-top: 50px; /* Khoảng cách từ đỉnh trang */
 }
 

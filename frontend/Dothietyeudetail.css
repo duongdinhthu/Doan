@@ -33,11 +33,6 @@
     max-height: 3em; /* Đặt chiều cao tối đa là 2 dòng */
     overflow: hidden;
 }
-.d-flex {
-    background-color: #764740;
-    color: #ffffff;
-}
-
 #carouselExampleIndicators,
 .product-detail {
     width: 40%;
@@ -168,9 +163,6 @@
     white-space: nowrap;  /* Ngăn chặn việc ngắt dòng cho các phần tử bên trong */
     max-width: 100%;     /* Đặt chiều rộng tối đa của "navigation-bar" */
 }
-.footer{
-    background-color:#f29f33;
-}
 .navigation-bar {
     background-color: #f29f33;
     overflow-x: auto;
@@ -194,6 +186,12 @@
 }
 
 
-
+.ship\&return\&pay div h2{
+    text-align: start;
+    color: #f29f33;
+}
+.ship\&return\&pay header{
+    color: #f29f33;
+}
 
 

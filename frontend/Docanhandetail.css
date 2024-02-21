@@ -40,11 +40,6 @@
     width: 40%;
     box-sizing: border-box; /* Ensure padding and border are included in the total width */
 }
-#carouselExampleIndicators{
-    width: 40%;
-    box-sizing: border-box;
-    margin-left: 30%;
-}
 
 .product-detail {
     margin-left: 20px; /* Adjust the margin between carousel and product detail as needed */
@@ -192,11 +187,20 @@
 .navigation-bar a:hover,
 .navigation-bar a.active {
     color: #f29f33;
-    cursor: pointer;
 }
 
+.ship\&return\&pay div h2{
+    text-align: start;
+    color: #f29f33;
+}
+.ship\&return\&pay header{
+    color: #f29f33;
+}
 
+.colored-dots li::before {
 
-
-
+    color: #f29f33; /* Màu sắc của dấu chấm */
+    font-size: 1.2em; /* Cỡ chữ của dấu chấm */
+    margin-right: 0.5em; /* Khoảng cách giữa dấu chấm và nội dung */
+}
 

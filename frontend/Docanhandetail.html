@@ -29,41 +29,39 @@
             </div>
         </div>
         <div class="d-flex">
-            <a href="home.html" class="btn btn-outline">Trang chủ</a>
-            <div class="menu">
-                <ul>
-                    <li><a href="home.html">Trò chơi</a>
-                        <ul class="ul">
-                            <li><a href="Trochoitreem.html"> Trẻ em</a></li>
-                            <li><a href="Trochoigiadinh.html">Gia đình</a></li>
-                            <li><a href="Trochoinguoilon.html">Người lớn</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="home.html">Sản phẩm</a>
-                        <ul class="ul">
-                            <li><a href="Docanhan.html">Đồ cá nhân</a></li>
-                            <li><a href="Dothietyeu.html">Đồ thiết yếu</a></li>
-                            <li><a href="Thucpham.html">Thực phẩm</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="home.html">Dịch vụ</a>
-                        <ul class="ul">
-                            <li><a href="Dichvutrongoi.html">Trọn gói</a></li>
-                            <li><a href="Dichvutour.html"> Tour</a></li>
-                            <li><a href="Dichvutochuc.html">Tổ chức</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <a href="home.html" class="btn btn-outline">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Games</button>
+                <div class="dropdown-content">
+                    <a href="Trochoitreem.html"> Children</a>
+                    <a href="Trochoigiadinh.html">Family</a>
+                    <a href="Trochoinguoilon.html">Adults</a>
+                </div>
             </div>
-            <a href="tintuc.html" class="btn btn-outline">Tin tức</a>
-            <a href="lienhe.html" class="btn btn-outline">Liên hệ</a>
-            <a href="../backend/login.php" class="btn btn-outline">Đăng nhập </a>
+            <div class="dropdown">
+                <button class="dropbtn">Products</button>
+                <div class="dropdown-content">
+                    <a href="Docanhan.html">Personal items</a>
+                    <a href="Dothietyeu.html">Essentials</a>
+                    <a href="Thucpham.html">Food</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="Dichvutrongoi.html">Packages</a>
+                    <a href="Dichvutour.html">Tour</a>
+                    <a href="Dichvutochuc.html">Organizing</a>
+                </div>
+            </div>
+            <a href="tintuc.html" class="btn btn-outline">News</a>
+            <a href="lienhe.html" class="btn btn-outline">Contact</a>
+            <a href="../backend/login.php" class="btn btn-outline">Log in </a>
 
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%">
 </header>
-
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
     <ol class="carousel-indicators" >
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
@@ -114,160 +112,177 @@
     </a>
 </div>
 
-<script src="Dothietyeudetail.js"></script>
 <div class="product-detail" style="margin-top:10px">
-    <div class="product-title">Dao Sinh Tồn Morakniv Companion Spark Stainless Steel - Đen</div>
-    <div class="price">200.000₫ <span class="discount-price">300.000₫</span></div>
+    <div class="product-title">Morakniv Companion Spark Stainless Steel Survival Knife - Black</div>
+    <div class="price">200,000 VND <span class="discount-price">300,000 VND</span></div>
     <div class="product-info">
-        <p><strong>Loại:</strong> Dao sinh tồn</p>
-        <p><strong>Hãng sản xuất:</strong> Đang cập nhật</p>
-        <p><strong>Giao hàng:</strong> Toàn quốc</p>
-        <p><strong>Thanh toán:</strong> Khi nhận hàng</p>
-        <p><strong>Chính sách đổi/trả hàng:</strong> Miễn phí</p>
-        <p><strong>Bảo hành:</strong> 10 năm</p>
+        <p><strong>Type:</strong> Survival knife</p>
+        <p><strong>Manufacturer:</strong> Updating</p>
+        <p><strong>Delivery:</strong> Nationwide</p>
+        <p><strong>Payment:</strong> Cash on delivery</p>
+        <p><strong>Return/Exchange Policy:</strong> Free</p>
+        <p><strong>Warranty:</strong> 10 years</p>
     </div>
     <div class="availability">
-        <p><strong>Tình trạng:</strong> Hết hàng <span class="out-of-stock">(Hãy liên hệ để biết thêm chi tiết)</span></p>
+        <p><strong>Status:</strong> Out of stock <span class="out-of-stock">(Contact for more details)</span></p>
     </div>
 
     <div class="buttons">
-        <a href="#" class="btn">Liên hệ mua hàng</a>
+        <a href="#" class="btn">Contact to buy</a>
     </div>
 </div>
 
 <div class="navigation-bar">
-    <a onclick="showContent('product-info')" style="color:#ffffff">Thông tin sản phẩm</a>
-    <a onclick="showContent('shipping-policy')" style="color:#ffffff">Chính sách vận chuyển</a>
-    <a onclick="showContent('return-warranty')" style="color:#ffffff">Đổi trả & Bảo hành</a>
-    <a onclick="showContent('payment-methods')" style="color:#ffffff">Hình thức thanh toán</a>
+    <a onclick="showContent('product-info')" style="color:#ffffff">Product Information</a>
+    <a onclick="showContent('shipping-policy')" style="color:#ffffff">Shipping Policy</a>
+    <a onclick="showContent('return-warranty')" style="color:#ffffff">Return & Warranty</a>
+    <a onclick="showContent('payment-methods')" style="color:#ffffff">Payment Methods</a>
 </div>
 
 
-<!-- Các phần nội dung tương ứng -->
+<!-- Corresponding content sections -->
 <div id="product-info" class="content-section">
-    <h2>Đao Sinh Tồn Chống Nước 6 Inches - Xuất Xứ Nhật Bản</h2>
+    <h2>Waterproof 6-Inch Survival Knife - Made in Japan</h2>
 
-    <h3>Thông số kỹ thuật</h3>
+    <h3>Technical Specifications</h3>
     <ul>
-        <li><strong>Xuất Xứ:</strong> Sản phẩm được sản xuất và xuất xứ từ Nhật Bản, nổi tiếng với chất lượng cao và kỹ thuật sản xuất tiên tiến.</li>
-        <li><strong>Hạn Sử Dụng:</strong> Dao có thời hạn sử dụng lâu dài khi được bảo quản và sử dụng đúng cách. Không có hạn sử dụng cụ thể do chú trọng vào việc bảo quản và bảo dưỡng.</li>
+        <li><strong>Origin:</strong> The product is manufactured and originated from Japan, known for high quality and advanced manufacturing techniques.</li>
+        <li><strong>Expiration Date:</strong> The knife has a long expiration date when properly stored and used. There is no specific expiration date due to emphasis on proper storage and maintenance.</li>
     </ul>
 
-    <h3>Thông số kỹ thuật</h3>
+    <h3>Technical Details</h3>
     <ul>
-        <li><strong>Chất Liệu Lưỡi:</strong> Lưỡi được làm từ thép không gỉ chất lượng cao, chống mài mòn và giữ được độ sắc lâu dài.</li>
-        <li><strong>Cán Dao:</strong> Cán được làm từ vật liệu chống nước và chống va đập để đảm bảo độ bền trong mọi điều kiện thời tiết.</li>
-        <li><strong>Chiều Dài Lưỡi:</strong> 6 inches, lý tưởng cho các công việc sinh tồn và cắt tự nhiên.</li>
+        <li><strong>Blade Material:</strong> The blade is made of high-quality stainless steel, resistant to corrosion and retains sharpness for a long time.</li>
+        <li><strong>Knife Handle:</strong> The handle is made of waterproof and impact-resistant material to ensure durability in all weather conditions.</li>
+        <li><strong>Blade Length:</strong> 6 inches, ideal for survival and outdoor cutting tasks.</li>
     </ul>
 
-    <h3>Hình Dáng</h3>
+    <h3>Design Features</h3>
     <ul>
-        <li><strong>Thiết kế lưỡi:</strong> Drop-point giúp dễ dàng thực hiện nhiều công việc cắt khác nhau.</li>
-        <li><strong>Cán dao:</strong> Có kết cấu chống trơn trượt, đảm bảo an toàn khi sử dụng.</li>
-        <li><strong>Bao da đựng dao:</strong> Có khóa an toàn để giữ dao chặt chẽ và tránh tai nạn.</li>
+        <li><strong>Blade Design:</strong> Drop-point design facilitates various cutting tasks.</li>
+        <li><strong>Knife Handle:</strong> Features an anti-slip structure for safety during use.</li>
+        <li><strong>Knife Sheath:</strong> Includes a safety lock to securely hold the knife and prevent accidents.</li>
     </ul>
 
-    <h3>Lợi Ích</h3>
+    <h3>Benefits</h3>
     <ul>
-        <li><strong>Đa Năng:</strong> Sử dụng cho nhiều mục đích như cắt gỗ, làm bếp nấu ăn, hay làm công việc cắt tự nhiên.</li>
-        <li><strong>Sinh Tồn:</strong> Là một công cụ quan trọng cho các hoạt động sinh tồn và cắm trại.</li>
-        <li><strong>Bền Bỉ:</strong> Chất liệu và thiết kế nhằm mục đích chịu được điều kiện khắc nghiệt và sử dụng lâu dài.</li>
+        <li><strong>Versatility:</strong> Suitable for various purposes such as wood cutting, cooking, or outdoor cutting tasks.</li>
+        <li><strong>Survival:</strong> An essential tool for survival activities and camping.</li>
+        <li><strong>Durability:</strong> Designed with materials and features to withstand harsh conditions and long-term use.</li>
     </ul>
 </div>
 
-<div id="shipping-policy" class="content-section">
+<div class="ship&return&pay">
     <header>
-        <h2>Chính sách vận chuyển</h2>
+        <h1>Shipping Policy</h1>
     </header>
 
-    <section>
-        <h2>1. Phí Vận chuyển</h2>
-        <p>
-            Chúng tôi cung cấp dịch vụ vận chuyển miễn phí cho đơn hàng trên $50. Đối với đơn hàng dưới $50, phí vận chuyển sẽ được tính phụ thuộc vào địa chỉ giao hàng và phương thức vận chuyển bạn chọn.
-        </p>
-    </section>
-
-    <section>
-        <h2>2. Thời gian Giao hàng</h2>
-        <p>
-            Thời gian giao hàng có thể biến động tùy thuộc vào địa chỉ giao hàng và phương thức vận chuyển được chọn. Thông thường, chúng tôi cố gắng giao hàng trong khoảng 3-5 ngày làm việc kể từ ngày đặt hàng.
-        </p>
-    </section>
-
-    <section>
-        <h2>3. Phương thức Vận chuyển</h2>
-        <p>
-            Chúng tôi hỗ trợ nhiều phương thức vận chuyển khác nhau, bao gồm Vận chuyển Tiêu chuẩn, Vận chuyển Nhanh, và Vận chuyển Quốc tế. Bạn có thể chọn phương thức phù hợp nhất với nhu cầu của mình khi thanh toán đơn hàng.
-        </p>
-    </section>
-
-    <section>
-        <h2>4. Đổi/Trả hàng</h2>
-        <p>
-            Chúng tôi chấp nhận đổi/trả hàng trong vòng 30 ngày kể từ ngày nhận hàng. Để biết thêm chi tiết và hướng dẫn đổi/trả hàng, vui lòng đọc Chính sách Đổi/Trả hàng của chúng tôi.
-        </p>
-    </section>
-
-</div>
-
-<div id="return-warranty" class="content-section">
-    <header>
-        <h1>Chính sách Đổi trả và Bảo hành</h1>
-    </header>
-
-    <section>
-        <h2>1. Đổi/Trả hàng</h2>
-        <p>
-            Chúng tôi chấp nhận đổi/trả hàng trong vòng 30 ngày kể từ ngày nhận hàng. Để yêu cầu đổi/trả hàng, vui lòng liên hệ với chúng tôi qua địa chỉ email hoặc số điện thoại được cung cấp trên trang Liên hệ của chúng tôi. Hàng đổi/trả phải ở trong tình trạng mới và không bị hư hại.
-        </p>
-    </section>
-
-    <section>
-        <h2>2. Bảo hành</h2>
-        <p>
-            Tất cả các sản phẩm được bảo hành trong khoảng thời gian quy định. Nếu sản phẩm có bất kỳ lỗi nào do sản xuất, chúng tôi sẽ chịu trách nhiệm sửa chữa hoặc thay thế sản phẩm. Để yêu cầu bảo hành, vui lòng liên hệ với bộ phận hỗ trợ của chúng tôi.
-        </p>
-    </section>
-
-    <section>
-        <h2>3. Điều kiện Đổi trả và Bảo hành</h2>
+    <div>
+        <h2>1. Shipping Fee</h2>
         <ul>
-            <li>Sản phẩm phải được trả về trong bao bì gốc và không có dấu hiệu sử dụng.</li>
-            <li>Không áp dụng đổi/trả hàng cho các sản phẩm giảm giá hoặc khuyến mãi đặc biệt.</li>
-            <li>Chúng tôi không chịu trách nhiệm cho việc mất mát hoặc hư hại trong quá trình vận chuyển đổi/trả hàng.</li>
+            <li>
+                We provide free shipping for orders over $50. For orders under $50, the shipping fee will depend on the delivery address and the shipping method you choose.
+            </li>
         </ul>
-    </section>
+    </div>
+
+    <div>
+        <h2>2. Delivery Time</h2>
+        <ul>
+            <li>
+                Delivery time may vary depending on the delivery address and the selected shipping method. Typically, we aim to deliver within 3-5 business days from the date of order.
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>3. Shipping Methods</h2>
+        <ul>
+            <li>
+                We support various shipping methods, including Standard Shipping, Express Shipping, and International Shipping. You can choose the most suitable method for your needs when placing an order.
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>4. Returns/Exchanges</h2>
+        <ul>
+            <li>
+                We accept returns/exchanges within 30 days from the date of receipt. For more details and instructions on returns/exchanges, please read our Return/Exchange Policy.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="ship&return&pay">
+    <header>
+        <h1>Return & Warranty Policy</h1>
+    </header>
+
+    <div>
+        <h2>1. Returns/Exchanges</h2>
+        <ul>
+            <li>
+                We accept returns/exchanges within 30 days from the date of receipt. To request a return/exchange, please contact us via the email address or phone number provided on our Contact page. The returned/exchanged items must be in new and undamaged condition.
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>2. Warranty</h2>
+        <ul>
+            <li>
+                All products are warranted for the specified period. If the product has any manufacturing defects, we will be responsible for repairing or replacing the product. To request warranty service, please contact our support department.
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>3. Return & Warranty Conditions</h2>
+        <ul>
+            <li>The product must be returned in its original packaging and unused condition.</li>
+            <li>No returns/exchanges are applicable for discounted or special promotion items.</li>
+            <li>We are not responsible for loss or damage during the return/exchange shipping process.</li>
+        </ul>
+    </div>
 
 </div>
 
-<div id="payment-methods" class="content-section">
+<div class="ship&return&pay">
 
-    <h1>Hình thức thanh toán</h1>
-
-    <p>
-        Chúng tôi cung cấp các phương thức thanh toán đa dạng để đảm bảo sự thuận tiện cho khách hàng. Hãy chọn phương thức thanh toán phù hợp với bạn:
-    </p>
+    <header><h1>Payment Methods</h1></header>
+    <ul>
+        <li>
+            We offer various payment methods to ensure convenience for our customers. Choose the payment method that suits you best:
+        </li>
+    </ul>
 
     <div id="creditCard">
         <h2>1. Credit Card</h2>
-        <p>
-            Thanh toán bằng thẻ tín dụng/debit. Chúng tôi chấp nhận Visa, MasterCard và American Express.
-        </p>
+        <ul>
+            <li>
+                Payment by credit/debit card. We accept Visa, MasterCard, and American Express.
+            </li>
+        </ul>
     </div>
 
     <div id="payPal">
         <h2>2. PayPal</h2>
-        <p>
-            Thanh toán qua PayPal, một phương thức thanh toán trực tuyến an toàn và tiện lợi.
-        </p>
+        <ul>
+            <li>
+                Payment via PayPal, a secure and convenient online payment method.
+            </li>
+        </ul>
     </div>
 
 
     <div id="bankTransfer">
         <h2>3. Bank Transfer</h2>
-        <p>
-            Chuyển khoản ngân hàng trực tiếp vào tài khoản của chúng tôi. Thông tin tài khoản sẽ được cung cấp khi bạn chọn phương thức này.
-        </p>
+        <ul>
+            <li>
+                Direct bank transfer to our account. Account information will be provided when you choose this method.
+            </li>
+        </ul>
     </div>
 
 </div>
@@ -283,14 +298,14 @@
                 <i class="fa-brands fa-youtube"></i>
                 <i class="fa-brands fa-twitter"></i>
             </div>
-            <p>ĐĂNG KÝ NHẬN TIN</p>
+            <p>SUBSCRIBE TO NEWSLETTER</p>
             <label>
-                <input type="email" placeholder="Nhập địa chỉ email">
-                <button>GỬI</button>
+                <input type="email" placeholder="Enter email address">
+                <button>SEND</button>
             </label>
             <div class="contact">
                 <i class="fa-solid fa-location-dot"></i>
-                <p>.................................</p>
+                <p>.....................................</p>
             </div>
             <div class="contact">
                 <i class="fa-solid fa-phone"></i>
@@ -304,38 +319,38 @@
         <div class="footer2">
             <div class="paysupport">
                 <div class="Support">
-                    <h3>VỀ CHÚNG TÔI</h3><br>
-                    <a href="#">Trang chủ</a><br>
-                    <a href="#">Về chúng tôi</a><br>
-                    <a href="#">Sản phẩm</a><br>
-                    <a href="#">Dịch vụ cho thuê</a><br>
-                    <a href="#">Tin tức</a><br>
-                    <a href="#">Sản phẩm của Camp</a><br>
-                    <a href="#">Liên hệ</a><br>
+                    <h3>ABOUT US</h3><br>
+                    <a href="#">Home</a><br>
+                    <a href="#">About Us</a><br>
+                    <a href="#">Products</a><br>
+                    <a href="#">Rental Services</a><br>
+                    <a href="#">News</a><br>
+                    <a href="#">Camp's Products</a><br>
+                    <a href="#">Contact</a><br>
                 </div>
                 <div class="Support">
-                    <h3>HỖ TRỢ KHÁCH HÀNG</h3><br>
-                    <a href="#">Trang chủ</a><br>
-                    <a href="#">Về chúng tôi</a><br>
-                    <a href="#">Sản phẩm</a><br>
-                    <a href="#">Dịch vụ cho thuê</a><br>
-                    <a href="#">Tin tức</a><br>
-                    <a href="#">Sản phẩm của Camp</a><br>
-                    <a href="#">Liên hệ</a><br>
+                    <h3>CUSTOMER SUPPORT</h3><br>
+                    <a href="#">Home</a><br>
+                    <a href="#">About Us</a><br>
+                    <a href="#">Products</a><br>
+                    <a href="#">Rental Services</a><br>
+                    <a href="#">News</a><br>
+                    <a href="#">Camp's Products</a><br>
+                    <a href="#">Contact</a><br>
                 </div>
                 <div class="Support">
-                    <h3>DỊCH VỤ</h3><br>
-                    <a href="#">Trang chủ</a><br>
-                    <a href="#">Về chúng tôi</a><br>
-                    <a href="#">Sản phẩm</a><br>
-                    <a href="#">Dịch vụ cho thuê</a><br>
-                    <a href="#">Tin tức</a><br>
-                    <a href="#">Sản phẩm của Camp</a><br>
-                    <a href="#">Liên hệ</a><br>
+                    <h3>SERVICES</h3><br>
+                    <a href="#">Home</a><br>
+                    <a href="#">About Us</a><br>
+                    <a href="#">Products</a><br>
+                    <a href="#">Rental Services</a><br>
+                    <a href="#">News</a><br>
+                    <a href="#">Camp's Products</a><br>
+                    <a href="#">Contact</a><br>
                 </div>
             </div>
             <div class="pay">
-                <h3>HÌNH THỨC THANH TOÁN</h3>
+                <h3>PAYMENT METHODS</h3>
                 <button></button>
                 <button></button>
                 <button></button>
@@ -344,12 +359,14 @@
         </div>
     </div>
     <hr/>
-    <p class="license">@ Bản quyền thuộc về ... | Cung cấp bởi ...</p>
+    <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="Docannhandetail.js" ></script>
-<script src="trangchu.js"></script>
+
+<script src="../../DoanKI1%20(1)/frontend/trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="Docanhandetail.js"></script>
 </body>
 
 </html>
+

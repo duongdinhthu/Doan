@@ -9,7 +9,7 @@
     text-align: center;
 }
 
-.servicedetail button {
+.servicedetail a {
     border: none; /* Loại bỏ viền */
     background-color: transparent; /* Loại bỏ màu nền */
     color: #F29F33;
@@ -29,14 +29,9 @@
     padding: 10px;
 }
 
-.servicedetail p ,#carouselExampleIndicators{
+.servicedetail p {
     margin-left: 50px; /* Khoảng cách giữa các phần tử */
     color: #F29F33;
-}
-#carouselExampleIndicators{
-    width: 40%;
-    box-sizing: border-box;
-    margin-left: 30%;
 }
 
 .servicedetail a {
@@ -45,7 +40,6 @@
     color: #F29F33;
     cursor: pointer; /* Thay đổi con trỏ khi rê chuột qua button */
     margin-left:50px;
-    margin-bottom: 17px;
 }
 
 .servicedetail a:focus {
@@ -68,11 +62,11 @@
 }
 
 .one{
-    margin-left:100px;
+margin-left:100px;
 }
-.two{
-    margin-left:100px;
-}
+ .two{
+     margin-left:100px;
+ }
 .three{
     margin-left:100px;
 }

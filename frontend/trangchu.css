@@ -1,0 +1,352 @@
+body{
+    width: 100%;
+}
+.introduce{
+    padding-top: 50px;
+    width: 100%;
+    background-color: #FEF7EF;
+    padding-bottom: 50px;
+}
+.introduce p, h2{
+    text-align: center;
+}
+.introduce p{
+    font-weight: lighter;
+    font-size: 18px;
+}
+.introduce h2{
+    color: #F29F33;
+    font-weight: bold;
+}
+.introduce hr{
+    width: 100px;
+    height: 2px;
+    background-color: #F29F33;
+}
+.content{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 100%;
+}
+.content img{
+    border-radius: 20px;
+    margin-right: 20px;
+}
+.inside_content{
+    width: 100%;
+}
+.all-box{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+}
+.box, .box2{
+    width: 300px;
+    height: 215px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    outline: 0 !important;
+}
+.box{
+    margin-bottom: 25px;
+}
+.box i, .box2 i{
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+.box:hover, .box2:hover{
+    color: white;
+    background-color: #F29F33;
+}
+.service{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.service h2{
+    color: #F29F33;
+    font-weight: bold;
+    text-align: start;
+    padding-top: 100px;
+}
+.text-box{
+    width: 20%;
+}
+.text-box hr{
+    width: 150px;
+    height: 1px;
+    margin-right: 250px;
+    background-color: #F29F33;
+}
+.text-box button{
+    border: 1px solid #F29F33;
+    outline: none;
+    border-radius: 20px;
+    background-color: #F29F33;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    outline: 0 !important;
+}
+.text-box button:hover{
+    background-color: #492F29;
+}
+.text{
+    display: flex;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 20%;
+}
+.text p{
+    font-weight: bold;
+    color: #654145;
+}
+.img-box{
+    outline: 0 !important;
+    border: none;
+    background-color: white;
+}
+.img-box {
+    transition: all .3s ease-in-out;
+}
+.img-box:hover{
+    transform: scale(1.1);
+}
+.outstanding-product{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+
+    background-color: #FEF7EF;
+}
+.outstanding-product h2{
+    font-weight: bold;
+    color: #F29F33;
+}
+.product-boxes{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 12%;
+    padding-right: 7%;
+}
+.outstanding-product hr{
+    height: 1px;
+    width: 150px;
+    background-color: #F29F33;
+}
+.product-boxes div{
+    outline: 0 !important;
+    width: 300px;
+    text-align: start;
+    border: none;
+    background-color: #FEF7EF;
+    padding-right: 20px;
+}
+.product-boxes div img {
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.product-boxes div a{
+    text-decoration: none;
+    color: grey;
+    transition: all 0.3s ease;
+}
+.product-boxes div a:hover{
+    color: #F29F33;
+}
+.cost{
+    color: #F29F33;
+}
+.cost del{
+    color: grey;
+    padding-left: 10px;
+}
+.product-boxes button h2{
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 50px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+.product-boxes button h2:hover{
+    color: #F29F33;
+}
+.product-boxes button h2 p{
+    font-weight: lighter;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 380px;
+}
+.product-boxes button h2 p strong{
+    font-size: 16px;
+    color: white;
+}
+.product-boxes button{
+    outline: 0 !important;
+    border: none;
+    background-color: #FEF7EF;
+    text-align: center;
+}
+.exclusive-product{
+    width: 100%;
+    padding-top: 50px;
+}
+.exclusive-product h2{
+    font-weight: bold;
+    color: #F29F33;
+}
+.exclusive-product hr {
+    width: 150px;
+    background-color: #F29F33;
+    height: 1px;
+}
+.menu-product{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 10%;
+}
+.menu-product a{
+    text-decoration: none;
+    color: black;
+    outline: none;
+    border-radius: 20px;
+    margin-left: 20px;
+    padding: 10px 20px;
+}
+.a1{
+    text-decoration: none;
+    background-color: #F29F33;
+    color: white;
+}
+.exclusive-boxes{
+    width: 100%;
+    margin-bottom: 50px;
+    padding-left: 12%;
+    padding-right: 12%;
+    display: flex;
+}
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-left: 20px;
+}
+.product-boxes div{
+    outline: 0 !important;
+    width: 24%;
+    text-align: start;
+    border: none;
+    background-color: #FEF7EF;
+    padding-right: 20px;
+}
+.boxes div img {
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.boxes div a{
+    text-decoration: none;
+    color: grey;
+    transition: all 0.3s ease;
+}
+.boxes div a:hover{
+    color: #F29F33;
+}
+.cost{
+    color: #F29F33;
+}
+.cost del{
+    color: grey;
+    padding-left: 10px;
+}
+.combo{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: #FEF7EF;
+}
+.combo h2{
+    color: #F29F33;
+    font-weight: bold;
+}
+.combo hr{
+    height: 1px;
+    width: 150px;
+    background-color: #F29F33;
+}
+.img-combo {
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 13%;
+    display: flex;
+}
+.img-combo img{
+    width: 35%;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.news{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.news h2{
+    font-weight: bold;
+    color: #F29F33;
+}
+.news hr{
+    width: 100px;
+    height: 1px;
+    background-color: #F29F33;
+}
+.all-new{
+    display: flex;
+    margin-left: 13%;
+    margin-right: 13%;
+}
+.new{
+    width: 35%;
+    padding: 20px;
+}
+.new img{
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.new h5{
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.new h5:hover{
+    color: #F29F33;
+}
+.new p{
+    color: grey;
+    font-weight: lighter;
+}
+.new h6 {
+    color: grey;
+}
+.new a strong{
+    color: #F29F33;
+}
+.new a{
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.new a:hover{
+    color: #F29F33;
+}
