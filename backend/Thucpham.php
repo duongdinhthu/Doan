@@ -96,7 +96,7 @@ $product = $project->getAllProduct1();
             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><?php echo  $product["name"]; ?></h5>
-                
+
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><?php echo "$" . $product["price"]; ?></li>
