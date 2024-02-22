@@ -36,50 +36,54 @@ $product = $project->getAllProduct1();
     <title>Home</title>
 </head>
 <body>
-<div class="d-flex">
-    <img src="../img/Nội dung đoạn văn bản của bạn.png" alt="trangchu">
-    <a href="home.php" class="btn btn-outline" style="color: white;" >Trang chủ</a>
-    <div class="dropdown mr-1">
-        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-            Trò chơi
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-            <a class="dropdown-item" href="Trochoitreem.php">Trò chơi cho trẻ em</a>
-            <a class="dropdown-item" href="Trochoigiadinh.php">Trò chơi cho gia đình</a>
-            <a class="dropdown-item" href="Trochoinguoilon.php">Trò chơi cho người lớn</a>
+<header>
+    <div class="header">
+        <div class="header1">
+            <img src="img/logo.webp" alt="logo">
+            <label>
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+            <div class="hotline">
+                <i class="fa-solid fa-phone"></i>
+
+                <p>Hotline<br>78910JQKA</p>
+            </div>
+        </div>
+        <div class="d-flex">
+            <a href="home.php" class="btn btn-outline">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Games</button>
+                <div class="dropdown-content">
+                    <a href="Trochoitreem.php">Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Products</button>
+                <div class="dropdown-content">
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="Dichvutrongoi.php">Packages</a>
+                    <a href="Dichvutour.php"> Tours</a>
+                    <a href="Dichvutochuc.php">Organizing</a>
+                </div>
+            </div>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
+            <a href="user.php" class="btn btn-outline">Account</a>
+
         </div>
     </div>
-    <div class="dropdown mr-1">
-        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-            Sản phẩm
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-            <a class="dropdown-item" href="Docanhan.php">Đồ cá nhân</a>
-            <a class="dropdown-item" href="Dothietyeu.php">Đồ thiết yếu</a>
-            <a class="dropdown-item" href="Thucpham.php">Thực phẩm dã ngoại</a>
-        </div>
-    </div>
-    <div class="dropdown mr-1">
-        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-            Dịch vụ
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-            <a class="dropdown-item" href="Dichvutrongoi.php">Dịch vụ trọn gói</a>
-            <a class="dropdown-item" href="Dichvutour.php">Dịch vụ tour theo số người</a>
-            <a class="dropdown-item" href="Dichvutochuc.php">Dịch vụ tổ chức trò chơi</a>
-        </div>
-    </div>
-    <a href="cart.php" class="btn btn-outline" style="color: white;">Giỏ hàng</a>
-    <a href="tintuc.php" class="btn btn-outline" style="color: white;">Tin tức</a>
-    <a href="baiviet.php" class="btn btn-outline" style="color: white;">Bài viết</a>
-    <a href="user.php" class="btn btn-outline" style="color: white;" >Tài khoản</a>
-</div>
-<div class="search">
-    <label>
-        <input type="text" placeholder="Search">
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-    </label>
-</div>
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
+</header>
 
 <table >
 
@@ -92,7 +96,7 @@ $product = $project->getAllProduct1();
             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><?php echo  $product["name"]; ?></h5>
-                <p class="card-text"><?php echo $product["description"]; ?></p>
+
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><?php echo "$" . $product["price"]; ?></li>
@@ -118,74 +122,70 @@ $product = $project->getAllProduct1();
 </table>
 
 <div class="footer">
-    <div class="footer1">
-        <img src="img/Nội%20dung%20đoạn%20văn%20bản%20của%20bạn.png" alt="">
-        <div class="social">
-            <i class="fa-brands fa-square-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-square-youtube"></i>
-            <i class="fa-brands fa-square-twitter"></i>
+    <div class="footer0">
+        <div class="footer1">
+            <img src="img/logo.webp" alt="">
+            <div class="icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <p>SUBSCRIBE TO NEWSLETTER</p>
+            <label>
+                <input type="email" placeholder="Enter email address">
+                <button>SEND</button>
+            </label>
+            <div class="contact">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>.................................</p>
+            </div>
+            <div class="contact">
+                <i class="fa-solid fa-phone"></i>
+                <p>0910JQKA</p>
+            </div>
+            <div class="contact">
+                <i class="fa-solid fa-headphones"></i>
+                <p>support@gmail.com</p>
+            </div>
         </div>
-        <p>ĐĂNG KÝ NHẬN TIN</p>
-        <label>
-            <input type="email" placeholder="Nhập địa chỉ Email">
-            <button type="submit">GỬI</button>
-        </label>
-        <div class="splpe">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>.................................</p>
-        </div>
-        <div class="splpe">
-            <i class="fa-solid fa-phone"></i>
-            <p>0910JQKA</p>
-        </div>
-        <div class="splpe">
-            <i class="fa-solid fa-headphones"></i>
-            <p>support@gmail.com</p>
+        <div class="footer2">
+            <div class="paysupport">
+                <div class="Support">
+                    <h3>ABOUT US</h3><br>
+                    <a href="#">Company</a><br>
+                    <a href="#">Address</a><br>
+                    <a href="#">Phone number</a><br>
+                    <a href="#">Links</a><br>
+                </div>
+                <div class="Support">
+                    <h3>CUSTOMER SUPPORT</h3><br>
+                    <a href="#">Contact</a><br>
+                    <a href="#">Handling complaints</a><br>
+                    <a href="#">Usage guide</a><br>
+                    <a href="#">Warranty, returns</a><br>
+                    <a href="#">Contact</a><br>
+                </div>
+                <div class="Support">
+                    <h3>SERVICES</h3><br>
+                    <a href="#">Products</a><br>
+                    <a href="#">Game organization services</a><br>
+                    <a href="#">Payment</a><br>
+                </div>
+            </div>
+            <div class="pay">
+                <h3>PAYMENT METHODS</h3>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
         </div>
     </div>
-    <div class="footer2">
-        <div class="info">
-            <div class="hotro">
-                <p>VỀ CHÚNG TÔI</p>
-                <a href="#">Trang chủ</a>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Sản phẩm</a>
-                <a href="#">Dịch vụ cho thuê</a>
-                <a href="#">Tin tức</a>
-                <a href="#">Sản phẩm của Camp</a>
-                <a href="#">Liên hệ</a>
-            </div>
-            <div class="hotro">
-                <p>HỖ TRỢ KHÁCH HÀNG</p>
-                <a href="#">Trang chủ</a>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Sản phẩm</a>
-                <a href="#">Dịch vụ cho thuê</a>
-                <a href="#">Tin tức</a>
-                <a href="#">Sản phẩm của Camp</a>
-                <a href="#">Liên hệ</a>
-            </div>
-            <div class="hotro">
-                <p>DỊCH VỤ</p>
-                <a href="#">Trang chủ</a>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Sản phẩm</a>
-                <a href="#">Dịch vụ cho thuê</a>
-                <a href="#">Tin tức</a>
-                <a href="#">Sản phẩm của Camp</a>
-                <a href="#">Liên hệ</a>
-            </div>
-        </div>
-        <div class="thanhtoan">
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-        </div>
-    </div>
+    <hr/>
+    <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-
+<script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>

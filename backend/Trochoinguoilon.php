@@ -34,39 +34,39 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-                <p>Hotline<br>8910JQKA</p>
+
+                <p>Hotline<br>78910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
-            <a href="home.php" class="btn btn-outline">Trang chủ</a>
-            <div class="menu">
-                <ul>
-                    <li><a href="home.php">Trò chơi</a>
-                        <ul class="ul">
-                            <li><a href="Trochoitreem.php"> Trẻ em</a></li>
-                            <li><a href="Trochoigiadinh.php">Gia đình</a></li>
-                            <li><a href="Trochoinguoilon.php">Người lớn</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="home.php">Sản phẩm</a>
-                        <ul class="ul">
-                            <li><a href="Docanhan.php">Đồ cá nhân</a></li>
-                            <li><a href="Dothietyeu.php">Đồ thiết yếu</a></li>
-                            <li><a href="Thucpham.php">Thực phẩm</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="home.php">Dịch vụ</a>
-                        <ul class="ul">
-                            <li><a href="Dichvutrongoi.html">Trọn gói</a></li>
-                            <li><a href="Dichvutour.html"> Tour</a></li>
-                            <li><a href="Dichvutochuc.html">Tổ chức</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <a href="home.php" class="btn btn-outline">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Games</button>
+                <div class="dropdown-content">
+                    <a href="Trochoitreem.php">Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
+                </div>
             </div>
-            <a href="tintuc.php" class="btn btn-outline">Tin tức</a>
-            <a href="lienhe.php" class="btn btn-outline">Liên hệ</a>
-            <a href="user.php" class="btn btn-outline">Tài khoản </a>
+            <div class="dropdown">
+                <button class="dropbtn">Products</button>
+                <div class="dropdown-content">
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="Dichvutrongoi.php">Packages</a>
+                    <a href="Dichvutour.php"> Tours</a>
+                    <a href="Dichvutochuc.php">Organizing</a>
+                </div>
+            </div>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
+            <a href="user.php" class="btn btn-outline">Account</a>
 
         </div>
     </div>
