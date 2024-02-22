@@ -87,12 +87,10 @@ $product = $project->getAllProduct6();
 </header>
 
 <table >
-
-
     <tbody>
     <?php foreach ($product as $product):
         ?>
-        <div id="allcard">
+        <div class="all-card">
             <div class="card" style="width: 18rem;margin-bottom:25px;">
                 <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -106,7 +104,7 @@ $product = $project->getAllProduct6();
                 </ul>
                 <div class="card-body">
                     <form action="" method="post">
-                        <label for="sl">Số lượng</label>
+                        <label for="sl">Số lượng nguời:</label>
                         <input  value="1" style="width:90px" id="sl" name="sl">
                         <label for="gia" style="display: none">Giá</label>
                         <input  value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
