@@ -58,7 +58,8 @@
             </div>
             <a href="tintuc.html" class="btn btn-outline">News</a>
             <a href="lienhe.html" class="btn btn-outline">Contact</a>
-            <a href="../backend/login.php" class="btn btn-outline">Log in </a>
+            <a href="user.php" class="btn btn-outline">Account</a>
+            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
 
         </div>
     </div>

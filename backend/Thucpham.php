@@ -79,6 +79,7 @@ $product = $project->getAllProduct1();
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="user.php" class="btn btn-outline">Account</a>
+            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
 
         </div>
     </div>
