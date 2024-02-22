@@ -1,9 +1,10 @@
+
 .product-boxes{
     display: flex;
     padding-top: 50px;
     padding-left: 10%;
     background-color: #FEF7EF;
-
+    padding-bottom: 100px;
 }
 .product-boxes div{
     outline: 0 !important;
@@ -19,51 +20,37 @@
     border-radius: 20px;
     cursor: pointer;
 }
-.product-boxes div a{
-    text-decoration: none;
+.name{
+    text-decoration: none !important;
     color: grey;
     transition: all 0.3s ease;
 }
-.product-boxes div a:hover{
+.name:hover{
     color: #F29F33;
 }
 .cost{
     color: #F29F33;
+    margin-top: 10px;
 }
 .cost del{
     color: grey;
     padding-left: 10px;
 }
-.product-boxes button h2{
-    position: absolute;
-    margin-top: 320px;
-    margin-left: 50px;
+.buy-button{
+    outline: none !important;
+    border: none;
     color: white;
-    font-weight: bold;
+    text-decoration: none !important;
+    background-color: #f29f33;
+    padding: 5px 20px 5px 20px;
+    margin-left: 40px;
+    border-radius: 10px;
     transition: 0.3s ease-in-out;
 }
-.product-boxes button h2:hover{
-    color: #F29F33;
-}
-.product-boxes button h2 p{
-    font-weight: lighter;
-    font-size: 14px;
-    margin-top: 10px;
-    margin-right: 380px;
-}
-.product-boxes button h2 p strong{
-    font-size: 16px;
+.buy-button:hover{
+    background-color: #654145 ;
     color: white;
 }
-.product-boxes button{
-    outline: 0 !important;
-    border: none;
-    background-color: #FEF7EF;
-    text-align: center;
-}
-
-
-
 .text{
     margin-top: 30px;
     text-align: center;
@@ -95,4 +82,6 @@
     width: 100px;
     background-color: #f29f33;
 }
+
+
 
