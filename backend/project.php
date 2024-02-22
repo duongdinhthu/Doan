@@ -304,7 +304,7 @@ class projectFptHappy
     public function getAllProduct4()
     {
         $products = [];
-        $sql = "select * from product where pid BETWEEN 101 AND 116";
+        $sql = "select * from product where pid BETWEEN 201 AND 204";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -316,7 +316,7 @@ class projectFptHappy
     public function getAllProduct5()
     {
         $products = [];
-        $sql = "select * from product where pid BETWEEN 117 AND 132";
+        $sql = "select * from product where pid BETWEEN 205 AND 208";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -340,7 +340,7 @@ class projectFptHappy
     public function getAllProduct6()
     {
         $products = [];
-        $sql = "select * from product where pid BETWEEN 133 AND 148";
+        $sql = "select * from product where pid BETWEEN 209 AND 212";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -442,7 +442,7 @@ class projectFptHappy
     }
     public function totalShowPay($username)
     {
-        $sql = "SELECT total_pay FROM cart where username = '$username' and hidden = 2 and status = 'pend processing'";
+        $sql = "SELECT * FROM cart where username = '$username' and hidden = 2 and status = 'pend processing'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){

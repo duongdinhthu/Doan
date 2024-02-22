@@ -4,11 +4,11 @@
 
 }
 .card-title {
-    max-height: 3em; /* Giới hạn chiều cao của văn bản (tương đương 2 dòng) */
+    max-height: 4em; /* Giới hạn chiều cao của văn bản (tương đương 2 dòng) */
     overflow: hidden;
 }
 .card-text {
-    max-height: 3em; /* Giới hạn chiều cao của văn bản (tương đương 2 dòng) */
+    max-height: 4em; /* Giới hạn chiều cao của văn bản (tương đương 2 dòng) */
     overflow: hidden;
 }
 .card{
