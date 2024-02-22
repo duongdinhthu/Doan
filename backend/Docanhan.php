@@ -5,23 +5,33 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
+include "project.php";
+$project = new projectFptHappy();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username=$_SESSION["username"];
+    $sl = $_POST['sl'];
+    $id = $_POST['id'];
+    $gia = $_POST['gia'];
+    $cart = $project->addCart2($username,$id,$sl,$gia);
+}
+$product = $project->getAllProduct2();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <title>Title</title>
 </head>
 <body>
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Docanhan.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="Dothietyeu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
-
 </head>
 <body>
 <header>
@@ -73,7 +83,42 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
 
+<table >
 
+
+    <tbody>
+    <?php foreach ($product as $product):
+        ?>
+        <div id="allcard">
+            <div class="card" style="width: 18rem;margin-bottom:25px;">
+                <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo  $product["name"]; ?></h5>
+                    <p class="card-text"><?php echo $product["description"]; ?></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><?php echo "$" . $product["price"]; ?></li>
+
+
+                </ul>
+                <div class="card-body">
+                    <form action="" method="post">
+                        <label for="sl">Số lượng</label>
+                        <input  value="1" style="width:90px" id="sl" name="sl">
+                        <label for="gia" style="display: none">Giá</label>
+                        <input  value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
+                        <label for="id" style="display:none">ID</label>
+                        <input  value="<?php echo  $product["pid"]; ?>" style="display: none" id="id" name="id">
+                        <button type="submit" class="btn btn-primary">Thêm vào giỏ</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    <?php endforeach; ?>
+    </tbody>
+</table>
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
@@ -143,3 +188,4 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
+

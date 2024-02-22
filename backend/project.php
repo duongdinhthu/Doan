@@ -360,7 +360,7 @@ class projectFptHappy
     }
     public function getAllCart($username)
     {   $carts = [];
-        $sql = " select p.image,c.product_id,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price) from cart c join product p on c.product_id = p.pid where username = '$username' and hidden = 1 GROUP BY product_id, username";
+        $sql = " select p.image,c.product_id,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.total_price from cart c join product p on c.product_id = p.pid where username = '$username' and hidden = 1 GROUP BY product_id, username";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -432,7 +432,12 @@ class projectFptHappy
     }
     public function totalPayCart($username)
     {
-        $sql="UPDATE cart SET total_pay = (SELECT SUM(total_price) FROM cart where username = '$username' and hidden = 2) ";
+        $sql="UPDATE cart SET total = (SELECT SUM(total_price) FROM cart where username = '$username' and hidden = 2) ";
+        $this->conn->query($sql);
+    }
+    public function totalprice($username)
+    {
+        $sql="UPDATE cart SET total_price = quantity * list_price where username = '$username' ";
         $this->conn->query($sql);
     }
     public function totalShowPay($username)
