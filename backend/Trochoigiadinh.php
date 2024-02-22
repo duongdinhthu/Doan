@@ -24,50 +24,54 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <title>Home</title>
 </head>
 <body>
-<div class="d-flex">
-    <img src="../img/Nội dung đoạn văn bản của bạn.png" alt="trangchu">
-    <a href="home.php" class="btn btn-outline" style="color: white;" >Trang chủ</a>
-    <div class="dropdown mr-1">
-        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-            Trò chơi
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-            <a class="dropdown-item" href="Trochoitreem.php">Trò chơi cho trẻ em</a>
-            <a class="dropdown-item" href="Trochoigiadinh.php">Trò chơi cho gia đình</a>
-            <a class="dropdown-item" href="Trochoinguoilon.php">Trò chơi cho người lớn</a>
+<header>
+    <div class="header">
+        <div class="header1">
+            <img src="img/logo.webp" alt="logo">
+            <label>
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+            <div class="hotline">
+                <i class="fa-solid fa-phone"></i>
+
+                <p>Hotline<br>78910JQKA</p>
+            </div>
+        </div>
+        <div class="d-flex">
+            <a href="home.php" class="btn btn-outline">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Games</button>
+                <div class="dropdown-content">
+                    <a href="Trochoitreem.php">Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Products</button>
+                <div class="dropdown-content">
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="Dichvutrongoi.php">Packages</a>
+                    <a href="Dichvutour.php"> Tours</a>
+                    <a href="Dichvutochuc.php">Organizing</a>
+                </div>
+            </div>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
+            <a href="user.php" class="btn btn-outline">Account</a>
+
         </div>
     </div>
-    <div class="dropdown mr-1">
-        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-            Sản phẩm
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-            <a class="dropdown-item" href="Docanhan.php">Đồ cá nhân</a>
-            <a class="dropdown-item" href="Dothietyeu.php">Đồ thiết yếu</a>
-            <a class="dropdown-item" href="Thucpham.php">Thực phẩm dã ngoại</a>
-        </div>
-    </div>
-    <div class="dropdown mr-1">
-        <button type="button" class="btn btn-outline dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-            Dịch vụ
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-            <a class="dropdown-item" href="Dichvutrongoi.php">Dịch vụ trọn gói</a>
-            <a class="dropdown-item" href="Dichvutour.php">Dịch vụ tour theo số người</a>
-            <a class="dropdown-item" href="Dichvutochuc.php">Dịch vụ tổ chức trò chơi</a>
-        </div>
-    </div>
-    <a href="cart.php" class="btn btn-outline" style="color: white;">Giỏ hàng</a>
-    <a href="tintuc.php" class="btn btn-outline" style="color: white;">Tin tức</a>
-    <a href="baiviet.php" class="btn btn-outline" style="color: white;">Bài viết</a>
-    <a href="user.php" class="btn btn-outline" style="color: white;" >Tài khoản</a>
-</div>
-<div class="search">
-    <label>
-        <input type="text" placeholder="Search">
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-    </label>
-</div>
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
+</header>
 <div class="img_header">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">

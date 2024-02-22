@@ -34,39 +34,39 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-                <p>Hotline<br>8910JQKA</p>
+
+                <p>Hotline<br>78910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
-            <a href="home.php" class="btn btn-outline">Trang chủ</a>
-            <div class="menu">
-                <ul>
-                    <li><a href="home.php">Trò chơi</a>
-                        <ul class="ul">
-                            <li><a href="Trochoitreem.php"> Trẻ em</a></li>
-                            <li><a href="Trochoigiadinh.php">Gia đình</a></li>
-                            <li><a href="Trochoinguoilon.php">Người lớn</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="home.php">Sản phẩm</a>
-                        <ul class="ul">
-                            <li><a href="Docanhan.php">Đồ cá nhân</a></li>
-                            <li><a href="Dothietyeu.php">Đồ thiết yếu</a></li>
-                            <li><a href="Thucpham.php">Thực phẩm</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="home.php">Dịch vụ</a>
-                        <ul class="ul">
-                            <li><a href="Dichvutrongoi.html">Trọn gói</a></li>
-                            <li><a href="Dichvutour.html"> Tour</a></li>
-                            <li><a href="Dichvutochuc.html">Tổ chức</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <a href="home.php" class="btn btn-outline">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Games</button>
+                <div class="dropdown-content">
+                    <a href="Trochoitreem.php">Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
+                </div>
             </div>
-            <a href="tintuc.php" class="btn btn-outline">Tin tức</a>
-            <a href="lienhe.php" class="btn btn-outline">Liên hệ</a>
-            <a href="user.php" class="btn btn-outline">Tài khoản </a>
+            <div class="dropdown">
+                <button class="dropbtn">Products</button>
+                <div class="dropdown-content">
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="Dichvutrongoi.php">Packages</a>
+                    <a href="Dichvutour.php"> Tours</a>
+                    <a href="Dichvutochuc.php">Organizing</a>
+                </div>
+            </div>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
+            <a href="user.php" class="btn btn-outline">Account</a>
 
         </div>
     </div>
@@ -228,10 +228,10 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
                 <i class="fa-brands fa-youtube"></i>
                 <i class="fa-brands fa-twitter"></i>
             </div>
-            <p>ĐĂNG KÝ NHẬN TIN</p>
+            <p>SUBSCRIBE TO NEWSLETTER</p>
             <label>
-                <input type="email" placeholder="Nhập địa chỉ email">
-                <button>GỬI</button>
+                <input type="email" placeholder="Enter email address">
+                <button>SEND</button>
             </label>
             <div class="contact">
                 <i class="fa-solid fa-location-dot"></i>
@@ -249,29 +249,29 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         <div class="footer2">
             <div class="paysupport">
                 <div class="Support">
-                    <h3>VỀ CHÚNG TÔI</h3><br>
-                    <a href="#">Công ty</a><br>
-                    <a href="#">Địa chỉ</a><br>
-                    <a href="#">Số điện thoại</a><br>
-                    <a href="#">Liên kết</a><br>
+                    <h3>ABOUT US</h3><br>
+                    <a href="#">Company</a><br>
+                    <a href="#">Address</a><br>
+                    <a href="#">Phone number</a><br>
+                    <a href="#">Links</a><br>
                 </div>
                 <div class="Support">
-                    <h3>HỖ TRỢ KHÁCH HÀNG</h3><br>
-                    <a href="#">Liên hệ</a><br>
-                    <a href="#">Xử lý khiếu nại</a><br>
-                    <a href="#">Hướng dẫn sử dụng</a><br>
-                    <a href="#">Bảo hành, đổi trả</a><br>
-                    <a href="#">Liên hệ</a><br>
+                    <h3>CUSTOMER SUPPORT</h3><br>
+                    <a href="#">Contact</a><br>
+                    <a href="#">Handling complaints</a><br>
+                    <a href="#">Usage guide</a><br>
+                    <a href="#">Warranty, returns</a><br>
+                    <a href="#">Contact</a><br>
                 </div>
                 <div class="Support">
-                    <h3>DỊCH VỤ</h3><br>
-                    <a href="#">Sản phẩm</a><br>
-                    <a href="#">Dịch vụ tổ chức trò chơi</a><br>
-                    <a href="#">Thanh toán</a><br>
+                    <h3>SERVICES</h3><br>
+                    <a href="#">Products</a><br>
+                    <a href="#">Game organization services</a><br>
+                    <a href="#">Payment</a><br>
                 </div>
             </div>
             <div class="pay">
-                <h3>HÌNH THỨC THANH TOÁN</h3>
+                <h3>PAYMENT METHODS</h3>
                 <button></button>
                 <button></button>
                 <button></button>
@@ -280,7 +280,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         </div>
     </div>
     <hr/>
-    <p class="license">@ Bản quyền thuộc về ... | Cung cấp bởi ...</p>
+    <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
 <script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
