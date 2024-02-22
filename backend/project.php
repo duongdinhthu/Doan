@@ -442,7 +442,7 @@ class projectFptHappy
     }
     public function totalShowPay($username)
     {
-        $sql = "SELECT total_pay FROM cart where username = '$username' and hidden = 2 and status = 'pend processing'";
+        $sql = "SELECT * FROM cart where username = '$username' and hidden = 2 and status = 'pend processing'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
