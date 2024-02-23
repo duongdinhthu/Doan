@@ -228,10 +228,10 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
                 <i class="fa-brands fa-youtube"></i>
                 <i class="fa-brands fa-twitter"></i>
             </div>
-            <p>ĐĂNG KÝ NHẬN TIN</p>
+            <p>SUBSCRIBE TO NEWSLETTER</p>
             <label>
-                <input type="email" placeholder="Nhập địa chỉ email">
-                <button>GỬI</button>
+                <input type="email" placeholder="Enter email address">
+                <button>SEND</button>
             </label>
             <div class="contact">
                 <i class="fa-solid fa-location-dot"></i>
@@ -249,29 +249,29 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         <div class="footer2">
             <div class="paysupport">
                 <div class="Support">
-                    <h3>VỀ CHÚNG TÔI</h3><br>
-                    <a href="#">Công ty</a><br>
-                    <a href="#">Địa chỉ</a><br>
-                    <a href="#">Số điện thoại</a><br>
-                    <a href="#">Liên kết</a><br>
+                    <h3>ABOUT US</h3><br>
+                    <a href="#">Company</a><br>
+                    <a href="#">Address</a><br>
+                    <a href="#">Phone number</a><br>
+                    <a href="#">Links</a><br>
                 </div>
                 <div class="Support">
-                    <h3>HỖ TRỢ KHÁCH HÀNG</h3><br>
-                    <a href="#">Liên hệ</a><br>
-                    <a href="#">Xử lý khiếu nại</a><br>
-                    <a href="#">Hướng dẫn sử dụng</a><br>
-                    <a href="#">Bảo hành, đổi trả</a><br>
-                    <a href="#">Liên hệ</a><br>
+                    <h3>CUSTOMER SUPPORT</h3><br>
+                    <a href="#">Contact</a><br>
+                    <a href="#">Handling complaints</a><br>
+                    <a href="#">Usage guide</a><br>
+                    <a href="#">Warranty, returns</a><br>
+                    <a href="#">Contact</a><br>
                 </div>
                 <div class="Support">
-                    <h3>DỊCH VỤ</h3><br>
-                    <a href="#">Sản phẩm</a><br>
-                    <a href="#">Dịch vụ tổ chức trò chơi</a><br>
-                    <a href="#">Thanh toán</a><br>
+                    <h3>SERVICES</h3><br>
+                    <a href="#">Products</a><br>
+                    <a href="#">Game organization services</a><br>
+                    <a href="#">Payment</a><br>
                 </div>
             </div>
             <div class="pay">
-                <h3>HÌNH THỨC THANH TOÁN</h3>
+                <h3>PAYMENT METHODS</h3>
                 <button></button>
                 <button></button>
                 <button></button>
@@ -280,8 +280,9 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         </div>
     </div>
     <hr/>
-    <p class="license">@ Bản quyền thuộc về ... | Cung cấp bởi ...</p>
+    <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
+<script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
