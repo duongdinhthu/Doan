@@ -5,44 +5,26 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
-$username = $_SESSION["username"];
 include "project.php";
-$carts = new projectFptHappy();
+$project = new projectFptHappy();
+$username=$_SESSION['username'];
+$name = $_POST['name'];
+$phone=$_POST['phone'];
+$address= $_POST['address'];
+$cod = $_POST['payment'];
+$totalcart=$_POST['totalcart'];
 
-if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id'])) {
-    $id=$_GET['id'];
-    $delete = $carts->deleteItemByCart($id);
+if(isset($_POST['generate_code'])) {
+    $random_code =$project->generateRandomCode();
+}
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $update = $project->payTheBill($name,$phone,$address,$username,$cod);
+    echo "You have successfully purchased  ";
 
 }
-if (isset($_GET['action']) && $_GET['action'] === 'return' && isset($_GET['id'])) {
-    $id=$_GET['id'];
-    $delete = $carts->returnItemByCart($id);
-
-}
-if (isset($_GET['action']) && $_GET['action'] === 'delete1' && isset($_GET['id'])) {
-    $id=$_GET['id'];
-    $delete = $carts->deleteItem($id);
-}
-if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
-
-    $deletepay = $carts->deletePay($username);
-}
-
-
-
-
-$infor=$carts->inforByUserName($username);
-$updatetotalpaycart = $carts->totalPayCart($username);
-$updatetotalprice = $carts->totalprice($username);
-$updatetotalcart= $carts-> totalCart($username);
-$paycart = $carts->getAllPay($username);
-$totalcart = $carts->totalShow($username);
-$cart = $carts->getAllCart($username);
-$deletecart = $carts->getAllDeleteCart($username);
-$totalpay = $carts->totalShowPay($username);
-
+$paycart = $project->getAllPay($username);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,119 +92,49 @@ $totalpay = $carts->totalShowPay($username);
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-<table class="table">
-    <h1>
-        Cart</h1>
-    <thead>
-    <tr>
-        <th>Product image</th>
-        <th>Product Name</th>
-        <th>List Price($)</th>
-        <th>Quantity</th>
-        <th>Total Price($)</th>
-        <th>Delete</th>
+<div style="border: 2px solid #f29f33;
+            border-radius: 10px;
+            width: 600px;
+            padding: 10px">
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Customer Detail: <p style="margin-left: 10px; color: #654145;">- Name:<?php echo  $name; ?><br><br>- Phone Number:<?php echo  $phone; ?><br><br>- Address:<?php echo  $address; ?></p></h5>
+    <hr style="height: 0; width: 250px; background-color: #f29f33">
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Product Detail: <p style="margin-left: 10px; color: #654145;"> <table class="table">
 
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($cart as $cart):
-        ?>
-        <tr>
-            <td><img src="<?php echo $cart["image"]; ?>"style="width:70px" class="card-img-top" alt="...">
-            </td>
-            <td><?php echo $cart['name'] ?></td>
-            <td><?php echo $cart['list_price'] ?></td>
-            <td><?php echo $cart['SUM(c.quantity)'] ?></td>
-            <td><?php echo $cart['SUM(c.total_price)'] ?></td>
-                <td><a href="cart.php?action=delete&id=<?php echo $cart['product_id']; ?>"
-                   class="btn btn-warning btn-sm" onclick="return confirm('Remove this item from cart?')" >Delete</a></td>
-        </tr>
-    <?php endforeach; ?>
-    </tbody>
-</table>
-
-<div>
-
-    <h2>Total order value : <?php echo "$".$totalcart ?></h2>
-
-
-    <?php
-        echo "<a class='btn btn-primary' href='delivery_address.php?action=pay&money=$totalcart&username=$username' >Ckeck out</a>";
-     ?>
-
+            <thead>
+            <tr>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                <th>List Price($)</th>
+                <th>Quantity</th>
+                <th>Total Price($)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($paycart as $paycart):
+                ?>
+                <tr>
+                    <td><img src="<?php echo $paycart["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
+                    </td>
+                    <td><?php echo $paycart['name'] ?></td>
+                    <td><?php echo $paycart['list_price'] ?></td>
+                    <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
+                    <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table></p></h5>
+    <hr style="height: 0; width: 250px; background-color: #f29f33">
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Code Orders: <p style="margin-left: 10px; color: #654145;"> <?php echo  $random_code; ?></p></h5>
+    <hr style="height: 0; width: 250px; background-color: #f29f33">
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Payment Detail: <p style="margin-left: 10px; color: #654145;"> <?php echo  $cod; ?></p></h5>
+    <hr style="height: 0; width: 250px; background-color: #f29f33">
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Price: <p style="margin-left: 10px; color: #654145;"> <?php echo  $totalcart; ?></p></h5>
 </div>
 
-<hr>
-<table class="table" style="display: none">
-    <h1 style="display: none">
-        Deleted items</h1>
-    <thead>
-    <tr>
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th>List Price($)</th>
-        <th>Quantity</th>
-        <th>Total Price</th>
-        <th>Return</th>
-        <th>Delete</th>
+<td><a href="home.php?action=success&code=<?php echo  $random_code; ?> " class="btn btn-success"
+         >Home</a></td>
 
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($deletecart as $cart1):
-        ?>
-        <tr>
-        <tr>
-        <td><img src="<?php echo $cart1["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
-        </td>
-        <td><?php echo $cart1['name'] ?></td>
-        <td><?php echo $cart1['list_price'] ?></td>
-        <td><?php echo $cart1['SUM(c.quantity)'] ?></td>
-        <td><?php echo $cart1['total_price'] ?></td>
 
-            <td><a href="cart.php?action=return&id=<?php echo $cart1['product_id']; ?>"
-                   class="btn btn-success btn-sm" onclick="return confirm('put this item back in the cart?')" >
-                    return to cart</a>
-            </td>
-            <td><a href="cart.php?action=delete1&id=<?php echo $cart1['product_id']; ?>"
-                   class="btn btn-danger btn-sm" onclick="return confirm('put this item back in the cart?')" >
-                    Permanently Deleted</a>
-            </td>
-    </tr>
-    <?php endforeach; ?>
-    </tbody>
-</table>
-<hr>
-<table class="table">
-    <h1>
-        Purchased item</h1>
-    <thead>
-    <tr>
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th>List Price($)</th>
-        <th>Quantity</th>
-        <th>Total Price($)</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($paycart as $paycart):
-        ?>
-        <tr>
-            <td><img src="<?php echo $paycart["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
-            </td>
-            <td><?php echo $paycart['name'] ?></td>
-            <td><?php echo $paycart['list_price'] ?></td>
-            <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
-            <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
-        </tr>
-    <?php endforeach; ?>
-    </tbody>
-</table>
-<h2>
-    Total value of purchased items($): <?php echo $totalpay ?></h2>
-    <td><a href="cart.php?action=deletepay"
-           class="btn btn-warning btn-sm" onclick="return confirm('Remove this oder?')" >Delete order</a></td>
 
 <div class="footer">
     <div class="footer0">
@@ -288,6 +200,7 @@ $totalpay = $carts->totalShowPay($username);
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
+
 <script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

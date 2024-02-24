@@ -54,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <th>Quantity</th>
             <th>Total Price($)</th>
             <th>Status</th>
+            <th>Payment</th>
         </tr>
         </thead>
         <tbody>
@@ -67,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
                 <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
                 <td><?php echo $paycart['status'] ?></td>
+                <td><?php echo $paycart['payment'] ?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>
