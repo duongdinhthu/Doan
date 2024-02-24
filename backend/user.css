@@ -1,0 +1,88 @@
+.div-infor{
+    width: 100%;
+    background-color: #FEF7EF;
+    display: flex;
+    justify-content: center;
+}
+.information{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 1px 1px 5px #cccccc;
+}
+.information h2{
+    color: #f29f33;
+}
+.information hr{
+    height: 0;
+    width: 50px;
+    background-color: #654145;
+}
+.information p{
+    color: #f29f33;
+
+}
+.information p strong{
+    color: #654145;
+    font-weight: initial;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+}
+.button a{
+    text-decoration: none !important;
+    color: white;
+    background-color: #f29f33;
+    padding: 8px;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 5px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.blue:hover{
+    background-color: cornflowerblue;
+}
+.red:hover{
+    background-color: darkred;
+}
+.warning:hover{
+    background-color: #654145;
+}
+
+.text{
+    margin-top: 30px;
+    text-align: center;
+}
+.text div{
+    justify-content: center;
+    display: flex;
+}
+.text div a{
+    text-decoration: none;
+    color: #654145;
+    transition: 0.3s ease-in-out;
+    font-size: 18px;
+}
+.text div a:hover{
+    color: #f29f33;
+}
+.text div p{
+    margin-left: 5px;
+    color: #f29f33;
+    font-weight: bold;
+    font-size: 18px;
+}
+.text h2{
+    color: #f29f33;
+    font-weight: bold;
+}
+.text hr{
+    width: 100px;
+    background-color: #f29f33;
+}
