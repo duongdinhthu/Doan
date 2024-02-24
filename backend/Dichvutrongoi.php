@@ -96,7 +96,7 @@ $product = $project->getAllProduct5();
         <?php foreach ($product as $product): ?>
             <div class="product-item">
                 <div class="card" style="width: 18rem; margin-bottom: 25px;">
-                    <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
+                    <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="..." style="height: 280px">
                     <div class="card-body">
                         <h5 class="name"><?php echo $product["name"]; ?></h5>
                         <p class="description"><?php echo $product["description"]; ?></p>
