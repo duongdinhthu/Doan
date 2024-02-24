@@ -18,6 +18,37 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <link rel="stylesheet" href="Trochoigiadinh.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
+    <style>.text{
+            margin-top: 30px;
+            text-align: center;
+        }
+        .text div{
+            justify-content: center;
+            display: flex;
+        }
+        .text div a{
+            text-decoration: none;
+            color: #654145;
+            transition: 0.3s ease-in-out;
+            font-size: 18px;
+        }
+        .text div a:hover{
+            color: #f29f33;
+        }
+        .text div p{
+            margin-left: 5px;
+            color: #f29f33;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .text h2{
+            color: #f29f33;
+            font-weight: bold;
+        }
+        .text hr{
+            width: 100px;
+            background-color: #f29f33;
+        }</style>
 </head>
 <body>
 <header>

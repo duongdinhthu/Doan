@@ -64,8 +64,8 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
                     <a href="Dichvutochuc.html">Organize</a>
                 </div>
             </div>
-            <a href="tintuc.html" class="btn btn-outline">News</a>
-            <a href="lienhe.html" class="btn btn-outline">Contact</a>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="../backend/login.php" class="btn btn-outline">Login</a>
 
         </div>
