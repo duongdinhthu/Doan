@@ -145,16 +145,16 @@ $totalpay = $carts->totalShowPay($username);
 
     <h2>Total order value : <?php echo "$".$totalcart ?></h2>
 
+
     <?php
-
-        echo "<br><a href='delivery_address.php?action=pay&money=$totalcart&username=$username'' class='btn btn-primary'>Pay the bill</a>";
-
+        echo "<a class='btn btn-primary' href='delivery_address.php?action=pay&money=$totalcart&username=$username' >Ckeck out</a>";
      ?>
+
 </div>
 
 <hr>
-<table class="table">
-    <h1>
+<table class="table" style="display: none">
+    <h1 style="display: none">
         Deleted items</h1>
     <thead>
     <tr>

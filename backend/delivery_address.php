@@ -2,26 +2,16 @@
 session_start();
 //kiểm tra session
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
+    header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
 include "project.php";
 $project = new projectFptHappy();
 $username = $_GET['username'];
-$money = $_GET['money'];
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-$name = $_POST['name'];
-$phone=$_POST['phone'];
-$address= $_POST['address'];
-    $update = $project->payTheBill($name,$phone,$address,$username);
-    echo "You have successfully purchased with the amount:$money ";
-}
-if (isset($_GET['money1'])){
-    $money1=$_GET['money1'];
-    $updatemoney=$project->updateMoney($money1,$username);
-}
-$infor= $project->inforCustomerByUser($username);
 
+$infor= $project->inforCustomerByUser($username);
+$cart = $project->getAllCart($username);
+$totalcart = $project->totalShow($username);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,26 +81,61 @@ $infor= $project->inforCustomerByUser($username);
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
 <div class="container mt-5">
-    <a href="logout.php" class="btn btn-danger">Logout</a>
-    <a href="home.php" class="btn btn-primary">Back home</a>
-    <?php foreach ($infor
+    <form action="billinfor.php" method="post">
+        <a href="cart.php" class="btn btn-primary">Back Shopping cart</a>
 
-    as $infor): ?>
-    <h2>
-        Edit Information Customer</h2>
-    <form action="" method="post">
-        <label for="name" >Name </label>
-        <input name="name" type="text" id="name" required class="form-control" value="<?php echo$infor['name'] ?>">
-        <label for="phone" >Phone </label>
-        <input name="phone" type="text" id="phone" required class="form-control" value="<?php echo$infor['phone']?>">
-        <label for="address" >Address </label>
-        <input name="address" type="text" id="address" required class="form-control" value="<?php echo$infor['address'] ?>">
+        <?php foreach ($infor as $infor): ?>
+            <h2>Order Information</h2>
+            <br>
+            <h3>Consignee Information</h3>
+            <label for="name">Name</label>
+            <input name="name" type="text" id="name" required class="form-control" value="<?php echo $infor['name'] ?>">
+            <label for="phone">Phone</label>
+            <input name="phone" type="text" id="phone" required class="form-control" value="<?php echo $infor['phone'] ?>">
+            <label for="address">Address</label>
+            <input name="address" type="text" id="address" required class="form-control" value="<?php echo $infor['address'] ?>">
+            <br>
+        <?php endforeach; ?>
+
         <br>
-        <button class="btn btn-success" type="submit" >Pay the bill</button>
+        <h3>Product Information</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Product image</th>
+                <th>Product Name</th>
+                <th>List Price($)</th>
+                <th>Quantity</th>
+                <th>Total Price($)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($cart as $cart): ?>
+                <tr>
+                    <td><img src="<?php echo $cart["image"]; ?>" style="width:70px" class="card-img-top" alt="..."></td>
+                    <td><?php echo $cart['name'] ?></td>
+                    <td><?php echo $cart['list_price'] ?></td>
+                    <td><?php echo $cart['SUM(c.quantity)'] ?></td>
+                    <td><?php echo $cart['SUM(c.total_price)'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+            <h2>Total order value :
+                <label for="totalcart"><?php echo "$".$totalcart ?></label>
+                <input style="display: none" name="totalcart" type="text" id="totalcart"  value="<?php echo "$".$totalcart ?>"></h2>
+        </table>
 
+        <br>
+        <h3>Payment Information</h3>
+
+
+        <input type="radio" id="payment" name="payment" value="COD" required >
+        <label for="payment">COD</label><br>
+
+        <button class="btn btn-success" type="submit" name="generate_code" id="generate_code">Order</button>
+        <br>
     </form>
-    <?php endforeach; ?>
-    <br>
+
 
 </div>
 <div class="footer">
@@ -177,6 +202,7 @@ $infor= $project->inforCustomerByUser($username);
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
+
 <script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

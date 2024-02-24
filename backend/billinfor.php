@@ -5,6 +5,25 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
+include "project.php";
+$project = new projectFptHappy();
+$username=$_SESSION['username'];
+$name = $_POST['name'];
+$phone=$_POST['phone'];
+$address= $_POST['address'];
+$cod = $_POST['payment'];
+$totalcart=$_POST['totalcart'];
+
+if(isset($_POST['generate_code'])) {
+    $random_code =$project->generateRandomCode();
+}
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $update = $project->payTheBill($name,$phone,$address,$username,$cod);
+    echo "You have successfully purchased  ";
+
+}
+$paycart = $project->getAllPay($username);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,13 +38,13 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Trochoigiadinh.css">
+    <link rel="stylesheet" href="Dothietyeu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
 <body>
 <header>
-    <div class="header" style="">
+    <div class="header">
         <div class="header1">
             <img src="img/logo.webp" alt="logo">
             <label>
@@ -73,84 +92,49 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-<div class="img_header">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://leutrai.vn/wp-content/uploads/2023/07/tro-choi-cho-tre-di-da-ngoai-2.jpg" class="d-block w-100" alt="..." >
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Fpt Happy</h5>
-                    <p>Niềm vui gia đình bắt đầu từ những trò chơi chân thực.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://leutrai.vn/wp-content/uploads/2023/07/tro-choi-cho-tre-di-da-ngoai-3.jpg" class="d-block w-100" alt="..." >
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Fpt Happy</h5>
-                    <p>Trò chơi gia đình: nơi mọi khoảnh khắc trở nên đặc biệt.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://ecopark.com.vn/images/news/2020/10/original/trai-nghiem-cam-trai-qua-dem-nhu-troi-tay-giua-khong-gian-xanh-kdt-ecopark_1603337843.jpg" class="d-block w-100" alt="..." >
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Fpt Happy</h5>
-                    <p>Hòa mình vào trò chơi, kết nối trái tim gia đình.</p>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+<div style="border: 2px solid #f29f33;
+            border-radius: 10px;
+            width: 600px;
+            padding: 10px">
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Customer Detail: <p style="margin-left: 10px; color: #654145;">- Name:<?php echo  $name; ?><br><br>- Phone Number:<?php echo  $phone; ?><br><br>- Address:<?php echo  $address; ?></p></h5>
+    <hr style="height: 0; width: 250px; background-color: #f29f33">
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Product Detail: <p style="margin-left: 10px; color: #654145;"> <table class="table">
 
+            <thead>
+            <tr>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                <th>List Price($)</th>
+                <th>Quantity</th>
+                <th>Total Price($)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($paycart as $paycart):
+                ?>
+                <tr>
+                    <td><img src="<?php echo $paycart["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
+                    </td>
+                    <td><?php echo $paycart['name'] ?></td>
+                    <td><?php echo $paycart['list_price'] ?></td>
+                    <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
+                    <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table></p></h5>
+    <hr style="height: 0; width: 250px; background-color: #f29f33">
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Code Orders: <p style="margin-left: 10px; color: #654145;"> <?php echo  $random_code; ?></p></h5>
+    <hr style="height: 0; width: 250px; background-color: #f29f33">
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Payment Detail: <p style="margin-left: 10px; color: #654145;"> <?php echo  $cod; ?></p></h5>
+    <hr style="height: 0; width: 250px; background-color: #f29f33">
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Price: <p style="margin-left: 10px; color: #654145;"> <?php echo  $totalcart; ?></p></h5>
 </div>
-<div id="allcard" >
-    <div class="card1" style=" width:300px;height:200px">
-        <img src="https://img.freepik.com/premium-photo/happy-family-playing-football-park_107420-91413.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Family Football Game</h5>
-            <p class="card-text">Get ready for family football fun with exciting games that bring dynamic moments to every<br> member.</br></p>
-            <a href="Trochoigiadinhchitiet.html" class="btn btn-primary" style="text-align:center">Instructions</a>
-        </div>
-    </div>
 
-    <div class="card2" style="width:300px;height:200px">
-        <img src="https://hallmark.brightspotcdn.com/4b/be/d1aa420336cb9e18012b5ad5bf31/vs-18073.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Word Puzzle Game</h5>
-            <p class="card-text">
-                Explore the world through puzzle games! Experience creative and exciting fun, fresh for the whole family.</p>
-            <a href="https://docs.google.com/document/d/16yPAcvo1MnixsDJbKfwU2Krd7zikjORw/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-    <div class="card3" style="width:300px;height:200px">
-        <img src="https://bloximages.chicago2.vip.townnews.com/meridianstar.com/content/tncms/assets/v3/editorial/e/65/e650054c-4e59-11e7-ae4f-f37feb92da32/593cbf7b4a932.image.jpg?resize=750%2C500" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Archery Game</h5>
-            <p class="card-text">
-                Enjoy family fun with archery games - where skills and fun blend together, inviting every member to participate.</p>
-            <a href="https://docs.google.com/document/d/1OP6Pzfu6zhNJYQzNjP13URofOqqc2kQn/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-    <div class="card4" style="width:300px;height:200px">
-        <img src="https://i.guim.co.uk/img/media/b5d22535a5a254f97b3251bd6a226c4eac12fbf8/571_585_2691_2736/master/2691.jpg?width=620&quality=85&auto=format&fit=max&s=240ea90f5bd2a7a2adcc7e95953491fe" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Jigsaw Puzzle Game</h5>
-            <p class="card-text">Challenge your thinking and creativity with giant jigsaw puzzles, where each piece is the key to an imaginary world.</p>
-            <a href="https://docs.google.com/document/d/15zPIxFKXbnOVxd1PW05VPas7pw_v9eRd/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-</div>
+<td><a href="home.php?action=success&code=<?php echo  $random_code; ?> " class="btn btn-success"
+         >Home</a></td>
+
+
 
 <div class="footer">
     <div class="footer0">
@@ -216,6 +200,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
+
 <script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

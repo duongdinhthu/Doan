@@ -81,6 +81,10 @@ header{
     border: none;
     padding-left: 15px;
     background-color: #654145;
+    transition: 0.3s ease-in-out;
+}
+.dropbtn:hover{
+    color: #f29f33;
 }
 
 .dropdown {
