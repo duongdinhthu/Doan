@@ -102,8 +102,8 @@ $product = $project->getAllProduct1();
                         </a>
                         <a href="Docanhandetail.php" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">
-                            <label for="sl" style="display: none">Số lượng</label>
-                            <input value="1" style="width: 90px; display: none" id="sl" name="sl">
+                            <label for="sl" style="">Số lượng</label>
+                            <input value="1" style="width: 90px;" id="sl" name="sl">
                             <label for="gia" style="display: none">Giá</label>
                             <input value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
                             <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
