@@ -30,8 +30,7 @@ if(isset($username)&&isset($password)){
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Thucpham.css">
-
+    <link rel="stylesheet" href="register2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
@@ -86,15 +85,36 @@ if(isset($username)&&isset($password)){
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
 
+<div class="login">
+    <div class="text">
+        <div>
+            <a href="../frontend/home.html">Home  > </a>
+            <p>Login</p>
+        </div>
+        <h2>REGISTER QUICK</h2>
+        <hr/>
+    </div>
+    <form action="" method="post" >
+        <label for="username" style="display: none">Username:</label>
+        <input name="username" placeholder="Username" type="text" id="username" required><br>
+        <label for="password" style="display: none">Password:</label>
+        <input name="password" placeholder="Password" type="password" id="password" required>
+        <br>
+        <div class="tag-a">
+            <a href="login.php">Go back to login</a>
+        </div>
+        <button type="submit" >Register</button>
+    </form>
+</div>
 
 <form action="" method="post">
     <label for="username">Username:</label>
-    <input name="username" type="text" id="username" required class="form-control" >
+    <input name="username" type="text" id="username" required>
     <label for="password">Password:</label>
-    <input name="password" type="password" id="password" required class="form-control">
+    <input name="password" type="password" id="password" required>
     <br>
-    <button type="submit" class="btn btn-primary">Register</button>
-    <a href="login.php" class="btn btn-success">Go back to login</a>
+    <button type="submit">Register</button>
+    <a href="login.php">Go back to login</a>
 </form>
 <div class="footer">
     <div class="footer0">

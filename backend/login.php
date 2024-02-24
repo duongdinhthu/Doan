@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
@@ -71,18 +71,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="login.php" class="btn btn-outline">Login</a>
         </div>
     </div>
-    <img src="img/slider_1.webp" alt="" style="width: 100%; background-color: #FEF7EF">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
-<form action="" method="post" >
-    <label for="username">Username:</label>
-    <input name="username" type="text" id="username" required class="form-control">
-    <label for="password">Password:</label>
-    <input name="password" type="password" id="password" required class="form-control">
-    <br>
-    <button type="submit" class="btn btn-primary">Login</button>
-    <a href="register2.php" class="btn btn-success">Register</a>
-    <a href="changePassword.php" class="btn btn-warning">changePassword</a>
-</form>
+    <div class="login">
+        <div class="text">
+            <div>
+                <a href="../frontend/home.html">Home  > </a>
+                <p>Login</p>
+            </div>
+            <h2>LOGIN QUICK</h2>
+            <hr/>
+        </div>
+        <form action="" method="post" >
+            <label for="username" style="display: none">Username:</label>
+            <input name="username" placeholder="Username" type="text" id="username" required><br>
+            <label for="password" style="display: none">Password:</label>
+            <input name="password" placeholder="Password" type="password" id="password" required>
+            <br>
+            <div class="tag-a">
+                <a href="register2.php">Already have an account?<br> register</a>
+                <a href="changePassword.php">ChangePassword</a><br>
+            </div>
+            <button type="submit" >Login</button>
+        </form>
+    </div>
 <div class="footer">
     <div class="footer0">
         <div class="footer1">

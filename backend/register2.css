@@ -1,0 +1,90 @@
+.login{
+    width: 100%;
+    background-color: #FEF7EF;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+form{
+    width: 100%;
+    text-align: center;
+}
+form h3{
+    color: #f29f33;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px #cccccc;
+}
+form input{
+    margin-top: 10px;
+    padding: 10px;
+    padding-right: 150px;
+    padding-left: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 2px #cccccc;
+}
+form a{
+    text-decoration: none !important;
+    text-shadow: 2px 2px 2px #cccccc;
+}
+.tag-a{
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.tag-a a{
+    color: #f29f33;
+    margin-top: 5px;
+    margin-right: 220px;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+.tag-a a:hover{
+    color: #654145;
+}
+form button{
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #f29f33;
+    color: white;
+    transition: 0.3s ease-in-out;
+    padding: 6px 50px 6px 50px;
+    box-shadow: 2px 2px 5px #cccccc;
+}
+form button:hover{
+    background-color: #654145;
+}
+.text{
+    text-align: center;
+}
+.text div{
+    justify-content: center;
+    display: flex;
+}
+.text div a{
+    text-decoration: none;
+    color: #654145;
+    transition: 0.3s ease-in-out;
+    font-size: 18px;
+}
+.text div a:hover{
+    color: #f29f33;
+}
+.text div p{
+    margin-left: 5px;
+    color: #f29f33;
+    font-weight: bold;
+    font-size: 18px;
+}
+.text h2{
+    color: #f29f33;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.text hr{
+    width: 100px;
+    background-color: #f29f33;
+}
