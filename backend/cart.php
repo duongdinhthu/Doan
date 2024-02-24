@@ -142,21 +142,13 @@ $totalpay = $carts->totalShowPay($username);
 </table>
 
 <div>
-    <?php foreach ($infor
 
-    as $infor): ?>
-    <h2><?php echo "Account money : $" .$infor['money'] ?></h2>
-    <?php endforeach; ?>
     <h2>Total order value : <?php echo "$".$totalcart ?></h2>
 
-    <?php $a=$infor['money'] - $totalcart;
-    if($a>=0){
-        echo "<h3>Your account also has:</h3> $".$a;
-        echo "<br><a href='delivery_address.php?action=pay&money=$totalcart&money1=$a&username=$username'' class='btn btn-primary'>Pay the bill</a>";
-    }else{
-        echo"<br><a href='delivery_address.php?action=pay&money=$totalcart&username=$username' class='btn btn-warning'>
-Your account is insufficient. Payment in cash</a>";
-    }
+    <?php
+
+        echo "<br><a href='delivery_address.php?action=pay&money=$totalcart&username=$username'' class='btn btn-primary'>Pay the bill</a>";
+
      ?>
 </div>
 
