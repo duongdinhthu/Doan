@@ -116,106 +116,39 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 </div>
 
 <div id="allcard">
-    <div class="card1" style="width: 18rem;">
-        <img src="https://cdn.chanhtuoi.com/uploads/2022/11/do-vui-cho-be-2-1667719108.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Trò chơi câu đố</h5>
-            <p class="card-text">
-                Khám phá thế giới thông qua trò chơi câu đố! Trải nghiệm giáo dục sáng tạo và thú vị dành cho trẻ..........</p>
-            <a href="https://docs.google.com/document/d/13hWikpcOE2PUWF-1Pv0leeBFxlhP9uqo/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng Dẫn</a>
-        </div>
-    </div>
-    <div class="card2" style="width: 18rem;">
-        <img src="https://monkeymedia.vcdn.com.vn/upload/web/storage_web/21-03-2022_09:53:06_bo-do-choi-domino-go-thong-minh.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Trò chơi domino</h5>
-            <p class="card-text">
-                Domino - Trò chơi kinh điển với những chiếc viên gạch, đưa bạn vào thế giới chiến lược và tài năng tuyệt vời.</p>
-            <a href="https://docs.google.com/document/d/1OP6Pzfu6zhNJYQzNjP13URofOqqc2kQn/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng Dẫn</a>
-
-        </div>
-    </div>
-    <div class="card3" style="width: 18rem;">
-        <img src="https://salt.tikicdn.com/cache/w400/ts/product/8f/9b/38/c45b8a495d5a8227eaeb6d82d0210a11.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Trò chơi blowing mini</h5>
-            <p class="card-text">Blowing Mini - Trò chơi sáng tạo đòi hỏi người chơi thổi nhẹ vào mini để giữ nó nổi trên không.............</p>
-            <a href="https://docs.google.com/document/d/1kmpRagK0o-av29N5KJma02oy9qfSkh2m/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng dẫn</a>
-        </div>
-    </div>
-    <div class="card4" style="width: 18rem;">
-        <img src="https://www.indy100.com/media-library/teachers-fed-up-with-11-year-old-kids-wearing-diapers-to-school-worrying-trend.jpg?id=34778564&width=1245&height=700&quality=85&coordinates=0%2C65%2C0%2C66" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Trò chơi tung đồng xu</h5>
-            <p class="card-text">
-                Tung Đồng Xu-Trò chơi vui nhộn giúp trẻ rèn kỹ năng tập trung và xác định kết quả bằng cách tung xu.</p>
-            <a href="https://docs.google.com/document/d/13hWikpcOE2PUWF-1Pv0leeBFxlhP9uqo/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng dẫn</a>
-        </div>
-    </div>
-    <div class="card5" style="width:18rem;">
-        <img src="https://trangtrisinhnhat.com/wp-content/uploads/2022/04/15-tro-choi-nhay-khinh-khi-cau-vui-nhon-danh.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Trò chơi bong bóng</h5>
-            <p class="card-text">
-                Bong Bóng - Trò chơi vui nhộn và sôi động dành cho trẻ, nơi họ có thể khám phá thế giới của màu sắc và niềm vui.</p>
-            <a href="https://docs.google.com/document/d/1YRfo3WMzib-foSMb2qjgk70oXrxdukB0/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng dẫn</a>
-        </div>
-    </div>
-    <div class="card6" style="width: 18rem;">
-        <img src="https://journeytothefloridviet.weebly.com/uploads/8/2/1/1/82112576/loco1_orig.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Nhảy Lò Cò</h5>
-            <p class="card-text"> Trò chơi sôi động và thú vị, nơi trẻ em có thể tận hưởng niềm vui của việc nhảy qua và vượt qua các "lò cò" nhỏ.</p>
-            <a href="https://docs.google.com/document/d/1JQxKT7o89SRY6GnmYk8dfAqu_tzzCk5i/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng Dẫn</a>
-        </div>
-    </div>
-    <div class="card7" style="width: 18rem;">
-        <img src="https://wis.edu.vn/wp-content/uploads/2022/11/1-11.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Trò chơi vượt chướng ngại vật</h5>
-            <p class="card-text">Vượt Chướng Ngại Vật - Trò chơi kích thích sự phát triển vận động và sự khéo léo của trẻ.</p>
-            <a href="https://docs.google.com/document/d/18vpGa1pDX2BhM8ey8gPjnEwCHWHj_pXM/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng Dẫn</a>
-        </div>
-    </div>
-    <div class="card8" style="width: 18rem;">
-        <img src="https://kidsonline.edu.vn/wp-content/uploads/2017/05/Nhung-tro-choi-dong-vai-theo-chi-de-giup-tre-ky-nang-lam-viec-nhom-cho-tre-02.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Trò chơi đóng vai</h5>
-            <p class="card-text">Đóng Vai - Khám phá thế giới qua trò chơi đóng vai, nơi trẻ em có cơ hội sáng tạo và phát triển kỹ năng xã hội.</p>
-            <a href="https://docs.google.com/document/d/1AmW2gJ-Aoqnk4FZqi_hfh9KKlKJn-Njx/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng Dẫn</a>
-        </div>
-    </div>
-    <div class="card9" style="width: 18rem;">
-        <img src="https://heraldindependent.com/wp-content/uploads/2022/11/khu-vui-choi-tre-em-sai-gon-8-1400x788.png" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Trò chơi bé là ninja</h5>
-            <p class="card-text">Bé Là Ninja - Trò chơi mạo hiểm đầy phấn khích, nơi trẻ em có thể trải nghiệm cuộc phiêu lưu ninja với nhiệm vụ vui nhộn và kỹ năng tinh tế.</p>
-            <a href="https://docs.google.com/document/d/1ANcZ_O5OmFgWLkOiZLXb7iisLK-Ty5KZ/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng Dẫn</a>
-        </div>
-    </div>
-    <div class="card10" style="width: 18rem;">
+    <div class="card1" style="width:300px;height:200px">
         <img src="https://www.cleanipedia.com/images/5iwkm8ckyw6v/5RHBi0UiJNDQ95B1sXp1ao/f767c121fee347d130c344dde308f931/Ymlnc3RvY2stZ2lybHMtaW4tcGlsbG93LWZvcnQtMTk3ODc4NjMwLmpwZw/900w/tr%C3%B2-ch%C6%A1i-trong-nh%C3%A0-cho-b%C3%A9.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Trò chơi xây dựng pháo đài</h5>
+            <h5 class="card-title">Building Forts Game</h5>
+            <p class="card-text">Building Forts - Creative game where children can explore and develop building skills.
+            </p>
+            <a href="Trochoitreemchitiet.html" class="btn btn-primary">Instructions</a>
+        </div>
+    </div>
+    <div class="card2" style="width:300px;height:200px">
+        <img src="https://cdn.chanhtuoi.com/uploads/2022/11/do-vui-cho-be-2-1667719108.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Riddle Game</h5>
             <p class="card-text">
-                Xây Dựng Pháo Đài - Trò chơi sáng tạo, nơi trẻ em có thể khám phá và phát triển tài năng xây dựng.</p>
-            <a href="https://docs.google.com/document/d/1EEZow_tW95mgz9bC2OeUoMzOTUMQhKH7/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng Dẫn</a>
+                Explore the world through riddle games! An educational and creative experience for children..........</p>
+            <a href="https://docs.google.com/document/d/13hWikpcOE2PUWF-1Pv0leeBFxlhP9uqo/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Instructions</a>
         </div>
     </div>
-    <div class="card11" style="width: 18rem;">
-        <img src="http://mnbavi.edu.vn/upload/21699/20230922/1_5e065.jpg"class="card-img-top" alt="...">
+    <div class="card3" style="width:300px;height:200px">
+        <img src="https://monkeymedia.vcdn.com.vn/upload/web/storage_web/21-03-2022_09:53:06_bo-do-choi-domino-go-thong-minh.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Trò chơi ghế âm nhạc</h5>
-            <p class="card-text">Trò chơi Âm Nhạc - Kích thích sự sáng tạo âm nhạc và giáo dục âm nhạc cho trẻ em.</p>
-            <a href="https://docs.google.com/document/d/1MMVN002egmSSpVlUYe1InXsl1Q0OeVJU/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng Dẫn</a>
+            <h5 class="card-title">Domino Game</h5>
+            <p class="card-text">
+                Domino - A classic game with tiles that immerses you in a world of strategy and great talent.</p>
+            <a href="https://docs.google.com/document/d/1OP6Pzfu6zhNJYQzNjP13URofOqqc2kQn/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Instructions</a>
         </div>
     </div>
-    <div class="card12" style="width: 18rem;">
-        <img src="https://camnanggiaoduc.org/wp-content/uploads/2017/02/ren-ky-nang-song-cho-tre-mam-non-1.jpg" class="card-img-top"alt="...">
+    <div class="card4"  style="width:300px;height:200px">
+        <img src="https://salt.tikicdn.com/cache/w400/ts/product/8f/9b/38/c45b8a495d5a8227eaeb6d82d0210a11.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Trò chơi lắng nghe</h5>
-            <p class="card-text">Trò chơi Lắng Nghe - Thách thức khả năng tập trung và nhận biết âm thanh.</p>
-            <a href="https://docs.google.com/document/d/1Xyf69dzfH9nxXiQMrSYXKlVNa_dV95qG/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Hướng Dẫn</a>
+            <h5 class="card-title">Blowing Mini Game</h5>
+            <p class="card-text">Blowing Mini - A creative game that requires players to blow gently into the mini to keep it afloat.............</p>
+            <a href="https://docs.google.com/document/d/1kmpRagK0o-av29N5KJma02oy9qfSkh2m/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Instructions</a>
         </div>
     </div>
 </div>
