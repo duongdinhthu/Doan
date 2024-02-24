@@ -1,22 +1,18 @@
+
+
 #allcard {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding:100px 100px 250px 250px;
+    margin-left: -100px;
 }
 
 .card1,
 .card2,
 .card3,
-.card4,
-.card5,
-.card6,
-.card7,
-.card8,
-.card9,
-.card10,
-.card11,
-.card12 {
+.card4
+{
     width: 100%;
     aspect-ratio: 1;
     transition: transform 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
@@ -24,15 +20,8 @@
 .card1:hover,
 .card2:hover,
 .card3:hover,
-.card4:hover,
-.card5:hover,
-.card6:hover,
-.card7:hover,
-.card8:hover,
-.card9:hover,
-.card10:hover,
-.card11:hover,
-.card12:hover {
+.card4:hover
+{
     transform: scale(1.1); /* Phóng to 110% khi trỏ vào */
 }
 .card-img-top {
@@ -49,4 +38,34 @@
     display: block;
     margin: 10px auto;
 }
-
+.text{
+    margin-top: 30px;
+    text-align: center;
+}
+.text div{
+    justify-content: center;
+    display: flex;
+}
+.text div a{
+    text-decoration: none;
+    color: #654145;
+    transition: 0.3s ease-in-out;
+    font-size: 18px;
+}
+.text div a:hover{
+    color: #f29f33;
+}
+.text div p{
+    margin-left: 5px;
+    color: #f29f33;
+    font-weight: bold;
+    font-size: 18px;
+}
+.text h2{
+    color: #f29f33;
+    font-weight: bold;
+}
+.text hr{
+    width: 100px;
+    background-color: #f29f33;
+}
