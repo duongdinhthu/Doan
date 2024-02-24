@@ -93,26 +93,23 @@ $product = $project->getAllProduct2();
     <div class="product-boxes">
         <?php foreach ($product as $product): ?>
             <div class="product-item">
-                <div class="card" style="width: 18rem; margin-bottom: 25px;">
-                    <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="name"><?php echo $product["name"]; ?></h5>
-                        <p class="description"><?php echo $product["description"]; ?></p>
-                    </div>
-                    <ul class="cost-list">
-                        <li class="cost"><?php echo "$" . $product["price"]; ?></li>
-                    </ul>
-                    <div class="card-body">
-                        <form action="" method="post">
-                            <label for="sl">Số lượng</label>
-                            <input value="1" style="width: 90px" id="sl" name="sl">
+                <div>
+                    <form action="" method="post">
+                        <a href="Docanhandetail.php">
+                            <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
+                        </a>
+                        <a href="Docanhandetail.php" class="name"><?php echo $product["name"]; ?></a>
+                        <h5 class="cost">
+                            <label for="sl" style="display: none">Số lượng</label>
+                            <input value="1" style="width: 90px; display: none" id="sl" name="sl">
                             <label for="gia" style="display: none">Giá</label>
                             <input value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
+                            <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
                             <label for="id" style="display: none">ID</label>
                             <input value="<?php echo $product["pid"]; ?>" style="display: none" id="id" name="id">
                             <button type="submit" class="buy-button">Buy</button>
-                        </form>
-                    </div>
+                        </h5>
+                    </form>
                 </div>
             </div>
         <?php endforeach; ?>
