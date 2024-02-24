@@ -219,72 +219,68 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     </div>
 </div>
 <div class="footer">
-    <div class="footer1">
-        <img src="img/Nội%20dung%20đoạn%20văn%20bản%20của%20bạn.png" alt="">
-        <div class="social">
-            <i class="fa-brands fa-square-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-square-youtube"></i>
-            <i class="fa-brands fa-square-twitter"></i>
+    <div class="footer0">
+        <div class="footer1">
+            <img src="img/logo.webp" alt="">
+            <div class="icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <p>SUBSCRIBE TO NEWSLETTER</p>
+            <label>
+                <input type="email" placeholder="Enter email address">
+                <button>SEND</button>
+            </label>
+            <div class="contact">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>.................................</p>
+            </div>
+            <div class="contact">
+                <i class="fa-solid fa-phone"></i>
+                <p>0910JQKA</p>
+            </div>
+            <div class="contact">
+                <i class="fa-solid fa-headphones"></i>
+                <p>support@gmail.com</p>
+            </div>
         </div>
-        <p>ĐĂNG KÝ NHẬN TIN</p>
-        <label>
-            <input type="email" placeholder="Nhập địa chỉ Email">
-            <button type="submit">GỬI</button>
-        </label>
-        <div class="splpe">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>.................................</p>
-        </div>
-        <div class="splpe">
-            <i class="fa-solid fa-phone"></i>
-            <p>0910JQKA</p>
-        </div>
-        <div class="splpe">
-            <i class="fa-solid fa-headphones"></i>
-            <p>support@gmail.com</p>
+        <div class="footer2">
+            <div class="paysupport">
+                <div class="Support">
+                    <h3>ABOUT US</h3><br>
+                    <a href="#">Company</a><br>
+                    <a href="#">Address</a><br>
+                    <a href="#">Phone number</a><br>
+                    <a href="#">Links</a><br>
+                </div>
+                <div class="Support">
+                    <h3>CUSTOMER SUPPORT</h3><br>
+                    <a href="#">Contact</a><br>
+                    <a href="#">Handling complaints</a><br>
+                    <a href="#">Usage guide</a><br>
+                    <a href="#">Warranty, returns</a><br>
+                    <a href="#">Contact</a><br>
+                </div>
+                <div class="Support">
+                    <h3>SERVICES</h3><br>
+                    <a href="#">Products</a><br>
+                    <a href="#">Game organization services</a><br>
+                    <a href="#">Payment</a><br>
+                </div>
+            </div>
+            <div class="pay">
+                <h3>PAYMENT METHODS</h3>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
         </div>
     </div>
-    <div class="footer2">
-        <div class="info">
-            <div class="hotro">
-                <p>VỀ CHÚNG TÔI</p>
-                <a href="#">Trang chủ</a>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Sản phẩm</a>
-                <a href="#">Dịch vụ cho thuê</a>
-                <a href="#">Tin tức</a>
-                <a href="#">Sản phẩm của Camp</a>
-                <a href="#">Liên hệ</a>
-            </div>
-            <div class="hotro">
-                <p>HỖ TRỢ KHÁCH HÀNG</p>
-                <a href="#">Trang chủ</a>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Sản phẩm</a>
-                <a href="#">Dịch vụ cho thuê</a>
-                <a href="#">Tin tức</a>
-                <a href="#">Sản phẩm của Camp</a>
-                <a href="#">Liên hệ</a>
-            </div>
-            <div class="hotro">
-                <p>DỊCH VỤ</p>
-                <a href="#">Trang chủ</a>
-                <a href="#">Về chúng tôi</a>
-                <a href="#">Sản phẩm</a>
-                <a href="#">Dịch vụ cho thuê</a>
-                <a href="#">Tin tức</a>
-                <a href="#">Sản phẩm của Camp</a>
-                <a href="#">Liên hệ</a>
-            </div>
-        </div>
-        <div class="thanhtoan">
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-        </div>
-    </div>
+    <hr/>
+    <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
 <script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
