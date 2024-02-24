@@ -1,31 +1,65 @@
 <?php
 session_start();
-//kiểm tra session
-if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
+// Kiểm tra session
+if (!isset($_SESSION["username"]) && !isset($_SESSION['password'])) {
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<head>
-    <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Trochoitreem.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="Trochoinguoilon.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Home</title>
+    <style>
+        .text {
+            margin-top: 30px;
+            text-align: center;
+        }
 
+        .text div {
+            justify-content: center;
+            display: flex;
+        }
+
+        .text div a {
+            text-decoration: none;
+            color: #654145;
+            transition: 0.3s ease-in-out;
+            font-size: 18px;
+        }
+
+        .text div a:hover {
+            color: #f29f33;
+        }
+
+        .text div p {
+            margin-left: 5px;
+            color: #f29f33;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .text h2 {
+            color: #f29f33;
+            font-weight: bold;
+        }
+
+        .text hr {
+            width: 100px;
+            background-color: #f29f33;
+        }
+    </style>
 </head>
 <body>
 <header>
-    <div class="header">
+    <div class="header" style="">
         <div class="header1">
             <img src="img/logo.webp" alt="logo">
             <label>
@@ -34,7 +68,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-
                 <p>Hotline<br>78910JQKA</p>
             </div>
         </div>
@@ -73,6 +106,14 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
+<div class="text">
+    <div>
+        <a href="home.php">Home  > </a>
+        <p>Games</p>
+    </div>
+    <h2>GAMES FOR FAMILY</h2>
+    <hr/>
+</div>
 <div class="img_header">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
