@@ -29,7 +29,7 @@ $product = $project->getAllProduct2();
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dothietyeu.css">
+    <link rel="stylesheet" href="Docanhan.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
@@ -88,37 +88,40 @@ $product = $project->getAllProduct2();
 
 
     <tbody>
-    <?php foreach ($product as $product):
-        ?>
-        <div id="allcard">
-            <div class="card" style="width: 18rem;margin-bottom:25px;">
-                <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo  $product["name"]; ?></h5>
-                    <p class="card-text"><?php echo $product["description"]; ?></p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><?php echo "$" . $product["price"]; ?></li>
 
 
-                </ul>
-                <div class="card-body">
-                    <form action="" method="post">
-                        <label for="sl">Số lượng</label>
-                        <input  value="1" style="width:90px" id="sl" name="sl">
-                        <label for="gia" style="display: none">Giá</label>
-                        <input  value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
-                        <label for="id" style="display:none">ID</label>
-                        <input  value="<?php echo  $product["pid"]; ?>" style="display: none" id="id" name="id">
-                        <button type="submit" class="btn btn-primary">Thêm vào giỏ</button>
-                    </form>
+    <div class="product-boxes">
+        <?php foreach ($product as $product): ?>
+            <div class="product-item">
+                <div class="card" style="width: 18rem; margin-bottom: 25px;">
+                    <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="name"><?php echo $product["name"]; ?></h5>
+                        <p class="description"><?php echo $product["description"]; ?></p>
+                    </div>
+                    <ul class="cost-list">
+                        <li class="cost"><?php echo "$" . $product["price"]; ?></li>
+                    </ul>
+                    <div class="card-body">
+                        <form action="" method="post">
+                            <label for="sl">Số lượng</label>
+                            <input value="1" style="width: 90px" id="sl" name="sl">
+                            <label for="gia" style="display: none">Giá</label>
+                            <input value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
+                            <label for="id" style="display: none">ID</label>
+                            <input value="<?php echo $product["pid"]; ?>" style="display: none" id="id" name="id">
+                            <button type="submit" class="buy-button">Buy</button>
+                        </form>
+                    </div>
                 </div>
             </div>
+        <?php endforeach; ?>
+    </div>
 
-        </div>
-
-    <?php endforeach; ?>
     </tbody>
+
+
+
 </table>
 <div class="footer">
     <div class="footer0">
