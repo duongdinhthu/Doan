@@ -1,6 +1,7 @@
 <?php
 session_start();
 ini_set('display_errors', 'off');
+
 include "project.php";
 $loginPermissions = new projectFptHappy();
 $username=$_POST['username'];
