@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <br>
     <button type="submit" class="btn btn-primary">Login</button>
     <a href="register2.php" class="btn btn-success">Register</a>
-    <a href="changePassword.php" class="btn btn-warning">changePassword</a>
+
 </form>
 <div class="footer">
     <div class="footer0">

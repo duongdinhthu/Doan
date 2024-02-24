@@ -34,7 +34,7 @@ class projectFptHappy
             $this->conn->query($sql);
             echo"You have successfully changed your password on staff";
         }else if($this->isUpExists2($username,$password) == 1) {
-            $sql = "UPDATE account_custormer SET password ='$password2' where username='$username';";
+            $sql = "UPDATE account_customer SET password ='$password2' where username='$username';";
             $this->conn->query($sql);
             echo "You have successfully changed your password on custormer";
         }else{
