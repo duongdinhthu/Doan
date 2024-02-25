@@ -23,9 +23,69 @@ $infor=$project->inforByUserName($username);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dichvutour.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
+    <style>
+        .contact{
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            padding: 20px;
+        }
+        .contact div i{
+            padding-left: 10px;
+        }
+        .contact1{
+            border-left: 1px solid darkgrey;
+            border-top: 1px solid darkgrey;
+            border-bottom: 1px solid darkgrey;
+            padding: 10px;
+            border-radius: 10px 0 0 10px;
+            background-color: darkgrey;
+            color: white;
+        }
+        .contact2{
+            border-radius: 0 10px 10px 0;
+            border-top: 1px solid darkgrey;
+            padding: 10px;
+            border-bottom: 1px solid darkgrey;
+            border-right: 1px solid darkgrey;
+            background-color: darkgrey;
+        }
+
+
+        .text{
+            margin-top: 30px;
+            text-align: center;
+        }
+        .text div{
+            justify-content: center;
+            display: flex;
+        }
+        .text div a{
+            text-decoration: none;
+            color: #654145;
+            transition: 0.3s ease-in-out;
+            font-size: 18px;
+        }
+        .text div a:hover{
+            color: #f29f33;
+        }
+        .text div p{
+            margin-left: 5px;
+            color: #f29f33;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .text h2{
+            color: #f29f33;
+            font-weight: bold;
+        }
+        .text hr{
+            width: 100px;
+            background-color: #f29f33;
+        }</style>
 </head>
 <body>
 <header>
@@ -77,6 +137,17 @@ $infor=$project->inforByUserName($username);
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
+<<<<<<< HEAD
+=======
+<div class="text">
+    <div>
+        <a href="home.html">Home  > </a>
+        <p>Contact</p>
+    </div>
+    <h2>CONTACT</h2>
+    <hr/>
+</div>
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 <div class="contact">
     <div class="contact1">
         <h2>Contact Us</h2>
@@ -96,6 +167,11 @@ $infor=$project->inforByUserName($username);
     </div>
 </div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
@@ -160,7 +236,7 @@ $infor=$project->inforByUserName($username);
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="trangchu.js"></script>
+<script src="trangchu.js"></style>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>

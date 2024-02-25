@@ -413,15 +413,26 @@ class projectFptHappy
         $sql = "delete from cart where product_id = '$id' and hidden = 0";
         $this->conn->query($sql);
     }
-    public function payTheBill($name,$phone,$address,$username)
+    public function generateRandomCode() {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $random_code = '';
+        $length = 8;
+
+        for ($i = 0; $i < $length; $i++) {
+            $random_code .= $characters[rand(0, strlen($characters) - 1)];
+        }
+
+        return $random_code;
+    }
+    public function payTheBill($name,$phone,$address,$username,$cod,$code)
     {
-        $sql = "update cart set hidden = 2, hidden_customer = 4,name='$name',phone='$phone',address='$address' where username = '$username' and hidden = 1";
+        $sql = "update cart set hidden = 2, hidden_customer = 4,name='$name',phone='$phone',address='$address',payment='$cod',code='$code' where username = '$username' and hidden = 1";
         $this->conn->query($sql);
     }
     public function getAllPay($username)
     {
         $carts = [];
-        $sql = "select p.image,c.product_id,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.hidden ,c.hidden_customer from cart c join product p on c.product_id = p.pid where username = '$username'  and hidden = 2 and hidden_customer = 4 GROUP BY product_id, username";
+        $sql = "select p.image,c.product_id,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.hidden ,c.hidden_customer,c.status,c.payment,c.code from cart c join product p on c.product_id = p.pid where username = '$username'  and hidden = 2 and hidden_customer = 4 GROUP BY product_id, username";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -464,7 +475,7 @@ class projectFptHappy
     public function oder($dateyear,$datemonth,$dateday)
     {
         $carts = [];
-        $sql = "select c.username,c.product_id,c.total_adm,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.status from cart c join product p on c.product_id = p.pid where  hidden = 2 
+        $sql = "select c.username,c.product_id,c.total_adm,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.status,c.payment,c.code from cart c join product p on c.product_id = p.pid where  hidden = 2 
             and trading_day='$dateyear-$datemonth-$dateday' GROUP BY product_id, username ORDER BY username ASC;" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
@@ -523,11 +534,7 @@ class projectFptHappy
         }
         return $customer;
     }
-    public function updateMoney($money,$username)
-    {
-        $sql = "update account_customer set money='$money' where username='$username'";
-        $this->conn->query($sql);
-    }
+
     public function inforCustomerByUser($username){
         $customer = [];
         $sql = "select * from account_customer where username='$username'";
@@ -539,9 +546,6 @@ class projectFptHappy
         }
         return $customer;
     }
-    public function payTheBillShip()
-    {
-        $sql = "update cart set hidden = 2, hidden_customer = 4 where username = '$username' and hidden = 1";
-        $this->conn->query($sql);
-    }
+
+
 }

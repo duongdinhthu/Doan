@@ -7,7 +7,10 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 }
 ?>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,6 +81,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         line-height: 1.6;
         margin: 20px;
     }
+<<<<<<< HEAD
 
     .container {
         max-width: 600px;
@@ -105,6 +109,22 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     strong {
         color: #333;
     }
+=======
+    .announcement {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #333;
+    }
+    p {
+        color: #555;
+    }
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
     .comments {
         margin-top: 20px;
     }
@@ -145,6 +165,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         background-color: #45a049;
     }
 </style>
+<<<<<<< HEAD
 </head>
 <body>
 
@@ -170,17 +191,52 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     </ul>
 
     <p>Thank you for your support of FPT HAPPY throughout the past time. We wish you a New Year filled with Peace, Prosperity, and All Wishes Come True.</p>
+=======
+
+</head>
+<body>
+
+
+<div class="announcement">
+
+    <h2>NOTICE OF VIETNAM NATIONAL DAY OFF SEPTEMBER 2, 2023</h2>
+    <p><strong>76 Reviews</strong></p>
+    <p>Announcement of the Vietnam National Day off September 2, 2023</p>
+
+    <p>To our valued customers and partners,</p>
+    <p>FPT HAPPY Co., Ltd. respectfully announces the schedule of the National Day off September 2, 2023 of its branches:</p>
+
+    <!-- Content of holiday notice -->
+
+    <p>Please note: We will temporarily suspend express delivery services at all 3 branches during the holiday.</p>
+
+    <p>During the holiday, if you have any needs or questions, please send information via email or leave a message directly on our website. We will respond as soon as possible.</p>
+
+    <p>FPT HAPPY Co., Ltd. wishes our customers and partners a happy, peaceful holiday full of joy with family and loved ones.</p>
+
+    <p>Thank you and congratulations on the Vietnam National Day!</p>
+
+    <p>FPT HAPPY Co., Ltd.</p>
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 </div>
 
 <!-- Comment Section -->
 <div class="comments">
     <h2>Comments</h2>
+<<<<<<< HEAD
     <!-- Display comments here -->
+=======
+
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 
     <!-- Example comment -->
     <div class="comment">
         <p><strong>User:</strong> John Doe</p>
+<<<<<<< HEAD
         <p><strong>Comment:</strong> Wishing FPT HAPPY Company a joyful holiday!</p>
+=======
+        <p><strong>Comment:</strong> Wishing FPT HAPPY Co., Ltd. a holiday full of joy!</p>
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
     </div>
 </div>
 
@@ -188,13 +244,21 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 <div class="comment-form">
     <h2>Add Comment</h2>
     <form action="#" method="post">
+<<<<<<< HEAD
         <label for="username">User Name:</label>
+=======
+        <label for="username">Username:</label>
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
         <input type="text" id="username" name="username" required>
 
         <label for="comment">Comment:</label>
         <textarea id="comment" name="comment" rows="4" required></textarea>
 
+<<<<<<< HEAD
         <button type="submit">Submit Comment</button>
+=======
+        <button type="submit">Send Comment</button>
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
     </form>
 </div>
 </div>
@@ -267,4 +331,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696

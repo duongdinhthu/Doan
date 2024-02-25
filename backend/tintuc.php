@@ -11,16 +11,15 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
     <title>Title</title>
-</head>
-<body>
-<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="tintuc.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="Dichvutour.css">
+=======
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
     <style>
@@ -77,7 +76,24 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
+<div class="text">
+    <div>
+        <a href="home.php">Home  > </a>
+        <p>News</p>
+    </div>
+    <h2>NEWS</h2>
+    <hr/>
+</div>
+<div class="allcard">
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img200.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">ANNOUNCEMENT OF VIETNAM NATIONAL DAY HOLIDAY 2/9/2023
+            </h5>
 
+<<<<<<< HEAD
 
 <div class="allcard">
     <div class="card text-center">
@@ -88,6 +104,8 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <h5 class="card-title">ANNOUNCEMENT OF VIETNAM NATIONAL DAY HOLIDAY 2/9/2023
             </h5>
 
+=======
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
             <p class="card-text">  To our valued customers and partners, FPT HAPPY Company respectfully announces the schedule of the 2/9/2023 National Day holiday for its branches: Ho Chi Minh City branch: …</p>
             <a href="cardtitle1.php" class="btn btn-primary">Read More</a>
         </div>

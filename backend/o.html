@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chạy thẻ a khi chọn option</title>
+</head>
+<body>
+<select id="mySelect">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+</select>
+
+<a id="myLink" href="status.php">Link</a>
+
+<script>
+    document.getElementById("mySelect").addEventListener("change", function() {
+        var selectedValue = this.value;
+        if (selectedValue === "1") {
+            document.getElementById("myLink").click();
+        }
+    });
+</script>
+</body>
+</html>

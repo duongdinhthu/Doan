@@ -120,7 +120,7 @@ $totalpay = $carts->totalShowPay($username);
         <th>List Price($)</th>
         <th>Quantity</th>
         <th>Total Price($)</th>
-        <th>Delete</th>
+
 
     </tr>
     </thead>
@@ -145,16 +145,16 @@ $totalpay = $carts->totalShowPay($username);
 
     <h2>Total order value : <?php echo "$".$totalcart ?></h2>
 
+
     <?php
-
-        echo "<br><a href='delivery_address.php?action=pay&money=$totalcart&username=$username'' class='btn btn-primary'>Pay the bill</a>";
-
+        echo "<a class='btn btn-primary' href='delivery_address.php?action=pay&money=$totalcart&username=$username' >Ckeck out</a>";
      ?>
+
 </div>
 
 <hr>
-<table class="table">
-    <h1>
+<table class="table" style="display: none">
+    <h1 style="display: none">
         Deleted items</h1>
     <thead>
     <tr>
@@ -203,6 +203,9 @@ $totalpay = $carts->totalShowPay($username);
         <th>List Price($)</th>
         <th>Quantity</th>
         <th>Total Price($)</th>
+        <th>Payment</th>
+        <th>Code</th>
+        <th>Status</th>
     </tr>
     </thead>
     <tbody>
@@ -215,6 +218,9 @@ $totalpay = $carts->totalShowPay($username);
             <td><?php echo $paycart['list_price'] ?></td>
             <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
             <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
+            <td><?php echo $paycart['payment'] ?></td>
+            <td><?php echo $paycart['code'] ?></td>
+            <td><?php echo $paycart['status'] ?></td>
         </tr>
     <?php endforeach; ?>
     </tbody>

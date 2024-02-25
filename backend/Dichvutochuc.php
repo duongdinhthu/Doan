@@ -85,7 +85,14 @@ $product = $project->getAllProduct6();
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-
+<div class="text">
+    <div>
+        <a href="home.php">Home  > </a>
+        <p>Organizational service</p>
+    </div>
+    <h2>ORGANIZATIONAL SERVICE</h2>
+    <hr/>
+</div>
 <table >
 
 
@@ -109,7 +116,7 @@ $product = $project->getAllProduct6();
                             <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
                             <label for="id" style="display: none">ID</label>
                             <input value="<?php echo $product["pid"]; ?>" style="display: none" id="id" name="id">
-                            <button type="submit" class="buy-button">Buy</button>
+                            <button type="submit" class="buy-button">Contact Us</button>
                         </h5>
                     </form>
                 </div>
