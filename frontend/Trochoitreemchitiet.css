@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -24,7 +25,7 @@ section {
 
 /* CSS cho button */
 .custom-button {
-    background-color: #5e484a;
+    background-color:#f29f33 ;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -37,7 +38,7 @@ section {
 
 /* Hover effect */
 .custom-button:hover {
-    background-color: #725a5b;
+    background-color:#f38b03;
 }
 
 /* CSS cho link mặc định */
@@ -53,9 +54,6 @@ section {
 }
 
 
-h1 {
-    color: #333;
-}
 
 section {
     text-align: center;
@@ -67,7 +65,7 @@ section {
 }
 
 h2 {
-    color: #5e484a;
+    color: #f29f33;
 }
 
 p {
@@ -75,10 +73,10 @@ p {
 }
 
 strong {
-    color: #5e484a;
+    color: #f29f33;
 }
 h1 {
-    color: #333;
+    color: #f29f33;
     text-align: center;
 }
 
@@ -113,7 +111,7 @@ textarea {
 }
 
 button {
-    background-color: #5e484a;
+    background-color: #f29f33;
     color: #fff;
     padding: 10px 20px;
     border:10px;
@@ -122,5 +120,12 @@ button {
 }
 
 button:hover {
-    background-color: #7e6366;
+    background-color: #f38b03;
+}
+button:active {
+    color: #fff;
+    text-decoration: none;
+}
+p{
+    text-align:left;
 }
