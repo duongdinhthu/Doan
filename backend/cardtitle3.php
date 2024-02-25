@@ -313,7 +313,4 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 </body>
 </html>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
