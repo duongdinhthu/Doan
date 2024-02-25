@@ -137,6 +137,8 @@ $infor=$project->inforByUserName($username);
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
+<<<<<<< HEAD
+=======
 <div class="text">
     <div>
         <a href="home.html">Home  > </a>
@@ -145,6 +147,7 @@ $infor=$project->inforByUserName($username);
     <h2>CONTACT</h2>
     <hr/>
 </div>
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 <div class="contact">
     <div class="contact1">
         <h2>Contact Us</h2>
@@ -164,8 +167,11 @@ $infor=$project->inforByUserName($username);
     </div>
 </div>
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 <div class="footer">
     <div class="footer0">
         <div class="footer1">

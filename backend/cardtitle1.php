@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+<?php
+session_start();
+//kiểm tra session
+if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
+    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
+    exit;
+}
+?>
+
+=======
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,13 +76,22 @@
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%">
 </header>
 <style>
+<<<<<<< HEAD
+body {
+    font-family: Arial, sans-serif;
+=======
     body {
         font-family: Arial, sans-serif;
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
         line-height: 1.6;
         margin: 20px;
     }
     .announcement {
+<<<<<<< HEAD
+    max-width: 800px;
+=======
         max-width: 800px;
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
         margin: 0 auto;
         background-color: #f8f8f8;
         padding: 20px;
@@ -78,6 +99,18 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     h1 {
+<<<<<<< HEAD
+    color: #333;
+}
+    p {
+    color: #555;
+}
+    .comments {
+    margin-top: 20px;
+    }
+    .comment {
+    background-color: #f3f3f3;
+=======
         color: #333;
     }
     p {
@@ -88,11 +121,27 @@
     }
     .comment {
         background-color: #f3f3f3;
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
         padding: 10px;
         border-radius: 5px;
         margin-bottom: 10px;
     }
     .comment p {
+<<<<<<< HEAD
+    margin: 0;
+}
+    .comment-form {
+    margin-top: 20px;
+    }
+    .comment-form label {
+    display: block;
+    margin-bottom: 8px;
+    }
+    .comment-form input,
+    .comment-form textarea {
+    width: 100%;
+    padding: 8px;
+=======
         margin: 0;
     }
     .comment-form {
@@ -106,13 +155,18 @@
     .comment-form textarea {
         width: 100%;
         padding: 8px;
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
         margin-bottom: 12px;
         border: 1px solid #ccc;
         border-radius: 5px;
         box-sizing: border-box;
     }
     .comment-form button {
+<<<<<<< HEAD
+    background-color: #4caf50;
+=======
         background-color: #4caf50;
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
         color: #fff;
         padding: 10px;
         border: none;
@@ -120,7 +174,11 @@
         cursor: pointer;
     }
     .comment-form button:hover {
+<<<<<<< HEAD
+    background-color: #45a049;
+=======
         background-color: #45a049;
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
     }
 </style>
 
@@ -246,3 +304,7 @@
 </body>
 </html>
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696

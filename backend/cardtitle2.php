@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 <?php
 session_start();
 //kiểm tra session
@@ -64,8 +67,13 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
                     <a href="Dichvutochuc.html">Organize</a>
                 </div>
             </div>
+<<<<<<< HEAD
+            <a href="tintuc.html" class="btn btn-outline">News</a>
+            <a href="lienhe.html" class="btn btn-outline">Contact</a>
+=======
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
+>>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
             <a href="../backend/login.php" class="btn btn-outline">Login</a>
 
         </div>
