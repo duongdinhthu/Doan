@@ -1,17 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<body>
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="tintuc.css">
-    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="Dichvutochuc.css">
 </head>
 <body>
 <header>
@@ -32,11 +34,7 @@
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-
-                    <a href="Trochoitreem.html">Children</a>
-
-                    <a href="Trochoitreem.html">For Children</a>
-
+                    <a href="Trochoitreem.html"> Kids</a>
                     <a href="Trochoigiadinh.html">Family</a>
                     <a href="Trochoinguoilon.html">Adults</a>
                 </div>
@@ -44,7 +42,7 @@
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="Docanhan.html">Personal Items</a>
+                    <a href="Docanhan.html">Personal items</a>
                     <a href="Dothietyeu.html">Essentials</a>
                     <a href="Thucpham.html">Food</a>
                 </div>
@@ -52,128 +50,145 @@
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-
-                    <a href="Dichvutrongoi.html">Packages</a>
-                    <a href="Dichvutour.html">Tours</a>
-                    <a href="Dichvutochuc.html">Organizations</a>
-
-                    <a href="Dichvutrongoi.html">Package Services</a>
-                    <a href="Dichvutour.html">Tours</a>
-                    <a href="Dichvutochuc.html">Organization</a>
-
+                    <a href="Dichvutrongoi.html">Package</a>
+                    <a href="Dichvutour.html"> Tour</a>
+                    <a href="Dichvutochuc.html">Organize</a>
                 </div>
             </div>
             <a href="tintuc.html" class="btn btn-outline">News</a>
             <a href="lienhe.html" class="btn btn-outline">Contact</a>
-
             <a href="../backend/login.php" class="btn btn-outline">Login</a>
 
         </div>
     </div>
-    <img src="img/img_banner_brea_col.webp" alt="" style="width: 100%; background-color: #FEF7EF">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%">
 </header>
-<div class="text">
-    <div>
-        <a href="home.html">Home  > </a>
-        <p>News</p>
-    </div>
-    <h2>NEWS</h2>
-    <hr/>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+    .announcement {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #333;
+    }
+    p {
+        color: #555;
+    }
+    .comments {
+        margin-top: 20px;
+    }
+    .comment {
+        background-color: #f3f3f3;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .comment p {
+        margin: 0;
+    }
+    .comment-form {
+        margin-top: 20px;
+    }
+    .comment-form label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .comment-form input,
+    .comment-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .comment-form button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .comment-form button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+</head>
+<body>
+
+
+<div class="announcement">
+
+    <h2>NOTICE OF VIETNAM NATIONAL DAY OFF SEPTEMBER 2, 2023</h2>
+    <p><strong>76 Reviews</strong></p>
+    <p>Announcement of the Vietnam National Day off September 2, 2023</p>
+
+    <p>To our valued customers and partners,</p>
+    <p>FPT HAPPY Co., Ltd. respectfully announces the schedule of the National Day off September 2, 2023 of its branches:</p>
+
+    <!-- Content of holiday notice -->
+
+    <p>Please note: We will temporarily suspend express delivery services at all 3 branches during the holiday.</p>
+
+    <p>During the holiday, if you have any needs or questions, please send information via email or leave a message directly on our website. We will respond as soon as possible.</p>
+
+    <p>FPT HAPPY Co., Ltd. wishes our customers and partners a happy, peaceful holiday full of joy with family and loved ones.</p>
+
+    <p>Thank you and congratulations on the Vietnam National Day!</p>
+
+    <p>FPT HAPPY Co., Ltd.</p>
 </div>
-<div class="allcard">
-    <div class="card text-center">
-        <div class="img-card">
-            <img src="imageTinTuc/img200.webp"/>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">ANNOUNCEMENT OF VIETNAM NATIONAL DAY HOLIDAY 2/9/2023
-            </h5>
 
-            <p class="card-text">  To our valued customers and partners, FPT HAPPY Company respectfully announces the schedule of the 2/9/2023 National Day holiday for its branches: Ho Chi Minh City branch: …</p>
-            <a href="cardtitle1.html" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
-    </div>
-    <div class="card text-center">
-        <div class="img-card">
-            <img src="imageTinTuc/img201.webp"/>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Camping Equipment Store – Ho Chi Minh City Outdoor Activities
-            </h5>
-            <p class="card-text">Camping and outdoor activities have long been familiar to many people. With outdoor activities focusing on nature, helping improve significantly mental and physical health, camping has becom... </p>
-            <a href="cardtitle2.html" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
-    </div>
-    <div class="card text-center">
-        <div class="img-card">
-            <img src="imageTinTuc/img202.webp"/>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">FPT HAPPY Announces Lunar New Year Holiday Schedule of the Year of the Tiger 2022
+<!-- Comment Section -->
+<div class="comments">
+    <h2>Comments</h2>
 
-            </h5>
-            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Tiger 2022 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
-            <a href="cardtitle3.html" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
-    </div>
-    <div class="card text-center">
-        <div class="img-card">
-            <img src="imageTinTuc/img203.webp"/>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Tet Nguyen Dan Lunar New Year Holiday Schedule of the Year of the Buffalo 2021
-            </h5>
-            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Buffalo 2021 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
-            <a href="cardtitle4.html" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
-    </div>
-    <div class="card text-center">
-        <div class="img-card">
-            <img src="imageTinTuc/img204.webp"/>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Tet Canh Ty Lunar New Year Holiday Schedule of the Year of the Rat 2020
-            </h5>
-            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Rat 2020 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
-            <a href="cardtitle5.html" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
+
+    <!-- Example comment -->
+    <div class="comment">
+        <p><strong>User:</strong> John Doe</p>
+        <p><strong>Comment:</strong> Wishing FPT HAPPY Co., Ltd. a holiday full of joy!</p>
     </div>
 </div>
 
+<!-- Comment Form -->
+<div class="comment-form">
+    <h2>Add Comment</h2>
+    <form action="#" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
 
+        <button type="submit">Send Comment</button>
+    </form>
+</div>
+</div>
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
-            <img src="img/logo.webp" alt="">
+            <img src="img/logo_footer.webp" alt="">
             <div class="icon">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-youtube"></i>
                 <i class="fa-brands fa-twitter"></i>
             </div>
-
-            <p>SUBSCRIBE</p>
-
             <p>SUBSCRIBE TO NEWSLETTER</p>
-
             <label>
-                <input type="email" placeholder="Enter email address">
+                <input type="email" placeholder="Enter your email address">
                 <button>SEND</button>
             </label>
             <div class="contact">
@@ -195,23 +210,20 @@
                     <h3>ABOUT US</h3><br>
                     <a href="#">Company</a><br>
                     <a href="#">Address</a><br>
-                    <a href="#">Phone Number</a><br>
+                    <a href="#">Phone number</a><br>
                     <a href="#">Links</a><br>
                 </div>
                 <div class="Support">
                     <h3>CUSTOMER SUPPORT</h3><br>
                     <a href="#">Contact</a><br>
-                    <a href="#">Handling Complaints</a><br>
-                    <a href="#">User Guide</a><br>
-                    <a href="#">Warranty, Returns</a><br>
+                    <a href="#">Handling complaints</a><br>
+                    <a href="#">Instructions for use</a><br>
+                    <a href="#">Warranty, returns</a><br>
                     <a href="#">Contact</a><br>
                 </div>
                 <div class="Support">
                     <h3>SERVICES</h3><br>
                     <a href="#">Products</a><br>
-
-                    <a href="#">Game Organization Services</a><br>
-
                     <a href="#">Game organization services</a><br>
                     <a href="#">Payment</a><br>
                 </div>
@@ -226,14 +238,11 @@
         </div>
     </div>
     <hr/>
-
-    <p class="license">@ Copyright by ... | Provided by ...</p>
-
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
-
 </div>
 <script src="../../DoanKI1%20(1)/frontend/trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
+

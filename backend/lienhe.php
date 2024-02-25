@@ -23,9 +23,69 @@ $infor=$project->inforByUserName($username);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dichvutour.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
+    <style>
+        .contact{
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            padding: 20px;
+        }
+        .contact div i{
+            padding-left: 10px;
+        }
+        .contact1{
+            border-left: 1px solid darkgrey;
+            border-top: 1px solid darkgrey;
+            border-bottom: 1px solid darkgrey;
+            padding: 10px;
+            border-radius: 10px 0 0 10px;
+            background-color: darkgrey;
+            color: white;
+        }
+        .contact2{
+            border-radius: 0 10px 10px 0;
+            border-top: 1px solid darkgrey;
+            padding: 10px;
+            border-bottom: 1px solid darkgrey;
+            border-right: 1px solid darkgrey;
+            background-color: darkgrey;
+        }
+
+
+        .text{
+            margin-top: 30px;
+            text-align: center;
+        }
+        .text div{
+            justify-content: center;
+            display: flex;
+        }
+        .text div a{
+            text-decoration: none;
+            color: #654145;
+            transition: 0.3s ease-in-out;
+            font-size: 18px;
+        }
+        .text div a:hover{
+            color: #f29f33;
+        }
+        .text div p{
+            margin-left: 5px;
+            color: #f29f33;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .text h2{
+            color: #f29f33;
+            font-weight: bold;
+        }
+        .text hr{
+            width: 100px;
+            background-color: #f29f33;
+        }</style>
 </head>
 <body>
 <header>
@@ -77,6 +137,35 @@ $infor=$project->inforByUserName($username);
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
+<div class="text">
+    <div>
+        <a href="home.html">Home  > </a>
+        <p>Contact</p>
+    </div>
+    <h2>CONTACT</h2>
+    <hr/>
+</div>
+<div class="contact">
+    <div class="contact1">
+        <h2>Contact Us</h2>
+        <h5>FPT-HAPPY Store</h5>
+        <p> - Address: 8A Ton That Thuyet, My Dinh, Nam Tu Liem, Hanoi<br>
+            - Support Phone: 0910JQKA<br>
+            - Gmail: Support@gmail.com</p>
+        <i class="fa-brands fa-square-facebook" style="font-size: 40px"></i>
+        <i class="fa-brands fa-square-instagram" style="font-size: 40px"></i>
+        <i class="fa-brands fa-square-youtube" style="font-size: 40px"></i>
+        <i class="fa-brands fa-square-twitter" style="font-size: 40px"></i>
+    </div>
+    <div class="contact2">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0964843020174!2d105.77971641111058!3d21.028825087695044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab00954decbf%3A0xdb4ee23b49ad50c8!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIHRo4buRbmcgxJHDoG8gdOG6oW8gbOG6rXAgdHLDrG5oIHZpw6puIHF14buRYyB04bq_!5e0!3m2!1svi!2sus!4v1705398017169!5m2!1svi!2sus"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+
+
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
@@ -141,7 +230,7 @@ $infor=$project->inforByUserName($username);
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="trangchu.js"></script>
+<script src="trangchu.js"></style>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
