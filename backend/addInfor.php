@@ -105,6 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="text" placeholder="Address" id="address" name="address" required>
         </div>
         <button type="submit">Submit</button>
+        <a href="home.php">Back home</a>
     </form>
 </div>
 <div class="footer">
