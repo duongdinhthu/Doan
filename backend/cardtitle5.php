@@ -7,10 +7,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 }
 ?>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,35 +77,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         line-height: 1.6;
         margin: 20px;
     }
-<<<<<<< HEAD
-
-    .container {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    h1 {
-        color: #333;
-        text-align: center;
-    }
-
-    p {
-        color: #555;
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        margin-bottom: 10px;
-    }
-
-    strong {
-        color: #333;
-    }
-=======
     .announcement {
         max-width: 800px;
         margin: 0 auto;
@@ -124,7 +91,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     p {
         color: #555;
     }
->>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
     .comments {
         margin-top: 20px;
     }
@@ -165,33 +131,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         background-color: #45a049;
     }
 </style>
-<<<<<<< HEAD
-</head>
-<body>
-
-<div class="container">
-    <h1>Tết Holiday Notice</h1>
-
-    <p>Dear customers/members,</p>
-
-    <p>On the occasion of Lunar New Year, we would like to inform you of the holiday schedule as follows:</p>
-
-    <ul>
-        <li><strong>Start of holiday:</strong> Thursday, January 31, 2020, on the 30th day of the Lunar December of the year of Tan Suu.</li>
-        <li><strong>Return to work:</strong> Monday, February 07, 2020, on the 8th day of the Lunar January of the year of Nhâm Dần.</li>
-    </ul>
-
-    <p>During the Tet holiday, we will not be able to receive and process orders. All orders and support requests will be processed after the return to work.</p>
-
-    <p>If you need urgent support, please contact:</p>
-
-    <ul>
-        <li><strong>Hotline:</strong> 0123 456 789</li>
-        <li><strong>Email:</strong> support@example.com</li>
-    </ul>
-
-    <p>Thank you for your support of FPT HAPPY throughout the past time. We wish you a New Year filled with Peace, Prosperity, and All Wishes Come True.</p>
-=======
 
 </head>
 <body>
@@ -217,26 +156,17 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <p>Thank you and congratulations on the Vietnam National Day!</p>
 
     <p>FPT HAPPY Co., Ltd.</p>
->>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 </div>
 
 <!-- Comment Section -->
 <div class="comments">
     <h2>Comments</h2>
-<<<<<<< HEAD
-    <!-- Display comments here -->
-=======
 
->>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
 
     <!-- Example comment -->
     <div class="comment">
         <p><strong>User:</strong> John Doe</p>
-<<<<<<< HEAD
-        <p><strong>Comment:</strong> Wishing FPT HAPPY Company a joyful holiday!</p>
-=======
         <p><strong>Comment:</strong> Wishing FPT HAPPY Co., Ltd. a holiday full of joy!</p>
->>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
     </div>
 </div>
 
@@ -244,21 +174,13 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 <div class="comment-form">
     <h2>Add Comment</h2>
     <form action="#" method="post">
-<<<<<<< HEAD
-        <label for="username">User Name:</label>
-=======
         <label for="username">Username:</label>
->>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
         <input type="text" id="username" name="username" required>
 
         <label for="comment">Comment:</label>
         <textarea id="comment" name="comment" rows="4" required></textarea>
 
-<<<<<<< HEAD
-        <button type="submit">Submit Comment</button>
-=======
         <button type="submit">Send Comment</button>
->>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
     </form>
 </div>
 </div>
@@ -331,7 +253,3 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
-<<<<<<< HEAD
-
-=======
->>>>>>> a3a3c8a7fabf26de193bf5790584568b48c5a696
