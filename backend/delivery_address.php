@@ -1,14 +1,16 @@
 <?php
 session_start();
 //kiểm tra session
+
+include "project.php";
+$project = new projectFptHappy();
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
-include "project.php";
-$project = new projectFptHappy();
-$username = $_GET['username'];
 
+$username = $_GET['username'];
+$random_code =$project->generateRandomCode();
 $infor= $project->inforCustomerByUser($username);
 $cart = $project->getAllCart($username);
 $totalcart = $project->totalShow($username);
@@ -31,6 +33,7 @@ $totalcart = $project->totalShow($username);
     <title>Home</title>
 </head>
 <body>
+
 <header>
     <div class="header">
         <div class="header1">
@@ -127,12 +130,12 @@ $totalcart = $project->totalShow($username);
 
         <br>
         <h3>Payment Information</h3>
-
+        <input type="text" id="code" name="code" value="<?php echo $random_code ?>" required style="display: none">
 
         <input type="radio" id="payment" name="payment" value="COD" required >
         <label for="payment">COD</label><br>
 
-        <button class="btn btn-success" type="submit" name="generate_code" id="generate_code">Order</button>
+        <button class="btn btn-success" type="submit" >Order</button>
         <br>
     </form>
 

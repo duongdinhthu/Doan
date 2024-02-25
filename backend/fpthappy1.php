@@ -51,7 +51,11 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
             <th>List Price($)</th>
             <th>Quantity</th>
             <th>Total Price($)</th>
+            <th>Payment</th>
+            <th>Code</th>
             <th>Status</th>
+            <th>Update order status</th>
+
         </tr>
         </thead>
         <tbody>
@@ -64,11 +68,20 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
                 <td><?php echo $paycart['list_price'] ?></td>
                 <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
                 <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
+
+                <td><?php echo $paycart['payment'] ?></td>
+                <td><?php echo $paycart['code'] ?></td>
                 <td><?php echo $paycart['status'] ?></td>
-                <td><a href="status.php?action=done&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username']  ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo$dateyear ?>"
-                       class="btn btn-success btn-sm" onclick="return confirm('Do you want to change the order status to done?')" >Done?</a></td>
-                <td><a href="status.php?action=delivering&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username']  ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo$dateyear ?>"
-                       class="btn btn-warning btn-sm" onclick="return confirm('Do you want to change the order status to being delivered?')" >Delivering</a></td>
+                <td><select class="status-select">
+                        <option value=""><?php echo $paycart['status'] ?></option>
+                        <option value="1" style="background: #45a049">done</option>
+                        <option value="2" style="background: yellowgreen">delivering</option>
+                    </select></td>
+                <td><a href="status.php?action=done&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo $dateyear ?>" class=" myLink1 " >Done</a></td>
+                <td><a href="status.php?action=delivering&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo $dateyear ?>" class=" myLink2 ">Delivering</a></td>
+
+
+
             </tr>
         <?php endforeach; ?>
         </tbody>
@@ -76,5 +89,23 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
     <h2>Total value of goods sold:  $<?php echo $paycart['total_adm'] ?></h2>
 
 </div>
+<script>
+    var statusSelects = document.querySelectorAll('.status-select');
+
+    statusSelects.forEach(function(select) {
+        select.addEventListener("change", function() {
+            var selectedValue = this.value;
+            if (selectedValue === "1") {
+                this.parentNode.parentNode.querySelector(".myLink1").click();
+            } else if (selectedValue === "2") {
+                this.parentNode.parentNode.querySelector(".myLink2").click();
+            }
+        });
+    });
+
+</script>
+
+
 </body>
 </html>
+

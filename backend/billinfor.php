@@ -2,24 +2,26 @@
 session_start();
 //kiểm tra session
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
+
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
 include "project.php";
 $project = new projectFptHappy();
+
+
+
+
 $username=$_SESSION['username'];
 $name = $_POST['name'];
 $phone=$_POST['phone'];
 $address= $_POST['address'];
 $cod = $_POST['payment'];
 $totalcart=$_POST['totalcart'];
-
-if(isset($_POST['generate_code'])) {
-    $random_code =$project->generateRandomCode();
-}
+$code = $_POST['code'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $update = $project->payTheBill($name,$phone,$address,$username,$cod);
+    $update = $project->payTheBill($name,$phone,$address,$username,$cod,$code);
     echo "You have successfully purchased  ";
 
 }
@@ -124,15 +126,15 @@ $paycart = $project->getAllPay($username);
             </tbody>
         </table></p></h5>
     <hr style="height: 0; width: 250px; background-color: #f29f33">
-    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Code Orders: <p style="margin-left: 10px; color: #654145;"> <?php echo  $random_code; ?></p></h5>
+    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Code Orders: <p style="margin-left: 10px; color: #654145;"> <?php echo  $code; ?></p></h5>
     <hr style="height: 0; width: 250px; background-color: #f29f33">
     <h5 style="display: flex; margin-top: 15px; color: #f29f33">Payment Detail: <p style="margin-left: 10px; color: #654145;"> <?php echo  $cod; ?></p></h5>
     <hr style="height: 0; width: 250px; background-color: #f29f33">
     <h5 style="display: flex; margin-top: 15px; color: #f29f33">Price: <p style="margin-left: 10px; color: #654145;"> <?php echo  $totalcart; ?></p></h5>
 </div>
 
-<td><a href="home.php?action=success&code=<?php echo  $random_code; ?> " class="btn btn-success"
-         >Home</a></td>
+<td><a href="cart.php? " class="btn btn-success"
+         >Back to cart</a></td>
 
 
 
