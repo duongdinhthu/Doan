@@ -19,9 +19,13 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="tintuc.css">
     <link rel="stylesheet" href="Dichvutour.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
+    <style>
+
+    </style>
 </head>
 <body>
 <header>
@@ -74,6 +78,81 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
 
+
+<div class="allcard">
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img200.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">ANNOUNCEMENT OF VIETNAM NATIONAL DAY HOLIDAY 2/9/2023
+            </h5>
+
+            <p class="card-text">  To our valued customers and partners, FPT HAPPY Company respectfully announces the schedule of the 2/9/2023 National Day holiday for its branches: Ho Chi Minh City branch: …</p>
+            <a href="cardtitle1.php" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img201.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Camping Equipment Store – Ho Chi Minh City Outdoor Activities
+            </h5>
+            <p class="card-text">Camping and outdoor activities have long been familiar to many people. With outdoor activities focusing on nature, helping improve significantly mental and physical health, camping has becom... </p>
+            <a href="cardtitle2.php" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img202.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">FPT HAPPY Announces Lunar New Year Holiday Schedule of the Year of the Tiger 2022
+
+            </h5>
+            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Tiger 2022 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
+            <a href="cardtitle3.php" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img203.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Tet Nguyen Dan Lunar New Year Holiday Schedule of the Year of the Buffalo 2021
+            </h5>
+            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Buffalo 2021 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
+            <a href="cardtitle4.php" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img204.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Tet Canh Ty Lunar New Year Holiday Schedule of the Year of the Rat 2020
+            </h5>
+            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Rat 2020 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
+            <a href="cardtitle5.html" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+</div>
 <div class="footer">
     <div class="footer0">
         <div class="footer1">

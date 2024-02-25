@@ -71,9 +71,90 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0964843020174!2d105.77971641111058!3d21.028825087695044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab00954decbf%3A0xdb4ee23b49ad50c8!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIHRo4buRbmcgxJHDoG8gdOG6oW8gbOG6rXAgdHLDrG5oIHZpw6puIHF14buRYyB04bq_!5e0!3m2!1svi!2sus!4v1705398017169!5m2!1svi!2sus"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div>
+        <a href="home.html">Home  > </a>
+        <p>News</p>
+    </div>
+    <h2>NEWS</h2>
+    <hr/>
+</div>
+<div class="allcard">
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img200.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">ANNOUNCEMENT OF VIETNAM NATIONAL DAY HOLIDAY 2/9/2023
+            </h5>
+
+            <p class="card-text">  To our valued customers and partners, FPT HAPPY Company respectfully announces the schedule of the 2/9/2023 National Day holiday for its branches: Ho Chi Minh City branch: …</p>
+            <a href="cardtitle1.html" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img201.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Camping Equipment Store – Ho Chi Minh City Outdoor Activities
+            </h5>
+            <p class="card-text">Camping and outdoor activities have long been familiar to many people. With outdoor activities focusing on nature, helping improve significantly mental and physical health, camping has becom... </p>
+            <a href="cardtitle2.html" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img202.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">FPT HAPPY Announces Lunar New Year Holiday Schedule of the Year of the Tiger 2022
+
+            </h5>
+            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Tiger 2022 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
+            <a href="cardtitle3.html" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img203.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Tet Nguyen Dan Lunar New Year Holiday Schedule of the Year of the Buffalo 2021
+            </h5>
+            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Buffalo 2021 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
+            <a href="cardtitle4.html" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+    <div class="card text-center">
+        <div class="img-card">
+            <img src="imageTinTuc/img204.webp"/>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Tet Canh Ty Lunar New Year Holiday Schedule of the Year of the Rat 2020
+            </h5>
+            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Rat 2020 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
+            <a href="cardtitle5.html" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+</div>
+
+
+
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
