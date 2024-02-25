@@ -120,7 +120,7 @@ $totalpay = $carts->totalShowPay($username);
         <th>List Price($)</th>
         <th>Quantity</th>
         <th>Total Price($)</th>
-        <th>Delete</th>
+
 
     </tr>
     </thead>
@@ -203,6 +203,9 @@ $totalpay = $carts->totalShowPay($username);
         <th>List Price($)</th>
         <th>Quantity</th>
         <th>Total Price($)</th>
+        <th>Payment</th>
+        <th>Code</th>
+        <th>Status</th>
     </tr>
     </thead>
     <tbody>
@@ -215,6 +218,9 @@ $totalpay = $carts->totalShowPay($username);
             <td><?php echo $paycart['list_price'] ?></td>
             <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
             <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
+            <td><?php echo $paycart['payment'] ?></td>
+            <td><?php echo $paycart['code'] ?></td>
+            <td><?php echo $paycart['status'] ?></td>
         </tr>
     <?php endforeach; ?>
     </tbody>
