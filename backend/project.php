@@ -370,7 +370,7 @@ class projectFptHappy
     }
     public function getAllCart($username)
     {   $carts = [];
-        $sql = " select p.image,c.product_id,p.pid,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.total_price from cart c join product p on c.product_id = p.pid where username = '$username' and hidden = 1 GROUP BY product_id, username";
+        $sql = " select p.image,c.product_id,p.pid,p.name,c.list_price,SUM(c.quantity),c.quantity,SUM(c.total_price),c.total_price from cart c join product p on c.product_id = p.pid where username = '$username' and hidden = 1 GROUP BY product_id, username";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){

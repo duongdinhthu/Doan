@@ -28,7 +28,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
     $deletepay = $carts->deletePay($username);
 }
 $cart = $carts->getAllCart($username);
-$updatetotalprice = $carts->totalprice($username);
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username=$_SESSION["username"];
@@ -36,7 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $product_id=$_POST['productid'];
     $updatequantity=$carts->updateQuantity($quantity,$username,$product_id);
 
+
 }
+$updatetotalprice = $carts->totalprice($username);
 $infor=$carts->inforByUserName($username);
 $updatetotalpaycart = $carts->totalPayCart($username);
 $updatetotalcart= $carts-> totalCart($username);

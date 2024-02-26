@@ -13,9 +13,6 @@ if(isset($username)&&isset($password)){
     $student = $register->addAccountCustomer($username,$password);
 
 }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
