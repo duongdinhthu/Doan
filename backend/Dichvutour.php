@@ -104,10 +104,10 @@ $product = $project->getAllProduct4();
             <div class="product-item">
                 <div>
                     <form action="" method="post">
-                        <a href="Docanhandetail.php">
+                        <a href="Dichvutourdetail.php">
                             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="..." style="height: 280px">
                         </a>
-                        <a href="Docanhandetail.php" class="name"><?php echo $product["name"]; ?></a>
+                        <a href="Dichvutourdetail.php" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">
                             <label for="sl" style="display: none">Số lượng</label>
                             <input value="1" style="width: 90px; display: none" id="sl" name="sl">
