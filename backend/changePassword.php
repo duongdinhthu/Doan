@@ -96,7 +96,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
 </div>
 <form action="" method="post" >
     <input type="hidden" name="choice" value="2">
-<<<<<<< HEAD
+
     <label for="username">Username:</label>
     <input name="username" type="text" id="username" required class="form-control">
     <label for="password">Old password:</label>
@@ -106,18 +106,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
     <input name="password2" type="password" id="password2" required class="form-control">
     <label for="password3">Enter the new password again:</label>
     <input name="password3" type="password" id="password3" required class="form-control">
-=======
-    <label for="username" style="display: none">Username:</label>
-    <input name="username" type="text" id="username" placeholder="Username" required><br>
-    <label for="password" style="display: none">Old password:</label>
-    <input name="password" type="password" id="password" placeholder="Old password" required><br>
-    <label for="password1" style="display: none">Enter the old password again:</label>
-    <input name="password1" type="password" id="password1" placeholder="New password" required><br>
-    <label for="password2" style="display: none">Enter your new password:</label>
-    <input name="password2" type="password" id="password2" required><br>
-    <label for="password3" style="display: none">Enter the new password again:</label>
-    <input name="password3" type="password" id="password3" required><br>
->>>>>>> 6e944ea614ebb0ae20e09c71ccba9a77b01c4209
+
     <br>
     <button type="submit" class="btn btn-primary">Change Password</button>
     <a href="login.php" class="btn btn-success">Re-Login</a>
