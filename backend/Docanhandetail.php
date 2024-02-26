@@ -1,4 +1,22 @@
 <?php
+session_start();
+//kiểm tra session
+if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
+    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
+    exit;
+}
+include "project.php";
+$project = new projectFptHappy();
+$gia=$_GET['gia'];
+$id=$_GET['id'];
+$sl='1';
+$username=$_SESSION["username"];
+if (isset($_GET['action']) && $_GET['action'] === 'add') {
+
+    $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
+    $success="ok";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +45,8 @@
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-                <p>Hotline<br>8910JQKA</p>
+
+                <p>Hotline<br>78910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
@@ -35,7 +54,7 @@
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.php"> Children</a>
+                    <a href="Trochoitreem.php">Kids</a>
                     <a href="Trochoigiadinh.php">Family</a>
                     <a href="Trochoinguoilon.php">Adults</a>
                 </div>
@@ -52,7 +71,7 @@
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
                     <a href="Dichvutrongoi.php">Packages</a>
-                    <a href="Dichvutour.php">Tour</a>
+                    <a href="Dichvutour.php"> Tours</a>
                     <a href="Dichvutochuc.php">Organizing</a>
                 </div>
             </div>
@@ -63,7 +82,7 @@
 
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
     <ol class="carousel-indicators" >
@@ -131,7 +150,7 @@
     </div>
 
     <div class="buttons">
-        <a href="#" class="btn">Contact to buy</a>
+        <a href="Docanhandetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn">Add to cart</a>
     </div>
 </div>
 
