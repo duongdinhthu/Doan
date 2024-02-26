@@ -342,8 +342,9 @@ body{
     color: #F29F33;
 }
 .new a{
+    color: black;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: none !important;
     font-weight: bold;
     transition: all 0.3s ease;
 }

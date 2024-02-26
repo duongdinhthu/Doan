@@ -116,45 +116,37 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         <span class="sr-only">Next</span>
     </a>
 </div>
-
-</div>
-<div id="allcard">
-    <div class="card1" style="width:300px;height:200px">
-        <img src="https://www.sukien-teambuilding.com/wp-content/uploads/to-chuc-teambuilding-buoi-toi.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Campfire Games</h5>
-            <p class="card-text">
-                Campfire games are interactive and survival skill activities, where players collaborate to light a campfire </p>
-            <a href="Trochoinguoilonchitiet.html" class="btn btn-primary" class="btn btn-primary">Instructions</a>
-        </div>
+<div class="product-boxes">
+    <div>
+        <a href="Trochoinguoilonchitiet.html">
+            <img src="https://www.sukien-teambuilding.com/wp-content/uploads/to-chuc-teambuilding-buoi-toi.jpg" alt="">
+        </a>
+        <a href="Trochoinguoilonchitiet.html" class="name">Campfire Games</a>
+        <h5 class="cost">
+            <a href="Trochoinguoilonchitiet.html" class="buy-button">View Detail</a>
+        </h5>
     </div>
-    <div class="card2" style="width:300px;height:200px">
-        <img src="https://vteambuilding.com/wp-content/uploads/2018/01/8.-Ban-nh%E1%BA%A1c-h%C3%B2a-t%E1%BA%A5u-1024x683.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Orchestra Harmony Game</h5>
-            <p class="card-text">
-                The orchestra harmony game is a creative experience where players collaborate to create great music.....</p>
-            <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20ban%20nhac%20hoa%20tau.docx" download="file.dox" class="btn btn-primary">Instructions</a>
-        </div>
+    <div>
+        <img src="https://vteambuilding.com/wp-content/uploads/2018/01/8.-Ban-nh%E1%BA%A1c-h%C3%B2a-t%E1%BA%A5u-1024x683.jpg" alt="">
+        <a href="#" class="name">Orchestra Harmony Game</a>
+        <h5 class="cost">
+            <a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20ban%20nhac%20hoa%20tau.docx" class="buy-button">View Detail</a>
+        </h5>
     </div>
-    <div class="card3" style="width:300px;height:200px">
-        <img src="https://bizweb.dktcdn.net/100/463/236/products/tro-choi-team-building-doan-ket-da-sua.png?v=1667918711933" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Team Wheel Game</h5>
-            <p class="card-text">
-                The team wheel game is a cooperation-focused challenge where players collectively control</p>
-            <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20banh%20xe%20dong%20doi.docx"  download="file.dox" class="btn btn-primary">Instructions</a>
-        </div>
+    <div>
+        <img src="https://bizweb.dktcdn.net/100/463/236/products/tro-choi-team-building-doan-ket-da-sua.png?v=1667918711933" alt="">
+        <a href="#" class="name">Team Wheel Game</a>
+        <h5 class="cost">
+            <a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20banh%20xe%20dong%20doi.docx" class="buy-button">View Detail</a>
+        </h5>
     </div>
-    <div class="card4" style="width:300px;height:200px">
-        <img src="https://cdn.tgdd.vn//GameApp/1388369//bit-mat-bat-de-cach-2-800x450.png" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Blindfolded Goat Catching Game</h5>
-            <p class="card-text">The blindfolded goat catching game is a team puzzle-solving game.......</p>
-            <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20bit%20mat%20bat%20de.docx"  download="file.dox" class="btn btn-primary">Instruction</a>
-        </div>
+    <div>
+        <img src="https://cdn.tgdd.vn//GameApp/1388369//bit-mat-bat-de-cach-2-800x450.png" alt="">
+        <a href="#" class="name">Blindfolded Goat Catching Game</a>
+        <h5 class="cost">
+            <a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20bit%20mat%20bat%20de.docx" class="buy-button">View Detail</a>
+        </h5>
     </div>
-
 </div>
 <div class="footer">
     <div class="footer0">
