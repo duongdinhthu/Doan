@@ -7,31 +7,27 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 }
 include "project.php";
 $project = new projectFptHappy();
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$gia=$_GET['gia'];
+$id=$_GET['id'];
+$sl='1';
+if (isset($_GET['action']) && $_GET['action'] === 'add') {
     $username=$_SESSION["username"];
-    $sl = $_POST['sl'];
-    $id = $_POST['id'];
-    $gia = $_POST['gia'];
-    $cart = $project->addCart2($username,$id,$sl,$gia);
-
+    $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
+    $success="ok";
 }
-$product = $project->getAllProduct3();
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
     <title>Title</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dothietyeudetail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> <link rel="stylesheet" href="trangchu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
+    <link rel="stylesheet" href="Dothietyeudetail.css">
 </head>
 <body>
 <header>
@@ -83,7 +79,6 @@ $product = $project->getAllProduct3();
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-
 
 <div id="card-body">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
@@ -152,7 +147,7 @@ $product = $project->getAllProduct3();
         </div>
 
         <div class="buttons">
-            <a href="#" class="btn">Contact to buy</a>
+            <a href="DothietyeuDetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn">Add to cart</a>
         </div>
     </div>
 
@@ -376,8 +371,6 @@ $product = $project->getAllProduct3();
         <p class="license">@ Copyright by ... | Provided by ...</p>
     </div>
     <script src="Dothietyeudetail.js" ></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 </body>
 
