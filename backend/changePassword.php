@@ -9,18 +9,18 @@ include "project.php";
 $studentManager = new projectFptHappy();
 $username = $_POST['username'];
 $password = $_POST['password'];
-$password1 = $_POST['password1'];
+
 $password2 = $_POST['password2'];
 $password3 = $_POST['password3'];
-if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password1'])&&isset($_POST['password2'])&&isset($_POST['password3'])){
-    if ($password===$password1){
+if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2'])&&isset($_POST['password3'])){
+    if (isset($password)){
         if ($password2===$password3){
             $studentManager->changePassword($username,$password,$password2,);
         }else{
             echo"The 2 new passwords do not match, please try again ";
         }
     }else{
-        echo"The 2 old passwords do not match, please try again";
+        echo"Password has not been entered yet";
     }
 }
 
@@ -92,8 +92,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password1
     <input name="username" type="text" id="username" required class="form-control">
     <label for="password">Old password:</label>
     <input name="password" type="password" id="password" required class="form-control">
-    <label for="password1">Enter the old password again:</label>
-    <input name="password1" type="password" id="password1" required class="form-control">
+
     <label for="password2">Enter your new password:</label>
     <input name="password2" type="password" id="password2" required class="form-control">
     <label for="password3">Enter the new password again:</label>
