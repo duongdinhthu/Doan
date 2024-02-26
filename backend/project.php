@@ -562,5 +562,4 @@ public function updateQuantity($quantity,$username,$product_id)
     $this->conn->query($sql);
 
 }
-
 }
