@@ -101,10 +101,10 @@ $product = $project->getAllProduct1();
             <div class="product-item">
                 <div>
                     <form action="" method="post">
-                        <a href="Docanhandetail.php">
+                        <a href="Thucphamdetail.php">
                             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
                         </a>
-                        <a href="Docanhandetail.php" class="name"><?php echo $product["name"]; ?></a>
+                        <a href="Thucphamdetail.php" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">
                             <label for="sl" style="">Số lượng</label>
                             <input value="1" style="width: 90px;" id="sl" name="sl">
@@ -188,7 +188,6 @@ $product = $project->getAllProduct1();
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>

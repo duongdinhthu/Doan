@@ -120,21 +120,21 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
                 <img src="https://leutrai.vn/wp-content/uploads/2023/07/tro-choi-cho-tre-di-da-ngoai-2.jpg" class="d-block w-100" alt="..." >
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Fpt Happy</h5>
-                    <p>Niềm vui gia đình bắt đầu từ những trò chơi chân thực.</p>
+                    <p>Family joy starts with authentic games.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="https://leutrai.vn/wp-content/uploads/2023/07/tro-choi-cho-tre-di-da-ngoai-3.jpg" class="d-block w-100" alt="..." >
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Fpt Happy</h5>
-                    <p>Trò chơi gia đình: nơi mọi khoảnh khắc trở nên đặc biệt.</p>
+                    <p>Family games: where every moment becomes special.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="https://ecopark.com.vn/images/news/2020/10/original/trai-nghiem-cam-trai-qua-dem-nhu-troi-tay-giua-khong-gian-xanh-kdt-ecopark_1603337843.jpg" class="d-block w-100" alt="..." >
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Fpt Happy</h5>
-                    <p>Hòa mình vào trò chơi, kết nối trái tim gia đình.</p>
+                    <p>Immerse yourself in games, connect the hearts of the family.</p>
                 </div>
             </div>
         </div>
@@ -147,7 +147,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <span class="sr-only">Next</span>
         </a>
     </div>
-
 </div>
 <div id="allcard" >
     <div class="card1" style=" width:300px;height:200px">
@@ -155,7 +154,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         <div class="card-body">
             <h5 class="card-title">Family Football Game</h5>
             <p class="card-text">Get ready for family football fun with exciting games that bring dynamic moments to every<br> member.</br></p>
-            <a href="Trochoigiadinhchitiet.html" class="btn btn-primary" style="text-align:center">Instructions</a>
+            <a href="Trochoigiadinhchitiet.php" class="btn btn-primary" style="text-align:center">Instructions</a>
         </div>
     </div>
 

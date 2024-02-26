@@ -1,20 +1,36 @@
 <?php
+session_start();
+//kiểm tra session
+if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
+    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
+    exit;
+}
+include "project.php";
+$project = new projectFptHappy();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username=$_SESSION["username"];
+    $sl = $_POST['sl'];
+    $id = $_POST['id'];
+    $gia = $_POST['gia'];
+    $cart = $project->addCart2($username,$id,$sl,$gia);
+
+}
+$product = $project->getAllProduct3();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<head>
-    <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="Docanhandetail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
-    <link rel="stylesheet" href="Docanhandetail.css">
 </head>
 <body>
 <header>
@@ -27,43 +43,44 @@
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-                <p>Hotline<br>8910JQKA</p>
+
+                <p>Hotline<br>78910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
-            <a href="home.html" class="btn btn-outline">Home</a>
+            <a href="home.php" class="btn btn-outline">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.html"> Children</a>
-                    <a href="Trochoigiadinh.html">Family</a>
-                    <a href="Trochoinguoilon.html">Adults</a>
+                    <a href="Trochoitreem.php">Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="Docanhan.html">Personal items</a>
-                    <a href="Dothietyeu.html">Essentials</a>
-                    <a href="Thucpham.html">Food</a>
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="Dichvutrongoi.html">Packages</a>
-                    <a href="Dichvutour.html">Tour</a>
-                    <a href="Dichvutochuc.html">Organizing</a>
+                    <a href="Dichvutrongoi.php">Packages</a>
+                    <a href="Dichvutour.php"> Tours</a>
+                    <a href="Dichvutochuc.php">Organizing</a>
                 </div>
             </div>
-            <a href="tintuc.html" class="btn btn-outline">News</a>
-            <a href="lienhe.html" class="btn btn-outline">Contact</a>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="user.php" class="btn btn-outline">Account</a>
             <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
 
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
     <ol class="carousel-indicators" >
@@ -117,7 +134,7 @@
 
 <div class="product-detail" style="margin-top:10px">
     <div class="product-title">Morakniv Companion Spark Stainless Steel Survival Knife - Black</div>
-    <div class="price">200,000 VND <span class="discount-price">300,000 VND</span></div>
+    <div class="price">$3,99<span class="discount-price">$6</span></div>
     <div class="product-info">
         <p><strong>Type:</strong> Survival knife</p>
         <p><strong>Manufacturer:</strong> Updating</p>
@@ -136,10 +153,10 @@
 </div>
 
 <div class="navigation-bar">
-    <a onclick="showContent('product-info')" style="color:#ffffff">Product Information</a>
-    <a onclick="showContent('shipping-policy')" style="color:#ffffff">Shipping Policy</a>
-    <a onclick="showContent('return-warranty')" style="color:#ffffff">Return & Warranty</a>
-    <a onclick="showContent('payment-methods')" style="color:#ffffff">Payment Methods</a>
+    <a onclick="showContent('product-info')" style="color:#ffffff; cursor: pointer">Product Information</a>
+    <a onclick="showContent('shipping-policy')" style="color:#ffffff; cursor: pointer">Shipping Policy</a>
+    <a onclick="showContent('return-warranty')" style="color:#ffffff; cursor: pointer">Return & Warranty</a>
+    <a onclick="showContent('payment-methods')" style="color:#ffffff; cursor: pointer">Payment Methods</a>
 </div>
 
 
@@ -175,13 +192,13 @@
     </ul>
 </div>
 
-<div class="ship&return&pay">
+<div  id="shipping-policy" class="content-section">
     <header>
         <h1>Shipping Policy</h1>
     </header>
 
     <div>
-        <h2>1. Shipping Fee</h2>
+        <h2 style="text-align: start">1. Shipping Fee</h2>
         <ul>
             <li>
                 We provide free shipping for orders over $50. For orders under $50, the shipping fee will depend on the delivery address and the shipping method you choose.
@@ -190,7 +207,7 @@
     </div>
 
     <div>
-        <h2>2. Delivery Time</h2>
+        <h2 style="text-align: start">2. Delivery Time</h2>
         <ul>
             <li>
                 Delivery time may vary depending on the delivery address and the selected shipping method. Typically, we aim to deliver within 3-5 business days from the date of order.
@@ -199,7 +216,7 @@
     </div>
 
     <div>
-        <h2>3. Shipping Methods</h2>
+        <h2 style="text-align: start">3. Shipping Methods</h2>
         <ul>
             <li>
                 We support various shipping methods, including Standard Shipping, Express Shipping, and International Shipping. You can choose the most suitable method for your needs when placing an order.
@@ -208,7 +225,7 @@
     </div>
 
     <div>
-        <h2>4. Returns/Exchanges</h2>
+        <h2 style="text-align: start">4. Returns/Exchanges</h2>
         <ul>
             <li>
                 We accept returns/exchanges within 30 days from the date of receipt. For more details and instructions on returns/exchanges, please read our Return/Exchange Policy.
@@ -217,13 +234,13 @@
     </div>
 </div>
 
-<div class="ship&return&pay">
+<div  id="return-warranty" class="content-section">
     <header>
         <h1>Return & Warranty Policy</h1>
     </header>
 
     <div>
-        <h2>1. Returns/Exchanges</h2>
+        <h2 style="text-align: start">1. Returns/Exchanges</h2>
         <ul>
             <li>
                 We accept returns/exchanges within 30 days from the date of receipt. To request a return/exchange, please contact us via the email address or phone number provided on our Contact page. The returned/exchanged items must be in new and undamaged condition.
@@ -232,7 +249,7 @@
     </div>
 
     <div>
-        <h2>2. Warranty</h2>
+        <h2 style="text-align: start">2. Warranty</h2>
         <ul>
             <li>
                 All products are warranted for the specified period. If the product has any manufacturing defects, we will be responsible for repairing or replacing the product. To request warranty service, please contact our support department.
@@ -241,7 +258,7 @@
     </div>
 
     <div>
-        <h2>3. Return & Warranty Conditions</h2>
+        <h2 style="text-align: start">3. Return & Warranty Conditions</h2>
         <ul>
             <li>The product must be returned in its original packaging and unused condition.</li>
             <li>No returns/exchanges are applicable for discounted or special promotion items.</li>
@@ -251,7 +268,7 @@
 
 </div>
 
-<div class="ship&return&pay">
+<div class="content-section" id="payment-methods">
 
     <header><h1>Payment Methods</h1></header>
     <ul>
@@ -261,7 +278,7 @@
     </ul>
 
     <div id="creditCard">
-        <h2>1. Credit Card</h2>
+        <h2 style="text-align: start">1. Credit Card</h2>
         <ul>
             <li>
                 Payment by credit/debit card. We accept Visa, MasterCard, and American Express.
@@ -270,7 +287,7 @@
     </div>
 
     <div id="payPal">
-        <h2>2. PayPal</h2>
+        <h2 style="text-align: start">2. PayPal</h2>
         <ul>
             <li>
                 Payment via PayPal, a secure and convenient online payment method.
@@ -280,7 +297,7 @@
 
 
     <div id="bankTransfer">
-        <h2>3. Bank Transfer</h2>
+        <h2 style="text-align: start">3. Bank Transfer</h2>
         <ul>
             <li>
                 Direct bank transfer to our account. Account information will be provided when you choose this method.
@@ -355,12 +372,10 @@
     <hr/>
     <p class="license">@ Copyright by ... | Provided by ...</p>
 </div>
-<script src="../../DoanKI1%20(1)/frontend/trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="Docanhandetail.js"></script>
 </body>
 
 </html>
-
 

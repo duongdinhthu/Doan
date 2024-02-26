@@ -79,44 +79,47 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <hr/>
 </div>
 <div class="img_header">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://www.saisivahospital.com/wp-content/uploads/2020/01/children-development.jpg" class="d-block w-100" alt="..." >
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Fpt Happy</h5>
-                    <p>Khám Phá Tạo Hình Cho Tuổi Thơ - Trò Chơi Dã Ngoại Cho Bé Yêu.</p>
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.saisivahospital.com/wp-content/uploads/2020/01/children-development.jpg" class="d-block w-100" alt="..." >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Fpt Happy</h5>
+                        <p>Explore Creating Memories for Childhood - Outdoor Games for Beloved Children.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src=https://www.counsellinginmelbourne.com.au/wp-content/uploads/2023/03/The-Importance-of-Play-for-Child-Development-small.jpg"" class="d-block w-100" alt="..." >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Fpt Happy</h5>
+                        <p>Play, Learn, Discover - Colorful Outdoor Experience.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.parents.com/thmb/VK_eMsHSWaYAAAuaFnyO88r_mh0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-901208614-2000-9d4cdf4d1ad94fcb97ca78d67836a9d8.jpg" class="d-block w-100" alt="..." >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Fpt Happy</h5>
+                        <p>Children, Stay Away from Computers, Explore Nature with Outdoor Games.</p>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src=https://www.counsellinginmelbourne.com.au/wp-content/uploads/2023/03/The-Importance-of-Play-for-Child-Development-small.jpg"" class="d-block w-100" alt="..." >
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Fpt Happy</h5>
-                    <p>Vui Chơi, Học Hỏi, Khám Phá - Trải Nghiệm Dã Ngoại Đầy Màu Sắc.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://www.parents.com/thmb/VK_eMsHSWaYAAAuaFnyO88r_mh0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-901208614-2000-9d4cdf4d1ad94fcb97ca78d67836a9d8.jpg" class="d-block w-100" alt="..." >
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Fpt Happy</h5>
-                    <p>Bé Yêu Hãy Rời Xa Máy Tính, Khám Phá Thiên Nhiên Cùng Trò Chơi Dã Ngoại.</p>
-                </div>
-            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+
+   
 
 </div>
 
@@ -127,7 +130,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <h5 class="card-title">Building Forts Game</h5>
             <p class="card-text">Building Forts - Creative game where children can explore and develop building skills.
             </p>
-            <a href="Trochoitreemchitiet.html" class="btn btn-primary">Instructions</a>
+            <a href="Trochoitreemchitiet.php" class="btn btn-primary">Instructions</a>
         </div>
     </div>
     <div class="card2" style="width:300px;height:200px">

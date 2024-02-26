@@ -7,17 +7,18 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 }
 include "project.php";
 $project = new projectFptHappy();
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username=$_SESSION["username"];
     $sl = $_POST['sl'];
     $id = $_POST['id'];
     $gia = $_POST['gia'];
     $cart = $project->addCart2($username,$id,$sl,$gia);
+
 }
-$product = $project->getAllProduct5();
+$product = $project->getAllProduct3();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@ $product = $project->getAllProduct5();
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dichvutour.css">
+    <link rel="stylesheet" href="Dothietyeudetail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
@@ -82,48 +83,129 @@ $product = $project->getAllProduct5();
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-<div class="text">
-    <div>
-        <a href="home.php">Home  > </a>
-        <p>Service Package</p>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
+    <ol class="carousel-indicators" >
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+            <img src="https://cf.shopee.vn/file/2004a66f48abb8ff17e17144d2b14db5" class="d-block w-100" alt="...">
+
+        </li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1">
+            <img src="https://vn-test-11.slatic.net/p/3328c8c438f3c620ce9a8652f19b3e0e.jpg" class="d-block w-100" alt="...">
+
+        </li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2">
+            <img src="https://cf.shopee.vn/file/88d53e7b880288bb10628d9d75038f21" class="d-block w-100" alt="...">
+
+        </li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpT97k5zUc2VW0G7KsS2IakfzCu_bYaRYHowyazLqqQJqr9HTgNqf6rUBsc70qK4HPvW4&usqp=CAU" class="d-block w-100" alt="...">
+        </li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4">
+            <img src="https://cf.shopee.vn/file/b1441a313fb6fa121f72c6ce50c3f144" class="d-block w-100" alt="...">
+
+        </li>
+    </ol>
+
+    <script src="Dothietyeudetail.js"></script>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://cf.shopee.vn/file/2004a66f48abb8ff17e17144d2b14db5" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://vn-test-11.slatic.net/p/3328c8c438f3c620ce9a8652f19b3e0e.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://cf.shopee.vn/file/88d53e7b880288bb10628d9d75038f21" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpT97k5zUc2VW0G7KsS2IakfzCu_bYaRYHowyazLqqQJqr9HTgNqf6rUBsc70qK4HPvW4&usqp=CAU" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://cf.shopee.vn/file/b1441a313fb6fa121f72c6ce50c3f144" class="d-block w-100" alt="...">
+        </div>
     </div>
-    <h2>SERVICE PACKAGE</h2>
-    <hr/>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
-<table >
 
-
-    <tbody>
-
-
-    <div class="product-boxes">
-        <?php foreach ($product as $product): ?>
-            <div class="product-item">
-                <div>
-                    <form action="" method="post">
-                        <a href="Dichvutrongoidetail.php">
-                            <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="..." style="height: 280px">
-                        </a>
-                        <a href="Dichvutrongoidetail.php" class="name"><?php echo $product["name"]; ?></a>
-                        <h5 class="cost">
-                            <label for="sl" style="display: none">Số lượng</label>
-                            <input value="1" style="width: 90px; display: none" id="sl" name="sl">
-                            <label for="gia" style="display: none">Giá</label>
-                            <input value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
-                            <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
-                            <label for="id" style="display: none">ID</label>
-                            <input value="<?php echo $product["pid"]; ?>" style="display: none" id="id" name="id">
-                            <button type="submit" class="buy-button">Contact Us</button>
-                        </h5>
-                    </form>
-                </div>
-            </div>
-        <?php endforeach; ?>
+<div class="product-detail">
+    <div class="product-title">Concentrated tomatoes</div>
+    <div class="price">$2.99<span class="discount-price">$4</span></div>
+    <div class="product-info">
+        <p><strong>Type:</strong> Vegetables</p>
+        <p><strong>Origin:</strong> Vietnam</p>
+        <p><strong>Delivery:</strong> Nationwide</p>
+        <p><strong>Payment:</strong> Cash on delivery</p>
+        <p><strong>Return/Exchange policy:</strong> Free</p>
+        <p><strong>Warranty:</strong> Not applicable</p>
     </div>
+    <div class="availability">
+        <p><strong>Status:</strong> In stock</p>
+    </div>
+    <div class="buttons">
+        <a href="#" class="btn">Buy now</a>
+    </div>
+</div>
 
-    </tbody>
-</table>
+<div class="navigation-bar">
+    <a onclick="showContent('product-info')" style="color:#ffffff; cursor: pointer">Product Information</a>
+    <a onclick="showContent('shipping-policy')" style="color:#ffffff; cursor: pointer">Shipping Policy</a>
+    <a onclick="showContent('return-warranty')" style="color:#ffffff; cursor: pointer">Return & Warranty</a>
+    <a onclick="showContent('payment-methods')" style="color:#ffffff; cursor: pointer">Payment Methods</a>
+</div>
 
+<div id="product-info" class="content-section">
+    <h2 style="text-align: start">Product Information: Concentrated tomatoes</h2>
+    <p>
+        Concentrated tomatoes are a product made from natural tomatoes, processed through drying to remove water and enhance the tomato flavor.
+    </p>
+    <h3>Product Features:</h3>
+    <ul>
+        <li>Weight: 200g</li>
+        <li>Expiration date: 12 months from the production date</li>
+        <li>Origin: Vietnam</li>
+        <li>Ingredients: 100% natural tomatoes, no preservatives</li>
+    </ul>
+</div>
+
+<div id="shipping-policy" class="content-section">
+    <h2 style="text-align: start">Shipping Policy</h2>
+    <ul>
+        <li>
+            We provide nationwide shipping services. Shipping fees will be calculated based on the delivery address and the shipping method you choose.
+        </li>
+        <li>
+            The estimated delivery time is from 3 to 5 working days after the order is confirmed.
+        </li>
+    </ul>
+</div>
+
+<div id="return-warranty" class="content-section">
+    <h2 style="text-align: start">Return/Exchange Policy and Warranty</h2>
+    <ul>
+        <li>
+            We accept returns/exchanges within 30 days from the date of receipt of the goods. The product must be intact, unused, and undamaged.
+        </li>
+        <li>
+            If the product has any manufacturing defects, we will be responsible for repairing or replacing the product free of charge within the warranty period.
+        </li>
+    </ul>
+</div>
+
+<div id="payment-methods" class="content-section">
+    <h2 style="text-align: start">Payment Methods</h2>
+    <ul>
+        <li>
+            We offer various payment methods such as credit/debit card payment, PayPal, and bank transfer.
+        </li>
+    </ul>
+</div>
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
@@ -188,8 +270,10 @@ $product = $project->getAllProduct5();
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="trangchu.js"></script>
+<script src="../../DoanKI1%20(1)/frontend/trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
+
+

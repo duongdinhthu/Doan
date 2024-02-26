@@ -22,18 +22,14 @@ $product = $project->getAllProduct6();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
     <title>Title</title>
-</head>
-<body>
-<head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dichvutour.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="Dichvutour.css">
 </head>
 <body>
 <header>
@@ -93,39 +89,42 @@ $product = $project->getAllProduct6();
     <h2>ORGANIZATIONAL SERVICE</h2>
     <hr/>
 </div>
-<table >
-
-
-    <tbody>
-
-
-    <div class="product-boxes">
-        <?php foreach ($product as $product): ?>
-            <div class="product-item">
-                <div>
-                    <form action="" method="post">
-                        <a href="Docanhandetail.php">
-                            <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="..." style="height: 280px">
-                        </a>
-                        <a href="Docanhandetail.php" class="name"><?php echo $product["name"]; ?></a>
-                        <h5 class="cost">
-                            <label for="sl" style="display: none">Số lượng</label>
-                            <input value="1" style="width: 90px; display: none" id="sl" name="sl">
-                            <label for="gia" style="display: none">Giá</label>
-                            <input value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
-                            <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
-                            <label for="id" style="display: none">ID</label>
-                            <input value="<?php echo $product["pid"]; ?>" style="display: none" id="id" name="id">
-                            <button type="submit" class="buy-button">Contact Us</button>
-                        </h5>
-                    </form>
-                </div>
-            </div>
-        <?php endforeach; ?>
+<div class="product-boxes">
+    <div>
+        <a href="">
+            <img src="./imageDichVu/img209.jpg" alt="" style="height: 280px">
+        </a>
+        <a href="#" class="name">Powder Passing Game in the Thung Lung Vang (Dalat)</a><br><br>
+        <h5 class="cost">
+            $199 <small><del>$239</del></small>
+            <a href="../backend/login.php" class="buy-button">Contact Us</a>
+        </h5>
     </div>
-
-    </tbody>
-</table>
+    <div>
+        <img src="./imageDichVu/img210.jpg" alt="" style="height: 280px">
+        <a href="#" class="name">Climbing Fansipan - Roof of Fansipan (Sapa, Lao Cai)</a>
+        <h5 class="cost">
+            $199 <small><del>$239</del></small>
+            <a href="../backend/login.php" class="buy-button">Contact Us</a>
+        </h5>
+    </div>
+    <div>
+        <img src="./imageDichVu/img211.jpg" alt="" style="height: 280px">
+        <a href="#" class="name">Team Wheel Cake at Nha Trang - Phan Thiet Beach</a>
+        <h5 class="cost">
+            $70 <small><del>$90</del></small>
+            <a href="../backend/login.php" class="buy-button">Contact Us</a>
+        </h5>
+    </div>
+    <div>
+        <img src="./imageDichVu/img212.jpg" alt="" style="height: 280px">
+        <a href="Dichvutochucdetail.php" class="name">Kayaking in Halong Bay</a>
+        <h5 class="cost">
+            $150 <small><del>$180</del></small>
+            <a href="../backend/login.php" class="buy-button">Contact Us</a>
+        </h5>
+    </div>
+</div>
 
 <div class="footer">
     <div class="footer0">

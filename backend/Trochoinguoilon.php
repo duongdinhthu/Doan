@@ -117,7 +117,8 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     </a>
 </div>
 
-</div>
+
+
 <div id="allcard">
     <div class="card1" style="width:300px;height:200px">
         <img src="https://www.sukien-teambuilding.com/wp-content/uploads/to-chuc-teambuilding-buoi-toi.jpg" class="card-img-top" alt="...">
@@ -125,7 +126,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <h5 class="card-title">Campfire Games</h5>
             <p class="card-text">
                 Campfire games are interactive and survival skill activities, where players collaborate to light a campfire </p>
-            <a href="Trochoinguoilonchitiet.html" class="btn btn-primary" class="btn btn-primary">Instructions</a>
+            <a href="Trochoinguoilonchitiet.php" class="btn btn-primary" class="btn btn-primary">Instructions</a>
         </div>
     </div>
     <div class="card2" style="width:300px;height:200px">
