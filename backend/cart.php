@@ -2,9 +2,11 @@
 session_start();
 //kiểm tra session
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
+    header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
+header("http://localhost:63342/Doan/backend/cart.php");
+
 $username = $_SESSION["username"];
 include "project.php";
 $carts = new projectFptHappy();
@@ -35,8 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $quantity=$_POST['quantity'];
     $product_id=$_POST['productid'];
     $updatequantity=$carts->updateQuantity($quantity,$username,$product_id);
-
-
 }
 $updatetotalprice = $carts->totalprice($username);
 $infor=$carts->inforByUserName($username);

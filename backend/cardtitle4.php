@@ -24,7 +24,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="Dichvutochuc.css">
 </head>
-<body>
+</body>
 <header>
     <div class="header">
         <div class="header1">
