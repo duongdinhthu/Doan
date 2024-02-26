@@ -27,17 +27,24 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
 
     $deletepay = $carts->deletePay($username);
 }
+$cart = $carts->getAllCart($username);
 
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username=$_SESSION["username"];
+    $quantity=$_POST['quantity'];
+    $product_id=$_POST['productid'];
+    $updatequantity=$carts->updateQuantity($quantity,$username,$product_id);
 
 
+}
+$updatetotalprice = $carts->totalprice($username);
 $infor=$carts->inforByUserName($username);
 $updatetotalpaycart = $carts->totalPayCart($username);
-$updatetotalprice = $carts->totalprice($username);
 $updatetotalcart= $carts-> totalCart($username);
 $paycart = $carts->getAllPay($username);
 $totalcart = $carts->totalShow($username);
-$cart = $carts->getAllCart($username);
+
 $deletecart = $carts->getAllDeleteCart($username);
 $totalpay = $carts->totalShowPay($username);
 
@@ -50,9 +57,6 @@ $totalpay = $carts->totalShowPay($username);
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <title>Title</title>
-</head>
-<body>
-<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
@@ -120,6 +124,7 @@ $totalpay = $carts->totalShowPay($username);
         <th>List Price($)</th>
         <th>Quantity</th>
         <th>Total Price($)</th>
+        <th hidden="hidden">pid</th>
 
 
     </tr>
@@ -127,27 +132,28 @@ $totalpay = $carts->totalShowPay($username);
     <tbody>
     <?php foreach ($cart as $cart):
         ?>
-        <tr>
-            <td><img src="<?php echo $cart["image"]; ?>"style="width:70px" class="card-img-top" alt="...">
-            </td>
-            <td><?php echo $cart['name'] ?></td>
-            <td><?php echo $cart['list_price'] ?></td>
-            <td><?php echo $cart['SUM(c.quantity)'] ?></td>
-            <td><?php echo $cart['SUM(c.total_price)'] ?></td>
-                <td><a href="cart.php?action=delete&id=<?php echo $cart['product_id']; ?>"
-                   class="btn btn-warning btn-sm" onclick="return confirm('Remove this item from cart?')" >Delete</a></td>
-        </tr>
+        <form method="post" action="">
+            <tr>
+                <td><img src="<?php echo $cart["image"]; ?>"style="width:70px" class="card-img-top" alt="...">
+                </td>
+                <td><?php echo $cart['name'] ?></td>
+                <td><?php echo $cart['list_price'] ?></td>
+                <td><input id="quantity" name="quantity" value="<?php echo $cart['SUM(c.quantity)'] ?>"></td>
+                <td><?php echo $cart['SUM(c.total_price)'] ?></td>
+                <td><input id="productid" name="productid" value="<?php echo $cart['pid'] ?>" hidden="hidden"></td>
+                <td><button type="submit">Update Quantity</button></td>
+            </tr>
+        </form>
     <?php endforeach; ?>
     </tbody>
 </table>
 
 <div>
 
-    <h2>Total order value : <?php echo "$".$totalcart ?></h2>
 
 
     <?php
-        echo "<a class='btn btn-primary' href='delivery_address.php?action=pay&money=$totalcart&username=$username' >Ckeck out</a>";
+        echo "<a id='check'  class='btn btn-primary' href='delivery_address.php?action=pay&username=$username' >Ckeck out</a>";
      ?>
 
 </div>
@@ -294,6 +300,7 @@ $totalpay = $carts->totalShowPay($username);
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
+
 <script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

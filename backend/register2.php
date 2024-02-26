@@ -13,9 +13,6 @@ if(isset($username)&&isset($password)){
     $student = $register->addAccountCustomer($username,$password);
 
 }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -107,15 +104,7 @@ if(isset($username)&&isset($password)){
     </form>
 </div>
 
-<form action="" method="post">
-    <label for="username">Username:</label>
-    <input name="username" type="text" id="username" required>
-    <label for="password">Password:</label>
-    <input name="password" type="password" id="password" required>
-    <br>
-    <button type="submit">Register</button>
-    <a href="login.php">Go back to login</a>
-</form>
+
 <div class="footer">
     <div class="footer0">
         <div class="footer1">

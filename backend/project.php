@@ -353,6 +353,16 @@ class projectFptHappy
         $sql = "UPDATE cart SET total_price = list_price * quantity";
         $this->conn->query($sql);
     }
+    public function checkProductByCart($username,$id,$sl,$price)
+    {
+        $sql="select * from cart where username='$username' and product_id='$id' and hidden = 1";
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            echo"Mặt hàng này đã có trong giỏ hàng!";
+        }else{
+            $this->addCart2($username,$id,$sl,$price);
+        }
+    }
     public function addCart2($username,$id,$sl,$price)
     {
         $sql = "insert into cart(username,product_id,quantity,list_price)values('$username','$id','$sl','$price')";
@@ -360,7 +370,7 @@ class projectFptHappy
     }
     public function getAllCart($username)
     {   $carts = [];
-        $sql = " select p.image,c.product_id,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.total_price from cart c join product p on c.product_id = p.pid where username = '$username' and hidden = 1 GROUP BY product_id, username";
+        $sql = " select p.image,c.product_id,p.pid,p.name,c.list_price,SUM(c.quantity),c.quantity,SUM(c.total_price),c.total_price from cart c join product p on c.product_id = p.pid where username = '$username' and hidden = 1 GROUP BY product_id, username";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -546,6 +556,10 @@ class projectFptHappy
         }
         return $customer;
     }
+public function updateQuantity($quantity,$username,$product_id)
+{
+    $sql="UPDATE cart SET quantity='$quantity' where username='$username'and product_id='$product_id' and hidden = 1 ";
+    $this->conn->query($sql);
 
-
+}
 }

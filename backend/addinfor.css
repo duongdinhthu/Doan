@@ -35,6 +35,23 @@ form button{
     transition: 0.3s ease-in-out;
     box-shadow: 2px 2px 2px #cccccc;
 }
+form a{
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #f29f33;
+    color: white;
+    padding :8px 35px 8px 35px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 2px #cccccc;
+
+}
+form a:hover{
+    background-color: #654145;
+    text-decoration: none;
+   color: white;
+}
 form button:hover{
     background-color: #654145;
 }

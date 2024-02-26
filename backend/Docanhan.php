@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sl = $_POST['sl'];
     $id = $_POST['id'];
     $gia = $_POST['gia'];
-    $cart = $project->addCart2($username,$id,$sl,$gia);
+    $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
 }
 $product = $project->getAllProduct2();
 ?>
@@ -88,26 +88,22 @@ $product = $project->getAllProduct2();
     <hr/>
 </div>
 <table >
-
-
     <tbody>
-
-
     <div class="product-boxes">
         <?php foreach ($product as $product): ?>
             <div class="product-item">
                 <div>
                     <form action="" method="post">
-                        <a href="Docanhandetail.php">
+                        <a href="Docanhandetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>">
                             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
                         </a>
-                        <a href="Docanhandetail.php" class="name"><?php echo $product["name"]; ?></a>
+                        <a href="Docanhandetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">
-                            <label for="sl" style="">Số lượng</label>
-                            <input value="1" style="width: 90px" id="sl" name="sl">
-                            <label for="gia" style="display: none">Giá</label>
                             <input value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
                             <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
+                            <label for="sl" style="font-weight: initial; font-size: 16px; margin-left: 70px">Quantity: </label>
+                            <input value="1" style="width: 50px;outline: none; border: none; box-shadow: 1px 1px 2px #cccccc; border-radius: 8px" id="sl" name="sl">
+                            <label for="gia" style="display: none">Giá</label>
                             <label for="id" style="display: none">ID</label>
                             <input value="<?php echo $product["pid"]; ?>" style="display: none" id="id" name="id">
                             <button type="submit" class="buy-button">Buy</button>
