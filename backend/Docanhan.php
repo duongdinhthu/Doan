@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sl = $_POST['sl'];
     $id = $_POST['id'];
     $gia = $_POST['gia'];
-    $cart = $project->addCart2($username,$id,$sl,$gia);
+    $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
 }
 $product = $project->getAllProduct2();
 ?>
@@ -98,10 +98,10 @@ $product = $project->getAllProduct2();
             <div class="product-item">
                 <div>
                     <form action="" method="post">
-                        <a href="Docanhandetail.php">
+                        <a href="Docanhandetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>">
                             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
                         </a>
-                        <a href="Docanhandetail.php" class="name"><?php echo $product["name"]; ?></a>
+                        <a href="Docanhandetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">
                             <label for="sl" style="">Số lượng</label>
                             <input value="1" style="width: 90px" id="sl" name="sl">

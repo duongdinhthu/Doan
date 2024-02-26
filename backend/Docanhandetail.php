@@ -1,4 +1,22 @@
 <?php
+session_start();
+//kiểm tra session
+if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
+    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
+    exit;
+}
+include "project.php";
+$project = new projectFptHappy();
+$gia=$_GET['gia'];
+$id=$_GET['id'];
+$sl='1';
+$username=$_SESSION["username"];
+if (isset($_GET['action']) && $_GET['action'] === 'add') {
+
+    $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
+    $success="ok";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,43 +45,44 @@
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-                <p>Hotline<br>8910JQKA</p>
+
+                <p>Hotline<br>78910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
-            <a href="home.html" class="btn btn-outline">Home</a>
+            <a href="home.php" class="btn btn-outline">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.html"> Children</a>
-                    <a href="Trochoigiadinh.html">Family</a>
-                    <a href="Trochoinguoilon.html">Adults</a>
+                    <a href="Trochoitreem.php">Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="Docanhan.html">Personal items</a>
-                    <a href="Dothietyeu.html">Essentials</a>
-                    <a href="Thucpham.html">Food</a>
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="Dichvutrongoi.html">Packages</a>
-                    <a href="Dichvutour.html">Tour</a>
-                    <a href="Dichvutochuc.html">Organizing</a>
+                    <a href="Dichvutrongoi.php">Packages</a>
+                    <a href="Dichvutour.php"> Tours</a>
+                    <a href="Dichvutochuc.php">Organizing</a>
                 </div>
             </div>
-            <a href="tintuc.html" class="btn btn-outline">News</a>
-            <a href="lienhe.html" class="btn btn-outline">Contact</a>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="user.php" class="btn btn-outline">Account</a>
             <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
 
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
     <ol class="carousel-indicators" >
@@ -131,7 +150,7 @@
     </div>
 
     <div class="buttons">
-        <a href="#" class="btn">Contact to buy</a>
+        <a href="Docanhandetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn">Add to cart</a>
     </div>
 </div>
 

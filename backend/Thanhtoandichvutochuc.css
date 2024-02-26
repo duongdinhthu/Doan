@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-column, .right-column {
+    flex: 1 1 50%;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #f29f33; /* Màu chữ */
+    font-weight: bold;
+}
+
+form label {
+    font-weight: bold;
+    color: #f29f33; /* Màu chữ */
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form input[type="submit"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #f29f33; /* Màu nút */
+    color: white; /* Màu chữ */
+    cursor: pointer;
+    font-weight: bold; /* Chữ in đậm */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f29f33; /* Màu chữ */
+}
