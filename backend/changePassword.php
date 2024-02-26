@@ -50,41 +50,43 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
 
-                <p>Hotline<br>8910JQKA</p>
+                <p>Hotline<br>78910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
-            <a href="../frontend/home.html" class="btn btn-outline">Home</a>
+            <a href="home.php" class="btn btn-outline">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="../frontend/Trochoitreem.html">Kids</a>
-                    <a href="../frontend/Trochoigiadinh.html">Family</a>
-                    <a href="../frontend/Trochoinguoilon.html">Adults</a>
+                    <a href="Trochoitreem.php">Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="../frontend/Docanhan.html">Personal items</a>
-                    <a href="../frontend/Dothietyeu.html">Essentials</a>
-                    <a href="../frontend/Thucpham.html">Food</a>
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="../frontend/Dichvutrongoi.html">Packages</a>
-                    <a href="../frontend/Dichvutour.html"> Tours</a>
-                    <a href="../frontend/Dichvutochuc.html">Organizing</a>
+                    <a href="Dichvutrongoi.php">Packages</a>
+                    <a href="Dichvutour.php"> Tours</a>
+                    <a href="Dichvutochuc.php">Organizing</a>
                 </div>
             </div>
-            <a href="../frontend/tintuc.html" class="btn btn-outline">News</a>
-            <a href="../frontend/lienhe.html" class="btn btn-outline">Contact</a>
-            <a href="login.php" class="btn btn-outline">Login</a>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
+            <a href="user.php" class="btn btn-outline">Account</a>
+            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
+
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
 <div class="text">
     <div>
@@ -94,24 +96,24 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
     <h2>CHANGE PASSWORD</h2>
     <hr/>
 </div>
-<form action="" method="post" >
-    <input type="hidden" name="choice" value="2">
-
-    <label for="username">Username:</label>
-    <input name="username" type="text" id="username" required class="form-control">
-    <label for="password">Old password:</label>
-    <input name="password" type="password" id="password" required class="form-control">
-
-    <label for="password2">Enter your new password:</label>
-    <input name="password2" type="password" id="password2" required class="form-control">
-    <label for="password3">Enter the new password again:</label>
-    <input name="password3" type="password" id="password3" required class="form-control">
-
-    <br>
-    <button type="submit" class="btn btn-primary">Change Password</button>
-    <a href="login.php" class="btn btn-success">Re-Login</a>
-    <a href="home.php" class="btn btn-primary">Return to home page</a>
-</form>
+<div class="form-cp">
+    <form action="" method="post" >
+        <input type="hidden" name="choice" value="2">
+        <label for="username" style="display: none">Username:</label>
+        <input name="username" placeholder="Username" type="text" id="username" required><br>
+        <label for="password" style="display: none">Old password:</label>
+        <input name="password" placeholder="Old password" type="password" id="password" required><br>
+        <label for="password2" style="display: none">Enter your new password:</label>
+        <input name="password2" placeholder="New password" type="password" id="password2" required><br>
+        <label for="password3" style="display: none">Enter the new password again:</label>
+        <input name="password3" placeholder="New password again" type="password" id="password3" required><br>
+        <button type="submit">Change Password</button><br>
+        <div>
+            <a href="login.php" class="re-login">Re-Login</a>
+            <a href="home.php" class="return">Return to home page</a>
+        </div>
+    </form>
+</div>
 <div class="footer">
     <div class="footer0">
         <div class="footer1">

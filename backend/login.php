@@ -90,7 +90,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <br>
             <div class="tag-a">
                 <a href="register2.php">Already have an account?<br> register</a>
-                <a href="changePassword.php">ChangePassword</a><br>
             </div>
             <button type="submit" >Login</button>
         </form>
