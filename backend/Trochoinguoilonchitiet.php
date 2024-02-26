@@ -14,7 +14,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Trochoinguoilon.css">
+    <link rel="stylesheet" href="Trochoinguoilonchitiet.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
@@ -70,84 +70,78 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-<div class="text">
-    <div>
-        <a href="home.php">Home  > </a>
-        <p>Games</p>
-    </div>
-    <h2>GAMES FOR ADULTS</h2>
-    <hr/>
+<section>
+    <h2>Description of the Game</h2>
+    <p ><strong>Team:</strong> Form teams, each team can have from 2 to 4 people.</p>
+    <p ><strong>Materials:</strong> Prepare materials such as firewood, newspapers, and tools for starting a fire.</p>
+    <p ><strong>Campfire Area:</strong> Choose a safe area to build a campfire, it could be a backyard or suburban area.</p>
+    <p ><strong>Time:</strong> Set the duration of the game, for example: 20 minutes to 1 hour.</p>
+    <p ><strong>Safety Rules:</strong> Define safety rules when building a campfire, maintain a safe distance, and use safe materials.</p>
+    <p ><strong>Winning Points:</strong> The team that starts the fire quickly and maintains the campfire for the shortest time wins.</p>
+    <p><strong>Have Fun:</strong> Ensure everyone participating enjoys themselves and has fun during the fire starting process and camp atmosphere.</p>
+</section>
+
+<section>
+    <h2>Notes and Warnings</h2>
+    <p ><strong>Safety:</strong> Always prioritize safety when working with fire, avoid using hazardous materials.</p>
+    <p ><strong>Clothing:</strong> Wear appropriate clothing to protect the body from fire hazards.</p>
+    <p><strong>Fair Play Rules:</strong> Encourage fair play to create a positive environment and avoid unnecessary conflicts.</p>
+    <p ><strong>Health Check:</strong> Remember to check health conditions before participating, especially for elderly or individuals with special health conditions.</p>
+</section>
+
+<section>
+    <h2>Benefits</h2>
+    <p ><strong>Survival Skills:</strong> Learning how to build and maintain a campfire develops survival skills.</p>
+    <p ><strong>Teamwork:</strong> The game provides opportunities to develop teamwork skills and communication.</p>
+    <p ><strong>Outdoor Experience:</strong> Enjoy the outdoor atmosphere and learn how to appreciate outdoor life.</p>
+    <p ><strong>Creativity:</strong> Building a campfire is also a creative experience and teaches how to work with unfamiliar environments.</p>
+</section>
+
+<h2 style="text-align:center">Images</h2>
+<img class="img1" src="https://hockiquandoi.net/wp-content/uploads/2020/09/unnamed-1.jpg" alt="Starting a Campfire" />
+
+<section>
+    <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20dot%20duoc%20lua%20trai.docx" class="custom-button">Download Instructions</a>
+</section>
+
+<h1>Reviews and Comments</h1>
+
+<div class="rating">
+    <input type="radio" name="star" id="star5" value="5" />
+    <label for="star5" class="star">&#9733;</label>
+    <input type="radio" name="star" id="star4" value="4" />
+    <label for="star4" class="star">&#9733;</label>
+    <input type="radio" name="star" id="star3" value="3" />
+    <label for="star3" class="star">&#9733;</label>
+    <input type="radio" name="star" id="star2" value="2" />
+    <label for="star2" class="star">&#9733;</label>
+    <input type="radio" name="star" id="star1" value="1" />
+    <label for="star1" class="star">&#9733;</label>
 </div>
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="https://gudgear.com/wp-content/uploads/2018/02/camping-activities-for-adults.jpg" class="d-block w-100" alt="..." >
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Fpt Happy</h5>
-                <p>Trải nghiệm ngày dã ngoại sôi động với trò chơi dành cho người lớn, kết hợp giải đố, hoạt động nhóm, và niềm vui ngoại ô.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQatPZOv88kmUUS0RRxrBXHZoF5Eb3oY5zANWV61epHxz8BSG6AJQ_tsyaqHh78nZEw36U&usqp=CAU" class="d-block w-100" alt="..." >
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Fpt Happy</h5>
-                <p>Khám phá địa điểm mới và tận hưởng không khí tự nhiên với trò chơi dã ngoại cho người lớn, mang lại trải nghiệm thư giãn và kích thích.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="https://www.theordinaryadventurer.com/wp-content/uploads/2019/10/IMG_2531-1024x768.jpg" class="d-block w-100" alt="..." >
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Fpt Happy</h5>
-                <p>Xây dựng kỷ niệm độc đáo với bạn bè qua các hoạt động như cắm trại, thả thuyền, và thưởng thức đồ ăn nướng trong không khí ấm áp của trò chơi dã ngoại.</p>
-            </div>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-<div class="product-boxes">
-    <div>
-        <a href="Trochoinguoilonchitiet.html">
-            <img src="https://www.sukien-teambuilding.com/wp-content/uploads/to-chuc-teambuilding-buoi-toi.jpg" alt="">
-        </a>
-        <a href="Trochoinguoilonchitiet.html" class="name">Campfire Games</a>
-        <h5 class="cost">
-            <a href="Trochoinguoilonchitiet.html" class="buy-button">View Detail</a>
-        </h5>
-    </div>
-    <div>
-        <img src="https://vteambuilding.com/wp-content/uploads/2018/01/8.-Ban-nh%E1%BA%A1c-h%C3%B2a-t%E1%BA%A5u-1024x683.jpg" alt="">
-        <a href="#" class="name">Orchestra Harmony Game</a>
-        <h5 class="cost">
-            <a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20ban%20nhac%20hoa%20tau.docx" class="buy-button">View Detail</a>
-        </h5>
-    </div>
-    <div>
-        <img src="https://bizweb.dktcdn.net/100/463/236/products/tro-choi-team-building-doan-ket-da-sua.png?v=1667918711933" alt="">
-        <a href="#" class="name">Team Wheel Game</a>
-        <h5 class="cost">
-            <a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20banh%20xe%20dong%20doi.docx" class="buy-button">View Detail</a>
-        </h5>
-    </div>
-    <div>
-        <img src="https://cdn.tgdd.vn//GameApp/1388369//bit-mat-bat-de-cach-2-800x450.png" alt="">
-        <a href="#" class="name">Blindfolded Goat Catching Game</a>
-        <h5 class="cost">
-            <a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20bit%20mat%20bat%20de.docx" class="buy-button">View Detail</a>
-        </h5>
-    </div>
-</div>
+
+<textarea id="review" placeholder="Write your review..."></textarea>
+
+<button onclick="submitReview()">Submit Review</button>
+
+<script>
+    function submitReview() {
+        // Get star rating and review text
+        var rating = document.querySelector('input[name="star"]:checked');
+        var reviewText = document.getElementById('review').value;
+
+        // Check if star rating is selected
+        if (!rating) {
+            alert('Please select a star rating before submitting your review.');
+            return;
+        }
+
+        // Display message
+        alert('Your rating: ' + rating.value + ' stars\nReview: ' + reviewText);
+
+        // You can add logic to save the review to a database here
+    }
+</script>
+
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
@@ -212,8 +206,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="trangchu.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
+

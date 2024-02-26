@@ -2,9 +2,11 @@
 session_start();
 //kiểm tra session
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
+    header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
+header("http://localhost:63342/Doan/backend/cart.php");
+
 $username = $_SESSION["username"];
 include "project.php";
 $carts = new projectFptHappy();
@@ -28,15 +30,15 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
     $deletepay = $carts->deletePay($username);
 }
 $cart = $carts->getAllCart($username);
-$updatetotalprice = $carts->totalprice($username);
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username=$_SESSION["username"];
     $quantity=$_POST['quantity'];
     $product_id=$_POST['productid'];
     $updatequantity=$carts->updateQuantity($quantity,$username,$product_id);
-
 }
+$updatetotalprice = $carts->totalprice($username);
 $infor=$carts->inforByUserName($username);
 $updatetotalpaycart = $carts->totalPayCart($username);
 $updatetotalcart= $carts-> totalCart($username);

@@ -3,7 +3,7 @@ session_start();
 //kiểm tra session
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
+    header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
 include "project.php";
