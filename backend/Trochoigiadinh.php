@@ -147,46 +147,38 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <span class="sr-only">Next</span>
         </a>
     </div>
-
-</div>
-<div id="allcard" >
-    <div class="card1" style=" width:300px;height:200px">
-        <img src="https://img.freepik.com/premium-photo/happy-family-playing-football-park_107420-91413.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Family Football Game</h5>
-            <p class="card-text">Get ready for family football fun with exciting games that bring dynamic moments to every<br> member.</br></p>
-            <a href="Trochoigiadinhchitiet.html" class="btn btn-primary" style="text-align:center">Instructions</a>
+    <div class="product-boxes">
+        <div>
+            <a href="Trochoigiadinhchitiet.html">
+                <img src="https://img.freepik.com/premium-photo/happy-family-playing-football-park_107420-91413.jpg" alt="">
+            </a>
+            <a href="Trochoigiadinhchitiet.html" class="name">Family Football Game</a>
+            <h5 class="cost">
+                <a href="Trochoigiadinhchitiet.html" class="buy-button">View Detail</a>
+            </h5>
+        </div>
+        <div>
+            <img src="https://hallmark.brightspotcdn.com/4b/be/d1aa420336cb9e18012b5ad5bf31/vs-18073.jpg" alt="">
+            <a href="#" class="name">Word Puzzle Game</a>
+            <h5 class="cost">
+                <a href="https://docs.google.com/document/d/16yPAcvo1MnixsDJbKfwU2Krd7zikjORw/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="buy-button">View Detail</a>
+            </h5>
+        </div>
+        <div>
+            <img src="https://bloximages.chicago2.vip.townnews.com/meridianstar.com/content/tncms/assets/v3/editorial/e/65/e650054c-4e59-11e7-ae4f-f37feb92da32/593cbf7b4a932.image.jpg?resize=750%2C500" alt="">
+            <a href="#" class="name">Archery Game</a>
+            <h5 class="cost">
+                <a href="https://docs.google.com/document/d/1OP6Pzfu6zhNJYQzNjP13URofOqqc2kQn/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="buy-button">View Detail</a>
+            </h5>
+        </div>
+        <div>
+            <img src="https://i.guim.co.uk/img/media/b5d22535a5a254f97b3251bd6a226c4eac12fbf8/571_585_2691_2736/master/2691.jpg?width=620&quality=85&auto=format&fit=max&s=240ea90f5bd2a7a2adcc7e95953491fe" alt="">
+            <a href="#" class="name">Jigsaw Puzzle Game</a>
+            <h5 class="cost">
+                <a href="https://docs.google.com/document/d/15zPIxFKXbnOVxd1PW05VPas7pw_v9eRd/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="buy-button">View Detail</a>
+            </h5>
         </div>
     </div>
-
-    <div class="card2" style="width:300px;height:200px">
-        <img src="https://hallmark.brightspotcdn.com/4b/be/d1aa420336cb9e18012b5ad5bf31/vs-18073.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Word Puzzle Game</h5>
-            <p class="card-text">
-                Explore the world through puzzle games! Experience creative and exciting fun, fresh for the whole family.</p>
-            <a href="https://docs.google.com/document/d/16yPAcvo1MnixsDJbKfwU2Krd7zikjORw/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-    <div class="card3" style="width:300px;height:200px">
-        <img src="https://bloximages.chicago2.vip.townnews.com/meridianstar.com/content/tncms/assets/v3/editorial/e/65/e650054c-4e59-11e7-ae4f-f37feb92da32/593cbf7b4a932.image.jpg?resize=750%2C500" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Archery Game</h5>
-            <p class="card-text">
-                Enjoy family fun with archery games - where skills and fun blend together, inviting every member to participate.</p>
-            <a href="https://docs.google.com/document/d/1OP6Pzfu6zhNJYQzNjP13URofOqqc2kQn/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-    <div class="card4" style="width:300px;height:200px">
-        <img src="https://i.guim.co.uk/img/media/b5d22535a5a254f97b3251bd6a226c4eac12fbf8/571_585_2691_2736/master/2691.jpg?width=620&quality=85&auto=format&fit=max&s=240ea90f5bd2a7a2adcc7e95953491fe" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Jigsaw Puzzle Game</h5>
-            <p class="card-text">Challenge your thinking and creativity with giant jigsaw puzzles, where each piece is the key to an imaginary world.</p>
-            <a href="https://docs.google.com/document/d/15zPIxFKXbnOVxd1PW05VPas7pw_v9eRd/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-</div>
-
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
