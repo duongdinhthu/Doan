@@ -6,22 +6,19 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
-<head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="Trochoigiadinh.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dichvutochuc.css">
+
 </head>
 <body>
 <header>
@@ -34,7 +31,8 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-                <p>Hotline<br>8910JQKA</p>
+
+                <p>Hotline<br>78910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
@@ -42,7 +40,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.php"> Kids</a>
+                    <a href="Trochoitreem.php">Kids</a>
                     <a href="Trochoigiadinh.php">Family</a>
                     <a href="Trochoinguoilon.php">Adults</a>
                 </div>
@@ -58,136 +56,104 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="Dichvutrongoi.php">Package</a>
-                    <a href="Dichvutour.php"> Tour</a>
-                    <a href="Dichvutochuc.php">Organize</a>
+                    <a href="Dichvutrongoi.php">Packages</a>
+                    <a href="Dichvutour.php"> Tours</a>
+                    <a href="Dichvutochuc.php">Organizing</a>
                 </div>
             </div>
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
-            <a href="../backend/login.php" class="btn btn-outline">Login</a>
+            <a href="user.php" class="btn btn-outline">Account</a>
+            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
 
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-    }
-    .announcement {
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: #f8f8f8;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-        color: #333;
-    }
-    p {
-        color: #555;
-    }
-    .comments {
-        margin-top: 20px;
-    }
-    .comment {
-        background-color: #f3f3f3;
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
-    .comment p {
-        margin: 0;
-    }
-    .comment-form {
-        margin-top: 20px;
-    }
-    .comment-form label {
-        display: block;
-        margin-bottom: 8px;
-    }
-    .comment-form input,
-    .comment-form textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 12px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-    .comment-form button {
-        background-color: #4caf50;
-        color: #fff;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .comment-form button:hover {
-        background-color: #45a049;
-    }
-</style>
-
-</head>
-<body>
-
-
-<div class="announcement">
-
-    <h2>NOTICE OF VIETNAM NATIONAL DAY OFF SEPTEMBER 2, 2023</h2>
-    <p><strong>76 Reviews</strong></p>
-    <p>Announcement of the Vietnam National Day off September 2, 2023</p>
-
-    <p>To our valued customers and partners,</p>
-    <p>FPT HAPPY Co., Ltd. respectfully announces the schedule of the National Day off September 2, 2023 of its branches:</p>
-
-    <!-- Content of holiday notice -->
-
-    <p>Please note: We will temporarily suspend express delivery services at all 3 branches during the holiday.</p>
-
-    <p>During the holiday, if you have any needs or questions, please send information via email or leave a message directly on our website. We will respond as soon as possible.</p>
-
-    <p>FPT HAPPY Co., Ltd. wishes our customers and partners a happy, peaceful holiday full of joy with family and loved ones.</p>
-
-    <p>Thank you and congratulations on the Vietnam National Day!</p>
-
-    <p>FPT HAPPY Co., Ltd.</p>
+<div class="text">
+    <div>
+        <a href="home.php">Home  > </a>
+        <p>Games</p>
+    </div>
+    <h2>GAMES FOR FAMILY</h2>
+    <hr/>
 </div>
-
-<!-- Comment Section -->
-<div class="comments">
-    <h2>Comments</h2>
-
-
-    <!-- Example comment -->
-    <div class="comment">
-        <p><strong>User:</strong> John Doe</p>
-        <p><strong>Comment:</strong> Wishing FPT HAPPY Co., Ltd. a holiday full of joy!</p>
+<div class="img-header">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://leutrai.vn/wp-content/uploads/2023/07/tro-choi-cho-tre-di-da-ngoai-2.jpg" class="d-block w-100" alt="..." >
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fpt Happy</h5>
+                    <p>Family joy starts with authentic games.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://leutrai.vn/wp-content/uploads/2023/07/tro-choi-cho-tre-di-da-ngoai-3.jpg" class="d-block w-100" alt="..." >
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fpt Happy</h5>
+                    <p>Family games: where every moment becomes special.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://ecopark.com.vn/images/news/2020/10/original/trai-nghiem-cam-trai-qua-dem-nhu-troi-tay-giua-khong-gian-xanh-kdt-ecopark_1603337843.jpg" class="d-block w-100" alt="..." >
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fpt Happy</h5>
+                    <p>Immerse yourself in games, connect the hearts of the family.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
-
-<!-- Comment Form -->
-<div class="comment-form">
-    <h2>Add Comment</h2>
-    <form action="#" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="comment">Comment:</label>
-        <textarea id="comment" name="comment" rows="4" required></textarea>
-
-        <button type="submit">Send Comment</button>
-    </form>
-</div>
+<div class="product-boxes">
+    <div>
+        <a href="Trochoigiadinhchitiet.html">
+            <img src="https://img.freepik.com/premium-photo/happy-family-playing-football-park_107420-91413.jpg" alt="">
+        </a>
+        <a href="Trochoigiadinhchitiet.html" class="name">Family Football Game</a>
+        <h5 class="cost">
+            <a href="Trochoigiadinhchitiet.html" class="buy-button">View Detail</a>
+        </h5>
+    </div>
+    <div>
+        <img src="https://hallmark.brightspotcdn.com/4b/be/d1aa420336cb9e18012b5ad5bf31/vs-18073.jpg" alt="">
+        <a href="#" class="name">Word Puzzle Game</a>
+        <h5 class="cost">
+            <a href="https://docs.google.com/document/d/16yPAcvo1MnixsDJbKfwU2Krd7zikjORw/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="buy-button">View Detail</a>
+        </h5>
+    </div>
+    <div>
+        <img src="https://bloximages.chicago2.vip.townnews.com/meridianstar.com/content/tncms/assets/v3/editorial/e/65/e650054c-4e59-11e7-ae4f-f37feb92da32/593cbf7b4a932.image.jpg?resize=750%2C500" alt="">
+        <a href="#" class="name">Archery Game</a>
+        <h5 class="cost">
+            <a href="https://docs.google.com/document/d/1OP6Pzfu6zhNJYQzNjP13URofOqqc2kQn/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="buy-button">View Detail</a>
+        </h5>
+    </div>
+    <div>
+        <img src="https://i.guim.co.uk/img/media/b5d22535a5a254f97b3251bd6a226c4eac12fbf8/571_585_2691_2736/master/2691.jpg?width=620&quality=85&auto=format&fit=max&s=240ea90f5bd2a7a2adcc7e95953491fe" alt="">
+        <a href="#" class="name">Jigsaw Puzzle Game</a>
+        <h5 class="cost">
+            <a href="https://docs.google.com/document/d/15zPIxFKXbnOVxd1PW05VPas7pw_v9eRd/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="buy-button">View Detail</a>
+        </h5>
+    </div>
 </div>
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
-            <img src="img/logo_footer.webp" alt="">
+            <img src="img/logo.webp" alt="">
             <div class="icon">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-facebook"></i>
@@ -196,7 +162,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             </div>
             <p>SUBSCRIBE TO NEWSLETTER</p>
             <label>
-                <input type="email" placeholder="Enter your email address">
+                <input type="email" placeholder="Enter email address">
                 <button>SEND</button>
             </label>
             <div class="contact">
@@ -225,7 +191,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
                     <h3>CUSTOMER SUPPORT</h3><br>
                     <a href="#">Contact</a><br>
                     <a href="#">Handling complaints</a><br>
-                    <a href="#">Instructions for use</a><br>
+                    <a href="#">Usage guide</a><br>
                     <a href="#">Warranty, returns</a><br>
                     <a href="#">Contact</a><br>
                 </div>
@@ -248,7 +214,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="../../DoanKI1%20(1)/frontend/trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>

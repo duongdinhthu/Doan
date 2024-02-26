@@ -39,33 +39,33 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             </div>
         </div>
         <div class="d-flex">
-            <a href="home.html" class="btn btn-outline">Home</a>
+            <a href="home.php" class="btn btn-outline">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.html"> Kids</a>
-                    <a href="Trochoigiadinh.html">Family</a>
-                    <a href="Trochoinguoilon.html">Adults</a>
+                    <a href="Trochoitreem.php"> Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="Docanhan.html">Personal items</a>
-                    <a href="Dothietyeu.html">Essentials</a>
-                    <a href="Thucpham.html">Food</a>
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="Dichvutrongoi.html">Package</a>
-                    <a href="Dichvutour.html"> Tour</a>
-                    <a href="Dichvutochuc.html">Organize</a>
+                    <a href="Dichvutrongoi.php">Package</a>
+                    <a href="Dichvutour.php"> Tour</a>
+                    <a href="Dichvutochuc.php">Organize</a>
                 </div>
             </div>
-            <a href="tintuc.html" class="btn btn-outline">News</a>
-            <a href="lienhe.html" class="btn btn-outline">Contact</a>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="../backend/login.php" class="btn btn-outline">Login</a>
 
         </div>
@@ -133,55 +133,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     }
 </style>
 </head>
-<body>
-<header>
-    <div class="header">
-        <div class="header1">
-            <img src="img/logo.webp" alt="logo">
-            <label>
-                <input type="text" placeholder="Search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </label>
-            <div class="hotline">
-                <i class="fa-solid fa-phone"></i>
-                <p>Hotline<br>8910JQKA</p>
-            </div>
-        </div>
-        <div class="d-flex">
-            <a href="home.html" class="btn btn-outline">Home</a>
-            <div class="menu">
-                <ul>
-                    <li><a href="home.html">Games</a>
-                        <ul class="ul">
-                            <li><a href="Trochoitreem.html"> Kids</a></li>
-                            <li><a href="Trochoigiadinh.html">Family</a></li>
-                            <li><a href="Trochoinguoilon.html">Adults</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="home.html">Products</a>
-                        <ul class="ul">
-                            <li><a href="Docanhan.html">Personal Items</a></li>
-                            <li><a href="Dothietyeu.html">Essentials</a></li>
-                            <li><a href="Thucpham.html">Food</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="home.html">Services</a>
-                        <ul class="ul">
-                            <li><a href="Dichvutrongoi.html">Packages</a></li>
-                            <li><a href="Dichvutour.html"> Tour</a></li>
-                            <li><a href="Dichvutochuc.html">Organization</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <a href="tintuc.html" class="btn btn-outline">News</a>
-            <a href="lienhe.html" class="btn btn-outline">Contact</a>
-            <a href="../backend/login.php" class="btn btn-outline">Log In </a>
-
-        </div>
-    </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
-</header>
 <div class="news">
     <h1>NEWS</h1>
     <h2>Outdoor Gear Store Ho Chi Minh City</h2>

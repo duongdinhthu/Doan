@@ -144,7 +144,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <h5 class="card-title">Tet Canh Ty Lunar New Year Holiday Schedule of the Year of the Rat 2020
             </h5>
             <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Rat 2020 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
-            <a href="cardtitle5.html" class="btn btn-primary">Read More</a>
+            <a href="cardtitle5.php" class="btn btn-primary">Read More</a>
         </div>
         <div class="card-footer text-muted">
             2 days ago
