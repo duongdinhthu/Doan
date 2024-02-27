@@ -101,10 +101,10 @@ $product = $project->getAllProduct1();
             <div class="product-item">
                 <div>
                     <form action="" method="post">
-                        <a href="Thucphamdetail.php">
+                        <a href="Thucphamdetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>">
                             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
                         </a>
-                        <a href="Thucphamdetail.php" class="name"><?php echo $product["name"]; ?></a>
+                        <a href="Thucphamdetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">
                             <label for="sl" style="">Số lượng</label>
                             <input value="1" style="width: 90px;" id="sl" name="sl">

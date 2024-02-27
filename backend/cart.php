@@ -5,7 +5,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
-header("http://localhost:63342/Doan/backend/cart.php");
+
 
 $username = $_SESSION["username"];
 include "project.php";
@@ -29,7 +29,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
 
     $deletepay = $carts->deletePay($username);
 }
-$cart = $carts->getAllCart($username);
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -37,18 +36,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $quantity=$_POST['quantity'];
     $product_id=$_POST['productid'];
     $updatequantity=$carts->updateQuantity($quantity,$username,$product_id);
-    header("refresh: 0.1; url= http://localhost:63342/Doan/backend/cart.php");
 
 }
-$updatetotalprice = $carts->totalprice($username);
-$infor=$carts->inforByUserName($username);
 $updatetotalpaycart = $carts->totalPayCart($username);
 $updatetotalcart= $carts-> totalCart($username);
+$updatetotalprice = $carts->totalprice($username);
+$infor=$carts->inforByUserName($username);
 $paycart = $carts->getAllPay($username);
 $totalcart = $carts->totalShow($username);
-
 $deletecart = $carts->getAllDeleteCart($username);
 $totalpay = $carts->totalShowPay($username);
+$cart = $carts->getAllCart($username);
 
 ?>
 

@@ -5,13 +5,14 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
+$username=$_SESSION["username"];
+$sl ='1';
+$id = $_GET['id'];
+$gia = $_GET['gia'];
 include "project.php";
 $project = new projectFptHappy();
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username=$_SESSION["username"];
-    $sl = $_POST['sl'];
-    $id = $_POST['id'];
-    $gia = $_POST['gia'];
+if (isset($_GET['action']) && $_GET['action'] === 'add'){
+
     $cart = $project->addCart2($username,$id,$sl,$gia);
 
 }

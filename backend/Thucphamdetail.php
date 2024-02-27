@@ -7,11 +7,13 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 }
 include "project.php";
 $project = new projectFptHappy();
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username=$_SESSION["username"];
-    $sl = $_POST['sl'];
-    $id = $_POST['id'];
-    $gia = $_POST['gia'];
+$username=$_SESSION["username"];
+$sl ='1';
+$id = $_GET['id'];
+$gia = $_GET['gia'];
+
+if (isset($_GET['action']) && $_GET['action'] === 'add'){
+
     $cart = $project->addCart2($username,$id,$sl,$gia);
 
 }
@@ -149,7 +151,7 @@ $product = $project->getAllProduct3();
         <p><strong>Status:</strong> In stock</p>
     </div>
     <div class="buttons">
-        <a href="#" class="btn">Buy now</a>
+        <a href="Thucphamdetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn">Add to cart</a>
     </div>
 </div>
 

@@ -13,7 +13,7 @@ $sl='1';
 if (isset($_GET['action']) && $_GET['action'] === 'add') {
     $username=$_SESSION["username"];
     $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
-    $success="ok";
+
 }
 ?>
 <!DOCTYPE html>
