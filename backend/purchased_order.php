@@ -1,53 +1,16 @@
 <?php
+
 session_start();
 //kiểm tra session
-if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
+if (!isset($_SESSION["username"]) && !isset($_SESSION['password'])) {
     header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
-
-
 $username = $_SESSION["username"];
 include "project.php";
-$carts = new projectFptHappy();
-
-if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id'])) {
-    $id=$_GET['id'];
-    $delete = $carts->deleteItemByCart($id);
-
-}
-if (isset($_GET['action']) && $_GET['action'] === 'return' && isset($_GET['id'])) {
-    $id=$_GET['id'];
-    $delete = $carts->returnItemByCart($id);
-
-}
-if (isset($_GET['action']) && $_GET['action'] === 'delete1' && isset($_GET['id'])) {
-    $id=$_GET['id'];
-    $delete = $carts->deleteItem($id);
-}
-if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
-
-    $deletepay = $carts->deletePay($username);
-}
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username=$_SESSION["username"];
-    $quantity=$_POST['quantity'];
-    $product_id=$_POST['productid'];
-    $updatequantity=$carts->updateQuantity($quantity,$username,$product_id);
-}
-$updatetotalpaycart = $carts->totalPayCart($username);
-$updatetotalprice = $carts->totalprice($username);
-$updatetotalcart= $carts-> totalCart($username);
-
-$infor=$carts->inforByUserName($username);
-$paycart = $carts->getAllPay($username);
-$totalcart = $carts->totalShow($username);
-$deletecart = $carts->getAllDeleteCart($username);
-$totalpay = $carts->totalShowPay($username);
-$cart = $carts->getAllCart($username);
-$totalcart = $carts->totalShow($username);
+$project = new projectFptHappy();
+$code = $project->codeOderCart($username);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,129 +75,30 @@ $totalcart = $carts->totalShow($username);
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-<a href="purchased_order.php" class="btn btn-primary btn-lg">Purchased order</a>
 <table class="table">
     <h1>
-        Cart</h1>
+        Purchased order</h1>
     <thead>
     <tr>
-        <th>Product image</th>
-        <th>Product Name</th>
-        <th>List Price($)</th>
-        <th>Quantity</th>
-        <th>Total Price($)</th>
-        <th hidden="hidden">pid</th>
-
-
+        <th>Code order</th>
+        <th>Order details</th>
     </tr>
     </thead>
     <tbody>
-    <?php foreach ($cart as $cart):
-        ?>
-        <form method="post" action="">
-            <tr>
-                <td><img src="<?php echo $cart["image"]; ?>"style="width:70px" class="card-img-top" alt="...">
-                </td>
-                <td><?php echo $cart['name'] ?></td>
-                <td><?php echo $cart['list_price'] ?></td>
-                <td><input id="quantity" name="quantity" value="<?php echo $cart['SUM(c.quantity)'] ?>"></td>
-                <td><?php echo $cart['SUM(c.total_price)'] ?></td>
-                <td><input id="productid" name="productid" value="<?php echo $cart['pid'] ?>" hidden="hidden"></td>
-                <td><button type="submit">Update Quantity</button></td>
-            </tr>
-        </form>
-    <?php endforeach; ?>
-    </tbody>
-
-</table>
-<h1 style="margin-left: 1200px"><?php echo"$". $totalcart ?></h1>
-<div>
-
-
-
-    <?php
-        echo "<a id='check'  class='btn btn-primary' href='delivery_address.php?action=pay&username=$username' >Ckeck out</a>";
-     ?>
-
-</div>
-
-<hr>
-<table class="table" style="display: none">
-    <h1 style="display: none">
-        Deleted items</h1>
-    <thead>
-    <tr>
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th>List Price($)</th>
-        <th>Quantity</th>
-        <th>Total Price</th>
-        <th>Return</th>
-        <th>Delete</th>
-
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($deletecart as $cart1):
+    <?php foreach ($code as $code):
         ?>
         <tr>
-        <tr>
-        <td><img src="<?php echo $cart1["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
-        </td>
-        <td><?php echo $cart1['name'] ?></td>
-        <td><?php echo $cart1['list_price'] ?></td>
-        <td><?php echo $cart1['SUM(c.quantity)'] ?></td>
-        <td><?php echo $cart1['total_price'] ?></td>
+            <td><?php echo $code['code'] ?></td>
+            <td><a href="order_detail.php?code=<?php echo $code['code'] ?>" class="btn btn-warning">Order details</a></td>
 
-            <td><a href="cart.php?action=return&id=<?php echo $cart1['product_id']; ?>"
-                   class="btn btn-success btn-sm" onclick="return confirm('put this item back in the cart?')" >
-                    return to cart</a>
-            </td>
-            <td><a href="cart.php?action=delete1&id=<?php echo $cart1['product_id']; ?>"
-                   class="btn btn-danger btn-sm" onclick="return confirm('put this item back in the cart?')" >
-                    Permanently Deleted</a>
-            </td>
-    </tr>
-    <?php endforeach; ?>
-    </tbody>
-</table>
-<hr>
-<table class="table" hidden="hidden">
-    <h1>
-        Purchased item</h1>
-    <thead>
-    <tr>
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th>List Price($)</th>
-        <th>Quantity</th>
-        <th>Total Price($)</th>
-        <th>Payment</th>
-        <th>Code</th>
-        <th>Status</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($paycart as $paycart):
-        ?>
-        <tr>
-            <td><img src="<?php echo $paycart["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
-            </td>
-            <td><?php echo $paycart['name'] ?></td>
-            <td><?php echo $paycart['list_price'] ?></td>
-            <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
-            <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
-            <td><?php echo $paycart['payment'] ?></td>
-            <td><?php echo $paycart['code'] ?></td>
-            <td><?php echo $paycart['status'] ?></td>
         </tr>
     <?php endforeach; ?>
     </tbody>
 </table>
-<h2 hidden="hidden">
-    Total value of purchased items($): <?php echo $totalpay ?></h2>
-    <td><a hidden="hidden" href="cart.php?action=deletepay"
-           class="btn btn-warning btn-sm" onclick="return confirm('Remove this oder?')" >Delete order</a></td>
+
+
+
+
 
 <div class="footer">
     <div class="footer0">
@@ -306,3 +170,4 @@ $totalcart = $carts->totalShow($username);
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
+

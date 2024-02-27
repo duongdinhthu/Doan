@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "You have successfully purchased  ";
 
 }
+
 $paycart = $project->getAllPay($username);
 ?>
 <!DOCTYPE html>
@@ -133,8 +134,8 @@ $paycart = $project->getAllPay($username);
     <h5 style="display: flex; margin-top: 15px; color: #f29f33">Price: <p style="margin-left: 10px; color: #654145;"> <?php echo  $totalcart; ?></p></h5>
 </div>
 
-<td><a href="cart.php? " class="btn btn-success"
-    >Back to cart</a></td>
+<td><a href="home.php?action=deletepay " class="btn btn-success"
+    >Back to Home</a></td>
 
 
 
