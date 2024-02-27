@@ -37,6 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $quantity=$_POST['quantity'];
     $product_id=$_POST['productid'];
     $updatequantity=$carts->updateQuantity($quantity,$username,$product_id);
+    header("refresh: 0.1; url= http://localhost:63342/Doan/backend/cart.php");
+
 }
 $updatetotalprice = $carts->totalprice($username);
 $infor=$carts->inforByUserName($username);
