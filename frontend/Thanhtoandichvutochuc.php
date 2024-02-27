@@ -1,3 +1,14 @@
+<?php
+include "../backend/project.php";
+$book = new projectFptHappy();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+   $name = $_POST['full_name'];
+    $phone = $_POST['phone_number'];
+    $email = $_POST['email'];
+    $address = $_POST['address'];
+    $add=$book->addBook($name,$phone,$email,$address);
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +76,7 @@
     <div class="left-column">
         <h2>BOOKING INFORMATION</h2>
 
-        <form action="/submit_booking_info" method="post">
+        <form action="" method="post">
             <label for="full_name">Full Name<br></label><br>
             <input type="text" id="full_name" name="full_name" required><br>
             <label for="phone_number">Phone Number<br></label><br>
@@ -74,15 +85,6 @@
             <input type="email" id="email" name="email" required><br>
             <label for="address">Address<br></label><br>
             <input type="text" id="address" name="address" required><br>
-            <label for="discount_code">Enter Discount Code:</label><br>
-            <input type="text" id="discount_code" name="discount_code"><br>
-            <p>Please select payment method</p>
-            <input type="radio" id="bank_transfer" name="payment_method" value="bank_transfer">
-            <label for="bank_transfer">Bank Transfer</label><br>
-            <input type="radio" id="office_payment" name="payment_method" value="office_payment">
-            <label for="office_payment">Office Payment</label><br>
-            <input type="radio" id="online_payment" name="payment_method" value="online_payment">
-            <label for="online_payment">Online Payment</label><br>
             <input type="submit" value="Book Tour">
         </form>
     </div>
@@ -198,3 +200,4 @@
 </body>
 </body>
 </html>
+

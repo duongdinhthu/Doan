@@ -12,8 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sl = $_POST['sl'];
     $id = $_POST['id'];
     $gia = $_POST['gia'];
-    $cart = $project->addCart2($username,$id,$sl,$gia);
-
+    $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
 }
 $product = $project->getAllProduct3();
 

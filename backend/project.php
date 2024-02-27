@@ -183,7 +183,7 @@ class projectFptHappy
             $_SESSION['password']=$password;
 
             echo"login thanh cong";
-            header("Location:dashboard.php");
+            header("Location:fpthappy.php");
         }else{
             $this->accountStaff($username,$password);
         }
@@ -200,7 +200,7 @@ class projectFptHappy
             $_SESSION['username']=$row['username'];
             $_SESSION['password']=$row['password'];
             echo"login thanh cong";
-            header("Location:dashboard1.php");
+            header("Location:fpthappy1.php");
         }else{
             $this->accountCustomer($username,$password);
         }
@@ -562,4 +562,31 @@ public function updateQuantity($quantity,$username,$product_id)
     $this->conn->query($sql);
 
 }
+public function addBook($name,$phone,$email,$address)
+{
+    $sql = "insert into book_tour(name,phone,email,address)values('$name','$phone','$email','$address')";
+    $this->conn->query($sql);
+}
+    public function booktour($dateyear,$datemonth,$dateday)
+    {
+        $carts = [];
+        $sql = "select * from book_tour  where trading_day='$dateyear-$datemonth-$dateday'" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+    }
+    public function statusDoneBook( $name ,$phone,$email,$address,$done,$dateyear,$datemonth,$dateday)
+    {
+        $sql = "update book_tour set status = '$done' where name = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$dateyear-$datemonth-$dateday' ";
+        $this->conn->query($sql);
+    }
+    public function statusDeliveringBook($name ,$phone,$email,$address,$delivering,$dateyear,$datemonth,$dateday)
+    {
+        $sql = "update book_tour set status = '$delivering' where name = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$dateyear-$datemonth-$dateday' ";
+        $this->conn->query($sql);
+    }
 }

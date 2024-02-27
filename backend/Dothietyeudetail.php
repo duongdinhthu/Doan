@@ -7,11 +7,12 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 }
 include "project.php";
 $project = new projectFptHappy();
-$gia=$_GET['gia'];
-$id=$_GET['id'];
-$sl='1';
+$username=$_SESSION["username"];
+$sl ='1';
+$id = $_GET['id'];
+$gia = $_GET['gia'];
+
 if (isset($_GET['action']) && $_GET['action'] === 'add') {
-    $username=$_SESSION["username"];
     $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
 
 }

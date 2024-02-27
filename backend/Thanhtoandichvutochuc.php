@@ -6,6 +6,15 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION['password'])) {
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
+include "../backend/project.php";
+$book = new projectFptHappy();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['full_name'];
+    $phone = $_POST['phone_number'];
+    $email = $_POST['email'];
+    $address = $_POST['address'];
+    $add=$book->addBook($name,$phone,$email,$address);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +27,7 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION['password'])) {
     <link rel="stylesheet" href="Thanhtoandichvutochuc.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Đặt tour du lịch</title>
+    <title>Book a Tour</title>
     <link rel="stylesheet" href="Trochoitreem.css">
 </head>
 <body>
@@ -32,50 +41,48 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION['password'])) {
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-
-                <p>Hotline<br>78910JQKA</p>
+                <p>Hotline<br>8910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
-            <a href="home.php" class="btn btn-outline">Home</a>
+            <a href="home.html" class="btn btn-outline">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.php">Kids</a>
-                    <a href="Trochoigiadinh.php">Family</a>
-                    <a href="Trochoinguoilon.php">Adults</a>
+                    <a href="Trochoitreem.html">Children</a>
+                    <a href="Trochoigiadinh.html">Family</a>
+                    <a href="Trochoinguoilon.html">Adults</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="Docanhan.php">Personal items</a>
-                    <a href="Dothietyeu.php">Essentials</a>
-                    <a href="Thucpham.php">Food</a>
+                    <a href="Docanhan.html">Personal Items</a>
+                    <a href="Dothietyeu.html">Essentials</a>
+                    <a href="Thucpham.html">Food</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="Dichvutrongoi.php">Packages</a>
-                    <a href="Dichvutour.php"> Tours</a>
-                    <a href="Dichvutochuc.php">Organizing</a>
+                    <a href="Dichvutrongoi.html">Packages</a>
+                    <a href="Dichvutour.html">Tours</a>
+                    <a href="Dichvutochuc.html">Organizations</a>
                 </div>
             </div>
-            <a href="tintuc.php" class="btn btn-outline">News</a>
-            <a href="lienhe.php" class="btn btn-outline">Contact</a>
-            <a href="user.php" class="btn btn-outline">Account</a>
-            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
-
+            <a href="tintuc.html" class="btn btn-outline">News</a>
+            <a href="lienhe.html" class="btn btn-outline">Contact</a>
+            <a href="../backend/login.php" class="btn btn-outline">Login</a>
         </div>
     </div>
     <img src="img/img_banner_brea_col.webp" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
+
 <div class="container">
     <div class="left-column">
         <h2>BOOKING INFORMATION</h2>
 
-        <form action="/submit_booking_info" method="post">
+        <form action="" method="post">
             <label for="full_name">Full Name<br></label><br>
             <input type="text" id="full_name" name="full_name" required><br>
             <label for="phone_number">Phone Number<br></label><br>
@@ -84,15 +91,6 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION['password'])) {
             <input type="email" id="email" name="email" required><br>
             <label for="address">Address<br></label><br>
             <input type="text" id="address" name="address" required><br>
-            <label for="discount_code">Enter Discount Code:</label><br>
-            <input type="text" id="discount_code" name="discount_code"><br>
-            <p>Please select payment method</p>
-            <input type="radio" id="bank_transfer" name="payment_method" value="bank_transfer">
-            <label for="bank_transfer">Bank Transfer</label><br>
-            <input type="radio" id="office_payment" name="payment_method" value="office_payment">
-            <label for="office_payment">Office Payment</label><br>
-            <input type="radio" id="online_payment" name="payment_method" value="online_payment">
-            <label for="online_payment">Online Payment</label><br>
             <input type="submit" value="Book Tour">
         </form>
     </div>

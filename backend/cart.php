@@ -29,14 +29,11 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
 
     $deletepay = $carts->deletePay($username);
 }
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username=$_SESSION["username"];
     $quantity=$_POST['quantity'];
     $product_id=$_POST['productid'];
     $updatequantity=$carts->updateQuantity($quantity,$username,$product_id);
-
 }
 $updatetotalpaycart = $carts->totalPayCart($username);
 $updatetotalcart= $carts-> totalCart($username);

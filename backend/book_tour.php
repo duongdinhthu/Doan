@@ -1,21 +1,20 @@
 <?php
 session_start();
 ini_set('display_errors', 'off');
+
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])) {
     header("Location: login.php");
     exit;
 }
 include "project.php";
+
 $project = new projectFptHappy();
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $dateday = $_POST['search'];
     $datemonth = $_POST['search1'];
     $dateyear = $_POST['search2'];
-    $paycart = $project->oder($dateyear,$datemonth,$dateday);
+    $paycart = $project->booktour($dateyear,$datemonth,$dateday);
 }
-
-$adm = $project->totalPayAdm($dateyear,$datemonth,$dateday);
-$paycart = $project->oder($dateyear,$datemonth,$dateday);
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +27,7 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
 <body>
 <div class="container mt-5">
     <a href="logout.php" class="btn btn-danger">Logout</a>
-    <a href="book_tour.php" class="btn btn-primary">Customers book tours</a>
+    <a href="fpthappy1.php" class="btn btn-success">Back</a>
     <h2>
         Enter the date to search</h2>
     <form action="" method="post">
@@ -47,40 +46,29 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
         <h2>List of sold goods</h2>
         <thead>
         <tr>
-            <th>Account</th>
-            <th>Product ID</th>
-            <th>Product Name</th>
-            <th>List Price($)</th>
-            <th>Quantity</th>
-            <th>Total Price($)</th>
-            <th>Payment</th>
-            <th>Code</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
             <th>Status</th>
-            <th>Update order status</th>
-
         </tr>
         </thead>
         <tbody>
         <?php foreach ($paycart as $paycart):
             ?>
             <tr>
-                <td><?php echo $paycart['username']  ?> </td>
-                <td><?php echo $paycart['product_id']  ?> </td>
-                <td><?php echo $paycart['name'] ?></td>
-                <td><?php echo $paycart['list_price'] ?></td>
-                <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
-                <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
-
-                <td><?php echo $paycart['payment'] ?></td>
-                <td><?php echo $paycart['code'] ?></td>
+                <td><?php echo $paycart['name']  ?> </td>
+                <td><?php echo $paycart['phone']  ?> </td>
+                <td><?php echo $paycart['email'] ?></td>
+                <td><?php echo $paycart['address'] ?></td>
                 <td><?php echo $paycart['status'] ?></td>
                 <td><select class="status-select">
                         <option value=""><?php echo $paycart['status'] ?></option>
                         <option value="1" style="background: #45a049">done</option>
-                        <option value="2" style="background: yellowgreen">delivering</option>
+                        <option value="2" style="background: yellowgreen">consulting</option>
                     </select></td>
-                <td><a href="status.php?action=done&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo $dateyear ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
-                <td><a href="status.php?action=delivering&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo $dateyear ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
+                <td><a href="status_book.php?action=done&name=<?php echo $paycart['name']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo $dateyear ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
+                <td><a href="status_book.php?action=consulting&name=<?php echo $paycart['name']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo $dateyear ?>" class=" myLink2 " hidden="hidden">Consulting</a></td>
 
 
 
@@ -88,7 +76,6 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
         <?php endforeach; ?>
         </tbody>
     </table>
-    <h2>Total value of goods sold:  $<?php echo $paycart['total_adm'] ?></h2>
 
 </div>
 <script>
@@ -106,8 +93,3 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
     });
 
 </script>
-
-
-</body>
-</html>
-

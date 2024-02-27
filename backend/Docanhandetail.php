@@ -11,9 +11,8 @@ $id = $_GET['id'];
 $gia = $_GET['gia'];
 include "project.php";
 $project = new projectFptHappy();
-if (isset($_GET['action']) && $_GET['action'] === 'add'){
-
-    $cart = $project->addCart2($username,$id,$sl,$gia);
+if (isset($_GET['action']) && $_GET['action'] === 'add') {
+    $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
 
 }
 $product = $project->getAllProduct3();
