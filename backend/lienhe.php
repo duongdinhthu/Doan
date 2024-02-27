@@ -15,11 +15,7 @@ $infor=$project->inforByUserName($username);
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
     <title>Title</title>
-</head>
-<body>
-<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
@@ -32,28 +28,28 @@ $infor=$project->inforByUserName($username);
             flex-direction: row;
             justify-content: center;
             padding: 20px;
+            background-color: #FEF7EF;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
         .contact div i{
             padding-left: 10px;
         }
         .contact1{
-            border-left: 1px solid darkgrey;
-            border-top: 1px solid darkgrey;
-            border-bottom: 1px solid darkgrey;
-            padding: 10px;
-            border-radius: 10px 0 0 10px;
-            background-color: darkgrey;
-            color: white;
+            background-color: white;
+            border-radius: 20px 0 0 20px;
+            box-shadow: 2px 2px 5px #cccccc;
         }
-        .contact2{
-            border-radius: 0 10px 10px 0;
-            border-top: 1px solid darkgrey;
+        .contact1 h2, .contact1 h5, .contact1 p{
+            color: #f29f33;
+            border-radius: 20px;
+            background-color: white;
             padding: 10px;
-            border-bottom: 1px solid darkgrey;
-            border-right: 1px solid darkgrey;
-            background-color: darkgrey;
         }
-
+        iframe{
+            border-radius: 0 20px 20px 0;
+            box-shadow: 2px 2px 5px #cccccc;
+        }
 
         .text{
             margin-top: 30px;
@@ -85,7 +81,8 @@ $infor=$project->inforByUserName($username);
         .text hr{
             width: 100px;
             background-color: #f29f33;
-        }</style>
+        }
+        </style>
 </head>
 <body>
 <header>
@@ -139,7 +136,7 @@ $infor=$project->inforByUserName($username);
 </header>
 <div class="text">
     <div>
-        <a href="home.html">Home  > </a>
+        <a href="home.php">Home  > </a>
         <p>Contact</p>
     </div>
     <h2>CONTACT</h2>

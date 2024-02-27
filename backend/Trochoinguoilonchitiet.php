@@ -69,60 +69,71 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         </div>
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
-</header>
-<section>
-    <h2>Description of the Game</h2>
-    <p ><strong>Team:</strong> Form teams, each team can have from 2 to 4 people.</p>
-    <p ><strong>Materials:</strong> Prepare materials such as firewood, newspapers, and tools for starting a fire.</p>
-    <p ><strong>Campfire Area:</strong> Choose a safe area to build a campfire, it could be a backyard or suburban area.</p>
-    <p ><strong>Time:</strong> Set the duration of the game, for example: 20 minutes to 1 hour.</p>
-    <p ><strong>Safety Rules:</strong> Define safety rules when building a campfire, maintain a safe distance, and use safe materials.</p>
-    <p ><strong>Winning Points:</strong> The team that starts the fire quickly and maintains the campfire for the shortest time wins.</p>
-    <p><strong>Have Fun:</strong> Ensure everyone participating enjoys themselves and has fun during the fire starting process and camp atmosphere.</p>
-</section>
-
-<section>
-    <h2>Notes and Warnings</h2>
-    <p ><strong>Safety:</strong> Always prioritize safety when working with fire, avoid using hazardous materials.</p>
-    <p ><strong>Clothing:</strong> Wear appropriate clothing to protect the body from fire hazards.</p>
-    <p><strong>Fair Play Rules:</strong> Encourage fair play to create a positive environment and avoid unnecessary conflicts.</p>
-    <p ><strong>Health Check:</strong> Remember to check health conditions before participating, especially for elderly or individuals with special health conditions.</p>
-</section>
-
-<section>
-    <h2>Benefits</h2>
-    <p ><strong>Survival Skills:</strong> Learning how to build and maintain a campfire develops survival skills.</p>
-    <p ><strong>Teamwork:</strong> The game provides opportunities to develop teamwork skills and communication.</p>
-    <p ><strong>Outdoor Experience:</strong> Enjoy the outdoor atmosphere and learn how to appreciate outdoor life.</p>
-    <p ><strong>Creativity:</strong> Building a campfire is also a creative experience and teaches how to work with unfamiliar environments.</p>
-</section>
-
-<h2 style="text-align:center">Images</h2>
-<img class="img1" src="https://hockiquandoi.net/wp-content/uploads/2020/09/unnamed-1.jpg" alt="Starting a Campfire" />
-
-<section>
-    <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20dot%20duoc%20lua%20trai.docx" class="custom-button">Download Instructions</a>
-</section>
-
-<h1>Reviews and Comments</h1>
-
-<div class="rating">
-    <input type="radio" name="star" id="star5" value="5" />
-    <label for="star5" class="star">&#9733;</label>
-    <input type="radio" name="star" id="star4" value="4" />
-    <label for="star4" class="star">&#9733;</label>
-    <input type="radio" name="star" id="star3" value="3" />
-    <label for="star3" class="star">&#9733;</label>
-    <input type="radio" name="star" id="star2" value="2" />
-    <label for="star2" class="star">&#9733;</label>
-    <input type="radio" name="star" id="star1" value="1" />
-    <label for="star1" class="star">&#9733;</label>
+</header><div class="text">
+    <div>
+        <a href="home.php">Home  > </a>
+        <p>Games for adult</p>
+    </div>
+    <h2>
+        GAME DETAILS FOR ADULT</h2>
+    <hr/>
 </div>
-
-<textarea id="review" placeholder="Write your review..."></textarea>
-
-<button onclick="submitReview()">Submit Review</button>
-
+<div class="des">
+    <div>
+        <h2 style="text-align: center">Description of the Game</h2>
+        <p style="text-align: center"><strong>Team:</strong> Form teams, each team can have from 2 to 4 people.</p>
+        <p style="text-align: center"><strong>Materials:</strong> Prepare materials such as firewood, newspapers, and tools for starting a fire.</p>
+        <p style="text-align: center"><strong>Campfire Area:</strong> Choose a safe area to build a campfire, it could be a backyard or suburban area.</p>
+        <p style="text-align: center"><strong>Time:</strong> Set the duration of the game, for example: 20 minutes to 1 hour.</p>
+        <p style="text-align: center"><strong>Safety Rules:</strong> Define safety rules when building a campfire, maintain a safe distance, and use safe materials.</p>
+        <p style="text-align: center"><strong>Winning Points:</strong> The team that starts the fire quickly and maintains the campfire for the shortest time wins.</p>
+        <p style="text-align: center"><strong>Have Fun:</strong> Ensure everyone participating enjoys themselves and has fun during the fire starting process and camp atmosphere.</p>
+    </div>
+</div>
+<div class="des">
+    <div>
+        <h2 style="text-align: center">Notes and Warnings</h2>
+        <p style="text-align: center"><strong>Safety:</strong> Always prioritize safety when working with fire, avoid using hazardous materials.</p>
+        <p style="text-align: center"><strong>Clothing:</strong> Wear appropriate clothing to protect the body from fire hazards.</p>
+        <p style="text-align: center"><strong>Fair Play Rules:</strong> Encourage fair play to create a positive environment and avoid unnecessary conflicts.</p>
+        <p style="text-align: center"><strong>Health Check:</strong> Remember to check health conditions before participating, especially for elderly or individuals with special health conditions.</p>
+    </div>
+</div>
+<div class="des">
+    <div>
+        <h2 style="text-align: center">Benefits</h2>
+        <p style="text-align: center"><strong>Survival Skills:</strong> Learning how to build and maintain a campfire develops survival skills.</p>
+        <p style="text-align: center"><strong>Teamwork:</strong> The game provides opportunities to develop teamwork skills and communication.</p>
+        <p style="text-align: center"><strong>Outdoor Experience:</strong> Enjoy the outdoor atmosphere and learn how to appreciate outdoor life.</p>
+        <p style="text-align: center"><strong>Creativity:</strong> Building a campfire is also a creative experience and teaches how to work with unfamiliar environments.</p>
+    </div>
+</div>
+<div class="des">
+    <div class="img">
+        <h2 style="text-align:center">Images</h2>
+        <img class="img1" src="https://hockiquandoi.net/wp-content/uploads/2020/09/unnamed-1.jpg" alt="Starting a Campfire" />
+        <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20dot%20duoc%20lua%20trai.docx" class="custom-button">Download Instructions</a>
+    </div>
+</div>
+<div class="des">
+    <div class="rating">
+        <h1>Reviews and Comments</h1>
+        <section>
+            <input type="radio" name="star" id="star5" value="5" />
+            <label for="star5" class="star">&#9733;</label>
+            <input type="radio" name="star" id="star4" value="4" />
+            <label for="star4" class="star">&#9733;</label>
+            <input type="radio" name="star" id="star3" value="3" />
+            <label for="star3" class="star">&#9733;</label>
+            <input type="radio" name="star" id="star2" value="2" />
+            <label for="star2" class="star">&#9733;</label>
+            <input type="radio" name="star" id="star1" value="1" />
+            <label for="star1" class="star">&#9733;</label>
+        </section>
+        <textarea id="review" placeholder="Write your review..."></textarea>
+        <button onclick="submitReview()">Submit Review</button>
+    </div>
+</div>
 <script>
     function submitReview() {
         // Get star rating and review text
@@ -141,7 +152,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         // You can add logic to save the review to a database here
     }
 </script>
-
 <div class="footer">
     <div class="footer0">
         <div class="footer1">

@@ -1,90 +1,89 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+
+.des{
+    background-color: #FEF7EF;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+.des div {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+    margin-right: 200px;
+    margin-left: 200px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #cccccc;
+    color: #f29f33;
+}
+.des div h2{
+    margin-bottom: 30px;
+}
+p{
+    color: black;
+}
+strong{
+    color: #f29f33;
+}
+.img{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
 }
-
-
-
-section {
-    margin: 20px;
+.img img{
+    width: 600px;
+    border-radius: 20px;
 }
-
-.img1 {
-    display: block;
-    margin: 0 auto; /* Căn giữa hình ảnh */
-    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của phần tử cha */
-    border-radius: 8px; /* Góc bo cho hình ảnh */
+.img a{
+    text-decoration: none;
+    margin-top: 20px;
+    color: white;
+    background-color: #f29f33;
+    padding: 12px 50px 12px 50px;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+.img a:hover{
+    background-color: #654145;
 }
 .rules {
     text-align: left;
     margin-left: 400px;
     border-radius:10px;
 }
-
-/* CSS cho button */
-.custom-button {
-    background-color:#f29f33 ;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Hover effect */
-.custom-button:hover {
-    background-color:#f38b03;
-}
-
-/* CSS cho link mặc định */
-.custom-button:link {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* CSS cho link khi được ấn */
-.custom-button:active {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-
-section {
-    text-align: center;
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #f29f33;
-}
-
-p {
-    line-height: 1.5;
-}
-
-strong {
-    color: #f29f33;
-}
 h1 {
     color: #f29f33;
     text-align: center;
 }
-
 .rating {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 20px;
 }
-
+.rating section{
+    text-align: center;
+}
+.rating textarea{
+    width: 800px;
+    margin-left: 15%;
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid #f29f33;
+}
+.rating button{
+    margin-top: 20px;
+    margin-left: 480px;
+    margin-right: 480px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #f29f33;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
 .star {
     color: #ffd700;
     font-size: 24px;
@@ -100,7 +99,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label {
-    color: #f89007; /* Màu vàng khi được chọn */
+    color: #ff9a1f; /* Màu vàng khi được chọn */
 }
 
 textarea {
@@ -109,23 +108,36 @@ textarea {
     box-sizing: border-box;
 }
 
-button {
-    background-color: #f29f33;
-    color: #fff;
-    padding: 10px 20px;
-    border:10px;
-    cursor: pointer;
 
+.text{
+    margin-top: 30px;
+    text-align: center;
 }
-
-button:hover {
-    background-color: #f38b03;
+.text div{
+    justify-content: center;
+    display: flex;
 }
-button:active {
-    color: #fff;
+.text div a{
     text-decoration: none;
+    color: #654145;
+    transition: 0.3s ease-in-out;
+    font-size: 18px;
+}
+.text div a:hover{
+    color: #f29f33;
+}
+.text div p{
+    margin-left: 5px;
+    color: #f29f33;
+    font-weight: bold;
+    font-size: 18px;
+}
+.text h2{
+    color: #f29f33;
+    font-weight: bold;
+}
+.text hr{
+    width: 100px;
+    background-color: #f29f33;
 }
 
-p{
-    text-align: left;
-}

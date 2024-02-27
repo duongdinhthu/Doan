@@ -33,14 +33,18 @@
     max-height: 3em; /* Đặt chiều cao tối đa là 2 dòng */
     overflow: hidden;
 }
+
+
 #carouselExampleIndicators,
 .product-detail {
-    width: 40%;
     box-sizing: border-box; /* Ensure padding and border are included in the total width */
 }
 
 .product-detail {
     margin-left: 20px; /* Adjust the margin between carousel and product detail as needed */
+}
+#carouselExampleIndicators{
+    margin-left: 350px;
 }
 
 .product-detail,
@@ -130,6 +134,9 @@
 #shipping-policy h2{
     color:#f29f33;
 }
+#shipping-policy h1{
+    color:#f29f33;
+}
 #shipping-policy h3,
 #shipping-policy p,
 #shipping-policy ul,
@@ -157,11 +164,9 @@
     color:#f29f33;
 }
 
-.navigation-bar {
-    background-color: #f29f33;
-    overflow-x: auto;  /* Cho phép cuộn ngang nếu nội dung vượt quá chiều rộng */
-    white-space: nowrap;  /* Ngăn chặn việc ngắt dòng cho các phần tử bên trong */
-    max-width: 100%;     /* Đặt chiều rộng tối đa của "navigation-bar" */
+
+.footer{
+    background-color:#f29f33;
 }
 .navigation-bar {
     background-color: #f29f33;
@@ -178,13 +183,13 @@
     color: #aea7b3;
     text-decoration: none;
     transition: color 0.3s ease;
+    margin-right: 100px;
 }
 
 .navigation-bar a:hover,
 .navigation-bar a.active {
     color: #f29f33;
 }
-
 
 .ship\&return\&pay div h2{
     text-align: start;
@@ -194,4 +199,10 @@
     color: #f29f33;
 }
 
+.colored-dots li::before {
+
+    color: #f29f33; /* Màu sắc của dấu chấm */
+    font-size: 1.2em; /* Cỡ chữ của dấu chấm */
+    margin-right: 0.5em; /* Khoảng cách giữa dấu chấm và nội dung */
+}
 

@@ -1,4 +1,5 @@
 
+
 <?php
 session_start();
 //kiểm tra session
@@ -10,10 +11,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+
 
 <head>
     <meta charset="UTF-8">
@@ -22,9 +20,87 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dichvutochuc.css">
-</head>
+    <style>
+        .news {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
+        .news h1,h2,strong {
+            color: #f29f33;
+        }
+        .news img {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            width: 650px;
+            height: 450px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tạo bóng cho hình ảnh */
+        }
+
+
+        .comments {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color:white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .comments h2{
+            color: #f29f33;
+        }
+        .comment strong  {
+            color: #f29f33;
+        }
+
+        .comment-form {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color:white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment-form h2 {
+            color: #f29f33;
+        }
+
+        .comment-form label {
+            color: #f29f33;
+        }
+
+        .comment-form input[type="text"],
+        .comment-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .comment-form button {
+            background-color: #f29f33;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comment-form button:hover {
+            background-color: #d98b29;
+        }
+    </style>
+</head>
+<body>
 <header>
     <div class="header">
         <div class="header1">
@@ -45,8 +121,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
 
-                    <a href="Trochoitreem.php"> Kids</a>
-
                     <a href="Trochoitreem.php">Kids</a>
 
                     <a href="Trochoigiadinh.php">Family</a>
@@ -64,11 +138,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-
-                    <a href="Dichvutrongoi.php">Package</a>
-                    <a href="Dichvutour.php"> Tour</a>
-                    <a href="Dichvutochuc.php">Organize</a>
-
                     <a href="Dichvutrongoi.php">Packages</a>
                     <a href="Dichvutour.php"> Tours</a>
                     <a href="Dichvutochuc.php">Organizing</a>
@@ -77,113 +146,23 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             </div>
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
+
+            <a href="../backend/login.php" class="btn btn-outline">Login</a>
+
             <a href="user.php" class="btn btn-outline">Account</a>
             <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
+
 
         </div>
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-    }
-
-    .news {
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: #f8f8f8;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-        color: #333;
-    }
-
-    p {
-        color: #555;
-    }
-
-    .comments {
-        margin-top: 20px;
-    }
-
-    .comment {
-        background-color: #f3f3f3;
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
-
-    .comment p {
-        margin: 0;
-    }
-
-    .comment-form {
-        margin-top: 20px;
-    }
-
-    .comment-form label {
-        display: block;
-        margin-bottom: 8px;
-    }
-
-    .comment-form input,
-    .comment-form textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 12px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-
-    .comment-form button {
-        background-color: #4caf50;
-        color: #fff;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .comment-form button:hover {
-        background-color: #45a049;
-    }
-
-    /* Phần CSS của dropdown */
-    .d-flex {
-        width: 100%; /* Thiết lập chiều rộng của thanh menu là 100% của phần tử cha */
-        display: flex;
-        justify-content: space-between; /* Các phần tử con sẽ được căn chỉnh cách đều nhau trên toàn bộ chiều rộng của thanh menu */
-        align-items: center;
-    }
-
-    .dropdown-content {
-        min-width: 100%; /* Thiết lập chiều rộng tối thiểu của các dropdown content bằng với chiều rộng của thanh menu */
-    }
-
-    .dropdown-content a {
-        width: 100%; /* Căn chỉnh chiều rộng của các mục menu bên trong dropdown content */
-        display: block;
-        padding: 10px;
-        text-decoration: none;
-        color: #333;
-        text-align: left;
-    }
-
-</style>
-</head>
-<body>
 
 <div class="news">
     <h1>NEWS</h1>
     <h2>Outdoor Gear Store Ho Chi Minh City</h2>
     <p><strong>202 Reviews</strong></p>
+    <img src="https://dioutdoor.vn/media/2022/08/dia-diem-ban-do-da-ngoai-ho-chi-minh-500x280.jpg.webp">
     <p>Location of outdoor gear store in Ho Chi Minh City Saigon</p>
 
     <!-- Content of the news about the outdoor gear store -->
