@@ -78,7 +78,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <h2>GAMES FOR FAMILY</h2>
     <hr/>
 </div>
-<div class="img-header">
+<div class="img_header">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>

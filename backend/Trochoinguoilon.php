@@ -65,97 +65,90 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="user.php" class="btn btn-outline">Account</a>
             <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
-
         </div>
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
 <div class="text">
     <div>
-        <a href="home.html">Home  > </a>
+        <a href="home.php">Home  > </a>
         <p>Games</p>
     </div>
     <h2>GAMES FOR ADULTS</h2>
     <hr/>
 </div>
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="https://gudgear.com/wp-content/uploads/2018/02/camping-activities-for-adults.jpg" class="d-block w-100" alt="..." >
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Fpt Happy</h5>
-                <p>Trải nghiệm ngày dã ngoại sôi động với trò chơi dành cho người lớn, kết hợp giải đố, hoạt động nhóm, và niềm vui ngoại ô.</p>
+<div class="img-header">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://gudgear.com/wp-content/uploads/2018/02/camping-activities-for-adults.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fpt Happy</h5>
+                    <p>Experience a lively day of outdoor activities with games designed for adults, combining puzzles, team activities, and suburban fun.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQatPZOv88kmUUS0RRxrBXHZoF5Eb3oY5zANWV61epHxz8BSG6AJQ_tsyaqHh78nZEw36U&usqp=CAU" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fpt Happy</h5>
+                    <p>Discover new locations and enjoy the natural atmosphere with outdoor games for adults, providing a relaxing and stimulating experience.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.theordinaryadventurer.com/wp-content/uploads/2019/10/IMG_2531-1024x768.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fpt Happy</h5>
+                    <p>Create unique memories with friends through activities like camping, kayaking, and enjoying grilled food in the warm atmosphere of outdoor games.</p>
+                </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQatPZOv88kmUUS0RRxrBXHZoF5Eb3oY5zANWV61epHxz8BSG6AJQ_tsyaqHh78nZEw36U&usqp=CAU" class="d-block w-100" alt="..." >
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Fpt Happy</h5>
-                <p>Khám phá địa điểm mới và tận hưởng không khí tự nhiên với trò chơi dã ngoại cho người lớn, mang lại trải nghiệm thư giãn và kích thích.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="https://www.theordinaryadventurer.com/wp-content/uploads/2019/10/IMG_2531-1024x768.jpg" class="d-block w-100" alt="..." >
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Fpt Happy</h5>
-                <p>Xây dựng kỷ niệm độc đáo với bạn bè qua các hoạt động như cắm trại, thả thuyền, và thưởng thức đồ ăn nướng trong không khí ấm áp của trò chơi dã ngoại.</p>
-            </div>
-        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+</div>
+<div class="product-boxes">
+    <div>
+        <a href="Trochoinguoilonchitiet.php">
+            <img src="https://www.sukien-teambuilding.com/wp-content/uploads/to-chuc-teambuilding-buoi-toi.jpg" alt="">
+        </a>
+        <a href="Trochoinguoilonchitiet.php" class="name">Campfire Games</a>
+        <h5 class="cost">
+            <a href="Trochoinguoilonchitiet.php" class="buy-button">View Detail</a>
+        </h5>
+    </div>
+    <div>
+        <img src="https://vteambuilding.com/wp-content/uploads/2018/01/8.-Ban-nh%E1%BA%A1c-h%C3%B2a-t%E1%BA%A5u-1024x683.jpg" alt="" style="width: 280px; height: 200px;">
+        <div class="name">Orchestra Harmony Game</div>
+        <h5 class="cost"><a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20ban%20nhac%20hoa%20tau.docx" download="file.dox" class="buy-button">View Detail</a>
+        </h5>
+    </div>
+    <div>
+        <img src="https://bizweb.dktcdn.net/100/463/236/products/tro-choi-team-building-doan-ket-da-sua.png?v=1667918711933" alt="" style="width: 280px; height: 200px;">
+        <div class="name">Team Wheel Game</div>
+        <h5 class="cost">
+            <a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20banh%20xe%20dong%20doi.docx"  download="file.dox" class="buy-button">View Detail</a>
+        </h5>
+    </div>
+    <div>
+        <img src="https://cdn.tgdd.vn//GameApp/1388369//bit-mat-bat-de-cach-2-800x450.png" alt="" style="width: 280px; height: 200px;">
+        <div class="name">Blindfolded Goat Catching Game</div>
+        <h5 class="cost">
+            <a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20bit%20mat%20bat%20de.docx"  download="file.dox" class="buy-button">View Detail</a>
+        </h5>
+    </div>
 </div>
 
-
-<div id="allcard">
-    <div class="card1" style="width:300px;height:200px">
-        <img src="https://www.sukien-teambuilding.com/wp-content/uploads/to-chuc-teambuilding-buoi-toi.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Campfire Games</h5>
-            <p class="card-text">
-                Campfire games are interactive and survival skill activities, where players collaborate to light a campfire </p>
-            <a href="Trochoinguoilonchitiet.php" class="btn btn-primary" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-    <div class="card2" style="width:300px;height:200px">
-        <img src="https://vteambuilding.com/wp-content/uploads/2018/01/8.-Ban-nh%E1%BA%A1c-h%C3%B2a-t%E1%BA%A5u-1024x683.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Orchestra Harmony Game</h5>
-            <p class="card-text">
-                The orchestra harmony game is a creative experience where players collaborate to create great music.....</p>
-            <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20ban%20nhac%20hoa%20tau.docx" download="file.dox" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-    <div class="card3" style="width:300px;height:200px">
-        <img src="https://bizweb.dktcdn.net/100/463/236/products/tro-choi-team-building-doan-ket-da-sua.png?v=1667918711933" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Team Wheel Game</h5>
-            <p class="card-text">
-                The team wheel game is a cooperation-focused challenge where players collectively control</p>
-            <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20banh%20xe%20dong%20doi.docx"  download="file.dox" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-    <div class="card4" style="width:300px;height:200px">
-        <img src="https://cdn.tgdd.vn//GameApp/1388369//bit-mat-bat-de-cach-2-800x450.png" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Blindfolded Goat Catching Game</h5>
-            <p class="card-text">The blindfolded goat catching game is a team puzzle-solving game.......</p>
-            <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20bit%20mat%20bat%20de.docx"  download="file.dox" class="btn btn-primary">Instruction</a>
-        </div>
-    </div>
-
-</div>
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
@@ -204,8 +197,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
                 <div class="Support">
                     <h3>SERVICES</h3><br>
                     <a href="#">Products</a><br>
-                    <a href="#">Game organization services</a><br>
-                    <a href="#">Payment</a><br>
+                    <a href="#">Game organization services</a><br><a href="#">Payment</a><br>
                 </div>
             </div>
             <div class="pay">
