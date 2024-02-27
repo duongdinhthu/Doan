@@ -44,7 +44,11 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
+
+                    <a href="Trochoitreem.php"> Kids</a>
+
                     <a href="Trochoitreem.php">Kids</a>
+
                     <a href="Trochoigiadinh.php">Family</a>
                     <a href="Trochoinguoilon.php">Adults</a>
                 </div>
@@ -60,9 +64,15 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
+
+                    <a href="Dichvutrongoi.php">Package</a>
+                    <a href="Dichvutour.php"> Tour</a>
+                    <a href="Dichvutochuc.php">Organize</a>
+
                     <a href="Dichvutrongoi.php">Packages</a>
                     <a href="Dichvutour.php"> Tours</a>
                     <a href="Dichvutochuc.php">Organizing</a>
+
                 </div>
             </div>
             <a href="tintuc.php" class="btn btn-outline">News</a>
@@ -80,6 +90,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         line-height: 1.6;
         margin: 20px;
     }
+
     .news {
         max-width: 800px;
         margin: 0 auto;
@@ -88,31 +99,39 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
     h1 {
         color: #333;
     }
+
     p {
         color: #555;
     }
+
     .comments {
         margin-top: 20px;
     }
+
     .comment {
         background-color: #f3f3f3;
         padding: 10px;
         border-radius: 5px;
         margin-bottom: 10px;
     }
+
     .comment p {
         margin: 0;
     }
+
     .comment-form {
         margin-top: 20px;
     }
+
     .comment-form label {
         display: block;
         margin-bottom: 8px;
     }
+
     .comment-form input,
     .comment-form textarea {
         width: 100%;
@@ -122,6 +141,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         border-radius: 5px;
         box-sizing: border-box;
     }
+
     .comment-form button {
         background-color: #4caf50;
         color: #fff;
@@ -130,9 +150,32 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         border-radius: 5px;
         cursor: pointer;
     }
+
     .comment-form button:hover {
         background-color: #45a049;
     }
+
+    /* Phần CSS của dropdown */
+    .d-flex {
+        width: 100%; /* Thiết lập chiều rộng của thanh menu là 100% của phần tử cha */
+        display: flex;
+        justify-content: space-between; /* Các phần tử con sẽ được căn chỉnh cách đều nhau trên toàn bộ chiều rộng của thanh menu */
+        align-items: center;
+    }
+
+    .dropdown-content {
+        min-width: 100%; /* Thiết lập chiều rộng tối thiểu của các dropdown content bằng với chiều rộng của thanh menu */
+    }
+
+    .dropdown-content a {
+        width: 100%; /* Căn chỉnh chiều rộng của các mục menu bên trong dropdown content */
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+        text-align: left;
+    }
+
 </style>
 </head>
 <body>

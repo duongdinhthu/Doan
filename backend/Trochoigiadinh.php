@@ -2,28 +2,9 @@
 session_start();
 //kiểm tra session
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location: login.php");
+    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
-include "project.php";
-$studentManager = new projectFptHappy();
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-$password2 = $_POST['password2'];
-$password3 = $_POST['password3'];
-if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2'])&&isset($_POST['password3'])){
-    if (isset($password)){
-        if ($password2===$password3){
-            $studentManager->changePassword($username,$password,$password2,);
-        }else{
-            echo"The 2 new passwords do not match, please try again ";
-        }
-    }else{
-        echo"Password has not been entered yet";
-    }
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,10 +14,11 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="changePassword.css">
+    <link rel="stylesheet" href="Trochoigiadinh.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
+
 </head>
 <body>
 <header>
@@ -90,29 +72,83 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
 </header>
 <div class="text">
     <div>
-        <a href="../frontend/home.html">Home  > </a>
-        <p>Accounts</p>
+        <a href="home.php">Home  > </a>
+        <p>Games</p>
     </div>
-    <h2>CHANGE PASSWORD</h2>
+    <h2>GAMES FOR FAMILY</h2>
     <hr/>
 </div>
-<div class="form-cp">
-    <form action="" method="post" >
-        <input type="hidden" name="choice" value="2">
-        <label for="username" style="display: none">Username:</label>
-        <input name="username" placeholder="Username" type="text" id="username" required><br>
-        <label for="password" style="display: none">Old password:</label>
-        <input name="password" placeholder="Old password" type="password" id="password" required><br>
-        <label for="password2" style="display: none">Enter your new password:</label>
-        <input name="password2" placeholder="New password" type="password" id="password2" required><br>
-        <label for="password3" style="display: none">Enter the new password again:</label>
-        <input name="password3" placeholder="New password again" type="password" id="password3" required><br>
-        <button type="submit">Change Password</button><br>
-        <div>
-            <a href="login.php" class="re-login">Re-Login</a>
-            <a href="home.php" class="return">Return to home page</a>
+<div class="img-header">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://leutrai.vn/wp-content/uploads/2023/07/tro-choi-cho-tre-di-da-ngoai-2.jpg" class="d-block w-100" alt="..." >
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fpt Happy</h5>
+                    <p>Family joy starts with authentic games.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://leutrai.vn/wp-content/uploads/2023/07/tro-choi-cho-tre-di-da-ngoai-3.jpg" class="d-block w-100" alt="..." >
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fpt Happy</h5>
+                    <p>Family games: where every moment becomes special.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://ecopark.com.vn/images/news/2020/10/original/trai-nghiem-cam-trai-qua-dem-nhu-troi-tay-giua-khong-gian-xanh-kdt-ecopark_1603337843.jpg" class="d-block w-100" alt="..." >
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fpt Happy</h5>
+                    <p>Immerse yourself in games, connect the hearts of the family.</p>
+                </div>
+            </div>
         </div>
-    </form>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div class="product-boxes">
+    <div>
+        <a href="Trochoigiadinhchitiet.html">
+            <img src="https://img.freepik.com/premium-photo/happy-family-playing-football-park_107420-91413.jpg" alt="">
+        </a>
+        <a href="Trochoigiadinhchitiet.html" class="name">Family Football Game</a>
+        <h5 class="cost">
+            <a href="Trochoigiadinhchitiet.html" class="buy-button">View Detail</a>
+        </h5>
+    </div>
+    <div>
+        <img src="https://hallmark.brightspotcdn.com/4b/be/d1aa420336cb9e18012b5ad5bf31/vs-18073.jpg" alt="">
+        <a href="#" class="name">Word Puzzle Game</a>
+        <h5 class="cost">
+            <a href="https://docs.google.com/document/d/16yPAcvo1MnixsDJbKfwU2Krd7zikjORw/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="buy-button">View Detail</a>
+        </h5>
+    </div>
+    <div>
+        <img src="https://bloximages.chicago2.vip.townnews.com/meridianstar.com/content/tncms/assets/v3/editorial/e/65/e650054c-4e59-11e7-ae4f-f37feb92da32/593cbf7b4a932.image.jpg?resize=750%2C500" alt="">
+        <a href="#" class="name">Archery Game</a>
+        <h5 class="cost">
+            <a href="https://docs.google.com/document/d/1OP6Pzfu6zhNJYQzNjP13URofOqqc2kQn/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="buy-button">View Detail</a>
+        </h5>
+    </div>
+    <div>
+        <img src="https://i.guim.co.uk/img/media/b5d22535a5a254f97b3251bd6a226c4eac12fbf8/571_585_2691_2736/master/2691.jpg?width=620&quality=85&auto=format&fit=max&s=240ea90f5bd2a7a2adcc7e95953491fe" alt="">
+        <a href="#" class="name">Jigsaw Puzzle Game</a>
+        <h5 class="cost">
+            <a href="https://docs.google.com/document/d/15zPIxFKXbnOVxd1PW05VPas7pw_v9eRd/edit?usp=sharing&ouid=110749224885515623712&rtpof=true&sd=true" class="buy-button">View Detail</a>
+        </h5>
+    </div>
 </div>
 <div class="footer">
     <div class="footer0">
@@ -178,12 +214,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-

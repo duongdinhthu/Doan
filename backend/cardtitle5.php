@@ -38,33 +38,33 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             </div>
         </div>
         <div class="d-flex">
-            <a href="home.html" class="btn btn-outline">Home</a>
+            <a href="home.php" class="btn btn-outline">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.html"> Kids</a>
-                    <a href="Trochoigiadinh.html">Family</a>
-                    <a href="Trochoinguoilon.html">Adults</a>
+                    <a href="Trochoitreem.php"> Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="Docanhan.html">Personal items</a>
-                    <a href="Dothietyeu.html">Essentials</a>
-                    <a href="Thucpham.html">Food</a>
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="Dichvutrongoi.html">Package</a>
-                    <a href="Dichvutour.html"> Tour</a>
-                    <a href="Dichvutochuc.html">Organize</a>
+                    <a href="Dichvutrongoi.php">Package</a>
+                    <a href="Dichvutour.php"> Tour</a>
+                    <a href="Dichvutochuc.php">Organize</a>
                 </div>
             </div>
-            <a href="tintuc.html" class="btn btn-outline">News</a>
-            <a href="lienhe.html" class="btn btn-outline">Contact</a>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="../backend/login.php" class="btn btn-outline">Login</a>
 
         </div>

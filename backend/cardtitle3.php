@@ -43,7 +43,11 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
+
+                    <a href="Trochoitreem.php"> Kids</a>
+
                     <a href="Trochoitreem.php">Kids</a>
+
                     <a href="Trochoigiadinh.php">Family</a>
                     <a href="Trochoinguoilon.php">Adults</a>
                 </div>
@@ -59,16 +63,23 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
+
+                    <a href="Dichvutrongoi.php">Package</a>
+                    <a href="Dichvutour.php"> Tour</a>
+                    <a href="Dichvutochuc.php">Organize</a>
+
                     <a href="Dichvutrongoi.php">Packages</a>
                     <a href="Dichvutour.php"> Tours</a>
                     <a href="Dichvutochuc.php">Organizing</a>
+
                 </div>
             </div>
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
+
+            <a href="../backend/login.php" class="btn btn-outline">Login</a>
             <a href="user.php" class="btn btn-outline">Account</a>
             <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
-
         </div>
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
@@ -135,7 +146,10 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     }
 </style>
 </head>
+
+
 <body>
+
 
 <div class="news">
     <h1>NEWS</h1>

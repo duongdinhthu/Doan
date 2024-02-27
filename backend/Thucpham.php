@@ -2,39 +2,33 @@
 session_start();
 //kiểm tra session
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location: login.php");
+    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
 include "project.php";
-$studentManager = new projectFptHappy();
-$username = $_POST['username'];
-$password = $_POST['password'];
+$project = new projectFptHappy();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username=$_SESSION["username"];
+    $sl = $_POST['sl'];
+    $id = $_POST['id'];
+    $gia = $_POST['gia'];
+    $cart = $project->addCart2($username,$id,$sl,$gia);
 
-$password2 = $_POST['password2'];
-$password3 = $_POST['password3'];
-if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2'])&&isset($_POST['password3'])){
-    if (isset($password)){
-        if ($password2===$password3){
-            $studentManager->changePassword($username,$password,$password2,);
-        }else{
-            echo"The 2 new passwords do not match, please try again ";
-        }
-    }else{
-        echo"Password has not been entered yet";
-    }
 }
-
+$product = $project->getAllProduct1();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <title>Title</title>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="changePassword.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="Thucpham.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
@@ -90,30 +84,46 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
 </header>
 <div class="text">
     <div>
-        <a href="../frontend/home.html">Home  > </a>
-        <p>Accounts</p>
+        <a href="home.php">Home  > </a>
+        <p>Food</p>
     </div>
-    <h2>CHANGE PASSWORD</h2>
+    <h2>FOOD</h2>
     <hr/>
 </div>
-<div class="form-cp">
-    <form action="" method="post" >
-        <input type="hidden" name="choice" value="2">
-        <label for="username" style="display: none">Username:</label>
-        <input name="username" placeholder="Username" type="text" id="username" required><br>
-        <label for="password" style="display: none">Old password:</label>
-        <input name="password" placeholder="Old password" type="password" id="password" required><br>
-        <label for="password2" style="display: none">Enter your new password:</label>
-        <input name="password2" placeholder="New password" type="password" id="password2" required><br>
-        <label for="password3" style="display: none">Enter the new password again:</label>
-        <input name="password3" placeholder="New password again" type="password" id="password3" required><br>
-        <button type="submit">Change Password</button><br>
-        <div>
-            <a href="login.php" class="re-login">Re-Login</a>
-            <a href="home.php" class="return">Return to home page</a>
-        </div>
-    </form>
-</div>
+<table >
+
+
+    <tbody>
+
+
+    <div class="product-boxes">
+        <?php foreach ($product as $product): ?>
+            <div class="product-item">
+                <div>
+                    <form action="" method="post">
+                        <a href="Thucphamdetail.php">
+                            <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
+                        </a>
+                        <a href="Thucphamdetail.php" class="name"><?php echo $product["name"]; ?></a>
+                        <h5 class="cost">
+                            <label for="sl" style="">Số lượng</label>
+                            <input value="1" style="width: 90px;" id="sl" name="sl">
+                            <label for="gia" style="display: none">Giá</label>
+                            <input value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
+                            <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
+                            <label for="id" style="display: none">ID</label>
+                            <input value="<?php echo $product["pid"]; ?>" style="display: none" id="id" name="id">
+                            <button type="submit" class="buy-button">Buy</button>
+                        </h5>
+                    </form>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    </tbody>
+</table>
+
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
@@ -178,12 +188,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-
