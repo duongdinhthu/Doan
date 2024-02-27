@@ -251,28 +251,3 @@ header{
     text-align: center;
     padding-bottom: 20px;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 25px; /* Đảm bảo góc được bo tròn */
-    background-color: #f29f33; /* Màu nền */
-    color: #000000; /* Màu chữ */
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    border: none; /* Xóa viền */
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
-}
-
-/* Hover effect */
-a:hover {
-    background-color: #d87c23; /* Màu nền hover */
-}

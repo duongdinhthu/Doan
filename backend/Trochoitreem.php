@@ -120,12 +120,12 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 </div>
 <div class="product-boxes">
     <div>
-        <a href="Trochoitreemchitiet.html">
+        <a href="Trochoitreemchitiet.php">
             <img src="https://www.cleanipedia.com/images/5iwkm8ckyw6v/5RHBi0UiJNDQ95B1sXp1ao/f767c121fee347d130c344dde308f931/Ymlnc3RvY2stZ2lybHMtaW4tcGlsbG93LWZvcnQtMTk3ODc4NjMwLmpwZw/900w/tr%C3%B2-ch%C6%A1i-trong-nh%C3%A0-cho-b%C3%A9.jpg" alt="" style="width: 280px;">
         </a>
-        <a href="Trochoitreemchitiet.html" class="name">Building Forts Game</a>
+        <a href="Trochoitreemchitiet.php" class="name">Building Forts Game</a>
         <h5 class="cost">
-            <a href="Trochoitreemchitiet.html" class="buy-button">View Detail</a>
+            <a href="Trochoitreemchitiet.php" class="buy-button">View Detail</a>
         </h5>
     </div>
     <div>

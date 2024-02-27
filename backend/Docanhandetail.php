@@ -148,7 +148,7 @@ $product = $project->getAllProduct3();
     </div>
 
     <div class="buttons">
-        <a href="#" class="btn">Contact to buy</a>
+        <a href="Docanhandetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn">Add to cart</a>
     </div>
 </div>
 

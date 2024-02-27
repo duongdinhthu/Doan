@@ -120,12 +120,12 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 </div>
 <div class="product-boxes">
     <div>
-        <a href="Trochoigiadinhchitiet.html">
+        <a href="Trochoigiadinhchitiet.php">
             <img src="https://img.freepik.com/premium-photo/happy-family-playing-football-park_107420-91413.jpg" alt="">
         </a>
-        <a href="Trochoigiadinhchitiet.html" class="name">Family Football Game</a>
+        <a href="Trochoigiadinhchitiet.php" class="name">Family Football Game</a>
         <h5 class="cost">
-            <a href="Trochoigiadinhchitiet.html" class="buy-button">View Detail</a>
+            <a href="Trochoigiadinhchitiet.php" class="buy-button">View Detail</a>
         </h5>
     </div>
     <div>

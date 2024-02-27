@@ -5,20 +5,33 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
+include "project.php";
+$project = new projectFptHappy();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username=$_SESSION["username"];
+    $sl = $_POST['sl'];
+    $id = $_POST['id'];
+    $gia = $_POST['gia'];
+    $cart = $project->addCart2($username,$id,$sl,$gia);
+
+}
+$product = $project->getAllProduct3();
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <title>Title</title>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Trochoinguoilon.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="Dothietyeudetail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
-
 </head>
 <body>
 <header>
@@ -70,91 +83,128 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-<div class="text">
-    <div>
-        <a href="home.html">Home  > </a>
-        <p>Games</p>
-    </div>
-    <h2>GAMES FOR ADULTS</h2>
-    <hr/>
-</div>
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
+    <ol class="carousel-indicators" >
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+            <img src="https://cf.shopee.vn/file/2004a66f48abb8ff17e17144d2b14db5" class="d-block w-100" alt="...">
+
+        </li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1">
+            <img src="https://vn-test-11.slatic.net/p/3328c8c438f3c620ce9a8652f19b3e0e.jpg" class="d-block w-100" alt="...">
+
+        </li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2">
+            <img src="https://cf.shopee.vn/file/88d53e7b880288bb10628d9d75038f21" class="d-block w-100" alt="...">
+
+        </li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpT97k5zUc2VW0G7KsS2IakfzCu_bYaRYHowyazLqqQJqr9HTgNqf6rUBsc70qK4HPvW4&usqp=CAU" class="d-block w-100" alt="...">
+        </li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4">
+            <img src="https://cf.shopee.vn/file/b1441a313fb6fa121f72c6ce50c3f144" class="d-block w-100" alt="...">
+
+        </li>
     </ol>
+
+    <script src="Dothietyeudetail.js"></script>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://gudgear.com/wp-content/uploads/2018/02/camping-activities-for-adults.jpg" class="d-block w-100" alt="..." >
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Fpt Happy</h5>
-                <p>Trải nghiệm ngày dã ngoại sôi động với trò chơi dành cho người lớn, kết hợp giải đố, hoạt động nhóm, và niềm vui ngoại ô.</p>
-            </div>
+            <img src="https://cf.shopee.vn/file/2004a66f48abb8ff17e17144d2b14db5" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQatPZOv88kmUUS0RRxrBXHZoF5Eb3oY5zANWV61epHxz8BSG6AJQ_tsyaqHh78nZEw36U&usqp=CAU" class="d-block w-100" alt="..." >
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Fpt Happy</h5>
-                <p>Khám phá địa điểm mới và tận hưởng không khí tự nhiên với trò chơi dã ngoại cho người lớn, mang lại trải nghiệm thư giãn và kích thích.</p>
-            </div>
+            <img src="https://vn-test-11.slatic.net/p/3328c8c438f3c620ce9a8652f19b3e0e.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="https://www.theordinaryadventurer.com/wp-content/uploads/2019/10/IMG_2531-1024x768.jpg" class="d-block w-100" alt="..." >
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Fpt Happy</h5>
-                <p>Xây dựng kỷ niệm độc đáo với bạn bè qua các hoạt động như cắm trại, thả thuyền, và thưởng thức đồ ăn nướng trong không khí ấm áp của trò chơi dã ngoại.</p>
-            </div>
+            <img src="https://cf.shopee.vn/file/88d53e7b880288bb10628d9d75038f21" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpT97k5zUc2VW0G7KsS2IakfzCu_bYaRYHowyazLqqQJqr9HTgNqf6rUBsc70qK4HPvW4&usqp=CAU" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://cf.shopee.vn/file/b1441a313fb6fa121f72c6ce50c3f144" class="d-block w-100" alt="...">
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
 </div>
 
+<div class="product-detail">
+    <div class="product-title">Concentrated tomatoes</div>
+    <div class="price">$2.99<span class="discount-price">$4</span></div>
+    <div class="product-info">
+        <p><strong>Type:</strong> Vegetables</p>
+        <p><strong>Origin:</strong> Vietnam</p>
+        <p><strong>Delivery:</strong> Nationwide</p>
+        <p><strong>Payment:</strong> Cash on delivery</p>
+        <p><strong>Return/Exchange policy:</strong> Free</p>
+        <p><strong>Warranty:</strong> Not applicable</p>
+    </div>
+    <div class="availability">
+        <p><strong>Status:</strong> In stock</p>
+    </div>
+    <div class="buttons">
+        <a href="#" class="btn">Buy now</a>
+    </div>
+</div>
 
-<div id="allcard">
-    <div class="card1" style="width:300px;height:200px">
-        <img src="https://www.sukien-teambuilding.com/wp-content/uploads/to-chuc-teambuilding-buoi-toi.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Campfire Games</h5>
-            <p class="card-text">
-                Campfire games are interactive and survival skill activities, where players collaborate to light a campfire </p>
-            <a href="Trochoinguoilonchitiet.php" class="btn btn-primary" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-    <div class="card2" style="width:300px;height:200px">
-        <img src="https://vteambuilding.com/wp-content/uploads/2018/01/8.-Ban-nh%E1%BA%A1c-h%C3%B2a-t%E1%BA%A5u-1024x683.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Orchestra Harmony Game</h5>
-            <p class="card-text">
-                The orchestra harmony game is a creative experience where players collaborate to create great music.....</p>
-            <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20ban%20nhac%20hoa%20tau.docx" download="file.dox" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-    <div class="card3" style="width:300px;height:200px">
-        <img src="https://bizweb.dktcdn.net/100/463/236/products/tro-choi-team-building-doan-ket-da-sua.png?v=1667918711933" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Team Wheel Game</h5>
-            <p class="card-text">
-                The team wheel game is a cooperation-focused challenge where players collectively control</p>
-            <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20banh%20xe%20dong%20doi.docx"  download="file.dox" class="btn btn-primary">Instructions</a>
-        </div>
-    </div>
-    <div class="card4" style="width:300px;height:200px">
-        <img src="https://cdn.tgdd.vn//GameApp/1388369//bit-mat-bat-de-cach-2-800x450.png" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Blindfolded Goat Catching Game</h5>
-            <p class="card-text">The blindfolded goat catching game is a team puzzle-solving game.......</p>
-            <a href="./Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20bit%20mat%20bat%20de.docx"  download="file.dox" class="btn btn-primary">Instruction</a>
-        </div>
-    </div>
+<div class="navigation-bar">
+    <a onclick="showContent('product-info')" style="color:#ffffff; cursor: pointer">Product Information</a>
+    <a onclick="showContent('shipping-policy')" style="color:#ffffff; cursor: pointer">Shipping Policy</a>
+    <a onclick="showContent('return-warranty')" style="color:#ffffff; cursor: pointer">Return & Warranty</a>
+    <a onclick="showContent('payment-methods')" style="color:#ffffff; cursor: pointer">Payment Methods</a>
+</div>
 
+<div id="product-info" class="content-section">
+    <h2 style="text-align: start">Product Information: Concentrated tomatoes</h2>
+    <p>
+        Concentrated tomatoes are a product made from natural tomatoes, processed through drying to remove water and enhance the tomato flavor.
+    </p>
+    <h3>Product Features:</h3>
+    <ul>
+        <li>Weight: 200g</li>
+        <li>Expiration date: 12 months from the production date</li>
+        <li>Origin: Vietnam</li>
+        <li>Ingredients: 100% natural tomatoes, no preservatives</li>
+    </ul>
+</div>
+
+<div id="shipping-policy" class="content-section">
+    <h2 style="text-align: start">Shipping Policy</h2>
+    <ul>
+        <li>
+            We provide nationwide shipping services. Shipping fees will be calculated based on the delivery address and the shipping method you choose.
+        </li>
+        <li>
+            The estimated delivery time is from 3 to 5 working days after the order is confirmed.
+        </li>
+    </ul>
+</div>
+
+<div id="return-warranty" class="content-section">
+    <h2 style="text-align: start">Return/Exchange Policy and Warranty</h2>
+    <ul>
+        <li>
+            We accept returns/exchanges within 30 days from the date of receipt of the goods. The product must be intact, unused, and undamaged.
+        </li>
+        <li>
+            If the product has any manufacturing defects, we will be responsible for repairing or replacing the product free of charge within the warranty period.
+        </li>
+    </ul>
+</div>
+
+<div id="payment-methods" class="content-section">
+    <h2 style="text-align: start">Payment Methods</h2>
+    <ul>
+        <li>
+            We offer various payment methods such as credit/debit card payment, PayPal, and bank transfer.
+        </li>
+    </ul>
 </div>
 <div class="footer">
     <div class="footer0">
@@ -220,7 +270,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="trangchu.js"></script>
+<script src="../../DoanKI1%20(1)/frontend/trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
