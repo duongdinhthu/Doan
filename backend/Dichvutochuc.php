@@ -91,10 +91,10 @@ $product = $project->getAllProduct6();
 </div>
 <div class="product-boxes">
     <div>
-        <a href="">
+        <a href="Dichvutochucdetail.php">
             <img src="./imageDichVu/img209.jpg" alt="" style="height: 280px">
         </a>
-        <a href="#" class="name">Powder Passing Game in the Thung Lung Vang (Dalat)</a><br><br>
+        <a href="Dichvutochucdetail.php" class="name">Powder Passing Game in the Thung Lung Vang (Dalat)</a>
         <h5 class="cost">
             $199 <small><del>$239</del></small>
             <a href="../backend/login.php" class="buy-button">Contact Us</a>
@@ -118,7 +118,7 @@ $product = $project->getAllProduct6();
     </div>
     <div>
         <img src="./imageDichVu/img212.jpg" alt="" style="height: 280px">
-        <a href="Dichvutochucdetail.php" class="name">Kayaking in Halong Bay</a>
+        <a href="Dichvutochucdetail.php" class="name">Kayaking in Halong Bay</a><br><br>
         <h5 class="cost">
             $150 <small><del>$180</del></small>
             <a href="../backend/login.php" class="buy-button">Contact Us</a>
