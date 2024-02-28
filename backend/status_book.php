@@ -26,7 +26,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'consulting' && isset($_GET['n
     $address = $_GET['address'];
     $delivering= $_GET['action'];
     $statusdone = $project->statusDeliveringBook($name ,$phone,$email,$address,$delivering,$dateyear,$datemonth,$dateday);
-    echo "<h3>Change the status to delivery successfully</h3>";
+    echo "<h3>Change the status to consulting successfully</h3>";
 }
 
 $paycart = $project->booktour($dateyear,$datemonth,$dateday);

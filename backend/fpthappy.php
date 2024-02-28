@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+<h1>Welcome to the administration area</h1>
 <div class="container mt-5">
     <a href="logout.php" class="btn btn-danger">Logout</a>
     <a href="infor_customer.php" class="btn btn-primary">customer information</a>
