@@ -84,6 +84,14 @@ $product = $project->getAllProduct3();
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
+<div class="text">
+    <div>
+        <a href="home.php">Home  > </a>
+        <p>Products</p>
+    </div>
+    <h2>DETAIL FOOD PRODUCT</h2>
+    <hr/>
+</div>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
     <ol class="carousel-indicators" >
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
@@ -134,7 +142,7 @@ $product = $project->getAllProduct3();
         <span class="sr-only">Next</span>
     </a>
 </div>
-
+<script src="Dothietyeudetail.js"></script>
 <div class="product-detail">
     <div class="product-title">Concentrated tomatoes</div>
     <div class="price">$2.99<span class="discount-price">$4</span></div>
@@ -150,7 +158,7 @@ $product = $project->getAllProduct3();
         <p><strong>Status:</strong> In stock</p>
     </div>
     <div class="buttons">
-        <a href="Thucphamdetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn">Add to cart</a>
+        <a href="Thucphamdetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn">Buy now</a>
     </div>
 </div>
 
@@ -160,52 +168,50 @@ $product = $project->getAllProduct3();
     <a onclick="showContent('return-warranty')" style="color:#ffffff; cursor: pointer">Return & Warranty</a>
     <a onclick="showContent('payment-methods')" style="color:#ffffff; cursor: pointer">Payment Methods</a>
 </div>
+<div class="main-content">
+    <div id="product-info" class="content-section">
+        <h2>Product Information</h2>
+        <h3>Product Features:</h3>
+        <ul>
+            <li>Weight: 200g</li>
+            <li>Expiration date: 12 months from the production date</li>
+            <li>Origin: Vietnam</li>
+            <li>Ingredients: 100% natural tomatoes, no preservatives</li>
+        </ul>
+    </div>
 
-<div id="product-info" class="content-section">
-    <h2 style="text-align: start">Product Information: Concentrated tomatoes</h2>
-    <p>
-        Concentrated tomatoes are a product made from natural tomatoes, processed through drying to remove water and enhance the tomato flavor.
-    </p>
-    <h3>Product Features:</h3>
-    <ul>
-        <li>Weight: 200g</li>
-        <li>Expiration date: 12 months from the production date</li>
-        <li>Origin: Vietnam</li>
-        <li>Ingredients: 100% natural tomatoes, no preservatives</li>
-    </ul>
-</div>
+    <div id="shipping-policy" class="content-section">
+        <h2>Shipping Policy</h2>
+        <ul>
+            <li>
+                We provide nationwide shipping services. Shipping fees will be calculated based on the delivery address and the shipping method you choose.
+            </li>
+            <li>
+                The estimated delivery time is from 3 to 5 working days after the order is confirmed.
+            </li>
+        </ul>
+    </div>
 
-<div id="shipping-policy" class="content-section">
-    <h2 style="text-align: start">Shipping Policy</h2>
-    <ul>
-        <li>
-            We provide nationwide shipping services. Shipping fees will be calculated based on the delivery address and the shipping method you choose.
-        </li>
-        <li>
-            The estimated delivery time is from 3 to 5 working days after the order is confirmed.
-        </li>
-    </ul>
-</div>
+    <div id="return-warranty" class="content-section">
+        <h2>Return/Exchange Policy and Warranty</h2>
+        <ul>
+            <li>
+                We accept returns/exchanges within 30 days from the date of receipt of the goods. The product must be intact, unused, and undamaged.
+            </li>
+            <li>
+                If the product has any manufacturing defects, we will be responsible for repairing or replacing the product free of charge within the warranty period.
+            </li>
+        </ul>
+    </div>
 
-<div id="return-warranty" class="content-section">
-    <h2 style="text-align: start">Return/Exchange Policy and Warranty</h2>
-    <ul>
-        <li>
-            We accept returns/exchanges within 30 days from the date of receipt of the goods. The product must be intact, unused, and undamaged.
-        </li>
-        <li>
-            If the product has any manufacturing defects, we will be responsible for repairing or replacing the product free of charge within the warranty period.
-        </li>
-    </ul>
-</div>
-
-<div id="payment-methods" class="content-section">
-    <h2 style="text-align: start">Payment Methods</h2>
-    <ul>
-        <li>
-            We offer various payment methods such as credit/debit card payment, PayPal, and bank transfer.
-        </li>
-    </ul>
+    <div id="payment-methods" class="content-section">
+        <h2>Payment Methods</h2>
+        <ul>
+            <li>
+                We offer various payment methods such as credit/debit card payment, PayPal, and bank transfer.
+            </li>
+        </ul>
+    </div>
 </div>
 <div class="footer">
     <div class="footer0">

@@ -82,6 +82,14 @@ $product = $project->getAllProduct3();
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
+<div class="text">
+    <div>
+        <a href="home.php">Home  > </a>
+        <p>Products</p>
+    </div>
+    <h2>DETAIL PERSONAL PRODUCT</h2>
+    <hr/>
+</div>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
     <ol class="carousel-indicators" >
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
@@ -161,157 +169,140 @@ $product = $project->getAllProduct3();
 
 
 <!-- Corresponding content sections -->
-<div id="product-info" class="content-section">
-    <h2>Waterproof 6-Inch Survival Knife - Made in Japan</h2>
-
-    <h3>Technical Specifications</h3>
-    <ul>
-        <li><strong>Origin:</strong> The product is manufactured and originated from Japan, known for high quality and advanced manufacturing techniques.</li>
-        <li><strong>Expiration Date:</strong> The knife has a long expiration date when properly stored and used. There is no specific expiration date due to emphasis on proper storage and maintenance.</li>
-    </ul>
-
-    <h3>Technical Details</h3>
-    <ul>
-        <li><strong>Blade Material:</strong> The blade is made of high-quality stainless steel, resistant to corrosion and retains sharpness for a long time.</li>
-        <li><strong>Knife Handle:</strong> The handle is made of waterproof and impact-resistant material to ensure durability in all weather conditions.</li>
-        <li><strong>Blade Length:</strong> 6 inches, ideal for survival and outdoor cutting tasks.</li>
-    </ul>
-
-    <h3>Design Features</h3>
-    <ul>
-        <li><strong>Blade Design:</strong> Drop-point design facilitates various cutting tasks.</li>
-        <li><strong>Knife Handle:</strong> Features an anti-slip structure for safety during use.</li>
-        <li><strong>Knife Sheath:</strong> Includes a safety lock to securely hold the knife and prevent accidents.</li>
-    </ul>
-
-    <h3>Benefits</h3>
-    <ul>
-        <li><strong>Versatility:</strong> Suitable for various purposes such as wood cutting, cooking, or outdoor cutting tasks.</li>
-        <li><strong>Survival:</strong> An essential tool for survival activities and camping.</li>
-        <li><strong>Durability:</strong> Designed with materials and features to withstand harsh conditions and long-term use.</li>
-    </ul>
-</div>
-
-<div  id="shipping-policy" class="content-section">
-    <header>
-        <h1>Shipping Policy</h1>
-    </header>
-
-    <div>
-        <h2 style="text-align: start">1. Shipping Fee</h2>
+<div class="main-content">
+    <div id="product-info" class="content-section">
+        <h2>Product Information</h2>
+        <h3>Technical Specifications</h3>
         <ul>
-            <li>
-                We provide free shipping for orders over $50. For orders under $50, the shipping fee will depend on the delivery address and the shipping method you choose.
-            </li>
+            <li><strong>Origin:</strong> The product is manufactured and originated from Japan, known for high quality and advanced manufacturing techniques.</li>
+            <li><strong>Expiration Date:</strong> The knife has a long expiration date when properly stored and used. There is no specific expiration date due to emphasis on proper storage and maintenance.</li>
+        </ul>
+
+        <h3>Technical Details</h3>
+        <ul>
+            <li><strong>Blade Material:</strong> The blade is made of high-quality stainless steel, resistant to corrosion and retains sharpness for a long time.</li>
+            <li><strong>Knife Handle:</strong> The handle is made of waterproof and impact-resistant material to ensure durability in all weather conditions.</li>
+            <li><strong>Blade Length:</strong> 6 inches, ideal for survival and outdoor cutting tasks.</li>
+        </ul>
+
+        <h3>Design Features</h3>
+        <ul>
+            <li><strong>Blade Design:</strong> Drop-point design facilitates various cutting tasks.</li>
+            <li><strong>Knife Handle:</strong> Features an anti-slip structure for safety during use.</li>
+            <li><strong>Knife Sheath:</strong> Includes a safety lock to securely hold the knife and prevent accidents.</li>
+        </ul>
+
+        <h3>Benefits</h3>
+        <ul>
+            <li><strong>Versatility:</strong> Suitable for various purposes such as wood cutting, cooking, or outdoor cutting tasks.</li>
+            <li><strong>Survival:</strong> An essential tool for survival activities and camping.</li>
+            <li><strong>Durability:</strong> Designed with materials and features to withstand harsh conditions and long-term use.</li>
         </ul>
     </div>
+    <div  id="shipping-policy" class="content-section">
+        <h2>Shipping Policy</h2>
+        <div>
+            <h3 style="text-align: start">Shipping Fee</h3>
+            <ul>
+                <li>
+                    We provide free shipping for orders over $50. For orders under $50, the shipping fee will depend on the delivery address and the shipping method you choose.
+                </li>
+            </ul>
+        </div>
 
-    <div>
-        <h2 style="text-align: start">2. Delivery Time</h2>
-        <ul>
-            <li>
-                Delivery time may vary depending on the delivery address and the selected shipping method. Typically, we aim to deliver within 3-5 business days from the date of order.
-            </li>
-        </ul>
+        <div>
+            <h3 style="text-align: start">Delivery Time</h3>
+            <ul>
+                <li>
+                    Delivery time may vary depending on the delivery address and the selected shipping method. Typically, we aim to deliver within 3-5 business days from the date of order.
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 style="text-align: start">Shipping Methods</h3>
+            <ul>
+                <li>
+                    We support various shipping methods, including Standard Shipping, Express Shipping, and International Shipping. You can choose the most suitable method for your needs when placing an order.
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 style="text-align: start">Returns/Exchanges</h3>
+            <ul>
+                <li>
+                    We accept returns/exchanges within 30 days from the date of receipt. For more details and instructions on returns/exchanges, please read our Return/Exchange Policy.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div  id="return-warranty" class="content-section">
+        <h2>Return & Warranty Policy</h2>
+        <div>
+            <h3 style="text-align: start">Returns/Exchanges</h3>
+            <ul>
+                <li>
+                    We accept returns/exchanges within 30 days from the date of receipt. To request a return/exchange, please contact us via the email address or phone number provided on our Contact page. The returned/exchanged items must be in new and undamaged condition.
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 style="text-align: start">Warranty</h3>
+            <ul>
+                <li>
+                    All products are warranted for the specified period. If the product has any manufacturing defects, we will be responsible for repairing or replacing the product. To request warranty service, please contact our support department.
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 style="text-align: start">Return & Warranty Conditions</h3>
+            <ul>
+                <li>The product must be returned in its original packaging and unused condition.</li>
+                <li>No returns/exchanges are applicable for discounted or special promotion items.</li>
+                <li>We are not responsible for loss or damage during the return/exchange shipping process.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-section" id="payment-methods">
+        <h2>Payment Methods</h2>
+        <div id="creditCard">
+            <h3 style="text-align: start">Credit Card</h3>
+            <ul>
+                <li>
+                    Payment by credit/debit card. We accept Visa, MasterCard, and American Express.
+                </li>
+            </ul>
+        </div>
+
+        <div id="payPal">
+            <h3 style="text-align: start">PayPal</h3>
+            <ul>
+                <li>
+                    Payment via PayPal, a secure and convenient online payment method.
+                </li>
+            </ul>
+        </div>
+
+
+        <div id="bankTransfer">
+            <h3 style="text-align: start">Bank Transfer</h3>
+            <ul>
+                <li>
+                    Direct bank transfer to our account. Account information will be provided when you choose this method.
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <div>
-        <h2 style="text-align: start">3. Shipping Methods</h2>
-        <ul>
-            <li>
-                We support various shipping methods, including Standard Shipping, Express Shipping, and International Shipping. You can choose the most suitable method for your needs when placing an order.
-            </li>
-        </ul>
-    </div>
-
-    <div>
-        <h2 style="text-align: start">4. Returns/Exchanges</h2>
-        <ul>
-            <li>
-                We accept returns/exchanges within 30 days from the date of receipt. For more details and instructions on returns/exchanges, please read our Return/Exchange Policy.
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div  id="return-warranty" class="content-section">
-    <header>
-        <h1>Return & Warranty Policy</h1>
-    </header>
-
-    <div>
-        <h2 style="text-align: start">1. Returns/Exchanges</h2>
-        <ul>
-            <li>
-                We accept returns/exchanges within 30 days from the date of receipt. To request a return/exchange, please contact us via the email address or phone number provided on our Contact page. The returned/exchanged items must be in new and undamaged condition.
-            </li>
-        </ul>
-    </div>
-
-    <div>
-        <h2 style="text-align: start">2. Warranty</h2>
-        <ul>
-            <li>
-                All products are warranted for the specified period. If the product has any manufacturing defects, we will be responsible for repairing or replacing the product. To request warranty service, please contact our support department.
-            </li>
-        </ul>
-    </div>
-
-    <div>
-        <h2 style="text-align: start">3. Return & Warranty Conditions</h2>
-        <ul>
-            <li>The product must be returned in its original packaging and unused condition.</li>
-            <li>No returns/exchanges are applicable for discounted or special promotion items.</li>
-            <li>We are not responsible for loss or damage during the return/exchange shipping process.</li>
-        </ul>
-    </div>
-
-</div>
-
-<div class="content-section" id="payment-methods">
-
-    <header><h1>Payment Methods</h1></header>
-    <ul>
-        <li>
-            We offer various payment methods to ensure convenience for our customers. Choose the payment method that suits you best:
-        </li>
-    </ul>
-
-    <div id="creditCard">
-        <h2 style="text-align: start">1. Credit Card</h2>
-        <ul>
-            <li>
-                Payment by credit/debit card. We accept Visa, MasterCard, and American Express.
-            </li>
-        </ul>
-    </div>
-
-    <div id="payPal">
-        <h2 style="text-align: start">2. PayPal</h2>
-        <ul>
-            <li>
-                Payment via PayPal, a secure and convenient online payment method.
-            </li>
-        </ul>
-    </div>
-
-
-    <div id="bankTransfer">
-        <h2 style="text-align: start">3. Bank Transfer</h2>
-        <ul>
-            <li>
-                Direct bank transfer to our account. Account information will be provided when you choose this method.
-            </li>
-        </ul>
-    </div>
 
 </div>
-
-
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
-            <img src="frontend/img/logo.webp" alt="">
+            <img src="../frontend/img/logo.webp" alt="">
             <div class="icon">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-facebook"></i>

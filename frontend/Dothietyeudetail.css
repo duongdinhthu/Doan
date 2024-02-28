@@ -91,118 +91,94 @@
 }
 
 .navigation-bar {
+    background-color: #FEF7EF;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     overflow-x: auto;
     white-space: nowrap;
+    color: white;
+    text-align: center;
 }
 
 .navigation-bar a {
     display: inline-block;
     padding: 10px 15px;
-    color: #aea7b3;
+    border-radius: 20px;
+    background-color: #f29f33;
+    margin-right: 10px;
     text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition for color change */
 }
-
-.navigation-bar a:hover,
-.navigation-bar a.active {
+.navigation-bar a:hover{
+    background-color: #654145;
+}
+.main-content{
+    background-color: #FEF7EF;
+    padding-bottom: 50px;
+}
+.content-section{
+    border-radius: 20px;
+    background-color: white;
+    padding: 30px 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 5px #cccccc;
+}
+.content-section h2{
+    text-align: center;
     color: #f29f33;
 }
-#product-info {
-    color:#f29f33 ;
-}
-
-#product-info h2,
-#product-info h3{
-    color:#f29f33;
-}
-
-#product-info ul
-{
-    color:#f29f33;
-}
-#product-info li,
-#product-info p {
-    color: rgba(79, 80, 78, 0.98) ;
-}
-
-#shipping-policy,
-#return-warranty,
-#payment-methods {
-    color: rgba(79, 80, 78, 0.98);
-}
-
-#shipping-policy h2{
-    color:#f29f33;
-}
-#shipping-policy h1{
-    color:#f29f33;
-}
-#shipping-policy h3,
-#shipping-policy p,
-#shipping-policy ul,
-#shipping-policy li{
-    color: rgba(79, 80, 78, 0.98);
-}
-
-#return-warranty h1{
-    color:#f29f33;
-}
-#return-warranty h2
-{color:#f29f33;}
-#return-warranty h3{
-    color:#f29f33;
-}
-#return-warranty p,
-#return-warranty ul,
-#return-warranty li,
-#payment-methods h3,
-#payment-methods li {
-    color: rgba(79, 80, 78, 0.98);
-}
-#payment-methods h1,
-#payment-methods h2{
-    color:#f29f33;
-}
-
-
-.footer{
-    background-color:#f29f33;
-}
-.navigation-bar {
-    background-color: #f29f33;
-    overflow-x: auto;
-    white-space: nowrap;
-    max-width: 100%;
-    margin-top:20px ;
-    margin-bottom: 20px; /* Thêm khoảng trắng ở dưới */
-}
-
-.navigation-bar a {
-    display: inline-block;
-    padding: 10px 15px;
-    color: #aea7b3;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    margin-right: 100px;
-}
-
-.navigation-bar a:hover,
-.navigation-bar a.active {
+.content-section h3, .content-section strong{
     color: #f29f33;
 }
-
-.ship\&return\&pay div h2{
-    text-align: start;
-    color: #f29f33;
-}
-.ship\&return\&pay header{
-    color: #f29f33;
-}
-
 .colored-dots li::before {
 
     color: #f29f33; /* Màu sắc của dấu chấm */
     font-size: 1.2em; /* Cỡ chữ của dấu chấm */
     margin-right: 0.5em; /* Khoảng cách giữa dấu chấm và nội dung */
 }
+.buttons a{
+    padding: 14px 30px;
+    background-color: #f29f33;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+.buttons a:hover{
+    background-color: #654145;
+}
 
+.text{
+    margin-top: 30px;
+    text-align: center;
+}
+.text div{
+    justify-content: center;
+    display: flex;
+}
+.text div a{
+    text-decoration: none;
+    color: #654145;
+    transition: 0.3s ease-in-out;
+    font-size: 18px;
+}
+.text div a:hover{
+    color: #f29f33;
+}
+.text div p{
+    margin-left: 5px;
+    color: #f29f33;
+    font-weight: bold;
+    font-size: 18px;
+}
+.text h2{
+    color: #f29f33;
+    font-weight: bold;
+}
+.text hr{
+    width: 100px;
+    background-color: #f29f33;
+}
