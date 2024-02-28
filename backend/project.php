@@ -361,6 +361,7 @@ class projectFptHappy
             echo"Mặt hàng này đã có trong giỏ hàng!";
         }else{
             $this->addCart2($username,$id,$sl,$price);
+            echo"Thêm hàng vào giỏ hàng thành công";
         }
     }
     public function addCart2($username,$id,$sl,$price)

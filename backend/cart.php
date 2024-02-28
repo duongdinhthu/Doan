@@ -7,8 +7,6 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
-
-
 $username = $_SESSION["username"];
 include "project.php";
 $carts = new projectFptHappy();
