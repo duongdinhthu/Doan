@@ -1,11 +1,12 @@
 <?php
 session_start();
+ini_set('display_errors', 'off');
+
 //kiểm tra session
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
-ini_set('display_errors', 'off');
 
 
 $username = $_SESSION["username"];
@@ -141,7 +142,8 @@ $totalcart = $carts->totalShow($username);
                 <td><input id="quantity" name="quantity" value="<?php echo $cart['SUM(c.quantity)'] ?>"></td>
                 <td><?php echo $cart['SUM(c.total_price)'] ?></td>
                 <td><input id="productid" name="productid" value="<?php echo $cart['pid'] ?>" hidden="hidden"></td>
-                <td><button type="submit">Update Quantity</button></td>
+                <td><button class="btn btn-success" type="submit">Update Quantity</button></td>
+                <td><a  class='btn btn-warning' href='cart.php?action=delete&id=<?php echo $cart['pid'] ?>'  onclick="if (!confirm('Are you sure you want to delete this product?')) return false;" >Delete item</a></td>
             </tr>
         </form>
     <?php endforeach; ?>
@@ -201,7 +203,7 @@ $totalcart = $carts->totalShow($username);
 </table>
 <hr>
 <table class="table" hidden="hidden">
-    <h1 hidden="hidden>
+    <h1 hidden="hidden >
         Purchased item</h1>
     <thead>
     <tr>
