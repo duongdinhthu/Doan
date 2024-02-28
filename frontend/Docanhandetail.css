@@ -37,12 +37,14 @@
 
 #carouselExampleIndicators,
 .product-detail {
-    width: 40%;
     box-sizing: border-box; /* Ensure padding and border are included in the total width */
 }
 
 .product-detail {
     margin-left: 20px; /* Adjust the margin between carousel and product detail as needed */
+}
+#carouselExampleIndicators{
+    margin-left: 350px;
 }
 
 .product-detail,

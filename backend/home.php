@@ -168,14 +168,14 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
     </div>
     <div class="product-boxes">
         <div>
-            <img src="img/sp7.webp" alt="">
+            <img src="imgsanpham/leu2.webp" alt="">
             <a href="#">Premium self-inflating camping tent for 1-3 people, size 2 x 1.5 x...</a>
             <h5 class="cost">
                 $80 <small><del>$100</del></small>
             </h5>
         </div>
         <div>
-            <img src="img/sp6.webp" alt="">
+            <img src="img/leu1.webp" alt="">
             <a href="#">Military-style self-inflating camping tent for 1-3 people, size...</a>
             <h5 class="cost">
                 Contact us
@@ -189,7 +189,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
             </h5>
         </div>
         <div>
-            <img src="img/sp4.webp" alt="">
+            <img src="img/leu3.webp" alt="">
             <a href="#">High-quality self-inflating camping tent for 8-9 people (Size...</a>
             <h5 class="cost">
                 $150 <small><del>$180</del></small>
