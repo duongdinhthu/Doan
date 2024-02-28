@@ -83,3 +83,29 @@
     background-color: #f29f33;
 }
 
+
+.hidden {
+     display: none;
+ }
+
+#successMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#successMessage i {
+    color: green;
+    font-size: 50px;
+}
+
+#successMessage p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+

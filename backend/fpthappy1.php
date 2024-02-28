@@ -26,6 +26,8 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+<h1 class="card-title">Welcome to the staff area</h1>
+
 <div class="container mt-5">
     <a href="logout.php" class="btn btn-danger">Logout</a>
     <a href="book_tour.php" class="btn btn-primary">Customers book tours</a>

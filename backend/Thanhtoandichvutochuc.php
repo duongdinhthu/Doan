@@ -41,41 +41,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-                <p>Hotline<br>8910JQKA</p>
+
+                <p>Hotline<br>78910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
-            <a href="home.html" class="btn btn-outline">Home</a>
+            <a href="home.php" class="btn btn-outline">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.html">Children</a>
-                    <a href="Trochoigiadinh.html">Family</a>
-                    <a href="Trochoinguoilon.html">Adults</a>
+                    <a href="Trochoitreem.php">Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="Docanhan.html">Personal Items</a>
-                    <a href="Dothietyeu.html">Essentials</a>
-                    <a href="Thucpham.html">Food</a>
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="Dichvutrongoi.html">Packages</a>
-                    <a href="Dichvutour.html">Tours</a>
-                    <a href="Dichvutochuc.html">Organizations</a>
+                    <a href="Dichvutrongoi.php">Packages</a>
+                    <a href="Dichvutour.php"> Tours</a>
+                    <a href="Dichvutochuc.php">Organizing</a>
                 </div>
             </div>
-            <a href="tintuc.html" class="btn btn-outline">News</a>
-            <a href="lienhe.html" class="btn btn-outline">Contact</a>
-            <a href="../backend/login.php" class="btn btn-outline">Login</a>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
+            <a href="user.php" class="btn btn-outline">Account</a>
+            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
+
         </div>
     </div>
-    <img src="img/img_banner_brea_col.webp" alt="" style="width: 100%; background-color: #FEF7EF">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
 
 <div class="container">
