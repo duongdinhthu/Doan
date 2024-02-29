@@ -180,7 +180,7 @@ $product = $project->getAllProduct3();
         </ul>
     </div>
 
-    <div id="shipping-policy" class="content-section">
+    <div id="shipping-policy" class="content-section" style="display:none">
         <h2>Shipping Policy</h2>
         <ul>
             <li>
@@ -192,7 +192,7 @@ $product = $project->getAllProduct3();
         </ul>
     </div>
 
-    <div id="return-warranty" class="content-section">
+    <div id="return-warranty" class="content-section" style="display:none">
         <h2>Return/Exchange Policy and Warranty</h2>
         <ul>
             <li>
@@ -204,7 +204,7 @@ $product = $project->getAllProduct3();
         </ul>
     </div>
 
-    <div id="payment-methods" class="content-section">
+    <div id="payment-methods" class="content-section" style="display:none">
         <h2>Payment Methods</h2>
         <ul>
             <li>
@@ -277,7 +277,7 @@ $product = $project->getAllProduct3();
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
-<script src="../../DoanKI1%20(1)/frontend/trangchu.js"></script>
+<script src="Docanhandetail.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>

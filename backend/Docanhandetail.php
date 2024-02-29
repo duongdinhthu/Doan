@@ -199,7 +199,7 @@ $product = $project->getAllProduct3();
             <li><strong>Durability:</strong> Designed with materials and features to withstand harsh conditions and long-term use.</li>
         </ul>
     </div>
-    <div  id="shipping-policy" class="content-section">
+    <div  id="shipping-policy" class="content-section" style="display:none">
         <h2>Shipping Policy</h2>
         <div>
             <h3 style="text-align: start">Shipping Fee</h3>
@@ -237,7 +237,7 @@ $product = $project->getAllProduct3();
             </ul>
         </div>
     </div>
-    <div  id="return-warranty" class="content-section">
+    <div  id="return-warranty" class="content-section" style="display:none">
         <h2>Return & Warranty Policy</h2>
         <div>
             <h3 style="text-align: start">Returns/Exchanges</h3>
@@ -266,7 +266,7 @@ $product = $project->getAllProduct3();
             </ul>
         </div>
     </div>
-    <div class="content-section" id="payment-methods">
+    <div class="content-section" id="payment-methods" style="display:none">
         <h2>Payment Methods</h2>
         <div id="creditCard">
             <h3 style="text-align: start">Credit Card</h3>

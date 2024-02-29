@@ -200,7 +200,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'add') {
             </ul>
         </div>
 
-        <div class="content-section" id="shipping-policy">
+        <div class="content-section" id="shipping-policy" style="display:none">
             <header>
                 <h2 style="color: #f29f33">Shipping Policy</h2>
             </header>
@@ -242,7 +242,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'add') {
             </div>
         </div>
 
-        <div class="content-section" id="return-warranty">
+        <div class="content-section" id="return-warranty" style="display:none">
             <header>
                 <h2>Return & Warranty Policy</h2>
             </header>
@@ -276,7 +276,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'add') {
 
         </div>
     </div>
-    <div class="content-section" id="payment-methods">
+    <div class="content-section" id="payment-methods" style="display:none">
 
         <header><h2>Payment Methods</h2></header>
         <div id="creditCard">
