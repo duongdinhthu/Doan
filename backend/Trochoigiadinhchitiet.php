@@ -82,32 +82,32 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 <div class="des">
     <div>
         <h2 style="text-align: center">Game Description</h2>
-        <p style="text-align: center"><strong>Team:</strong> Form two teams, each team can have from 3 to 6 players.</p>
-        <p style="text-align: center"><strong>Field:</strong> Choose a large enough space to play, it can be a backyard or a park.</p>
-        <p style="text-align: center"><strong>Time:</strong> Set the playing time, for example: 2 halves, each half 15 minutes.</p>
-        <p style="text-align: center"><strong>Ball:</strong> Use a soccer ball appropriate to the team size and playing field.</p>
-        <p style="text-align: center"><strong>Offside Rule:</strong> Depending on the field size, decide whether to use the offside rule or not.</p>
-        <p style="text-align: center"><strong>Scoring:</strong> Each goal scored will earn points for the team.</p>
-        <p style="text-align: center"><strong>Enjoyment:</strong> Most importantly, ensure everyone participates and has fun.</p>
+        <p><strong>Team:</strong> Form two teams, each team can have from 3 to 6 players.</p>
+        <p><strong>Field:</strong> Choose a large enough space to play, it can be a backyard or a park.</p>
+        <p><strong>Time:</strong> Set the playing time, for example: 2 halves, each half 15 minutes.</p>
+        <p><strong>Ball:</strong> Use a soccer ball appropriate to the team size and playing field.</p>
+        <p><strong>Offside Rule:</strong> Depending on the field size, decide whether to use the offside rule or not.</p>
+        <p><strong>Scoring:</strong> Each goal scored will earn points for the team.</p>
+        <p><strong>Enjoyment:</strong> Most importantly, ensure everyone participates and has fun.</p>
     </div>
 </div>
 <div class="des">
     <div>
         <h2 style="text-align: center">Notes and Warnings</h2>
-        <p style="text-align: center"><strong>Safety:</strong> Always ensure safety for everyone involved. Encourage the use of flashlights if playing at night.</p>
-        <p style="text-align: center"><strong>Clothing:</strong> Wear appropriate clothing and athletic shoes to reduce the risk of injury.</p>
-        <p style="text-align: center"><strong>Fair Play:</strong> Encourage fair play to create a positive environment and avoid unnecessary conflicts.</p>
-        <p style="text-align: center"><strong>Health Check:</strong> Remember to check health before participating, especially if there are elderly people or special health conditions.</p>
+        <p><strong>Safety:</strong> Always ensure safety for everyone involved. Encourage the use of flashlights if playing at night.</p>
+        <p><strong>Clothing:</strong> Wear appropriate clothing and athletic shoes to reduce the risk of injury.</p>
+        <p><strong>Fair Play:</strong> Encourage fair play to create a positive environment and avoid unnecessary conflicts.</p>
+        <p><strong>Health Check:</strong> Remember to check health before participating, especially if there are elderly people or special health conditions.</p>
     </div>
 </div>
 <div class="des">
     <div>
         <h2 style="text-align: center">Benefits</h2>
-        <p style="text-align: center"><strong>Family Bonding:</strong> Family soccer games create opportunities for family bonding and interaction.</p>
-        <p style="text-align: center"><strong>Health Improvement:</strong> Physical activity helps improve health and motivates to maintain a positive lifestyle.</p>
-        <p style="text-align: center"><strong>Skill Development:</strong> Soccer games also help develop skills such as tactical thinking, concentration, and teamwork.</p>
-        <p style="text-align: center"><strong>Stress Reduction:</strong> Participating in fun activities helps reduce stress and enhances positive mood.</p>
-        <p style="text-align: center"><strong>Learning:</strong> Games provide opportunities to learn about teamwork, time management, and how to overcome challenges.</p>
+        <p><strong>Family Bonding:</strong> Family soccer games create opportunities for family bonding and interaction.</p>
+        <p><strong>Health Improvement:</strong> Physical activity helps improve health and motivates to maintain a positive lifestyle.</p>
+        <p><strong>Skill Development:</strong> Soccer games also help develop skills such as tactical thinking, concentration, and teamwork.</p>
+        <p><strong>Stress Reduction:</strong> Participating in fun activities helps reduce stress and enhances positive mood.</p>
+        <p><strong>Learning:</strong> Games provide opportunities to learn about teamwork, time management, and how to overcome challenges.</p>
     </div>
 </div>
 <div class="des">
