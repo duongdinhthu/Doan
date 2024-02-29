@@ -42,6 +42,7 @@ $product = $project->getAllProduct2();
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
+                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -73,11 +74,9 @@ $product = $project->getAllProduct2();
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="user.php" class="btn btn-outline">Account</a>
-            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
-
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
 <div class="text">
     <div>

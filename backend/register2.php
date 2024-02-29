@@ -24,9 +24,6 @@ if(isset($username)&&isset($password)){
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <title>Title</title>
-</head>
-<body>
-<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
@@ -47,49 +44,48 @@ if(isset($username)&&isset($password)){
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
+                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
-            <a href="home.php" class="btn btn-outline">Home</a>
+            <a href="../frontend/home.html" class="btn btn-outline">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.php">Kids</a>
-                    <a href="Trochoigiadinh.php">Family</a>
-                    <a href="Trochoinguoilon.php">Adults</a>
+                    <a href="../frontend/Trochoitreem.html">Kids</a>
+                    <a href="../frontend/Trochoigiadinh.html">Family</a>
+                    <a href="../frontend/Trochoinguoilon.html">Adults</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="Docanhan.php">Personal items</a>
-                    <a href="Dothietyeu.php">Essentials</a>
-                    <a href="Thucpham.php">Food</a>
+                    <a href="../frontend/Docanhan.html">Personal items</a>
+                    <a href="../frontend/Dothietyeu.html">Essentials</a>
+                    <a href="../frontend/Thucpham.html">Food</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="Dichvutrongoi.php">Packages</a>
-                    <a href="Dichvutour.php"> Tours</a>
-                    <a href="Dichvutochuc.php">Organizing</a>
+                    <a href="../frontend/Dichvutrongoi.html">Packages</a>
+                    <a href="../frontend/Dichvutour.html"> Tours</a>
+                    <a href="../frontend/Dichvutochuc.html">Organizing</a>
                 </div>
             </div>
-            <a href="tintuc.php" class="btn btn-outline">News</a>
-            <a href="lienhe.php" class="btn btn-outline">Contact</a>
-            <a href="user.php" class="btn btn-outline">Account</a>
-            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
-
+            <a href="../frontend/tintuc.html" class="btn btn-outline">News</a>
+            <a href="../frontend/lienhe.html" class="btn btn-outline">Contact</a>
+            <a href="login.php" class="btn btn-outline">Account</a>
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
 
 <div class="login">
     <div class="text">
         <div>
             <a href="../frontend/home.html">Home  > </a>
-            <p>Login</p>
+            <p>Account</p>
         </div>
         <h2>REGISTER QUICK</h2>
         <hr/>

@@ -26,6 +26,28 @@ $code = $project->codeOderCart($username);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
+<style>
+    .back-cart{
+        display: flex;
+        width: 100%;
+        padding-bottom: 50px;
+        justify-content: end;
+        align-items: end;
+    }
+    .back-cart a{
+        background-color: #f29f33;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-right: 20%;
+    }
+    .back-cart a:hover{
+        background-color: #654145;
+        color: white;
+    }
+</style>
 <body>
 <header>
     <div class="header">
@@ -39,6 +61,7 @@ $code = $project->codeOderCart($username);
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
+                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -70,39 +93,47 @@ $code = $project->codeOderCart($username);
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="user.php" class="btn btn-outline">Account</a>
-            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
-
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
-<table class="table">
-    <h1>
-        Purchased order</h1>
-    <thead>
-    <tr>
-        <th>Code order</th>
-        <th>Status</th>
-        <th>Order details</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($code as $code):
-        ?>
-        <tr>
-            <td><?php echo $code['code'] ?></td>
-            <td><?php echo $code['status'] ?></td>
-            <td><a href="order_detail.php?code=<?php echo $code['code'] ?>" class="btn btn-warning">Order details</a></td>
+<div class="text">
+    <div>
+        <a href="../frontend/home.html">Home  > </a>
+        <p>Cart</p>
+    </div>
+    <h2 >PURCHASED ORDERS</h2>
+    <hr/>
+</div>
+<div style=" align-items: center; justify-content: center">
+    <div style=" padding: 20px 250px; background-color: #FEF7EF;">
+        <div style="background-color: white; padding: 20px; border-radius: 20px">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Code order</th>
+                    <th>Status</th>
+                    <th>Order details</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($code as $code):
+                    ?>
+                    <tr>
+                        <td><?php echo $code['code'] ?></td>
+                        <td><?php echo $code['status'] ?></td>
+                        <td><a href="order_detail.php?code=<?php echo $code['code'] ?>" class="btn btn-warning">Order details</a></td>
 
-        </tr>
-    <?php endforeach; ?>
-    </tbody>
-</table>
-
-
-
-
-
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="back-cart">
+    <a href="cart.php">Back to cart</a>
+</div>
 <div class="footer">
     <div class="footer0">
         <div class="footer1">

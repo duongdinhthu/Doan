@@ -18,7 +18,7 @@ form input{
     padding: 10px;
     padding-right: 150px;
     padding-left: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
     border: none;
     box-shadow: 2px 2px 2px #cccccc;
@@ -45,7 +45,7 @@ form a{
 }
 form button{
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
     background-color: #f29f33;
     color: white;

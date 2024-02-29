@@ -18,7 +18,7 @@ form input{
     padding: 10px;
     padding-right: 150px;
     padding-left: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
     border: none;
     box-shadow: 2px 2px 2px #cccccc;
@@ -43,7 +43,7 @@ form input{
 }
 form button{
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
     background-color: #f29f33;
     color: white;
@@ -79,7 +79,6 @@ form button:hover{
 .text h2{
     color: #f29f33;
     font-weight: bold;
-    margin-top: 50px;
 }
 .text hr{
     width: 100px;

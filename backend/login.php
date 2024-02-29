@@ -38,6 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>8910JQKA</p>
+                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
+
             </div>
         </div>
         <div class="d-flex">
@@ -68,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <a href="../frontend/tintuc.html" class="btn btn-outline">News</a>
             <a href="../frontend/lienhe.html" class="btn btn-outline">Contact</a>
-            <a href="login.php" class="btn btn-outline">Login</a>
+            <a href="login.php" class="btn btn-outline">Account</a>
         </div>
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
@@ -77,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="text">
             <div>
                 <a href="../frontend/home.html">Home  > </a>
-                <p>Login</p>
+                <p>Account</p>
             </div>
             <h2>LOGIN QUICK</h2>
             <hr/>

@@ -36,7 +36,7 @@ $totalcart = $project->totalShow($username);
         background-color: #f29f33;
         color: white;
         border: none;
-        border-radius: 20px;
+        border-radius: 10px;
         padding: 10px 20px;
         text-align: center;
         text-decoration: none;
@@ -46,9 +46,12 @@ $totalcart = $project->totalShow($username);
         cursor: pointer;
         transition: background-color 0.3s;
     }
+    form button{
+
+    }
 
     .order:hover, .Backshopping:hover {
-        background-color: #f29f33;
+        background-color: #654145;
     }
 
 
@@ -58,7 +61,7 @@ $totalcart = $project->totalShow($username);
 
 
     form input {
-        border: 1px solid black;
+        border: 1px solid grey;
         border-radius: 8px;
         padding: 10px;
         padding-right: 100px;
@@ -75,7 +78,38 @@ $totalcart = $project->totalShow($username);
         text-align: left;
         border-bottom: 1px solid #ddd;
     }
-
+    .text{
+        margin-top: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .text div{
+        justify-content: center;
+        display: flex;
+    }
+    .text div a{
+        text-decoration: none;
+        color: #654145;
+        transition: 0.3s ease-in-out;
+        font-size: 18px;
+    }
+    .text div a:hover{
+        color: #f29f33;
+    }
+    .text div p{
+        margin-left: 5px;
+        color: #f29f33;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .text h2{
+        color: #f29f33;
+        font-weight: bold;
+    }
+    .text hr{
+        width: 100px;
+        background-color: #f29f33;
+    }
 
 </style>
 <body>
@@ -92,6 +126,7 @@ $totalcart = $project->totalShow($username);
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
+                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -123,26 +158,31 @@ $totalcart = $project->totalShow($username);
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="user.php" class="btn btn-outline">Account</a>
-            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
-
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
-<a href="cart.php" class="Backshopping" style="text-decoration: none; color:white; margin-left: 300px;
-margin-top: 20px">Back Shopping cart</a>
+<div class="text">
+    <div>
+        <a href="home.php">Home  > </a>
+        <p>Shopping cart</p>
+    </div>
+    <h2>UPDATE PAYMENT INFORMATION</h2>
+    <hr/>
+</div>
+<a href="cart.php" class="Backshopping" style="text-decoration: none; color:white; margin-left: 200px; margin-top: 20px">Back Shopping cart</a>
 <div class="container mt-5" style="background-color: white; border-radius: 20px; padding: 20px;margin-bottom: 50px; box-shadow: 2px 2px 2px #cccccc">
     <form action="billinfor.php" method="post">
         <?php foreach ($infor as $infor): ?>
             <h2 style="text-align: center; color: #f29f33; margin-bottom: 50px">Order Information</h2>
             <br>
 
-            <label for="name">Name</label><br>
-            <input name="name" type="text" id="name" required value="<?php echo $infor['name'] ?>"><br>
-            <label for="phone">Phone</label><br>
-            <input name="phone" type="text" id="phone" required value="<?php echo $infor['phone'] ?>"><br>
-            <label for="address">Address</label><br>
-            <input name="address" type="text" id="address" required value="<?php echo $infor['address'] ?>"><br>
+            <label style="margin-left: 30px" for="name">Name</label><br>
+            <input style="margin-left: 30px" name="name" type="text" id="name" required value="<?php echo $infor['name'] ?>"><br>
+            <label style="margin-left: 30px" for="phone">Phone</label><br>
+            <input style="margin-left: 30px" name="phone" type="text" id="phone" required value="<?php echo $infor['phone'] ?>"><br>
+            <label style="margin-left: 30px" for="address">Address</label><br>
+            <input style="margin-left: 30px" name="address" type="text" id="address" required value="<?php echo $infor['address'] ?>"><br>
             <br>
         <?php endforeach; ?>
 
@@ -178,12 +218,19 @@ margin-top: 20px">Back Shopping cart</a>
                 <br>
             </div>
         </div>
-        <h3 style="text-align: center; margin-top: 50px">Payment Information</h3>
+        <h3 style="text-align: center; margin-top: 10px">Payment Methods</h3>
         <label for="code"></label><input type="text" id="code" name="code" value="<?php echo $random_code ?>" required style="display: none">
-
-        <input type="radio" id="payment" name="payment" value="COD" required >
-        <label for="payment">COD</label><br>
-        <button class="order" type="submit" >Order</button>
+        <form>
+            <input style="margin-left: 30px" type="radio" id="payment" name="payment" value="COD" required >
+            <label for="payment">COD</label><br>
+            <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="COD" required >
+            <label for="">Internet Banking</label><br>
+            <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="COD" required >
+            <label for="payment">VISA, MasterCard</label><br>
+            <div style="display: flex; justify-content: end; margin-right: 50px">
+                <button class="order" type="submit" >Order</button>
+            </div>
+        </form>
         <br>
     </form>
 

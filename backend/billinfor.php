@@ -41,6 +41,100 @@ $paycart = $project->getAllPay($username);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
+<style>
+    .text{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .text div{
+        justify-content: center;
+        display: flex;
+    }
+    .text div a{
+        text-decoration: none;
+        color: #654145;
+        transition: 0.3s ease-in-out;
+        font-size: 18px;
+    }
+    .text div a:hover{
+        color: #f29f33;
+    }
+    .text div p{
+        margin-left: 5px;
+        color: #f29f33;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .text h2{
+        color: #f29f33;
+        font-weight: bold;
+    }
+    .text hr{
+        width: 100px;
+        background-color: #f29f33;
+    }
+
+    .embrece {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .customer {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+
+    }
+
+    .customer h5 {
+        color: #f29f33;
+    }
+
+    .product, .code, .backhome {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+
+    }
+
+    .product h5, .code h5 {
+        color: #f29f33;
+    }
+
+    .product img {
+        width: 70px;
+    }
+
+    .code hr {
+        border-top: 1px solid #f29f33;
+    }
+
+    .backhome {
+        text-align: right;
+    }
+
+    .backhome a {
+        background-color: #f29f33;
+        color: white;
+        padding: 8px 35px;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .backhome a:hover {
+        background-color: #654145;
+    }
+
+
+</style>
 <body>
 <header>
     <div class="header">
@@ -54,6 +148,7 @@ $paycart = $project->getAllPay($username);
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
+                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -85,53 +180,70 @@ $paycart = $project->getAllPay($username);
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="user.php" class="btn btn-outline">Account</a>
-            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
-
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
-<div style="border: 2px solid #f29f33;
-            border-radius: 10px;
-            width: 600px;
-            padding: 10px">
-    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Customer Detail: <p style="margin-left: 10px; color: #654145;">- Name:<?php echo  $name; ?><br><br>- Phone Number:<?php echo  $phone; ?><br><br>- Address:<?php echo  $address; ?></p></h5>
-    <hr style="height: 0; width: 250px; background-color: #f29f33">
-    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Product Detail: <p style="margin-left: 10px; color: #654145;"> <table class="table">
-
-            <thead>
+<div class="text">
+    <div>
+        <a href="../frontend/home.html">Home  > </a>
+        <p>Account</p>
+    </div>
+    <h2>BILL INFORMATION</h2>
+    <hr/>
+</div>
+<div class="embrece" style="">
+    <div class="customer">
+    <h5 style="">Customer Detail: </h5>
+    <p style="">
+        - Name:<?php echo  $name; ?><br><br>
+        - Phone Number:<?php echo  $phone; ?><br><br>
+        - Address:<?php echo  $address; ?>
+    </p>
+    <hr style="">
+    </div>
+    <div class="product">
+    <h5 style="">Product Detail:</h5>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>List Price($)</th>
+            <th>Quantity</th>
+            <th>Total Price($)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($paycart as $paycart): ?>
             <tr>
-                <th>Product Image</th>
-                <th>Product Name</th>
-                <th>List Price($)</th>
-                <th>Quantity</th>
-                <th>Total Price($)</th>
+                <td><img src="<?php echo $paycart["image"]; ?>" style="width: 70px" class="card-img-top" alt="..."></td>
+                <td><?php echo $paycart['name'] ?></td>
+                <td><?php echo $paycart['list_price'] ?></td>
+                <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
+                <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
             </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($paycart as $paycart):
-                ?>
-                <tr>
-                    <td><img src="<?php echo $paycart["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
-                    </td>
-                    <td><?php echo $paycart['name'] ?></td>
-                    <td><?php echo $paycart['list_price'] ?></td>
-                    <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
-                    <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table></p></h5>
-    <hr style="height: 0; width: 250px; background-color: #f29f33">
-    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Code Orders: <p style="margin-left: 10px; color: #654145;"> <?php echo  $code; ?></p></h5>
-    <hr style="height: 0; width: 250px; background-color: #f29f33">
-    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Payment Detail: <p style="margin-left: 10px; color: #654145;"> <?php echo  $cod; ?></p></h5>
-    <hr style="height: 0; width: 250px; background-color: #f29f33">
-    <h5 style="display: flex; margin-top: 15px; color: #f29f33">Price: <p style="margin-left: 10px; color: #654145;"> <?php echo  $totalcart; ?></p></h5>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+    </div>
+    <div class="code">
+    <hr style="">
+    <h5 style="">Code Orders:</h5>
+    <p style=""><?php echo  $code; ?></p>
+    <hr style="">
+    <h5 style="">Payment Detail:</h5>
+    <p style=""><?php echo  $cod; ?></p>
+    <hr style="">
+    <h5 style="">Price:</h5>
+    <p style="margin-left: 10px; color: #654145;"><?php echo  $totalcart; ?></p>
+    </div>
 </div>
 
-<td><a href="home.php?action=deletepay " class="btn btn-success"
-    >Back to Home</a></td>
+<div class="backhome">
+    <a href="home.php?action=deletepay">Back to Home</a>
+</div>
+</div>
 
 
 

@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
                 <p>Hotline<br>8910JQKA</p>
+                <a href="../backend/login.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -42,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.html">Children</a>
+                    <a href="Trochoitreem.html">Kids</a>
                     <a href="Trochoigiadinh.html">Family</a>
                     <a href="Trochoinguoilon.html">Adults</a>
                 </div>
@@ -50,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="Docanhan.html">Personal Items</a>
+                    <a href="Docanhan.html">Personal items</a>
                     <a href="Dothietyeu.html">Essentials</a>
                     <a href="Thucpham.html">Food</a>
                 </div>
@@ -59,16 +60,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
                     <a href="Dichvutrongoi.html">Packages</a>
-                    <a href="Dichvutour.html">Tours</a>
-                    <a href="Dichvutochuc.html">Organizations</a>
+                    <a href="Dichvutour.html"> Tours</a>
+                    <a href="Dichvutochuc.html">Organizing</a>
                 </div>
             </div>
             <a href="tintuc.html" class="btn btn-outline">News</a>
             <a href="lienhe.html" class="btn btn-outline">Contact</a>
-            <a href="../backend/login.php" class="btn btn-outline">Login</a>
+            <a href="../backend/login.php" class="btn btn-outline">Account</a>
+
         </div>
     </div>
-    <img src="img/img_banner_brea_col.webp" alt="" style="width: 100%; background-color: #FEF7EF">
+    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
 
 <div class="container">

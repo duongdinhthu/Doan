@@ -88,7 +88,7 @@
     text-decoration: none !important;
     color: white;
     padding: 10px 25px;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: 0.3s ease-in-out;
 }
 .btn-purchased:hover{

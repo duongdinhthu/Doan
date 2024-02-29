@@ -100,13 +100,11 @@ body{
 }
 .text{
     display: flex;
-    position: absolute;
-    margin-left: 5%;
     margin-top: 20%;
 }
 .text p{
     font-weight: bold;
-    color: #654145;
+    color: #f29f33;
 }
 .img-box{
     outline: 0 !important;
@@ -118,7 +116,54 @@ body{
 }
 .img-box:hover{
     transform: scale(1.1);
+
 }
+.img-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; /* Điều chỉnh khoảng cách giữa các hàng */
+}
+
+.img-box {
+    width: calc(33.33% - 20px); /* 3 cột, trừ đi khoảng cách */
+    margin: 10px; /* Khoảng cách giữa các ô */
+    text-align: center;
+    position: relative; /* Để có thể sử dụng absolute positioning trong .text */
+}
+
+.text {
+    display: none; /* Ẩn văn bản ban đầu */
+    position: absolute;
+    bottom: 10px; /* Điều chỉnh vị trí văn bản */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.img-box:hover .text {
+    display: flex; /* Hiển thị văn bản khi hover */
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-box img {
+    width: 100%; /* Đảm bảo hình ảnh có kích thước đầy đủ */
+    height: auto;
+    max-width: 276px; /* Điều chỉnh kích thước tối đa */
+    max-height: 376px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #cccccc;
+}
+
+.text img {
+    margin-bottom: 10px;
+}
+
+.img-box.hidden {
+    display: none;
+}
+
 .outstanding-product{
     width: 100%;
     padding-top: 50px;
@@ -292,8 +337,8 @@ body{
 }
 .img-combo img{
     width: 35%;
-    margin-left: 20px;
     cursor: pointer;
+    border-radius: 20px;
 }
 .news{
     width: 100%;

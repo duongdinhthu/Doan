@@ -40,6 +40,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
+                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -71,7 +72,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="user.php" class="btn btn-outline">Account</a>
-            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
         </div>
     </div>
     <img src="img/slider_1.webp" alt="" style="width: 100%; background-color: #FEF7EF">
@@ -111,45 +111,122 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
     </div>
 </div>
 <div class="service">
-    <div class="text-box">
+    <div class="text-box" style="margin-left:100px;">
         <h2>SERVICES</h2>
         <hr/>
         <p>CAMP offers the most convenient and suitable services, making your trips hassle-free.</p>
-        <button>View all</button>
+        <button id="viewAllBtn">View all</button>
+        <button id="backToTopBtn" style="display: none;">View apart</button>
     </div>
     <div class="img-boxes">
         <button class="img-box">
             <div class="text">
-                <img width="50" height="50" src="https://img.icons8.com/ios/50/654145/backpack.png" alt="backpack"/><hr/>
+                <p>Adventure gear<br>combo</p>
+            </div>
+            <a href="Docanhandetail.php">
+                <img src="images(sanpham)/shopping.webp" alt="" style="border-radius:20px;">
+            </a>
+        </button>
+        <button class="img-box">
+            <div class="text">
+                <p>Travel gear<br>rental</p>
+            </div>
+            <a href="Dothietyeudetail.php">
+                <img src="images(sanpham)/img1.webp" alt="" style="border-radius:20px;">
+            </a>
+        </button>
+        <button class="img-box">
+            <div class="text">
+                <p>Camping gear</p>
+            </div>
+            <a href="Thucphamdetail.php">
+                <img src="images(sanpham)/img2.png" alt="" style="border-radius:20px;">
+            </a>
+        </button>
+        <!-- Ẩn đi -->
+        <button class="img-box hidden">
+            <div class="text">
                 <p>Adventure gear<br>combo</p>
             </div>
             <img src="img/banner-dich-vu-1.webp" alt="">
         </button>
-        <button class="img-box">
+        <button class="img-box hidden">
             <div class="text">
-                <img width="50" height="50" src="https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/654145/external-tent-camping-xnimrodx-lineal-xnimrodx.png" alt="external-tent-camping-xnimrodx-lineal-xnimrodx"/>
-                <hr/>
                 <p>Travel gear<br>rental</p>
             </div>
             <img src="img/banner-dich-vu-2.webp" alt="">
         </button>
-        <button class="img-box">
+        <button class="img-box hidden">
             <div class="text">
-                <img width="50" height="50" src="https://img.icons8.com/external-kmg-design-detailed-outline-kmg-design/64/654145/external-van-travel-kmg-design-detailed-outline-kmg-design.png" alt="external-van-travel-kmg-design-detailed-outline-kmg-design"/>
-                <hr/>
                 <p>Camping gear</p>
             </div>
             <img src="img/banner-dich-vu-3.webp" alt="">
         </button>
     </div>
 </div>
+<script>
+    // Lấy button "View all"
+    const viewAllBtn = document.getElementById('viewAllBtn');
+
+    // Lấy tất cả các button có class 'img-box' (tất cả 6 ảnh)
+    const imgBoxes = document.querySelectorAll('.img-box');
+
+    // Bắt sự kiện click vào nút "View all"
+    viewAllBtn.addEventListener('click', function() {
+// Lặp qua mỗi button có class 'img-box'
+        imgBoxes.forEach(function(imgBox, index) {
+// Hiện các ảnh bằng cách gỡ bỏ lớp 'hidden' từ các button
+            imgBox.classList.remove('hidden');
+        });
+
+// Ẩn nút "View all" sau khi đã hiển thị tất cả các ảnh
+        viewAllBtn.style.display = 'none';
+    });
+    // Lấy button "Back to top"
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    // Bắt sự kiện click vào nút "View all"
+    viewAllBtn.addEventListener('click', function() {
+        // Lặp qua mỗi button có class 'img-box'
+        imgBoxes.forEach(function(imgBox, index) {
+            // Hiện các ảnh bằng cách gỡ bỏ lớp 'hidden' từ các button
+            imgBox.classList.remove('hidden');
+        });
+
+        // Ẩn nút "View all" sau khi đã hiển thị tất cả các ảnh
+        viewAllBtn.style.display = 'none';
+
+        // Hiển thị nút "Back to top"
+        backToTopBtn.style.display = 'inline-block';
+    });
+
+    // Bắt sự kiện click vào nút "Back to top"
+    backToTopBtn.addEventListener('click', function() {
+        // Ẩn đi 3 hình ảnh thứ 4, 5 và 6
+        imgBoxes.forEach(function(imgBox, index) {
+            if (index >= 3) {
+                imgBox.classList.add('hidden');
+            }
+        });
+
+        // Ẩn nút "Back to top"
+        backToTopBtn.style.display = 'none';
+
+        // Hiển thị lại nút "View all"
+        viewAllBtn.style.display = 'inline-block';
+    });
+
+</script>
+
 <div class="outstanding-product">
     <h2>FEATURED PRODUCTS</h2>
     <hr/>
     <div class="product-boxes">
         <div>
-            <img src="img/sp9.webp" alt="">
-            <a href="#">Self-inflating camping tent for 4-5 people, cool and airy, with sunroof...</a>
+            <a href="Dothietyeudetail.php">
+                <img src="img/sp5.webp" alt="">
+            </a>
+            <a href="Dothietyeudetail.php">Self-inflating camping tent for 4-5 people, cool and airy, with sunroof...</a>
             <h5 class="cost">
                 $50 <small><del>$60</del></small>
             </h5>
@@ -168,7 +245,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
     </div>
     <div class="product-boxes">
         <div>
-            <img src="imgsanpham/leu2.webp" alt="">
+            <img src="img/leu2.webp" alt="">
             <a href="#">Premium self-inflating camping tent for 1-3 people, size 2 x 1.5 x...</a>
             <h5 class="cost">
                 $80 <small><del>$100</del></small>
@@ -182,7 +259,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
             </h5>
         </div>
         <div>
-            <img src="img/sp5.webp" alt="">
+            <img src="img/sp9.webp" alt="">
             <a href="#">Self-inflating camping tent with 2 sunroofs and 4 doors for 3-4...</a>
             <h5 class="cost">
                 $70 <small><del>$90</del></small>
@@ -201,44 +278,46 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
     <h2>CAMP EXCLUSIVES</h2>
     <hr/>
     <div class="menu-product">
-        <a href="#" class="a1">Tents and accessories</a>
-        <a href="#">Outdoor furniture</a>
-        <a href="#">Stoves and utensils</a>
-        <a href="#">Mats, mattresses, sleeping bags</a>
-        <a href="#">Floor lamps & outdoor lights</a>
-        <a href="#">Other products</a>
+        <a href="#" class="a1" style="color: white; text-decoration: none !important;">Tents and accessories</a>
+        <a href="#" style=" text-decoration: none !important;">Outdoor furniture</a>
+        <a href="#" style=" text-decoration: none !important;">Stoves and utensils</a>
+        <a href="#" style=" text-decoration: none !important;">Mats, mattresses, sleeping bags</a>
+        <a href="#" style=" text-decoration: none !important;">Floor lamps & outdoor lights</a>
+        <a href="#" style=" text-decoration: none !important;">Other products</a>
     </div>
     <div class="exclusive-boxes">
         <img src="img/img_banner_product_tab.webp" alt="">
         <div class="boxes">
             <div>
-                <img src="img/sp16-4.webp" alt="">
-                <a>Waterproof picnic mat with caro pattern...</a>
-                <h5 class="cost">$10 <small><del>$20</del></small></h5>
+                <a href="Docanhandetail.php">
+                    <img src="images(sanpham)/shopping.webp" alt="">
+                </a>
+                <a href="Docanhandetail.php">Survival Knife</a>
+                <h5 class="cost">$3.99 <small><del>$6</del></small></h5>
             </div>
             <div>
                 <img src="img/sp15.webp" alt="">
-                <a>Ultralight single hammock for outdoor...</a>
+                <a href="#">Ultralight single hammock for outdoor...</a>
                 <h5 class="cost">$20 <small><del>$40</del></small></h5>
             </div>
             <div>
                 <img src="img/sp11.webp" alt="">
-                <a>Outdoor BBQ grill made of stainless steel</a>
+                <a href="#">Outdoor BBQ grill made of stainless steel</a>
                 <h5 class="cost">$15</h5>
             </div>
             <div>
                 <img src="img/sp14.webp" alt="">
-                <a>Premium camping hammock K174, durable...</a>
+                <a href="#">Premium camping hammock K174, durable...</a>
                 <h5 class="cost">$20 <small><del>$40</del></small></h5>
             </div>
             <div>
                 <img src="img/sp12.webp" alt="">
-                <a>Outdoor BBQ grill with tall legs (Full set)...</a>
+                <a href="#">Outdoor BBQ grill with tall legs (Full set)...</a>
                 <h5 class="cost">$50</h5>
             </div>
             <div>
                 <img src="img/sp9%20(1).webp" alt="">
-                <a>Self-inflating camping tent for 4-5 people...</a>
+                <a href="#">Self-inflating camping tent for 4-5 people...</a>
                 <h5 class="cost">$50 <small><del>$60</del></small></h5>
             </div>
         </div>
@@ -248,7 +327,9 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
     <h2>CAMP EXCLUSIVE COMBOS</h2>
     <hr/>
     <div class="img-combo">
-        <img src="img/image_combo_1.webp" alt="">
+        <a href="Dichvutochucdetail.php" style="margin-right: 20px">
+            <img src="img/image_combo_1.webp" alt="" style="width: 100%; margin-right: -25px">
+        </a>
         <img src="img/image_combo_2.webp" alt="">
     </div>
 </div>
@@ -259,11 +340,11 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
     <hr/>
     <div class="all-new">
         <div class="new">
-            <img src="img/t4.webp" alt="">
-            <h5>6 nearby travel destinations from Saigon for the April 30th and May 1st holidays</h5>
+            <img src="imageTinTuc/img200.webp" alt="" style="height: 215px">
+            <h5>ANNOUNCEMENT OF VIETNAM NATIONAL DAY HOLIDAY 2/9/2023</h5>
             <p>Dung Nguyen | October 25, 2021</p>
-            <h6>Here are some eco-tourism destinations near Saigon where you can experience fun activities, relax...</h6>
-            <a href="#">Read more <strong>-></strong></a>
+            <h6>  To our valued customers and partners, FPT HAPPY Company respectfully announces the schedule of the 2/9/2023 National Day holiday...</h6>
+            <a href="cardtitle1.php">Read more <strong>-></strong></a>
         </div>
         <div class="new">
             <img src="img/t3.webp" alt="">
