@@ -1,6 +1,5 @@
 <?php
 session_start();
-ini_set('display_errors', 'off');
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])) {
     header("Location: login.php");
     exit;
@@ -8,14 +7,15 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])) {
 include "project.php";
 $project = new projectFptHappy();
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-    $dateday = $_POST['search'];
-    $datemonth = $_POST['search1'];
-    $dateyear = $_POST['search2'];
-    $paycart = $project->oder($dateyear,$datemonth,$dateday);
+     $from = $_POST['search'];
+    $to = $_POST['search1'];
+    $status = $_POST['search2'];
+    $paycart = $project->oder($to,$from,$status);
+}else{
+    $paycart = $project->oder1();
 }
 
-$adm = $project->totalPayAdm($dateyear,$datemonth,$dateday);
-$paycart = $project->oder($dateyear,$datemonth,$dateday);
+
 
 ?>
 <!DOCTYPE html>
@@ -34,14 +34,21 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
     <h2>
         Enter the date to search</h2>
     <form action="" method="post">
-        <label for="search" >Day </label>
-        <input name="search" type="text" id="search" required class="form-control" placeholder="01">
-        <label for="search1" >Month </label>
-        <input name="search1" type="text" id="search1" required class="form-control" placeholder="01">
-        <label for="search2" >Year </label>
-        <input name="search2" type="text" id="search2" required class="form-control"  value="2024">
+        <label for="search" >From </label>
+        <input name="search" type="text" id="search" required class="form-control" value="2024-02-28">
+        <label for="search1" >To </label>
+        <input name="search1" type="text" id="search1" required class="form-control" value="2024-02-29">
+        <label for="search2" >Status </label>
+        <select name="search2"  id="search2" class="status-select">
+            <option value="pend processing">pend processing</option>
+            <option value="done" style="background: #45a049">done</option>
+            <option value="delivering" style="background: yellowgreen">delivering</option>
+        </select>
         <br>
         <button class="btn btn-warning" type="submit" >Search</button>
+
+
+
 
     </form>
     <br>
@@ -58,6 +65,7 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
             <th>Payment</th>
             <th>Code</th>
             <th>Status</th>
+            <th>Day</th>
             <th>Update order status</th>
 
         </tr>
@@ -75,6 +83,7 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
 
                 <td><?php echo $paycart['payment'] ?></td>
                 <td><?php echo $paycart['code'] ?></td>
+                <td><?php echo $paycart['trading_day'] ?></td>
                 <td><?php echo $paycart['status'] ?></td>
                 <td><select class="status-select">
                         <option value=""><?php echo $paycart['status'] ?></option>
@@ -83,14 +92,10 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
                     </select></td>
                 <td><a href="status.php?action=done&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo $dateyear ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
                 <td><a href="status.php?action=delivering&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo $dateyear ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
-
-
-
             </tr>
         <?php endforeach; ?>
         </tbody>
     </table>
-    <h2>Total value of goods sold:  $<?php echo $paycart['total_adm'] ?></h2>
 
 </div>
 <script>
@@ -106,10 +111,7 @@ $paycart = $project->oder($dateyear,$datemonth,$dateday);
             }
         });
     });
-
 </script>
-
-
 </body>
 </html>
 

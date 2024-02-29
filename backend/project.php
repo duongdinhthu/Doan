@@ -481,11 +481,24 @@ class projectFptHappy
         $this->conn->query($sql);
 
     }
-    public function oder($dateyear,$datemonth,$dateday)
+    public function oder1()
     {
         $carts = [];
-        $sql = "select c.username,c.product_id,c.total_adm,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.status,c.payment,c.code from cart c join product p on c.product_id = p.pid where  hidden = 2 
-            and trading_day='$dateyear-$datemonth-$dateday' GROUP BY product_id, username ORDER BY username ASC;" ;
+        $sql = "select c.username,c.product_id,c.total_adm,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.status,c.payment,c.code,c.trading_day from cart c join product p on c.product_id = p.pid where  hidden = 2 and c.status ='pend processing'
+            and trading_day BETWEEN '2024-02-24' AND '2024-02-29'  GROUP BY product_id, username ORDER BY trading_day ASC;" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+    }
+    public function oder($to,$from,$status)
+    {
+        $carts = [];
+        $sql = "select c.username,c.product_id,c.total_adm,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.status,c.payment,c.code,c.trading_day from cart c join product p on c.product_id = p.pid where  hidden = 2 and c.status ='$status'
+            and trading_day BETWEEN '$from' AND '$to'  GROUP BY product_id, username ORDER BY trading_day ASC;" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){

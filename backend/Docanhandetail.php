@@ -13,7 +13,6 @@ include "project.php";
 $project = new projectFptHappy();
 if (isset($_GET['action']) && $_GET['action'] === 'add') {
     $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
-
 }
 $product = $project->getAllProduct3();
 
@@ -31,6 +30,27 @@ $product = $project->getAllProduct3();
     <link rel="stylesheet" href="Docanhandetail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
+    <style>
+        .success-form {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #28a745;
+            border-radius: 5px;
+            background-color: #d4edda;
+            display: none;
+        }
+
+        .success-form h2 {
+            color: #28a745;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .success-form p {
+            color: #333;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -156,7 +176,11 @@ $product = $project->getAllProduct3();
     </div>
 
     <div class="buttons">
-        <a href="Docanhandetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn">Add to cart</a>
+        <a href="Docanhandetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn" id="showSuccessForm">Add to cart</a>
+    </div>
+    <div class="success-form" id="successForm">
+        <h2>Thao tác thành công!</h2>
+        <p>Cảm ơn bạn đã thực hiện thao tác thành công.</p>
     </div>
 </div>
 
@@ -363,6 +387,18 @@ $product = $project->getAllProduct3();
     <hr/>
     <p class="license">@ Copyright by ... | Provided by ...</p>
 </div>
+<script>
+    const showSuccessFormButton = document.getElementById('showSuccessForm');
+    const successForm = document.getElementById('successForm');
+
+    showSuccessFormButton.addEventListener('click', function() {
+        successForm.style.display = 'block';
+
+        setTimeout(function() {
+            successForm.style.display = 'none';
+        }, 2000); // 1 giây
+    });
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="Docanhandetail.js"></script>
