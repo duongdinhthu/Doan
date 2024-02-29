@@ -7,26 +7,27 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])) {
 }
 include "project.php";
 $project = new projectFptHappy();
-$dateday = $_GET['day'];
-$datemonth=$_GET['month'];
-$dateyear = $_GET['year'];
-if (isset($_GET['action']) && $_GET['action'] === 'done' && isset($_GET['id'])&& isset($_GET['username'])) {
+$day = $_GET['day'];
+
+if (isset($_GET['action']) && $_GET['action'] === 'done' && isset($_GET['id'])&& isset($_GET['username'])&&isset($_GET['day'])) {
     $done= $_GET['action'];
     $id = $_GET['id'];
     $username = $_GET['username'];
-    $statusdone = $project->statusDone( $id ,$username,$done,$dateyear,$datemonth,$dateday);
+    $day=$_GET['day'];
+    $statusdone = $project->statusDone( $id ,$username,$done,$day);
     echo "<h3>Change the status to done successfully</h3>";
 }
-if (isset($_GET['action']) && $_GET['action'] === 'delivering' && isset($_GET['id'])&& isset($_GET['username'])) {
+if (isset($_GET['action']) && $_GET['action'] === 'delivering' && isset($_GET['id'])&& isset($_GET['username'])&&isset($_GET['day'])) {
     $id = $_GET['id'];
     $username = $_GET['username'];
     $delivering= $_GET['action'];
-    $statusdone = $project->statusDelivering( $id ,$username,$delivering,$dateyear,$datemonth,$dateday);
+    $day=$_GET['day'];
+    $statusdone = $project->statusDelivering( $id ,$username,$delivering,$day);
     echo "<h3>Change the status to delivery successfully</h3>";
 }
 
-$adm = $project->totalPayAdm($dateyear,$datemonth,$dateday);
-$paycart = $project->oder($dateyear,$datemonth,$dateday);
+$adm = $project->totalPayAdm($day);
+$paycart = $project->oder2($day);
 ?>
 <!DOCTYPE html>
 <html lang="en">

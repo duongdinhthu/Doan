@@ -475,9 +475,9 @@ class projectFptHappy
         $sql = "update cart set hidden_customer = 1 where username = '$username' and hidden_customer = 4";
         $this->conn->query($sql);
     }
-    public function totalPayAdm($dateyear,$datemonth,$dateday){
+    public function totalPayAdm($day){
 
-        $sql="UPDATE cart SET total_adm = (SELECT SUM(total_price) FROM cart where  hidden = 2 and trading_day='$dateyear-$datemonth-$dateday') ";
+        $sql="UPDATE cart SET total_adm = (SELECT SUM(total_price) FROM cart where  hidden = 2 and trading_day='$day') ";
         $this->conn->query($sql);
 
     }
@@ -507,12 +507,12 @@ class projectFptHappy
         }
         return $carts;
     }
-    public function statusDone( $id ,$username,$done,$year,$month,$day){
-        $sql = "update cart set status = '$done' where product_id = '$id' and username = '$username' and trading_day='$year-$month-$day' ";
+    public function statusDone( $id ,$username,$done,$day){
+        $sql = "update cart set status = '$done' where product_id = '$id' and username = '$username' and trading_day='$day' ";
         $this->conn->query($sql);
     }
-    public function statusDelivering( $id ,$username,$delivering,$year,$month,$day){
-        $sql = "update cart set status = '$delivering' where product_id = '$id' and username = '$username' and trading_day='$year-$month-$day' ";
+    public function statusDelivering( $id ,$username,$delivering,$day){
+        $sql = "update cart set status = '$delivering' where product_id = '$id' and username = '$username' and trading_day='$day' ";
         $this->conn->query($sql);
     }
     public function inforCustomer(){
@@ -641,5 +641,18 @@ public function addBook($name,$phone,$email,$address)
             }
         }
         return $totalcart;
+    }
+    public function oder2($day)
+    {
+        $carts = [];
+        $sql = "select c.username,c.product_id,c.total_adm,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.status,c.payment,c.code,c.trading_day from cart c join product p on c.product_id = p.pid where  hidden = 2
+            and trading_day='$day'  GROUP BY product_id, username ORDER BY trading_day ASC;" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
     }
 }

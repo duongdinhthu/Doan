@@ -90,8 +90,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                         <option value="1" style="background: #45a049">done</option>
                         <option value="2" style="background: yellowgreen">delivering</option>
                     </select></td>
-                <td><a href="status.php?action=done&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo $dateyear ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
-                <td><a href="status.php?action=delivering&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $dateday ?>&month=<?php echo $datemonth ?>&year=<?php echo $dateyear ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
+                <td><a href="status.php?action=done&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink1 "  >Done</a></td>
+                <td><a href="status.php?action=delivering&id=<?php echo $paycart['product_id']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink2 " >Delivering</a></td>
             </tr>
         <?php endforeach; ?>
         </tbody>
