@@ -112,52 +112,64 @@ $totalcart = $carts->totalShow($username);
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
 </header>
-<a href="purchased_order.php" class="btn btn-primary btn-lg">Purchased order</a>
-<table class="table">
-    <h1>
-        Cart</h1>
-    <thead>
-    <tr>
-        <th>Product image</th>
-        <th>Product Name</th>
-        <th>List Price($)</th>
-        <th>Quantity</th>
-        <th>Total Price($)</th>
-        <th hidden="hidden">pid</th>
-
-
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($cart as $cart):
-        ?>
-        <form method="post" action="">
-            <tr>
-                <td><img src="<?php echo $cart["image"]; ?>"style="width:70px" class="card-img-top" alt="...">
-                </td>
-                <td><?php echo $cart['name'] ?></td>
-                <td><?php echo $cart['list_price'] ?></td>
-                <td><input id="quantity" name="quantity" value="<?php echo $cart['SUM(c.quantity)'] ?>"></td>
-                <td><?php echo $cart['SUM(c.total_price)'] ?></td>
-                <td><input id="productid" name="productid" value="<?php echo $cart['pid'] ?>" hidden="hidden"></td>
-                <td><button class="btn btn-success" type="submit">Update Quantity</button></td>
-                <td><a  class='btn btn-warning' href='cart.php?action=delete&id=<?php echo $cart['pid'] ?>'  onclick="if (!confirm('Are you sure you want to delete this product?')) return false;" >Delete item</a></td>
-            </tr>
-        </form>
-    <?php endforeach; ?>
-    </tbody>
-
-</table>
-<h1 style="margin-left: 1200px"><?php echo"$". $totalcart ?></h1>
-<div>
-
-
-
-    <?php
-        echo "<a id='check'  class='btn btn-primary' href='delivery_address.php?action=pay&username=$username' >Ckeck out</a>";
-     ?>
-
+<div class="text">
+    <div>
+        <a href="home.php">Home  > </a>
+        <p>Shopping cart</p>
+    </div>
+    <h2>SHOPPING CART</h2>
+    <hr/>
 </div>
+<a href="cart.php" class="btn-purchased" style="margin-left: 250px">Cart</a>
+<a href="purchased_order.php" class="btn-purchased">Purchased order</a>
+<h1 style="text-align: center; color: #f29f33; margin-bottom: 20px;">
+    Cart</h1>
+<div style="display:flex; align-items: center; justify-content: center">
+    <div style="padding: 20px; background-color: white; border-radius: 20px; box-shadow: 2px 2px 5px #cccccc">
+        <table class="table">
+            <thead>
+            <tr>
+                <th style="color: #f29f33">Product image</th>
+                <th style="color: #f29f33">Product Name</th>
+                <th style="color: #f29f33">List Price($)</th>
+                <th style="color: #f29f33">Quantity</th>
+                <th style="color: #f29f33">Total Price($)</th>
+                <th hidden="hidden">pid</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($cart as $cart):
+                ?>
+                <form method="post" action="">
+                    <tr>
+                        <td><img src="<?php echo $cart["image"]; ?>"style="width:70px" class="card-img-top" alt="...">
+                        </td>
+                        <td><?php echo $cart['name'] ?></td>
+                        <td><?php echo $cart['list_price'] ?></td>
+                        <td><input id="quantity" name="quantity" value="<?php echo $cart['SUM(c.quantity)'] ?>"></td>
+                        <td><?php echo $cart['SUM(c.total_price)'] ?></td>
+                        <td><input id="productid" name="productid" value="<?php echo $cart['pid'] ?>" hidden="hidden"></td>
+                        <td><button class="btn btn-success" type="submit">Update Quantity</button></td>
+                        <td><a  class='btn btn-danger' href='cart.php?action=delete&id=<?php echo $cart['pid'] ?>'  onclick="if (!confirm('Are you sure you want to delete this product?')) return false;" >Delete item</a></td>
+                    </tr>
+                </form>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+        <hr>
+        <div style="display: flex">
+            <p style="margin-left: 10px; color: #f29f33">Total all product</p>
+            <h5 style="margin-left: 560px"><?php echo $totalcart ?></h5>
+        </div>
+        <hr>
+        <div>
+            <?php
+            echo "<a style='margin-left: 1000px;' id='check'  class='btn-purchased' href='delivery_address.php?action=pay&username=$username' >Check out</a>";
+            ?>
+        </div>
+    </div>
+</div>
+
 
 <hr>
 <table class="table" style="display: none">

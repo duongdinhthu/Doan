@@ -41,8 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-
-                <p>Hotline<br>78910JQKA</p>
+                <p>Hotline<br>8910JQKA</p>
             </div>
         </div>
         <div class="d-flex">
@@ -50,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="Trochoitreem.php">Kids</a>
+                    <a href="Trochoitreem.php">Children</a>
                     <a href="Trochoigiadinh.php">Family</a>
                     <a href="Trochoinguoilon.php">Adults</a>
                 </div>
@@ -58,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Docanhan.php">Personal Items</a>
                     <a href="Dothietyeu.php">Essentials</a>
                     <a href="Thucpham.php">Food</a>
                 </div>
@@ -67,18 +66,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
                     <a href="Dichvutrongoi.php">Packages</a>
-                    <a href="Dichvutour.php"> Tours</a>
-                    <a href="Dichvutochuc.php">Organizing</a>
+                    <a href="Dichvutour.php">Tours</a>
+                    <a href="Dichvutochuc.php">Organizations</a>
                 </div>
             </div>
             <a href="tintuc.php" class="btn btn-outline">News</a>
             <a href="lienhe.php" class="btn btn-outline">Contact</a>
-            <a href="user.php" class="btn btn-outline">Account</a>
-            <a href="cart.php" class="btn btn-outline">Shopping Cart</a>
-
+            <a href="../backend/login.php" class="btn btn-outline">Login</a>
         </div>
     </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width:100%;">
+    <img src="img/img_banner_brea_col.webp" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
 
 <div class="container">
