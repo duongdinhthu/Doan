@@ -11,8 +11,9 @@ include "project.php";
 $project = new projectFptHappy();
 $code = $_GET['code'];
 $update = $project->updateTotalByCode($username,$code);
-$detail = $project->detailCodeOrder($username,$code);
 $show = $project->totalShowByCode($username,$code);
+$detail = $project->detailCodeOrder($username,$code);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

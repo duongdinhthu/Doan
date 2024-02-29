@@ -109,7 +109,6 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
         <input name="password3" placeholder="New password again" type="password" id="password3" required><br>
         <button type="submit">Change Password</button><br>
         <div>
-            <a href="login.php" class="re-login">Re-Login</a>
             <a href="home.php" class="return">Return to home page</a>
         </div>
     </form>

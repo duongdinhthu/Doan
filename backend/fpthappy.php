@@ -1,20 +1,36 @@
 <?php
 session_start();
-ini_set('display_errors', 'off');
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])) {
     header("Location: login.php");
     exit;
 }
 include "project.php";
 $project = new projectFptHappy();
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $dateday = $_POST['search'];
-    $datemonth = $_POST['search1'];
-    $dateyear = $_POST['search2'];
-    $adm = $project->totalPayAdm($dateyear,$datemonth,$dateday);
-    $paycart = $project->oder($dateyear,$datemonth,$dateday);
-
+$day = $_GET['day'];
+if (isset($_GET['action']) && $_GET['action'] === 'done' && isset($_GET['code'])&& isset($_GET['username'])&&isset($_GET['day'])) {
+    $done= $_GET['action'];
+    $code = $_GET['code'];
+    $username = $_GET['username'];
+    $day=$_GET['day'];
+    $statusdone = $project->statusDone( $code ,$username,$done,$day);
+    echo "<h3>Change the status to done successfully</h3>";
+}
+if (isset($_GET['action']) && $_GET['action'] === 'delivering' && isset($_GET['code'])&& isset($_GET['username'])&&isset($_GET['day'])) {
+    $code = $_GET['code'];
+    $username = $_GET['username'];
+    $delivering= $_GET['action'];
+    $day=$_GET['day'];
+    $statusdone = $project->statusDelivering( $code ,$username,$delivering,$day);
+    echo "<h3>Change the status to delivery successfully</h3>";
+}
+$project = new projectFptHappy();
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $from = $_POST['search'];
+    $to = $_POST['search1'];
+    $status = $_POST['search2'];
+    $paycart = $project->oder($to,$from,$status);
+}else{
+    $paycart = $project->oder3();
 }
 
 ?>
@@ -22,26 +38,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>List of sold goods</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+    <title>Student List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <body>
-<h1>Welcome to the administration area</h1>
+<h1 class="card-title">Welcome to the Admin area</h1>
+
 <div class="container mt-5">
     <a href="logout.php" class="btn btn-danger">Logout</a>
+    <a href="book_tour.php" class="btn btn-success">Customers book tours</a>
     <a href="infor_customer.php" class="btn btn-primary">customer information</a>
+
     <h2>
         Enter the date to search</h2>
     <form action="" method="post">
-        <label for="search" >Day </label>
-        <input name="search" type="text" id="search" required class="form-control" placeholder="01">
-        <label for="search1" >Month </label>
-        <input name="search1" type="text" id="search1" required class="form-control" placeholder="01">
-        <label for="search2" >Year </label>
-        <input name="search2" type="text" id="search2" required class="form-control"  value="2024">
+        <label for="search" >From </label>
+        <input name="search" type="date" id="search" required class="form-control" value="2024-02-28">
+        <label for="search1" >To </label>
+        <input name="search1" type="date" id="search1" required class="form-control" value="2024-02-29">
+        <label for="search2" >Status </label>
+        <br>
+        <select name="search2"  id="search2" class="status-select">
+            <option value="pend processing">pend processing</option>
+            <option value="done" style="background: #45a049">done</option>
+            <option value="delivering" style="background: yellowgreen">delivering</option>
+        </select>
+        <br>
         <br>
         <button class="btn btn-warning" type="submit" >Search</button>
-
     </form>
     <br>
     <table class="table">
@@ -49,14 +72,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <thead>
         <tr>
             <th>Account</th>
-            <th>Product ID</th>
-            <th>Product Name</th>
-            <th>List Price($)</th>
-            <th>Quantity</th>
-            <th>Total Price($)</th>
-            <th>Status</th>
-            <th>Payment</th>
             <th>Code</th>
+            <th>Payment</th>
+            <th>Day</th>
+            <th>Update order status</th>
+            <th>Order Detail</th>
+
         </tr>
         </thead>
         <tbody>
@@ -64,20 +85,62 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ?>
             <tr>
                 <td><?php echo $paycart['username']  ?> </td>
-                <td><?php echo $paycart['product_id']  ?> </td>
-                <td><?php echo $paycart['name'] ?></td>
-                <td><?php echo $paycart['list_price'] ?></td>
-                <td><?php echo $paycart['SUM(c.quantity)'] ?></td>
-                <td><?php echo $paycart['SUM(c.total_price)'] ?></td>
-                <td><?php echo $paycart['status'] ?></td>
-                <td><?php echo $paycart['payment'] ?></td>
                 <td><?php echo $paycart['code'] ?></td>
+                <td><?php echo $paycart['payment'] ?></td>
+                <td><?php echo $paycart['trading_day'] ?></td>
+                <td><select class="status-select">
+                        <option value=""><?php echo $paycart['status'] ?></option>
+                        <option value="1" style="background: #45a049">done</option>
+                        <option value="2" style="background: yellowgreen">delivering</option>
+                    </select></td>
+
+                <td><a href="order_detail2.php?action=detail&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>" class="btn btn-primary">Order Detail</a></td>
+                <td><a href="fpthappy1.php?action=done&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
+                <td><a href="fpthappy1.php?action=delivering&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
+
             </tr>
         <?php endforeach; ?>
         </tbody>
     </table>
-    <h2>Total value of goods sold:  $<?php echo $paycart['total_adm'] ?></h2>
 
 </div>
+
+<script>
+    var statusSelects = document.querySelectorAll('.status-select');
+
+    statusSelects.forEach(function(select) {
+        select.addEventListener("change", function() {
+            var selectedValue = this.value;
+            if (selectedValue === "1") {
+                this.parentNode.parentNode.querySelector(".myLink1").click();
+            } else if (selectedValue === "2") {
+                this.parentNode.parentNode.querySelector(".myLink2").click();
+            }
+
+            // Disable options based on selected value
+            for (var i = 0; i < this.options.length; i++) {
+                if (this.options[i].value !== selectedValue && this.options[i].value !== "" && this.value === "1") {
+                    this.options[i].disabled = true;
+                } else {
+                    this.options[i].disabled = false;
+                }
+            }
+
+            // Store selected value in localStorage
+            localStorage.setItem('selectedValue', selectedValue);
+        });
+
+        // Check and disable options if value is stored in localStorage
+        var storedValue = localStorage.getItem('selectedValue');
+        if (storedValue) {
+            for (var i = 0; i < select.options.length; i++) {
+                if (select.options[i].value !== 1) {
+                    select.options[i].disabled = false;
+                }
+            }
+        }
+    });
+</script>
 </body>
 </html>
+

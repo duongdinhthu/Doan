@@ -484,8 +484,8 @@ class projectFptHappy
     public function oder1()
     {
         $carts = [];
-        $sql = "select c.username,c.product_id,c.total_adm,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.status,c.payment,c.code,c.trading_day from cart c join product p on c.product_id = p.pid where  hidden = 2 and c.status ='pend processing'
-            and trading_day BETWEEN '2024-02-24' AND '2024-02-29'  GROUP BY product_id, username ORDER BY trading_day ASC;" ;
+        $sql = "select c.username,c.product_id,c.total_adm,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.status,c.payment,c.code,c.trading_day from cart c join product p on c.product_id = p.pid where  hidden = 2 and 
+             trading_day BETWEEN '2024-02-28' AND '2024-03-28'  GROUP BY product_id, username ORDER BY trading_day ASC;" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -497,8 +497,8 @@ class projectFptHappy
     public function oder($to,$from,$status)
     {
         $carts = [];
-        $sql = "select c.username,c.product_id,c.total_adm,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.status,c.payment,c.code,c.trading_day from cart c join product p on c.product_id = p.pid where  hidden = 2 and c.status ='$status'
-            and trading_day BETWEEN '$from' AND '$to'  GROUP BY product_id, username ORDER BY trading_day ASC;" ;
+        $sql = " SELECT DISTINCT code,username, payment,trading_day,status FROM cart where  hidden = 2 and status = '$status' and 
+             trading_day BETWEEN '$from' AND '$to'  ORDER BY trading_day ASC;" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -507,12 +507,12 @@ class projectFptHappy
         }
         return $carts;
     }
-    public function statusDone( $id ,$username,$done,$day){
-        $sql = "update cart set status = '$done' where product_id = '$id' and username = '$username' and trading_day='$day' ";
+    public function statusDone( $code ,$username,$done,$day){
+        $sql = "update cart set status = '$done' where code = '$code' and username = '$username' and trading_day='$day' ";
         $this->conn->query($sql);
     }
-    public function statusDelivering( $id ,$username,$delivering,$day){
-        $sql = "update cart set status = '$delivering' where product_id = '$id' and username = '$username' and trading_day='$day' ";
+    public function statusDelivering( $code ,$username,$delivering,$day){
+        $sql = "update cart set status = '$delivering' where code = '$code' and username = '$username' and trading_day='$day' ";
         $this->conn->query($sql);
     }
     public function inforCustomer(){
@@ -579,10 +579,10 @@ public function addBook($name,$phone,$email,$address)
     $sql = "insert into book_tour(name,phone,email,address)values('$name','$phone','$email','$address')";
     $this->conn->query($sql);
 }
-    public function booktour($dateyear,$datemonth,$dateday)
+    public function booktour($date,$status)
     {
         $carts = [];
-        $sql = "select * from book_tour  where trading_day='$dateyear-$datemonth-$dateday'" ;
+        $sql = "select * from book_tour  where trading_day='$date' and status = '$status'" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -591,21 +591,21 @@ public function addBook($name,$phone,$email,$address)
         }
         return $carts;
     }
-    public function statusDoneBook( $name ,$phone,$email,$address,$done,$dateyear,$datemonth,$dateday)
+    public function statusDoneBook( $name ,$phone,$email,$address,$done,$day)
     {
-        $sql = "update book_tour set status = '$done' where name = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$dateyear-$datemonth-$dateday' ";
+        $sql = "update book_tour set status = '$done' where name = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$day' ";
         $this->conn->query($sql);
     }
-    public function statusDeliveringBook($name ,$phone,$email,$address,$delivering,$dateyear,$datemonth,$dateday)
+    public function statusDeliveringBook($name ,$phone,$email,$address,$consulting,$day)
     {
-        $sql = "update book_tour set status = '$delivering' where name = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$dateyear-$datemonth-$dateday' ";
+        $sql = "update book_tour set status = '$consulting' where name = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$day' ";
         $this->conn->query($sql);
     }
     public function codeOderCart($username)
 
     {
         $ordercarts = [];
-        $sql = "SELECT DISTINCT code FROM cart c  WHERE username = '$username';";
+        $sql = "SELECT DISTINCT code, status  FROM cart c  WHERE username = '$username';";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -647,6 +647,30 @@ public function addBook($name,$phone,$email,$address)
         $carts = [];
         $sql = "select c.username,c.product_id,c.total_adm,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.status,c.payment,c.code,c.trading_day from cart c join product p on c.product_id = p.pid where  hidden = 2
             and trading_day='$day'  GROUP BY product_id, username ORDER BY trading_day ASC;" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+    }
+    public function oder3()
+    {
+        $carts = [];
+        $sql = "SELECT DISTINCT code,username, payment,trading_day,status FROM cart" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+    }
+    public function oder4()
+    {
+        $carts = [];
+        $sql = " select * FROM book_tour" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){

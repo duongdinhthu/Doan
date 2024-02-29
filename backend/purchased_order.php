@@ -10,6 +10,7 @@ $username = $_SESSION["username"];
 include "project.php";
 $project = new projectFptHappy();
 $code = $project->codeOderCart($username);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,6 +82,7 @@ $code = $project->codeOderCart($username);
     <thead>
     <tr>
         <th>Code order</th>
+        <th>Status</th>
         <th>Order details</th>
     </tr>
     </thead>
@@ -89,6 +91,7 @@ $code = $project->codeOderCart($username);
         ?>
         <tr>
             <td><?php echo $code['code'] ?></td>
+            <td><?php echo $code['status'] ?></td>
             <td><a href="order_detail.php?code=<?php echo $code['code'] ?>" class="btn btn-warning">Order details</a></td>
 
         </tr>
