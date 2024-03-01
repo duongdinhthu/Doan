@@ -187,12 +187,12 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 <!-- Comment Section -->
 <div class="comments">
     <h2>Comments</h2>
-    <!-- Display comments here -->
+
 
     <!-- Example comment -->
     <div class="comment">
         <p><strong>User:</strong> John Doe</p>
-        <p><strong>Comment:</strong> Wishing FPT HAPPY Co., Ltd. a holiday filled with joy!</p>
+        <p><strong>Comment:</strong> Wishing FPT HAPPY Co., Ltd. a holiday full of joy!</p>
     </div>
 </div>
 
@@ -208,7 +208,44 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 
         <button type="submit">Send Comment</button>
     </form>
-</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy form bình luận
+            const commentForm = document.querySelector('.comment-form form');
+
+            //  sự kiện submit của form
+            commentForm.addEventListener('submit', function(event) {
+                // Ngăn chặn hành động mặc định của form
+                event.preventDefault();
+
+                // Lấy giá trị của username và comment từ form
+                const username = document.getElementById('username').value;
+                const comment = document.getElementById('comment').value;
+
+                // Tạo một phần tử div mới để chứa bình luận
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment');
+
+                // Tạo nội dung cho bình luận
+                const userParagraph = document.createElement('p');
+                userParagraph.innerHTML = `<strong>User:</strong> ${username}`;
+                const commentParagraph = document.createElement('p');
+                commentParagraph.innerHTML = `<strong>Comment:</strong> ${comment}`;
+
+                // Thêm nội dung vào phần tử bình luận mới
+                newComment.appendChild(userParagraph);
+                newComment.appendChild(commentParagraph);
+
+                // Thêm phần tử bình luận mới vào danh sách bình luận
+                const commentsContainer = document.querySelector('.comments');
+                commentsContainer.appendChild(newComment);
+
+                // Đặt lại giá trị của các trường nhập liệu về rỗng
+                document.getElementById('username').value = '';
+                document.getElementById('comment').value = '';
+            });
+        });
+    </script>
 </div>
 
 <div class="footer">

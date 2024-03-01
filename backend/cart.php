@@ -158,7 +158,7 @@ $totalcart = $carts->totalShow($username);
         <hr>
         <div style="display: flex">
             <p style="margin-left: 10px; color: #f29f33" id="check">Total all product</p>
-            <h5 style="margin-left: 560px"><?php echo $totalcart ?></h5>
+            <h5 style="margin-left: 545px"><?php echo $totalcart ?>$</h5>
         </div>
         <hr>
         <div>
@@ -230,7 +230,8 @@ $totalcart = $carts->totalShow($username);
     <?php foreach ($paycart as $paycart):
         ?>
         <tr>
-            <td><img src="<?php echo $paycart["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
+            <td>
+            <img src="<?php echo $paycart["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
             </td>
             <td><?php echo $paycart['name'] ?></td>
             <td><?php echo $paycart['list_price'] ?></td>
@@ -316,5 +317,6 @@ $totalcart = $carts->totalShow($username);
 <script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 </body>
 </html>

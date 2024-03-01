@@ -171,16 +171,15 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 
     <p>Thank you for your support of FPT HAPPY throughout the past time. We wish you a New Year filled with Peace, Prosperity, and All Wishes Come True.</p>
 </div>
-
-
+<!-- Comment Section -->
 <div class="comments">
     <h2>Comments</h2>
 
 
-
+    <!-- Example comment -->
     <div class="comment">
         <p><strong>User:</strong> John Doe</p>
-        <p><strong>Comment:</strong> Wishing FPT HAPPY Company a joyful holiday!</p>
+        <p><strong>Comment:</strong> Wishing FPT HAPPY Co., Ltd. a holiday full of joy!</p>
     </div>
 </div>
 
@@ -188,16 +187,55 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 <div class="comment-form">
     <h2>Add Comment</h2>
     <form action="#" method="post">
-        <label for="username">User Name:</label>
+        <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
         <label for="comment">Comment:</label>
         <textarea id="comment" name="comment" rows="4" required></textarea>
 
-        <button type="submit">Submit Comment</button>
+        <button type="submit">Send Comment</button>
     </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy form bình luận
+            const commentForm = document.querySelector('.comment-form form');
+
+            //  sự kiện submit của form
+            commentForm.addEventListener('submit', function(event) {
+                // Ngăn chặn hành động mặc định của form
+                event.preventDefault();
+
+                // Lấy giá trị của username và comment từ form
+                const username = document.getElementById('username').value;
+                const comment = document.getElementById('comment').value;
+
+                // Tạo một phần tử div mới để chứa bình luận
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment');
+
+                // Tạo nội dung cho bình luận
+                const userParagraph = document.createElement('p');
+                userParagraph.innerHTML = `<strong>User:</strong> ${username}`;
+                const commentParagraph = document.createElement('p');
+                commentParagraph.innerHTML = `<strong>Comment:</strong> ${comment}`;
+
+                // Thêm nội dung vào phần tử bình luận mới
+                newComment.appendChild(userParagraph);
+                newComment.appendChild(commentParagraph);
+
+                // Thêm phần tử bình luận mới vào danh sách bình luận
+                const commentsContainer = document.querySelector('.comments');
+                commentsContainer.appendChild(newComment);
+
+                // Đặt lại giá trị của các trường nhập liệu về rỗng
+                document.getElementById('username').value = '';
+                document.getElementById('comment').value = '';
+            });
+        });
+    </script>
 </div>
-</div>
+
+
 <div class="footer">
     <div class="footer0">
         <div class="footer1">

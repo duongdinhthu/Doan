@@ -45,11 +45,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <title>Student List</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+<style>
+    body{
+        background-color: #FEF7EF;
+    }
+    .container{
+        background-color: white;
+        padding: 30px 30px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px #cccccc;
+        margin-bottom: 50px;
+    }
+</style>
 <body>
-<div class="container mt-5">
+<h2 style="text-align: center; color: #f29f33; font-weight: bold; margin-top: 50px; margin-bottom: 50px">CUSTOMERS BOOK TOURS</h2>
+<div class="container">
     <a href="logout.php" class="btn btn-danger">Logout</a>
     <a href="fpthappy1.php" class="btn btn-success">Back</a>
-    <h2>
+    <h2 style="margin-top: 30px; color: #f29f33">
         Enter the date to search</h2>
     <form action="" method="post">
         <label for="search" >From </label>
@@ -60,8 +73,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         <br>
         <select name="search2"  id="search2" class="status-select">
             <option value="pend processing">pend processing</option>
-            <option value="done" style="background: #45a049">done</option>
-            <option value="consulting" style="background: yellowgreen">consulting</option>
+            <option value="done" style="background: #07ff07">done</option>
+            <option value="consulting" style="background: #f29f33">consulting</option>
         </select>
         <br>
         <br>
@@ -69,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     </form>
     <br>
     <table class="table">
-        <h2>List of sold goods</h2>
+        <h2 style="color: #f29f33; margin-bottom: 30px">List users</h2>
         <thead>
         <tr>
             <th>Name</th>
@@ -90,8 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <td><?php echo $paycart['status'] ?></td>
                 <td><select class="status-select">
                         <option value=""><?php echo $paycart['status'] ?></option>
-                        <option value="1" style="background: #45a049">done</option>
-                        <option value="2" style="background: yellowgreen">consulting</option>
+                        <option value="1" style="background: #07ff07">done</option>
+                        <option value="2" style="background: #f29f33">consulting</option>
                     </select></td>
                 <td><a href="book_tour.php?action=done&name=<?php echo $paycart['name']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
                 <td><a href="book_tour.php?action=consulting&name=<?php echo $paycart['name']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink2 " hidden="hidden">Consulting</a></td>

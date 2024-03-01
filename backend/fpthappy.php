@@ -40,15 +40,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <meta charset="UTF-8">
     <title>Student List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        background-color: #FEF7EF;
+    }
+    .container{
+        background-color: white;
+        padding: 30px 30px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px #cccccc;
+        margin-bottom: 50px;
+    }
+    .table a{
+        text-decoration: none;
+        color: white;
+        background-color: #f29f33;
+        padding: 8px 12px;
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+    }
+    .table a:hover{
+        background-color: #654145;
+    }
+</style>
 <body>
-<h1 class="card-title">Welcome to the Admin area</h1>
+<h2 style="color: #f29f33;margin-bottom: 50px; margin-top: 50px; text-align: center; font-weight: bold">WELCOME TO THE ADMIN AREA</h2>
 
-<div class="container mt-5">
+<div class="container">
     <a href="logout.php" class="btn btn-danger">Logout</a>
     <a href="book_tour.php" class="btn btn-success">Customers book tours</a>
     <a href="infor_customer.php" class="btn btn-primary">customer information</a>
 
-    <h2>
+    <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
         Enter the date to search</h2>
     <form action="" method="post">
         <label for="search" >From </label>
@@ -59,8 +83,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         <br>
         <select name="search2"  id="search2" class="status-select">
             <option value="pend processing">pend processing</option>
-            <option value="done" style="background: #45a049">done</option>
-            <option value="delivering" style="background: yellowgreen">delivering</option>
+            <option value="done" style="background: #07ff07">done</option>
+            <option value="delivering" style="background: #f29f33">delivering</option>
         </select>
         <br>
         <br>
@@ -68,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     </form>
     <br>
     <table class="table">
-        <h2>List of sold goods</h2>
+        <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">List users</h2>
         <thead>
         <tr>
             <th>Account</th>
@@ -90,11 +114,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <td><?php echo $paycart['trading_day'] ?></td>
                 <td><select class="status-select">
                         <option value=""><?php echo $paycart['status'] ?></option>
-                        <option value="1" style="background: #45a049">done</option>
-                        <option value="2" style="background: yellowgreen">delivering</option>
+                        <option value="1" style="background: #07ff07">done</option>
+                        <option value="2" style="background: #f29f33">delivering</option>
                     </select></td>
 
-                <td><a href="order_detail2.php?action=detail&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>" class="btn btn-primary">Order Detail</a></td>
+                <td><a href="order_detail2.php?action=detail&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>">Order Detail</a></td>
                 <td><a href="fpthappy1.php?action=done&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
                 <td><a href="fpthappy1.php?action=delivering&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
 

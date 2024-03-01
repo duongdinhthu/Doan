@@ -27,15 +27,80 @@ if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
+<style>
+    #searchResults a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    #searchResults a:hover {
+        text-decoration: none;
+    }
+    </style>
 <body>
 <header>
     <div class="header">
         <div class="header1">
             <img src="img/logo.webp" alt="logo">
-            <label>
-                <input type="text" placeholder="Search">
+            <label for="search">
+                <input type="text" id="search" placeholder="Search">
                 <i class="fa-solid fa-magnifying-glass"></i>
+                <div id="searchResults">
+                    <!-- Kết quả tìm kiếm hiển thị -->
+                </div>
             </label>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const searchInput = document.getElementById('search');
+                    const searchResultsContainer = document.getElementById('searchResults');
+
+                    // Event listener cho input tìm kiếm
+                    searchInput.addEventListener('input', function() {
+                        const searchQuery = searchInput.value.toLowerCase();
+                        if (searchQuery.length === 0) {
+                            // Nếu không có truy vấn tìm kiếm, xóa tất cả kết quả hiển thị
+                            searchResultsContainer.innerHTML = '';
+                            return;
+                        }
+                        // Gọi hàm tìm kiếm và hiển thị kết quả
+                        const searchResults = performSearch(searchQuery);
+                        displaySearchResults(searchResults);
+                    });
+
+                    // Hàm thực hiện tìm kiếm
+                    function performSearch(query) {
+                        const dummySearchResults = [
+                            { title: "Trochoitreem", url: "Trochoitreem.php" },
+                            { title: "Trochoinguoilon", url: "Trochoinguoilon.php" },
+                            { title: "Trochoigiadinh", url: "Trochoigiadinh.php" },
+                            { title: "Dichvutochuc", url: "Dichvutochuc.php" },
+                            { title: "Dichvutrongoi", url: "Dichvutrongoi.php" },
+                            { title: "Dichvutour", url: "Dichvutour.php" },
+                            { title: "Thucpham", url: "Thucpham.php" },
+                            { title: "Docanhan", url: "Docanhan.php" },
+                            { title: "Dothietyeu", url: "Dothietyeu.php" }
+
+                        ];
+                        // Lọc và trả về các kết quả phù hợp với truy vấn tìm kiếm
+                        return dummySearchResults.filter(result =>
+                            result.title.toLowerCase().includes(query)
+                        );
+                    }
+
+                    // Hàm hiển thị kết quả tìm kiếm
+                    function displaySearchResults(results) {
+                        // Xóa bất kỳ kết quả hiện có nào trước khi hiển thị kết quả mới
+                        searchResultsContainer.innerHTML = '';
+                        // Lặp qua mỗi kết quả và hiển thị nó trong phần tử searchResultsContainer
+                        results.forEach(result => {
+                            const resultItem = document.createElement('div');
+                            resultItem.innerHTML = `<a href="${result.url}">${result.title}</a>`;
+                            searchResultsContainer.appendChild(resultItem);
+                        });
+                    }
+                });
+            </script>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
 
