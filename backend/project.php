@@ -417,8 +417,15 @@ class projectFptHappy
             while($row=$result->fetch_assoc()){
                 $totalcart=$row['total'];
             }
+        }else{
+            echo '<style> #check{ display: none; } </style>';
         }
         return $totalcart;
+    }
+    public function deleCode()
+    {
+        $sql = "DELETE FROM cart WHERE code IS NULL;";
+        $result = $this->conn->query($sql);
     }
     public function getAllDeleteCart($username)
     {   $carts = [];

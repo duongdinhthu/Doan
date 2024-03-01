@@ -10,6 +10,7 @@ $username = $_SESSION["username"];
 include "project.php";
 $project = new projectFptHappy();
 $code = $project->codeOderCart($username);
+$delete = $project->deleCode();
 
 ?>
 <!DOCTYPE html>

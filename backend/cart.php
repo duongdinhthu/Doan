@@ -157,7 +157,7 @@ $totalcart = $carts->totalShow($username);
         </table>
         <hr>
         <div style="display: flex">
-            <p style="margin-left: 10px; color: #f29f33">Total all product</p>
+            <p style="margin-left: 10px; color: #f29f33" id="check">Total all product</p>
             <h5 style="margin-left: 560px"><?php echo $totalcart ?></h5>
         </div>
         <hr>

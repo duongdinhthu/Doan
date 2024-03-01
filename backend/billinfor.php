@@ -6,11 +6,23 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
+?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<?php
 include "project.php";
 $project = new projectFptHappy();
+$server = "Localhost:3306";    //your ip and port
+$user = "root";                            //username by default give it root
+$password = "";                                   // default password is empty
+$databse = "fpthappy";             // database name
 
+$conn = mysqli_connect($server, $user, $password, $databse);
 
-
+if ($conn) {
+    echo "<p hidden='hidden'>ok</p>";
+} else {
+    echo "";
+}
 
 $username=$_SESSION['username'];
 $name = $_POST['name'];
@@ -21,9 +33,17 @@ $totalcart=$_POST['totalcart'];
 $code = $_POST['code'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $update = $project->payTheBill($name,$phone,$address,$username,$cod,$code);
-    echo "You have successfully purchased  ";
-
+    $sql = "update cart set hidden = 2, hidden_customer = 4,name='$name',phone='$phone',address='$address',payment='$cod',code='$code' where username = '$username' and hidden = 1";
+    $result = mysqli_query($conn,$sql);
+?>
+    <script>
+        swal({
+            title: "Success",
+            text: "The order has been sent. Thank you for supporting the shop",
+            icon: "success",
+        });
+    </script>
+<?php
 }
 
 $paycart = $project->getAllPay($username);
