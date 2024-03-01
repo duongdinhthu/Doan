@@ -1,12 +1,42 @@
+
+<?php
+session_start();
+// Check session
+
+?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <?php
 include "../backend/project.php";
 $book = new projectFptHappy();
+$server = "Localhost:3306";    //your ip and port
+$user = "root";                            //username by default give it root
+$password = "";                                   // default password is empty
+$databse = "fpthappy";             // database name
+
+$conn = mysqli_connect($server, $user, $password, $databse);
+
+if ($conn) {
+    echo "<p hidden='hidden'>ok</p>";
+} else {
+    echo "";
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-   $name = $_POST['full_name'];
+    $name = $_POST['full_name'];
     $phone = $_POST['phone_number'];
     $email = $_POST['email'];
     $address = $_POST['address'];
-    $add=$book->addBook($name,$phone,$email,$address);
+    $sql = "insert into book_tour(name,phone,email,address)values('$name','$phone','$email','$address')";
+    $result = mysqli_query($conn,$sql);
+    ?>
+    <script>
+        swal({
+            title: "Success",
+            text: "Thank you for leaving your information. We will contact you as soon as possible for advice",
+            icon: "success",
+        });
+    </script>
+    <?php
 }
 ?>
 
