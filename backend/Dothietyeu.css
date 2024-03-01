@@ -112,5 +112,8 @@ form{
 body{
     background-color: #FEF7EF;
 }
+form{
+    background-color: transparent;
+}
 
 

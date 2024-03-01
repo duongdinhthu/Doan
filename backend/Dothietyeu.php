@@ -5,15 +5,56 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
+?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<?php
 include "project.php";
 $project = new projectFptHappy();
+$server = "Localhost:3306";    //your ip and port
+$user = "root";                            //username by default give it root
+$password = "";                                   // default password is empty
+$databse = "fpthappy";             // database name
+
+$conn = mysqli_connect($server, $user, $password, $databse);
+
+if ($conn) {
+    echo "<p hidden='hidden'>ok</p>";
+} else {
+    echo "";
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username=$_SESSION["username"];
     $sl = $_POST['sl'];
     $id = $_POST['id'];
     $gia = $_POST['gia'];
-    $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
-}
+    $sql="select * from cart where username='$username' and product_id='$id' and hidden = 1";
+        $result = mysqli_query($conn,$sql);
+        if($result->num_rows>0){
+            ?>
+            <script>
+                swal({
+                    title: "Failed",
+                    text: "This item is already in the cart",
+                    icon: "error",
+                });
+            </script>
+<?php
+        }else{
+            $sql1 = "insert into cart(username,product_id,quantity,list_price)values('$username','$id','$sl','$gia')";
+            $result1 = mysqli_query($conn,$sql1);
+           ?>
+            <script>
+                swal({
+                    title: "Success",
+                    text: "The item was successfully added to the cart",
+                    icon: "success",
+                });
+            </script>
+<?php
+        }
+    }
+
 $product = $project->getAllProduct3();
 
 ?>
@@ -94,7 +135,7 @@ $product = $project->getAllProduct3();
         <?php foreach ($product as $product): ?>
             <div class="product-item">
                 <div>
-                    <form action="" method="post">
+                    <form action="" method="post" >
                         <a href="Dothietyeudetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>">
                             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
                         </a>

@@ -358,10 +358,34 @@ class projectFptHappy
         $sql="select * from cart where username='$username' and product_id='$id' and hidden = 1";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
-            echo"Mặt hàng này đã có trong giỏ hàng!";
+            ?>
+            <script>
+
+                swal({
+                    title: "Success",
+                    text: "Data insertd",
+                    icon: "success",
+                });
+
+
+
+            </script>
+<?php
         }else{
             $this->addCart2($username,$id,$sl,$price);
-            echo"Thêm hàng vào giỏ hàng thành công";
+           ?>
+            <script>
+
+                swal({
+                    title: "Failed",
+                    text: "Data not insertd",
+                    icon: "error",
+                });
+
+
+
+            </script>
+<?php
         }
     }
     public function addCart2($username,$id,$sl,$price)

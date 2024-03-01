@@ -20,9 +20,9 @@ $totalcart = $project->totalShow($username);
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
     <title>Title</title>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -223,9 +223,9 @@ $totalcart = $project->totalShow($username);
         <form>
             <input style="margin-left: 30px" type="radio" id="payment" name="payment" value="COD" required >
             <label for="payment">COD</label><br>
-            <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="COD" required >
+            <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="Internet Banking" required >
             <label for="">Internet Banking</label><br>
-            <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="COD" required >
+            <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="VISA, MasterCard" required >
             <label for="payment">VISA, MasterCard</label><br>
             <div style="display: flex; justify-content: end; margin-right: 50px">
                 <button class="order" type="submit" >Order</button>
@@ -233,6 +233,30 @@ $totalcart = $project->totalShow($username);
         </form>
         <br>
     </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderButton = document.querySelector('.order');
+
+            orderButton.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "Do you want to place this order?",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, place order'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+
+                        event.target.closest('form').submit();
+                    }
+                });
+            });
+        });
+    </script>
 
 
 </div>

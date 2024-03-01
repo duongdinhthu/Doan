@@ -30,27 +30,7 @@ $product = $project->getAllProduct3();
     <link rel="stylesheet" href="Docanhandetail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
-    <style>
-        .success-form {
-            text-align: center;
-            padding: 20px;
-            border: 2px solid #28a745;
-            border-radius: 5px;
-            background-color: #d4edda;
-            display: none;
-        }
 
-        .success-form h2 {
-            color: #28a745;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .success-form p {
-            color: #333;
-            font-size: 18px;
-        }
-    </style>
 </head>
 <body>
 <header>
@@ -177,10 +157,7 @@ $product = $project->getAllProduct3();
     <div class="buttons">
         <a href="Docanhandetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn" id="showSuccessForm">Add to cart</a>
     </div>
-    <div class="success-form" id="successForm">
-        <h2>Thao tác thành công!</h2>
-        <p>Cảm ơn bạn đã thực hiện thao tác thành công.</p>
-    </div>
+
 </div>
 
 <div class="navigation-bar">

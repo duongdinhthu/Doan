@@ -5,16 +5,58 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
     exit;
 }
+?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<?php
 include "project.php";
 $project = new projectFptHappy();
+$server = "Localhost:3306";    //your ip and port
+$user = "root";                            //username by default give it root
+$password = "";                                   // default password is empty
+$databse = "fpthappy";             // database name
+
+$conn = mysqli_connect($server, $user, $password, $databse);
+
+if ($conn) {
+    echo "<p hidden='hidden'>ok</p>";
+} else {
+    echo "";
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username=$_SESSION["username"];
     $sl = $_POST['sl'];
     $id = $_POST['id'];
     $gia = $_POST['gia'];
-    $cart = $project-> checkProductByCart($username,$id,$sl,$gia);
+    $sql="select * from cart where username='$username' and product_id='$id' and hidden = 1";
+    $result = mysqli_query($conn,$sql);
+    if($result->num_rows>0){
+        ?>
+        <script>
+            swal({
+                title: "Failed",
+                text: "This item is already in the cart",
+                icon: "error",
+            });
+        </script>
+        <?php
+    }else{
+        $sql1 = "insert into cart(username,product_id,quantity,list_price)values('$username','$id','$sl','$gia')";
+        $result1 = mysqli_query($conn,$sql1);
+        ?>
+        <script>
+            swal({
+                title: "Success",
+                text: "The item was successfully added to the cart",
+                icon: "success",
+            });
+        </script>
+        <?php
+    }
 }
+
 $product = $project->getAllProduct1();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +68,7 @@ $product = $project->getAllProduct1();
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Thucpham.css">
-
+    <link rel="stylesheet" href="Dothietyeu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
@@ -83,30 +124,26 @@ $product = $project->getAllProduct1();
 <div class="text">
     <div>
         <a href="home.php">Home  > </a>
-        <p>Food</p>
+        <p>Essential items</p>
     </div>
-    <h2>FOOD</h2>
+    <h2>ESSENTIAL ITEMS</h2>
     <hr/>
 </div>
 <table >
-
-
     <tbody>
-
-
     <div class="product-boxes">
         <?php foreach ($product as $product): ?>
             <div class="product-item">
                 <div>
-                    <form action="" method="post">
-                        <a href="Thucphamdetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>">
+                    <form action="" method="post" >
+                        <a href="Docanhandetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>">
                             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
                         </a>
-                        <a href="Thucphamdetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>" class="name"><?php echo $product["name"]; ?></a>
+                        <a href="Docanhandetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">
                             <input value="<?php echo $product["price"]; ?>" style="display: none" id="gia" name="gia">
                             <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
-                            <label for="sl" style="font-weight: initial; font-size: 16px; margin-left: 70px">Quantity:</label>
+                            <label for="sl" style="font-weight: initial; font-size: 16px; margin-left: 50px">Quantity:</label>
                             <input value="1" style="width: 50px;outline: none; border: none; box-shadow: 1px 1px 2px #cccccc; border-radius: 8px" id="sl" name="sl">
                             <label for="gia" style="display: none">Giá</label>
                             <label for="id" style="display: none">ID</label>
@@ -121,7 +158,6 @@ $product = $project->getAllProduct1();
 
     </tbody>
 </table>
-
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
@@ -186,7 +222,9 @@ $product = $project->getAllProduct1();
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
+<script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
+
