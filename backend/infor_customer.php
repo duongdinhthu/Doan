@@ -40,6 +40,13 @@ $customer=$project->inforCustomer();
     .table a:hover{
         background-color: #654145;
     }
+    form input{
+        margin-right: 10px;
+        outline: none;
+        border: 1px solid grey;
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
 </style>
 <body>
 <h2 style="margin-top: 50px; margin-bottom: 50px; text-align: center; color: #f29f33; font-weight: bold">INFORMATION CUSTOMERS</h2>
@@ -49,10 +56,11 @@ $customer=$project->inforCustomer();
     <br>
 
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
-        Enter any information you want to search (name, account, phone number, address)</h2>
+        Enter any information you want to search <br>(name, account, phone number, address)</h2>
     <form action="search.php" method="post">
         <label for="name" > </label>
-        <input name="name" type="text" id="name" required class="form-control" placeholder="thu">
+        <input name="name" type="text" id="name" required placeholder="thu">
+        <br>
         <br>
         <button class="btn btn-warning" type="submit" >Search</button>
     </form>

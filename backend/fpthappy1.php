@@ -63,6 +63,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     .table a:hover{
         background-color: #654145;
     }
+    form input{
+        margin-right: 10px;
+        outline: none;
+        border: 1px solid grey;
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
+    form select{
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
 </style>
 <body>
 <h2 style="text-align: center; color: #f29f33; margin-top: 50px; margin-bottom: 50px; font-weight: bold">WELCOME TO STAFF AREA</h2>
@@ -74,11 +85,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         Enter the date to search</h2>
     <form action="" method="post">
         <label for="search" >From </label>
-        <input name="search" type="date" id="search" required class="form-control" value="2024-02-28">
+        <input name="search" type="date" id="search" required value="2024-02-28">
         <label for="search1" >To </label>
-        <input name="search1" type="date" id="search1" required class="form-control" value="2024-02-29">
+        <input name="search1" type="date" id="search1" required value="2024-02-29">
         <label for="search2" >Status </label>
-        <br>
         <select name="search2"  id="search2" class="status-select">
             <option value="pend processing">pend processing</option>
             <option value="done" style="background: #07ff07">done</option>
