@@ -76,12 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
 </style>
 <body>
-<h2 style="text-align: center; color: #f29f33; margin-top: 50px; margin-bottom: 50px; font-weight: bold">WELCOME TO STAFF AREA</h2>
+<h2 style="color: #f29f33;margin-bottom: 50px; margin-top: 50px; text-align: center; font-weight: bold">WELCOME TO  STAFF AREA</h2>
 
 <div class="container">
     <a href="logout.php" class="btn btn-danger">Logout</a>
-    <a href="book_tour1.php" class="btn btn-primary">Customers book tours</a>
-    <h2 style=" color: #f29f33; margin-top: 30px">
+    <a href="book_tour1.php" class="btn btn-success">Customers book tours</a>
+
+    <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
         Enter the date to search</h2>
     <form action="" method="post">
         <label for="search" >From </label>
@@ -100,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     </form>
     <br>
     <table class="table">
-        <h2 style="color: #f29f33; margin-bottom: 30px">List users</h2>
+        <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">List users</h2>
         <thead>
         <tr>
             <th>Account</th>
@@ -120,17 +121,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <td><?php echo $paycart['code'] ?></td>
                 <td><?php echo $paycart['payment'] ?></td>
                 <td><?php echo $paycart['trading_day'] ?></td>
-                <td><label>
-                        <select class="status-select">
-                                <option value=""><?php echo $paycart['status'] ?></option>
-                                <option value="1" style="background: #07ff07">done</option>
-                                <option value="2" style="background: #f29f33">delivering</option>
-                            </select>
-                    </label>
-                </td>
+                <td><select class="status-select">
+                        <option value=""><?php echo $paycart['status'] ?></option>
+                        <option value="1" style="background: #07ff07">done</option>
+                        <option value="2" style="background: #f29f33">delivering</option>
+                    </select></td>
+
                 <td><a href="order_detail2.php?action=detail&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>">Order Detail</a></td>
                 <td><a href="fpthappy1.php?action=done&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
                 <td><a href="fpthappy1.php?action=delivering&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
+
             </tr>
         <?php endforeach; ?>
         </tbody>
