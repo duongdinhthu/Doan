@@ -7,11 +7,11 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])) {
 include "project.php";
 $project = new projectFptHappy();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-$name=$_POST['name'];
-$price=$_POST['price'];
-$image=$_POST['image'];
-$type=$_POST['type'];
-$add = $project->addProduct($name,$price,$image,$type);
+    $name=$_POST['name'];
+    $price=$_POST['price'];
+    $image=$_POST['image'];
+    $type=$_POST['type'];
+    $add = $project->addProduct($name,$price,$image,$type);
 }
 
 ?>
@@ -24,7 +24,7 @@ $add = $project->addProduct($name,$price,$image,$type);
 </head>
 <body>
 <div>
-    <a href="fpthappy.php" class="btn btn-warning">Back</a>
+    <a href="fpthappy1.php" class="btn btn-warning">Back</a>
 
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
         ADD PRODUCT</h2>

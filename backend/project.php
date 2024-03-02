@@ -715,6 +715,25 @@ public function addBook($name,$phone,$email,$address)
     {
         $sql="insert into product(name,price,image,code)values ('$name','$price','$image','$type');";
         $this->conn->query($sql);
-        echo"ok";
+        echo"Thêm sp thành công!";
+    }
+    public function showStaff()
+    {
+        $carts = [];
+        $sql = " select * FROM account_staffs" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+
+    }
+    public function statusStaff( $username,$status)
+    {
+        $sql="update account_staffs set status='$status' where username = '$username' ";
+        $this->conn->query($sql);
+        echo "ok";
     }
 }

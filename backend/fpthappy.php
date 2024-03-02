@@ -84,7 +84,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <a href="logout.php" class="btn btn-danger">Logout</a>
     <a href="book_tour.php" class="btn btn-primary">Customers book tours</a>
     <a href="infor_customer.php" class="btn btn-primary">Customer information</a>
+    <a href="employye_manager.php" class="btn btn-primary">Employee manager</a>
     <a href="add_product.php" class="btn btn-success">Add product</a>
+
+
 
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
         Enter the date to search</h2>
