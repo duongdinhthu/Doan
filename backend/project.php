@@ -280,7 +280,7 @@ class projectFptHappy
     public function getAllProduct1()
     {
         $products = [];
-        $sql = "select * from product WHERE code = 'TP' ";
+        $sql = "select * from product WHERE code = 'TP' and status='stocking'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -292,7 +292,7 @@ class projectFptHappy
     public function getAllProduct2()
     {
         $products = [];
-        $sql = "select * from product where code = 'CN'";
+        $sql = "select * from product where code = 'CN' and status='stocking'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -304,7 +304,7 @@ class projectFptHappy
     public function getAllProduct3()
     {
         $products = [];
-        $sql = "select * from product where code = 'TY'";
+        $sql = "select * from product where code = 'TY' and status='stocking'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -316,7 +316,7 @@ class projectFptHappy
     public function getAllProduct4()
     {
         $products = [];
-        $sql = "select * from product where code = 'TOUR'";
+        $sql = "select * from product where code = 'TOUR' and status='stocking'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -328,7 +328,7 @@ class projectFptHappy
     public function getAllProduct5()
     {
         $products = [];
-        $sql = "select * from product where code = 'PACKAGE'";
+        $sql = "select * from product where code = 'PACKAGE' and status='stocking'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -341,7 +341,7 @@ class projectFptHappy
     public function getAllProduct6()
     {
         $products = [];
-        $sql = "select * from product where code = 'ORGANIZATIONAL'";
+        $sql = "select * from product where code = 'ORGANIZATIONAL' and status='stocking'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -734,6 +734,22 @@ public function addBook($name,$phone,$email,$address)
     {
         $sql="update account_staffs set status='$status' where username = '$username' ";
         $this->conn->query($sql);
-        echo "ok";
     }
+public function showProject()
+{
+    $carts = [];
+    $sql="select * from product";
+    $result = $this->conn->query($sql);
+    if($result->num_rows>0){
+        while($row=$result->fetch_assoc()){
+            $carts[]=$row;
+        }
+    }
+    return $carts;
+}
+public function statusProduct( $id ,$status)
+{
+    $sql="update product set status='$status' where pid = '$id' ";
+    $this->conn->query($sql);
+}
 }
