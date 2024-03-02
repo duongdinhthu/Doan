@@ -130,7 +130,7 @@ $product = $project->getAllProduct2();
         <a href="home.php">Home  > </a>
         <p>Essential items</p>
     </div>
-    <h2>ESSENTIAL ITEMS</h2>
+    <h2>PERSIONAL ITEMS</h2>
     <hr/>
 </div>
 <table >
@@ -141,7 +141,7 @@ $product = $project->getAllProduct2();
                 <div>
                     <form action="" method="post" >
                         <a href="Docanhandetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>">
-                            <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
+                            <img src="<?php echo $product["image"]; ?>" class="card-img-top"  alt="..." style="height: 300px">
                         </a>
                         <a href="Docanhandetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">

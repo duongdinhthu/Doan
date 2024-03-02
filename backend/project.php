@@ -280,7 +280,7 @@ class projectFptHappy
     public function getAllProduct1()
     {
         $products = [];
-        $sql = "select * from product WHERE (pid BETWEEN 1 AND 16) OR (pid BETWEEN 41 AND 48); ";
+        $sql = "select * from product WHERE code = 'TP' ";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -292,31 +292,7 @@ class projectFptHappy
     public function getAllProduct2()
     {
         $products = [];
-        $sql = "select * from product where pid BETWEEN 17 AND 40";
-        $result = $this->conn->query($sql);
-        if($result->num_rows>0){
-            while($row=$result->fetch_assoc()){
-                $products[]=$row;
-            }
-        }
-        return $products;
-    }
-    public function getAllProduct4()
-    {
-        $products = [];
-        $sql = "select * from product where pid BETWEEN 201 AND 204";
-        $result = $this->conn->query($sql);
-        if($result->num_rows>0){
-            while($row=$result->fetch_assoc()){
-                $products[]=$row;
-            }
-        }
-        return $products;
-    }
-    public function getAllProduct5()
-    {
-        $products = [];
-        $sql = "select * from product where pid BETWEEN 205 AND 208";
+        $sql = "select * from product where code = 'CN'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -328,7 +304,7 @@ class projectFptHappy
     public function getAllProduct3()
     {
         $products = [];
-        $sql = "select * from product where pid BETWEEN 51 AND 78";
+        $sql = "select * from product where code = 'TY'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -337,10 +313,35 @@ class projectFptHappy
         }
         return $products;
     }
+    public function getAllProduct4()
+    {
+        $products = [];
+        $sql = "select * from product where code = 'TOUR'";
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $products[]=$row;
+            }
+        }
+        return $products;
+    }
+    public function getAllProduct5()
+    {
+        $products = [];
+        $sql = "select * from product where code = 'PACKAGE'";
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $products[]=$row;
+            }
+        }
+        return $products;
+    }
+
     public function getAllProduct6()
     {
         $products = [];
-        $sql = "select * from product where pid BETWEEN 209 AND 212";
+        $sql = "select * from product where code = 'ORGANIZATIONAL'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -709,5 +710,11 @@ public function addBook($name,$phone,$email,$address)
             }
         }
         return $carts;
+    }
+    public function addProduct($name,$price,$image,$type)
+    {
+        $sql="insert into product(name,price,image,code)values ('$name','$price','$image','$type');";
+        $this->conn->query($sql);
+        echo"ok";
     }
 }

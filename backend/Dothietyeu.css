@@ -1,5 +1,7 @@
+
 .product-boxes{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding-top: 50px;
     padding-left: 10%;
     background-color: #FEF7EF;
