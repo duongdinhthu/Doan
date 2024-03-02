@@ -261,7 +261,7 @@ $paycart = $project->getAllPay($username);
 </div>
 
 <div class="backhome">
-    <a href="home.php?action=deletepay">Back to Home</a>
+    <a href="home.php?">Back to Home</a>
 </div>
 </div>
 

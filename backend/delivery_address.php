@@ -1,14 +1,12 @@
 <?php
 session_start();
 //kiểm tra session
-
-include "project.php";
-$project = new projectFptHappy();
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location:http://localhost:63342/Doan/frontend/home.html");
+    header("Location:http://localhost:63342/Doan/backend/login.php");
     exit;
 }
-
+include "project.php";
+$project = new projectFptHappy();
 $username = $_GET['username'];
 $random_code =$project->generateRandomCode();
 $infor= $project->inforCustomerByUser($username);
@@ -220,45 +218,15 @@ $totalcart = $project->totalShow($username);
         </div>
         <h3 style="text-align: center; margin-top: 10px">Payment Methods</h3>
         <label for="code"></label><input type="text" id="code" name="code" value="<?php echo $random_code ?>" required style="display: none">
-        <form>
             <input style="margin-left: 30px" type="radio" id="payment" name="payment" value="COD" required >
             <label for="payment">COD</label><br>
             <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="Internet Banking" required >
             <label for="">Internet Banking</label><br>
             <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="VISA, MasterCard" required >
             <label for="payment">VISA, MasterCard</label><br>
-            <div style="display: flex; justify-content: end; margin-right: 50px">
-                <button class="order" type="submit" required>Order</button>
-            </div>
-        </form>
+            <button style="display: flex; justify-content: end; margin-right: 50px" class="order" type="submit" required>Order</button>
         <br>
     </form>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const orderButton = document.querySelector('.order');
-
-            orderButton.addEventListener('click', function (event) {
-                event.preventDefault();
-
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "Do you want to place this order?",
-                    icon: 'question',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, place order'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-
-                        event.target.closest('form').submit();
-                    }
-                });
-            });
-        });
-    </script>
-
-
 </div>
 <div class="footer">
     <div class="footer0">
