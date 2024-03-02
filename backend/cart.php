@@ -35,6 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $product_id=$_POST['productid'];
     $updatequantity=$carts->updateQuantity($quantity,$username,$product_id);
 }
+$delete = $carts->deleCode();
+
 $updatetotalpaycart = $carts->totalPayCart($username);
 $updatetotalprice = $carts->totalprice($username);
 $updatetotalcart= $carts-> totalCart($username);

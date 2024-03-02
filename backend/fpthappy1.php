@@ -7,6 +7,8 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])) {
 include "project.php";
 $project = new projectFptHappy();
 $day = $_GET['day'];
+$delete = $project->deleCode();
+
 if (isset($_GET['action']) && $_GET['action'] === 'done' && isset($_GET['code'])&& isset($_GET['username'])&&isset($_GET['day'])) {
     $done= $_GET['action'];
     $code = $_GET['code'];
@@ -32,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 }else{
     $paycart = $project->oder3();
 }
+
 
 ?>
 <!DOCTYPE html>
