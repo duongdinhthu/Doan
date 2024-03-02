@@ -29,7 +29,7 @@ $product= $project->showProject();
 </head>
 <body>
 <div>
-    <a href="fpthappy.php" class="btn btn-warning">Back</a>
+    <a href="fpthappy1.php" class="btn btn-warning">Back</a>
 
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
         ADD PRODUCT</h2>

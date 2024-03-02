@@ -425,7 +425,7 @@ class projectFptHappy
     }
     public function deleCode()
     {
-        $sql = "DELETE FROM cart WHERE code IS NULL;";
+        $sql = "DELETE FROM cart WHERE code IS NULL ;";
         $result = $this->conn->query($sql);
     }
     public function getAllDeleteCart($username)
