@@ -23,8 +23,9 @@ if ($conn) {
 } else {
     echo "";
 }
-
 $username=$_SESSION['username'];
+$paycart = $project->getAllPay($username);
+
 $name = $_POST['name'];
 $phone=$_POST['phone'];
 $address= $_POST['address'];
@@ -32,7 +33,6 @@ $cod = $_POST['payment'];
 $totalcart=$_POST['totalcart'];
 $code = $_POST['code'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
     $sql = "update cart set hidden = 2, hidden_customer = 4,name='$name',phone='$phone',address='$address',payment='$cod',code='$code' where username = '$username' and hidden = 1";
     $result = mysqli_query($conn,$sql);
 ?>
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php
 }
 
-$paycart = $project->getAllPay($username);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

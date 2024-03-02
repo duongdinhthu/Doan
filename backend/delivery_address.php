@@ -224,8 +224,9 @@ $totalcart = $project->totalShow($username);
             <label for="">Internet Banking</label><br>
             <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="VISA, MasterCard" required >
             <label for="payment">VISA, MasterCard</label><br>
-            <button style="display: flex; justify-content: end; margin-right: 50px" class="order" type="submit" required>Order</button>
+
         <br>
+        <button style="display: flex; justify-content: end; margin-right: 50px" class="order" type="submit" required>Order</button>
     </form>
 </div>
 <div class="footer">
