@@ -100,7 +100,7 @@ $product = $project->getAllProduct6();
         <a href="Dichvutochucdetail.php" class="name">Powder Passing Game in the Thung Lung Vang (Dalat)</a>
         <h5 class="cost">
             $199 <small><del>$239</del></small>
-            <a href="../backend/login.php" class="buy-button">Contact Us</a>
+            <a href="Thanhtoandichvutochuc.php" class="buy-button">Contact Us</a>
         </h5>
     </div>
     <div>
