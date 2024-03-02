@@ -1,0 +1,87 @@
+
+.product-boxes{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 10%;
+    background-color: #FEF7EF;
+    padding-bottom: 100px;
+}
+.product-boxes div{
+    outline: 0 !important;
+    width: 300px;
+    text-align: start;
+    border: none;
+    background-color: #FEF7EF;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+.product-boxes div img {
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.name{
+    text-decoration: none !important;
+    color: grey;
+    transition: all 0.3s ease;
+}
+.name:hover{
+    color: #F29F33;
+}
+.cost{
+    color: #F29F33;
+    margin-top: 10px;
+}
+.cost del{
+    color: grey;
+    padding-left: 10px;
+}
+.buy-button{
+    outline: none !important;
+    border: none;
+    color: white;
+    text-decoration: none !important;
+    background-color: #f29f33;
+    padding: 5px 20px 5px 20px;
+    margin-left: 40px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+.buy-button:hover{
+    background-color: #654145 ;
+    color: white;
+}
+.text{
+    margin-top: 30px;
+    text-align: center;
+}
+.text div{
+    justify-content: center;
+    display: flex;
+}
+.text div a{
+    text-decoration: none;
+    color: #654145;
+    transition: 0.3s ease-in-out;
+    font-size: 18px;
+}
+.text div a:hover{
+    color: #f29f33;
+}
+.text div p{
+    margin-left: 5px;
+    color: #f29f33;
+    font-weight: bold;
+    font-size: 18px;
+}
+.text h2{
+    color: #f29f33;
+    font-weight: bold;
+}
+.text hr{
+    width: 100px;
+    background-color: #f29f33;
+}
+
+
+

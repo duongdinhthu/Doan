@@ -20,6 +20,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
+    <script src="search.js"></script>
     <style>
         .news {
             max-width: 800px;
@@ -105,9 +106,12 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <div class="header">
         <div class="header1">
             <img src="img/logo.webp" alt="logo">
-            <label>
-                <input type="text" placeholder="Search">
+            <label for="search">
+                <input type="text" id="search" placeholder="Search">
                 <i class="fa-solid fa-magnifying-glass"></i>
+                <div id="searchResults">
+                    <!-- Kết quả tìm kiếm hiển thị -->
+                </div>
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>

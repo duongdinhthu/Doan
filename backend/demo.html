@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Thêm</title>
+    <style>
+        #fullContent {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="card text-center">
+    <div class="img-card">
+        <img src="./imageTinTuc/img200.webp" alt="Image"/>
+    </div>
+    <div class="card-body" id="fullContent">
+        <h5 class="card-title">THÔNG BÁO NGHỈ LỄ QUỐC KHÁNH VIỆT NAM 2/9/2023</h5>
+        <!-- Nội dung tin tức -->
+        <p>Kính gửi Quý khách hàng và đối tác, Công Ty TNHH FPT HAPPY trân trọng thông báo lịch nghỉ lễ Quốc Khánh 2/9/2023 của các chi nhánh: Chi nhánh Hồ Chí Minh: …</p>
+        <a href="cardtitle1.html" class="btn btn-primary" onclick="toggleContent()">Ẩn đi</a>
+    </div>
+    <div class="card-footer text-muted">
+        2 days ago
+    </div>
+</div>
+
+<!-- Thêm nút "Xem thêm" -->
+<button id="buttonShow" onclick="toggleContent()">Xem thêm</button>
+
+<script>
+    function toggleContent() {
+        var fullContent = document.getElementById("fullContent");
+        var buttonShow = document.getElementById("buttonShow");
+
+        // Nếu nội dung đang ẩn, hiển thị và đổi nút thành "Ẩn đi"
+        if (fullContent.style.display === "none") {
+            fullContent.style.display = "block";
+            buttonShow.innerText = "Ẩn đi";
+        }
+        // Ngược lại, ẩn đi và đổi nút thành "Xem thêm"
+        else {
+            fullContent.style.display = "none";
+            buttonShow.innerText = "Xem thêm";
+        }
+    }
+</script>
+</body>
+</html>
+
