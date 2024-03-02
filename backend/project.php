@@ -560,7 +560,7 @@ class projectFptHappy
     }
     public function inforCustomerByName($name){
         $customer = [];
-        $sql = "select * from account_customer where name='$name'";
+        $sql = "select * from account_customer where name='$name' or username='$name' or phone='$name' or address='$name'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){

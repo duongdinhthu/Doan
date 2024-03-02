@@ -52,7 +52,7 @@ $customer=$project->inforCustomer();
         Enter the name of the customer you want to search</h2>
     <form action="search.php" method="post">
         <label for="name" >Name: </label>
-        <input name="name" type="text" id="name" required class="form-control" placeholder="01">
+        <input name="name" type="text" id="name" required class="form-control" placeholder="thu">
         <br>
         <button class="btn btn-warning" type="submit" >Search</button>
     </form>

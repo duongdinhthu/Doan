@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 <div class="container">
     <a href="logout.php" class="btn btn-danger">Logout</a>
-    <a href="book_tour.php" class="btn btn-primary">Customers book tours</a>
+    <a href="book_tour1.php" class="btn btn-primary">Customers book tours</a>
     <h2 style=" color: #f29f33; margin-top: 30px">
         Enter the date to search</h2>
     <form action="" method="post">

@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <h2 style="text-align: center; color: #f29f33; font-weight: bold; margin-top: 50px; margin-bottom: 50px">CUSTOMERS BOOK TOURS</h2>
 <div class="container">
     <a href="logout.php" class="btn btn-danger">Logout</a>
-    <a href="fpthappy.php" class="btn btn-success">Back</a>
+    <a href="fpthappy1.php" class="btn btn-success">Back</a>
     <h2 style="margin-top: 30px; color: #f29f33">
         Enter the date to search</h2>
     <form action="" method="post">
