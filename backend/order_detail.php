@@ -1,19 +1,17 @@
 <?php
-
 session_start();
-//kiểm tra session
-if (!isset($_SESSION["username"]) && !isset($_SESSION['password'])) {
-    header("Location:http://localhost:63342/Doan/frontend/home.html");
+if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])) {
+    header("Location: login.php");
     exit;
 }
-$username = $_SESSION["username"];
 include "project.php";
 $project = new projectFptHappy();
 $code = $_GET['code'];
+$username = $_GET['username'];
 $update = $project->updateTotalByCode($username,$code);
+
 $show = $project->totalShowByCode($username,$code);
 $detail = $project->detailCodeOrder($username,$code);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,159 +23,58 @@ $detail = $project->detailCodeOrder($username,$code);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dothietyeu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
+<style>
+    body{
+        background-color: #FEF7EF;
+    }
+    .container{
+        background-color: white;
+        padding: 20px 30px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px #cccccc;
+    }
+</style>
 <body>
-<header>
-    <div class="header">
-        <div class="header1">
-            <img src="img/logo.webp" alt="logo">
-            <label>
-                <input type="text" placeholder="Search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </label>
-            <div class="hotline">
-                <i class="fa-solid fa-phone"></i>
-
-                <p>Hotline<br>78910JQKA</p>
-                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-        <div class="d-flex">
-            <a href="home.php" class="btn btn-outline">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Games</button>
-                <div class="dropdown-content">
-                    <a href="Trochoitreem.php">Kids</a>
-                    <a href="Trochoigiadinh.php">Family</a>
-                    <a href="Trochoinguoilon.php">Adults</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Products</button>
-                <div class="dropdown-content">
-                    <a href="Docanhan.php">Personal items</a>
-                    <a href="Dothietyeu.php">Essentials</a>
-                    <a href="Thucpham.php">Food</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Services</button>
-                <div class="dropdown-content">
-                    <a href="Dichvutrongoi.php">Packages</a>
-                    <a href="Dichvutour.php"> Tours</a>
-                    <a href="Dichvutochuc.php">Organizing</a>
-                </div>
-            </div>
-            <a href="tintuc.php" class="btn btn-outline">News</a>
-            <a href="lienhe.php" class="btn btn-outline">Contact</a>
-            <a href="user.php" class="btn btn-outline">Account</a>
-        </div>
-    </div>
-    <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
-</header>
-<table class="table">
-    <h1>
-        Code order:<?php echo $code ?></h1>
-    <thead>
-    <tr>
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th>List Price($)</th>
-        <th>Quantity</th>
-        <th>Total Price($)</th>
-        <th>Payment</th>
-        <th>Status</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($detail as $detail):
-        ?>
+<a style="margin-top: 50px; margin-bottom: 10px; margin-left: 220px; border-radius: 10px" class="btn btn-outline-primary" href="fpthappy.php">Back</a>
+<div class="container">
+    <table class="table">
+        <h1 style="color: #f29f33; text-align: center">
+            Code order:<?php echo $code ?></h1>
+        <thead>
         <tr>
-            <td><img src="<?php echo $detail["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
-            </td>
-            <td><?php echo $detail['name'] ?></td>
-            <td><?php echo $detail['list_price'] ?></td>
-            <td><?php echo $detail['SUM(c.quantity)'] ?></td>
-            <td><?php echo $detail['SUM(c.total_price)'] ?></td>
-            <td><?php echo $detail['payment'] ?></td>
-            <td><?php echo $detail['status'] ?></td>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>List Price($)</th>
+            <th>Quantity</th>
+            <th>Total Price($)</th>
+            <th>Payment</th>
+            <th>Status</th>
         </tr>
-    <?php endforeach; ?>
-    </tbody>
-</table>
-<h1 style="margin-left: 1300px"><?php echo "$".$show; ?></h1>
-
-<div class="footer">
-    <div class="footer0">
-        <div class="footer1">
-            <img src="img/logo.webp" alt="">
-            <div class="icon">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-twitter"></i>
-            </div>
-            <p>SUBSCRIBE TO NEWSLETTER</p>
-            <label>
-                <input type="email" placeholder="Enter email address">
-                <button>SEND</button>
-            </label>
-            <div class="contact">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>.................................</p>
-            </div>
-            <div class="contact">
-                <i class="fa-solid fa-phone"></i>
-                <p>0910JQKA</p>
-            </div>
-            <div class="contact">
-                <i class="fa-solid fa-headphones"></i>
-                <p>support@gmail.com</p>
-            </div>
-        </div>
-        <div class="footer2">
-            <div class="paysupport">
-                <div class="Support">
-                    <h3>ABOUT US</h3><br>
-                    <a href="#">Company</a><br>
-                    <a href="#">Address</a><br>
-                    <a href="#">Phone number</a><br>
-                    <a href="#">Links</a><br>
-                </div>
-                <div class="Support">
-                    <h3>CUSTOMER SUPPORT</h3><br>
-                    <a href="#">Contact</a><br>
-                    <a href="#">Handling complaints</a><br>
-                    <a href="#">Usage guide</a><br>
-                    <a href="#">Warranty, returns</a><br>
-                    <a href="#">Contact</a><br>
-                </div>
-                <div class="Support">
-                    <h3>SERVICES</h3><br>
-                    <a href="#">Products</a><br>
-                    <a href="#">Game organization services</a><br>
-                    <a href="#">Payment</a><br>
-                </div>
-            </div>
-            <div class="pay">
-                <h3>PAYMENT METHODS</h3>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-        </div>
+        </thead>
+        <tbody>
+        <?php foreach ($detail as $detail):
+            ?>
+            <tr>
+                <td><img src="<?php echo $detail["image"]; ?>"style="width: 70px" class="card-img-top" alt="...">
+                </td>
+                <td><?php echo $detail['name'] ?></td>
+                <td><?php echo $detail['list_price'] ?></td>
+                <td><?php echo $detail['SUM(c.quantity)'] ?></td>
+                <td><?php echo $detail['SUM(c.total_price)'] ?></td>
+                <td><?php echo $detail['payment'] ?></td>
+                <td><?php echo $detail['status'] ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+    <div style="display: flex; color: #f29f33">
+        <h2>Total product price: </h2>
+        <h2 style="margin-left: 20px"><?php echo "$".$show; ?></h2>
     </div>
-    <hr/>
-    <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
 
-<script src="trangchu.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
-

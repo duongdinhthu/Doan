@@ -100,7 +100,7 @@ $delete = $project->deleCode();
 </header>
 <div class="text">
     <div>
-        <a href="../frontend/home.html">Home  > </a>
+        <a href="home.php">Home  > </a>
         <p>Cart</p>
     </div>
     <h2 >PURCHASED ORDERS</h2>

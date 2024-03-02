@@ -57,14 +57,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
     .table a{
         text-decoration: none;
-        color: white;
-        background-color: #f29f33;
+        color: #f29f33;
+        border: 1px solid #f29f33;
         padding: 8px 12px;
         border-radius: 10px;
         transition: 0.3s ease-in-out;
     }
     .table a:hover{
-        background-color: #654145;
+        background-color: #f29f33;
+        color: white;
     }
     form input{
         margin-right: 10px;
@@ -82,9 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <h2 style="color: #f29f33;margin-bottom: 50px; margin-top: 50px; text-align: center; font-weight: bold">WELCOME TO  STAFF AREA</h2>
 
 <div class="container">
-    <a href="logout.php" class="btn btn-danger">Logout</a>
-    <a href="book_tour1.php" class="btn btn-success">Customers book tours</a>
-    <a href="add_product1.php" class="btn btn-success">Add product</a>
+    <a href="logout.php" class="btn btn-outline-danger" style="border-radius: 10px">Logout</a>
+    <a href="book_tour1.php" class="btn btn-outline-secondary" style="border-radius: 10px">Customers book tours</a>
+    <a href="add_product1.php" class="btn btn-outline-success" style="border-radius: 10px">Add product</a>
 
 
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
@@ -102,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         </select>
         <br>
         <br>
-        <button class="btn btn-warning" type="submit" >Search</button>
+        <button class="btn btn-outline-warning" type="submit" style="border-radius: 10px" >Search</button>
     </form>
     <br>
     <table class="table">

@@ -56,14 +56,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
     .table a{
         text-decoration: none;
-        color: white;
-        background-color: #f29f33;
+        color: #f29f33;
+        border: 1px solid #f29f33;
         padding: 8px 12px;
         border-radius: 10px;
         transition: 0.3s ease-in-out;
     }
     .table a:hover{
-        background-color: #654145;
+        background-color: #f29f33;
+        color: white;
     }
     form input{
         margin-right: 10px;
@@ -81,11 +82,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <h2 style="color: #f29f33;margin-bottom: 50px; margin-top: 50px; text-align: center; font-weight: bold">WELCOME TO THE ADMIN AREA</h2>
 
 <div class="container">
-    <a href="logout.php" class="btn btn-danger">Logout</a>
-    <a href="book_tour.php" class="btn btn-primary">Customers book tours</a>
-    <a href="infor_customer.php" class="btn btn-primary">Customer information</a>
-    <a href="employye_manager.php" class="btn btn-primary">Employee manager</a>
-    <a href="add_product.php" class="btn btn-success">Add product</a>
+    <a href="logout.php" class="btn btn-outline-danger" style="border-radius: 10px">Logout</a>
+    <a href="book_tour.php" class="btn btn-outline-secondary" style="border-radius: 10px">Customers book tours</a>
+    <a href="infor_customer.php" class="btn btn-outline-secondary" style="border-radius: 10px">Customer information</a>
+    <a href="employye_manager.php" class="btn btn-outline-secondary" style="border-radius: 10px">Employee manager</a>
+    <a href="add_product.php" class="btn btn-outline-success" style="border-radius: 10px">Add product</a>
 
 
 
@@ -104,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         </select>
         <br>
         <br>
-        <button class="btn btn-warning" type="submit" >Search</button>
+        <button class="btn btn-outline-warning" type="submit" style="border-radius: 10px" >Search</button>
     </form>
     <br>
     <table class="table">
@@ -134,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                         <option value="2" style="background: #f29f33">delivering</option>
                     </select></td>
 
-                <td><a href="order_detail2.php?action=detail&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>">Order Detail</a></td>
+                <td><a href="order_detail.php?action=detail&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>">Order Detail</a></td>
                 <td><a href="fpthappy.php?action=done&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
                 <td><a href="fpthappy.php?action=delivering&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
 

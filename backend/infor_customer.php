@@ -31,28 +31,29 @@ $customer=$project->inforCustomer();
     }
     .table a{
         text-decoration: none;
-        color: white;
-        background-color: #f29f33;
+        color: #f29f33;
+        border: 1px solid #f29f33;
         padding: 8px 12px;
         border-radius: 10px;
         transition: 0.3s ease-in-out;
     }
     .table a:hover{
-        background-color: #654145;
+        background-color: #f29f33;
+        color: white;
     }
     form input{
         margin-right: 10px;
         outline: none;
         border: 1px solid grey;
-        padding: 3px 10px;
+        padding: 5px 10px;
         border-radius: 10px;
     }
 </style>
 <body>
 <h2 style="margin-top: 50px; margin-bottom: 50px; text-align: center; color: #f29f33; font-weight: bold">INFORMATION CUSTOMERS</h2>
 <div class="container">
-    <a href="logout.php" class="btn btn-danger">Logout</a>
-    <a href="fpthappy.php" class="btn btn-success">Back</a>
+    <a href="logout.php" class="btn btn-outline-danger" style="border-radius: 10px">Logout</a>
+    <a href="fpthappy.php" class="btn btn-outline-primary" style="border-radius: 10px">Back</a>
     <br>
 
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
@@ -62,7 +63,7 @@ $customer=$project->inforCustomer();
         <input name="name" type="text" id="name" required placeholder="thu">
         <br>
         <br>
-        <button class="btn btn-warning" type="submit" >Search</button>
+        <button class="btn btn-outline-warning" type="submit"  style="border-radius: 10px">Search</button>
     </form>
     <br>
     <table class="table">

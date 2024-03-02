@@ -61,8 +61,8 @@ if (isset($_GET['action']) && isset($_GET['username'])) {
 <h2 style="color: #f29f33;margin-bottom: 50px; margin-top: 50px; text-align: center; font-weight: bold">WELCOME TO THE ADMIN AREA</h2>
 
 <div class="container">
-    <a href="logout.php" class="btn btn-danger">Logout</a>
-    <a href="fpthappy.php" class="btn btn-warning">Back</a>
+    <a href="logout.php" class="btn btn-outline-danger" style="border-radius: 10px">Logout</a>
+    <a href="fpthappy.php" class="btn btn-outline-primary" style="border-radius: 10px">Back</a>
 
     <table class="table">
         <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">List users</h2>
