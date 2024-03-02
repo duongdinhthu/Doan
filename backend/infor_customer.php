@@ -49,9 +49,9 @@ $customer=$project->inforCustomer();
     <br>
 
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
-        Enter the name of the customer you want to search</h2>
+        Enter any information you want to search (name, account, phone number, address)</h2>
     <form action="search.php" method="post">
-        <label for="name" >Name: </label>
+        <label for="name" > </label>
         <input name="name" type="text" id="name" required class="form-control" placeholder="thu">
         <br>
         <button class="btn btn-warning" type="submit" >Search</button>
