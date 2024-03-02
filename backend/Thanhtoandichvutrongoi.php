@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $address = $_POST['address'];
     $sql = "insert into book_tour(name,phone,email,address)values('$name','$phone','$email','$address')";
     $result = mysqli_query($conn,$sql);
-?>
+    ?>
     <script>
         swal({
             title: "Success",
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             icon: "success",
         });
     </script>
-<?php
+    <?php
 }
 ?>
 <!DOCTYPE html>
@@ -144,14 +144,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="text">
     <div>
         <a href="home.php">Home  > </a>
-        <p>Services</p>
+        <p>Tour service</p>
     </div>
-    <h2>BOOKING ORGANIZING SERVICE INFORMATION</h2>
+    <h2>BOOKING TOUR SERVICE INFORMATION</h2>
     <hr/>
 </div>
 <div class="container">
     <div class="left-column">
-        <h2>BOOKING INFORMATION</h2>
+        <h2>BOOKING  INFORMATION</h2>
 
         <form action="" method="post">
             <label for="full_name">Full Name<br></label><br>
@@ -168,10 +168,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="right-column">
         <h2>PRODUCT / SERVICE INFORMATION</h2>
-        <p>Adventure Camping in Ha Long: Kayak Tour in Ha Long-Discovering Thien Cung Cave</p>
+        <p>Golden Stream Lake, Lonely Pine Tree: Kayak Tour in Ha Long-Discovering Thien Cung Cave</p>
         <p>Departure Date: 03/07/2024</p>
         <p>Available Seats: 15</p>
-        <img src="https://phongnhatrips.com/wp-content/uploads/2022/06/2-5.jpeg" style="width:500px;height:300px;">
+        <img src="https://kenhhomestay.com/wp-content/uploads/2022/06/cay-thong-co-don-da-lat-1.jpg" style="width:500px;height:300px;">
         <table>
             <tr>
                 <th>Type</th>
@@ -179,11 +179,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </tr>
             <tr>
                 <td>Adults</td>
-                <td>199$</td>
+                <td>124$</td>
             </tr>
             <tr>
                 <td>Children (6-11 years old)</td>
-                <td>199$</td>
+                <td>124$</td>
             </tr>
             <tr>
                 <td>Children (2-5 years old)</td>
