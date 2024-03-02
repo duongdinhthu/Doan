@@ -56,6 +56,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Book a Tour</title>
     <link rel="stylesheet" href="Trochoitreem.css">
 </head>
+<style>
+    body{
+        background-color: #FEF7EF;
+    }
+    .text{
+        margin-top: 30px;
+        text-align: center;
+    }
+    .text div{
+        justify-content: center;
+        display: flex;
+    }
+    .text div a{
+        text-decoration: none;
+        color: #654145;
+        transition: 0.3s ease-in-out;
+        font-size: 18px;
+    }
+    .text div a:hover{
+        color: #f29f33;
+    }
+    .text div p{
+        margin-left: 5px;
+        color: #f29f33;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .text h2{
+        color: #f29f33;
+        font-weight: bold;
+    }
+    .text hr{
+        width: 100px;
+        background-color: #f29f33;
+    }
+</style>
 <body>
 <header>
     <div class="header">
@@ -105,7 +141,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
-
+<div class="text">
+    <div>
+        <a href="home.php">Home  > </a>
+        <p>Tour service</p>
+    </div>
+    <h2>BOOKING INFORMATION</h2>
+    <hr/>
+</div>
 <div class="container">
     <div class="left-column">
         <h2>BOOKING INFORMATION</h2>
