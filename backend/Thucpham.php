@@ -1,10 +1,6 @@
 <?php
 session_start();
-//kiểm tra session
-if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
-    exit;
-}
+
 ?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
@@ -24,6 +20,12 @@ if ($conn) {
     echo "";
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //kiểm tra session
+    if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
+
+        header("Location:http://localhost:63342/Doan/backend/login.php");
+        exit;
+    }else{
     $username=$_SESSION["username"];
     $sl = $_POST['sl'];
     $id = $_POST['id'];
@@ -52,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             });
         </script>
         <?php
+    }
     }
 }
 

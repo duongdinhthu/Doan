@@ -1,14 +1,9 @@
 <?php
 session_start();
 //kiểm tra session
-if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
-    exit;
-}
+
 include "project.php";
 $project = new projectFptHappy();
-$username = $_SESSION["username"];
-$infor=$project->inforByUserName($username);
 ?>
 <!DOCTYPE html>
 <html lang="en">

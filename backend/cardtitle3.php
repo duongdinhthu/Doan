@@ -1,10 +1,7 @@
 <?php
 session_start();
 //kiểm tra session
-if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
-    exit;
-}
+
 ?>
 
 <!DOCTYPE html>

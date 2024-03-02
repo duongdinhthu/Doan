@@ -1,17 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
-    exit;
-}
-$username = $_SESSION["username"];
-include "project.php";
-$carts = new projectFptHappy();
-if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
 
-    $deletepay = $carts->deletePay($username);
-}
 ?>
 
 <!DOCTYPE html>

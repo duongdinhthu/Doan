@@ -30,47 +30,49 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="header">
         <div class="header1">
             <img src="img/logo.webp" alt="logo">
-            <label>
-                <input type="text" placeholder="Search">
+            <label for="search">
+                <input type="text" id="search" placeholder="Search">
                 <i class="fa-solid fa-magnifying-glass"></i>
+                <div id="searchResults">
+                    <!-- Kết quả tìm kiếm hiển thị -->
+                </div>
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
 
-                <p>Hotline<br>8910JQKA</p>
+                <p>Hotline<br>78910JQKA</p>
                 <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
-
             </div>
         </div>
         <div class="d-flex">
-            <a href="../frontend/home.html" class="btn btn-outline">Home</a>
+            <a href="home.php" class="btn btn-outline">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="../frontend/Trochoitreem.html">Kids</a>
-                    <a href="../frontend/Trochoigiadinh.html">Family</a>
-                    <a href="../frontend/Trochoinguoilon.html">Adults</a>
+                    <a href="Trochoitreem.php">Kids</a>
+                    <a href="Trochoigiadinh.php">Family</a>
+                    <a href="Trochoinguoilon.php">Adults</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="../frontend/Docanhan.html">Personal items</a>
-                    <a href="../frontend/Dothietyeu.html">Essentials</a>
-                    <a href="../frontend/Thucpham.html">Food</a>
+                    <a href="Docanhan.php">Personal items</a>
+                    <a href="Dothietyeu.php">Essentials</a>
+                    <a href="Thucpham.php">Food</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="../frontend/Dichvutrongoi.html">Packages</a>
-                    <a href="../frontend/Dichvutour.html"> Tours</a>
-                    <a href="../frontend/Dichvutochuc.html">Organizing</a>
+                    <a href="Dichvutrongoi.php">Packages</a>
+                    <a href="Dichvutour.php"> Tours</a>
+                    <a href="Dichvutochuc.php">Organizing</a>
                 </div>
             </div>
-            <a href="../frontend/tintuc.html" class="btn btn-outline">News</a>
-            <a href="../frontend/lienhe.html" class="btn btn-outline">Contact</a>
-            <a href="login.php" class="btn btn-outline">Account</a>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
+            <a href="user.php" class="btn btn-outline">Account</a>
         </div>
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">

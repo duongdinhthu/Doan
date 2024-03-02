@@ -1,10 +1,7 @@
 <?php
 session_start();
 //kiểm tra session
-if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
-    exit;
-}
+
 ?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
@@ -29,32 +26,36 @@ if ($conn) {
     echo "";
 }
 if (isset($_GET['action']) && $_GET['action'] === 'add') {
-    $username=$_SESSION["username"];
-
-    $sql="select * from cart where username='$username' and product_id='$id' and hidden = 1";
-    $result = mysqli_query($conn,$sql);
-    if($result->num_rows>0){
-        ?>
-        <script>
-            swal({
-                title: "Failed",
-                text: "This item is already in the cart",
-                icon: "error",
-            });
-        </script>
-        <?php
+    if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
+        header("Location:http://localhost:63342/Doan/backend/login.php");
+        exit;
     }else{
-        $sql1 = "insert into cart(username,product_id,quantity,list_price)values('$username','$id','$sl','$gia')";
-        $result1 = mysqli_query($conn,$sql1);
-        ?>
-        <script>
-            swal({
-                title: "Success",
-                text: "The item was successfully added to the cart",
-                icon: "success",
-            });
-        </script>
-        <?php
+        $username=$_SESSION["username"];
+        $sql="select * from cart where username='$username' and product_id='$id' and hidden = 1";
+        $result = mysqli_query($conn,$sql);
+        if($result->num_rows>0){
+            ?>
+            <script>
+                swal({
+                    title: "Failed",
+                    text: "This item is already in the cart",
+                    icon: "error",
+                });
+            </script>
+            <?php
+        }else{
+            $sql1 = "insert into cart(username,product_id,quantity,list_price)values('$username','$id','$sl','$gia')";
+            $result1 = mysqli_query($conn,$sql1);
+            ?>
+            <script>
+                swal({
+                    title: "Success",
+                    text: "The item was successfully added to the cart",
+                    icon: "success",
+                });
+            </script>
+            <?php
+        }
     }
 }
 

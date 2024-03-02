@@ -1,20 +1,8 @@
 <?php
 session_start();
 //kiểm tra session
-if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
-    exit;
-}
 include "project.php";
 $project = new projectFptHappy();
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username=$_SESSION["username"];
-    $sl = $_POST['sl'];
-    $id = $_POST['id'];
-    $gia = $_POST['gia'];
-    $cart = $project->addCart2($username,$id,$sl,$gia);
-}
 $product = $project->getAllProduct5();
 
 ?>

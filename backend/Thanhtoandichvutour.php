@@ -2,10 +2,7 @@
 <?php
 session_start();
 // Check session
-if (!isset($_SESSION["username"]) && !isset($_SESSION['password'])) {
-    header("Location:http://localhost:63342/DoanKI1/frontend/home.html");
-    exit;
-}
+
 ?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
