@@ -32,15 +32,19 @@ $product = $project->getAllProduct6();
     <title>Home</title>
     <link rel="stylesheet" href="Dichvutour.css">
     <link rel="stylesheet" href="Dichvutochuc.css">
+    <script src="search.js"></script>
 </head>
 <body>
 <header>
     <div class="header">
         <div class="header1">
             <img src="img/logo.webp" alt="logo">
-            <label>
-                <input type="text" placeholder="Search">
+            <label for="search">
+                <input type="text" id="search" placeholder="Search">
                 <i class="fa-solid fa-magnifying-glass"></i>
+                <div id="searchResults">
+                    <!-- Kết quả tìm kiếm hiển thị -->
+                </div>
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>

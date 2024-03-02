@@ -21,6 +21,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="Dichvutochuc.css">
+    <script src="search.js"></script>
     <style>
         .announcement {
             max-width: 800px;
@@ -106,9 +107,12 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     <div class="header">
         <div class="header1">
             <img src="img/logo.webp" alt="logo">
-            <label>
-                <input type="text" placeholder="Search">
+            <label for="search">
+                <input type="text" id="search" placeholder="Search">
                 <i class="fa-solid fa-magnifying-glass"></i>
+                <div id="searchResults">
+                    <!-- Kết quả tìm kiếm hiển thị -->
+                </div>
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>

@@ -1,10 +1,19 @@
 /*HEADER*/
+#searchResults a {
+    color: #333;
+    text-decoration: none;
+}
+
+#searchResults a:hover {
+    text-decoration: none;
+}
 header{
     width: 100%;
 }
 .img-header img{
     width: 100%;
     background-color: #FEF7EF;
+    height:80px;
 }
 .header{
     width: 100%;
@@ -17,6 +26,9 @@ header{
     display: flex;
     padding: 10px;
     justify-content: center;
+}
+.header1 img{
+    height: 80px;
 }
 .header1 input{
     outline: none;

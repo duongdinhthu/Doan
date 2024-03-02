@@ -1,0 +1,61 @@
+
+.contact{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    background-color: #FEF7EF;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.contact div i{
+    padding-left: 10px;
+}
+.contact1{
+    background-color: white;
+    border-radius: 20px 0 0 20px;
+    box-shadow: 2px 2px 5px #cccccc;
+}
+.contact1 h2, .contact1 h5, .contact1 p{
+    color: #f29f33;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+}
+iframe{
+    border-radius: 0 20px 20px 0;
+    box-shadow: 2px 2px 5px #cccccc;
+}
+
+.text{
+    margin-top: 30px;
+    text-align: center;
+}
+.text div{
+    justify-content: center;
+    display: flex;
+}
+.text div a{
+    text-decoration: none;
+    color: #654145;
+    transition: 0.3s ease-in-out;
+    font-size: 18px;
+}
+.text div a:hover{
+    color: #f29f33;
+}
+.text div p{
+    margin-left: 5px;
+    color: #f29f33;
+    font-weight: bold;
+    font-size: 18px;
+}
+.text h2{
+    color: #f29f33;
+    font-weight: bold;
+}
+.text hr{
+    width: 100px;
+    background-color: #f29f33;
+}
