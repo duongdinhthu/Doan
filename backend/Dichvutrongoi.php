@@ -116,7 +116,7 @@ $product = $project->getAllProduct5();
                             <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
                             <label for="id" style="display: none">ID</label>
                             <input value="<?php echo $product["pid"]; ?>" style="display: none" id="id" name="id">
-                            <button type="submit" class="buy-button"><a style="color: white;text-decoration: none" href="Thanhtoandichvutochuc.php">Contact Us</a></button>
+                            <button type="submit" class="buy-button"><a style="color: white;text-decoration: none" href="Thanhtoandichvutrongoi.php">Contact Us</a></button>
                         </h5>
                     </form>
                 </div>
