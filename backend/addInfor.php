@@ -5,16 +5,39 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
+?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<?php
 include "project.php";
 $project = new projectFptHappy();
 $username = $_SESSION["username"];
+$server = "Localhost:3306";    //your ip and port
+$user = "root";                            //username by default give it root
+$password = "";                                   // default password is empty
+$databse = "fpthappy";             // database name
+
+$conn = mysqli_connect($server, $user, $password, $databse);
+
+if ($conn) {
+    echo "<p hidden='hidden'>ok</p>";
+} else {
+    echo "";
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name1 = $_POST['name'];
     $phone1 = $_POST['phone'];
     $address1 = $_POST['address'];
-    $update = $project->updateInforCustomer($name1,$phone1,$address1,$username);
-    echo"<h2>Added information successfully</h2>";
-    echo"$username,$name1,$phone1,$address1";
+    $sql = "update account_customer set name='$name1',phone='$phone1',address='$address1' where username = '$username' ";
+    $result = mysqli_query($conn,$sql);
+    ?>
+    <script>
+        swal({
+            title: "Success",
+            text: "Thank you for leaving your information. We will contact you as soon as possible for advice",
+            icon: "success",
+        });
+    </script>
+    <?php
 }
 ?>
 <!DOCTYPE html>

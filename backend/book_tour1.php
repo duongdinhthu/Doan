@@ -99,6 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             <th>Phone</th>
             <th>Email</th>
             <th>Address</th>
+            <th>Day</th>
             <th>Status</th>
         </tr>
         </thead>
@@ -110,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <td><?php echo $paycart['phone']  ?> </td>
                 <td><?php echo $paycart['email'] ?></td>
                 <td><?php echo $paycart['address'] ?></td>
-                <td><?php echo $paycart['status'] ?></td>
+                <td><?php echo $paycart['trading_day'] ?></td>
                 <td><select class="status-select">
                         <option value=""><?php echo $paycart['status'] ?></option>
                         <option value="1" style="background: #07ff07">done</option>

@@ -178,11 +178,11 @@ $totalcart = $project->totalShow($username);
             <br>
 
             <label style="margin-left: 30px" for="name">Name</label><br>
-            <input style="margin-left: 30px" name="name" type="text" id="name" required value="<?php echo $infor['name'] ?>"><br>
+            <input style="margin-left: 30px" name="name" type="text" id="name"  value="<?php echo $infor['name'] ?>" required><br>
             <label style="margin-left: 30px" for="phone">Phone</label><br>
-            <input style="margin-left: 30px" name="phone" type="text" id="phone" required value="<?php echo $infor['phone'] ?>"><br>
+            <input style="margin-left: 30px" name="phone" type="text" id="phone"  value="<?php echo $infor['phone'] ?>" required><br>
             <label style="margin-left: 30px" for="address">Address</label><br>
-            <input style="margin-left: 30px" name="address" type="text" id="address" required value="<?php echo $infor['address'] ?>"><br>
+            <input style="margin-left: 30px" name="address" type="text" id="address"  value="<?php echo $infor['address'] ?>" required><br>
             <br>
         <?php endforeach; ?>
 
@@ -228,7 +228,7 @@ $totalcart = $project->totalShow($username);
             <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="VISA, MasterCard" required >
             <label for="payment">VISA, MasterCard</label><br>
             <div style="display: flex; justify-content: end; margin-right: 50px">
-                <button class="order" type="submit" >Order</button>
+                <button class="order" type="submit" required>Order</button>
             </div>
         </form>
         <br>
