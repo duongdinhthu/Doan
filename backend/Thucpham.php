@@ -137,7 +137,7 @@ $product = $project->getAllProduct1();
                 <div>
                     <form action="" method="post" >
                         <a href="Thucphamdetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>">
-                            <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="...">
+                            <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="..." style="height: 300px">
                         </a>
                         <a href="Thucphamdetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">
