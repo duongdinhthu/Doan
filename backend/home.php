@@ -333,7 +333,7 @@ session_start();
         <a href="#" style=" text-decoration: none !important;">Other products</a>
     </div>
     <div class="exclusive-boxes">
-        <img src="img/img_banner_product_tab.webp" alt="">
+        <img src="img/img_banner_product_tab.webp" alt="" class="banner">
         <div class="boxes">
             <div>
                 <a href="Docanhandetail.php">

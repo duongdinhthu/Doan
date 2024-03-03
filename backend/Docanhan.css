@@ -1,9 +1,10 @@
 .product-boxes{
     display: flex;
     padding-top: 50px;
-    padding-left: 10%;
     background-color: #FEF7EF;
     padding-bottom: 100px;
+    justify-items: center;
+    margin-left: 2%;
 }
 .product-boxes div{
     outline: 0 !important;

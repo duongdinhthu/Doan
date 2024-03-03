@@ -32,6 +32,10 @@ body{
 .content img{
     border-radius: 20px;
     margin-right: 20px;
+    transition: 0.3s ease-in-out;
+}
+.content img:hover{
+    transform: scale(1.06);
 }
 .inside_content{
     width: 100%;
@@ -198,6 +202,10 @@ body{
     width: 100%;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.product-boxes div img:hover{
+    transform: scale(1.07);
 }
 .product-boxes div a{
     text-decoration: none;
@@ -240,7 +248,15 @@ body{
     border: none;
     background-color: #FEF7EF;
     text-align: center;
+    transition: 0.3s ease-in-out;
 }
+.product-boxes img{
+    transition: 0.3s ease-in-out;
+}
+.product-boxes button:hover{
+    transform: scale(1.07);
+}
+
 .exclusive-product{
     width: 100%;
     padding-top: 50px;
@@ -267,6 +283,11 @@ body{
     border-radius: 20px;
     margin-left: 20px;
     padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+}
+.menu-product a:hover{
+    background-color: #654145;
+    color: white;
 }
 .a1{
     text-decoration: none;
@@ -298,6 +319,16 @@ body{
     width: 100%;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.boxes div img:hover{
+    transform: scale(1.06);
+}
+.banner{
+    transition: 0.3s ease-in-out;
+}
+.banner:hover{
+    transform: scale(1.06);
 }
 .boxes div a{
     text-decoration: none;
@@ -338,6 +369,10 @@ body{
     width: 35%;
     cursor: pointer;
     border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+.img-combo img:hover{
+    transform: scale(1.06);
 }
 .news{
     width: 100%;
