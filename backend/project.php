@@ -222,6 +222,24 @@ class projectFptHappy
             echo"login that bai, vui long  kiem tra lai<br>";
         }
     }
+    public function accountCustomer1($username,$password,$id,$gia)
+    {
+        $sql = "SELECT * FROM account_customer where username = ? and password = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if($result->num_rows>0){
+            $row = $result->fetch_assoc();
+            $_SESSION['username']=$row['username'];
+            $_SESSION['password']=$row['password'];
+            echo"login thanh cong";
+            header("Location:http://localhost:63342/Doan/backend/cart.php?gia=".$gia."&id=".$id);
+            exit();
+        }else{
+            echo"login that bai, vui long  kiem tra lai<br>";
+        }
+    }
     public function checkPermission($code)
     {
         $sql = "select * from code_permissions where id = ? ";

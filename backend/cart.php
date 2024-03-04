@@ -1,7 +1,10 @@
 <?php
 session_start();
 ini_set('display_errors', 'off');
+?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+<?php
 //kiểm tra session
 if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/Doan/backend/login.php");
@@ -25,6 +28,23 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete1' && isset($_GET['id']
     $id=$_GET['id'];
     $delete = $carts->deleteItem($id);
 }
+if (!isset($_SESSION['executed'])) {
+    if (isset($_GET['id'])  && isset($_GET['gia'])){
+        ?>
+
+<?php
+        $username=$_SESSION["username"];
+        $sl ='1';
+        $id = $_GET['id'];
+        $price = $_GET['gia'];
+        $addcart=$carts->addCart2($username,$id,$sl,$price);
+
+
+
+    }
+    $_SESSION['executed'] = true;
+}
+
 if (isset($_GET['action']) && $_GET['action'] === 'deletepay') {
 
     $deletepay = $carts->deletePay($username);
@@ -34,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $quantity=$_POST['quantity'];
     $product_id=$_POST['productid'];
     $updatequantity=$carts->updateQuantity($quantity,$username,$product_id);
+
 }
 
 $updatetotalpaycart = $carts->totalPayCart($username);
@@ -46,6 +67,7 @@ $deletecart = $carts->getAllDeleteCart($username);
 $totalpay = $carts->totalShowPay($username);
 $cart = $carts->getAllCart($username);
 $totalcart = $carts->totalShow($username);
+
 ?>
 
 <!DOCTYPE html>

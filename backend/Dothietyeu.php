@@ -22,7 +22,9 @@ if ($conn) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //kiểm tra session
     if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-        header("Location:http://localhost:63342/Doan/backend/login.php");
+        $id = $_POST['id'];
+        $gia = $_POST['gia'];
+        header("Location: http://localhost:63342/Doan/backend/login.php?gia=".$gia."&id=".$id);
         exit;
     }else{
         $username=$_SESSION["username"];
@@ -32,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql="select * from cart where username='$username' and product_id='$id' and hidden = 1";
         $result = mysqli_query($conn,$sql);
         if($result->num_rows>0){
+            
             ?>
             <script>
                 swal({

@@ -9,6 +9,13 @@ $password=$_POST['password'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $loginPermissions->accountAdmin($username,$password);
 }
+if (isset($_GET['id'])  && isset($_GET['gia'])) {
+    $id=$_GET['id'];
+    $gia=$_GET['gia'];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $loginPermissions->accountCustomer1($username,$password,$id,$gia);
+    }
+}
 
 ?>
 

@@ -7,6 +7,7 @@ session_start();
 <?php
 include "project.php";
 $project = new projectFptHappy();
+$product = $project->getAllProduct2();
 $server = "Localhost:3306";    //your ip and port
 $user = "root";                            //username by default give it root
 $password = "";                                   // default password is empty
@@ -19,10 +20,13 @@ if ($conn) {
 } else {
     echo "";
 }
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //kiểm tra session
     if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
-        header("Location:http://localhost:63342/Doan/backend/login.php");
+        $id = $_POST['id'];
+        $gia = $_POST['gia'];
+        header("Location: http://localhost:63342/Doan/backend/login.php?gia=".$gia."&id=".$id);
         exit;
     }else{
         $username=$_SESSION["username"];
@@ -57,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$product = $project->getAllProduct2();
+
 
 ?>
 <!DOCTYPE html>
