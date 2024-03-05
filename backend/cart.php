@@ -78,6 +78,7 @@ $totalcart = $carts->totalShow($username);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="Dothietyeu.css">
+    <script src="search.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
@@ -86,9 +87,12 @@ $totalcart = $carts->totalShow($username);
     <div class="header">
         <div class="header1">
             <img src="img/logo.webp" alt="logo">
-            <label>
-                <input type="text" placeholder="Search">
+            <label for="search">
+                <input type="text" id="search" placeholder="Search">
                 <i class="fa-solid fa-magnifying-glass"></i>
+                <div id="searchResults">
+                    <!-- Kết quả tìm kiếm hiển thị -->
+                </div>
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
