@@ -178,7 +178,7 @@ $totalcart = $project->totalShow($username);
         <?php foreach ($infor as $infor): ?>
             <h2 style="text-align: center; color: #f29f33; margin-bottom: 50px">Order Information</h2>
             <br>
-
+            <h3 style="text-align: center;">Consignee information</h3>
             <label style="margin-left: 30px" for="name">Name</label><br>
             <input style="margin-left: 30px" name="name" type="text" id="name"  value="<?php echo $infor['name'] ?>" required><br>
             <label style="margin-left: 30px" for="phone">Phone</label><br>
@@ -213,21 +213,56 @@ $totalcart = $project->totalShow($username);
                         </tr>
                     <?php endforeach; ?>
                     </tbody>
-                    <h5 style="color: #f29f33">Total order value :
-                        <label style="color: black" for="totalcart"><?php echo "$".$totalcart ?></label>
-                        <input style="; display: none" name="totalcart" type="text" id="totalcart"  value="<?php echo "$".$totalcart ?>"></h5>
+
                 </table>
+                <h5 style="color: #f29f33">Total order value :
+                    <label style="color: black" for="totalcart"><?php echo "$".$totalcart ?></label>
+                    <input style="; display: none" name="totalcart" type="text" id="totalcart"  value="<?php echo "$".$totalcart ?>"></h5>
                 <br>
             </div>
         </div>
         <h3 style="text-align: center; margin-top: 10px">Payment Methods</h3>
         <label for="code"></label><input type="text" id="code" name="code" value="<?php echo $random_code ?>" required style="display: none">
-            <input style="margin-left: 30px" type="radio" id="payment" name="payment" value="COD" required >
+            <input style="margin-left: 30px" type="radio" id="cod" name="payment" value="COD" required >
             <label for="payment">COD</label><br>
-            <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="Internet Banking" required >
-            <label for="">Internet Banking</label><br>
-            <input style="margin-left: 34px" type="radio" id="payment" name="payment" value="VISA, MasterCard" required >
+        <div id="shipcod" style="display: none; margin-left: 50px" >
+            <h6>Consignee information:</h6>
+            <h6>Name:<?php echo $infor['name'] ?></h6>
+            <h6>Phone:<?php echo $infor['phone'] ?></h6>
+            <h6>Address:<?php echo $infor['address'] ?></h6><br>
+        </div>
+            <input style="margin-left: 34px" type="radio" id="banking" name="payment" value="Internet Banking" required >
+            <label for="">Internet Banking</label>
+        <div id="internetbaking" style="display: none; margin-left: 50px" >
+            <div style="display: flex">
+                <div style="margin-top: 30px">
+                    <h6>Transfer information:</h6>
+                    <h6>Military Bank (MB)</h6>
+                    <h6>Number:8030103067001</h6>
+                    <h6>Name: Dương Đình Thứ</h6><br>
+                </div>
+                <div>
+                    <img src="./img/bank.jpg" height="300px">
+                </div>
+            </div>
+        </div>
+        <br>
+            <input style="margin-left: 34px" type="radio" id="visa" name="payment" value="VISA, MasterCard" required >
             <label for="payment">VISA, MasterCard</label><br>
+        <div id="visacard" style="display: none; margin-left: 50px" >
+            <div style="display: flex">
+                <div style="margin-top: 30px">
+                    <h6>Card Number:<input style="margin-left: 15px;width: 300px" required></h6>
+                    <h6>Card Holder:<input style="margin-left: 23px;width: 300px" required></h6>
+                    <h6>Expiration date:<input type="date" style="width: 300px" required></h6>
+                    <h6>CVV: <input style="margin-left: 75px;width:150px" required></h6><br>
+                </div>
+                <div>
+                    <img src="./img/signature-800x450.jpg" height="300px">
+                </div>
+            </div>
+        </div>
+
 
         <br>
         <button style="display: flex; justify-content: end; margin-right: 50px" class="order" type="submit" required>Order</button>
@@ -297,6 +332,54 @@ $totalcart = $project->totalShow($username);
     <hr/>
     <p class="license">@ Copyright belongs to ... | Provided by ...</p>
 </div>
+<script>
+    document.getElementById('cod').addEventListener('change', function() {
+        var shipcod = document.getElementById('shipcod');
+        if (this.checked) {
+            shipcod.style.display = 'block';
+        } else {
+            shipcod.style.display = 'none';
+        }
+
+        var internetBanking = document.getElementById('internetbaking');
+        internetBanking.style.display = 'none';
+
+        var visaCard = document.getElementById('visacard');
+        visaCard.style.display = 'none';
+    });
+
+    document.getElementById('banking').addEventListener('change', function() {
+        var internetBanking = document.getElementById('internetbaking');
+        if (this.checked) {
+            internetBanking.style.display = 'block';
+        } else {
+            internetBanking.style.display = 'none';
+        }
+
+        var shipcod = document.getElementById('shipcod');
+        shipcod.style.display = 'none';
+
+        var visaCard = document.getElementById('visacard');
+        visaCard.style.display = 'none';
+    });
+
+    document.getElementById('visa').addEventListener('change', function() {
+        var visaCard = document.getElementById('visacard');
+        if (this.checked) {
+            visaCard.style.display = 'block';
+        } else {
+            visaCard.style.display = 'none';
+        }
+
+        var shipcod = document.getElementById('shipcod');
+        shipcod.style.display = 'none';
+
+        var internetBanking = document.getElementById('internetbaking');
+        internetBanking.style.display = 'none';
+    });
+</script>
+
+
 
 <script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

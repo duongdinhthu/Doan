@@ -58,31 +58,40 @@ $product= $project->showProject();
     <div class="container">
         <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
             ADD PRODUCT</h2>
-        <form action="" method="post">
-            <label for="name" >Product name </label><br>
-            <input name="name" type="text" id="name" required ><br>
-            <label for="price" >Product Price </label><br>
-            <input name="price" type="text" id="price" required ><br>
-            <label for="image" >Product Image Links </label><br>
-            <input name="image" type="text" id="image" required ><br>
-            <label for="type" >Product type</label><br>
-            <select name="type"  id="type" class="status-select">
-                <option value="TP">FOOD</option>
-                <option value="CN" >PERSONAL</option>
-                <option value="TY" >ESSENTIAL</option>
-                <option value="PACKAGE" >PACKAGE</option>
-                <option value="TOUR" >TOUR</option>
-                <option value="ORGANIZATIONAL" >ORGANIZATIONAL</option>
-            </select>
+        <form action="" method="post" style="display:flex ">
+            <div style="margin-left: 15px">
+                <label for="name" >Product name </label><br>
+                <input name="name" type="text" id="name" required ><br>
+            </div>
+            <div style="margin-left: 15px">
+                <label for="price" >Product Price </label><br>
+                <input name="price" type="text" id="price" required ><br>
+            </div>
+            <div style="margin-left: 15px">
+                <label for="image" >Product Image Links </label><br>
+                <input name="image" type="text" id="image" required ><br>
+            </div>
+            <div style="margin-left: 15px">
+                <label for="type" >Product type</label><br>
+                <select name="type"  id="type" class="status-select">
+                    <option value="TP">FOOD</option>
+                    <option value="CN" >PERSONAL</option>
+                    <option value="TY" >ESSENTIAL</option>
+                    <option value="PACKAGE" >PACKAGE</option>
+                    <option value="TOUR" >TOUR</option>
+                    <option value="ORGANIZATIONAL" >ORGANIZATIONAL</option>
+                </select>
+            </div>
             <br>
             <br>
-            <button class="btn btn-outline-warning" type="submit" style="border-radius: 10px" >Add</button>
+            <button class="btn btn-outline-success" type="submit" style="border-radius: 10px;margin-left: 15px;height: 35px;margin-top: 30px" >Add</button>
         </form>
         <table class="table">
             <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">List Product</h2>
             <thead>
             <tr>
                 <th>Product ID</th>
+                <th>Product Name</th>
                 <th>Price($)</th>
                 <th>Type</th>
                 <th>Status</th>
@@ -93,6 +102,7 @@ $product= $project->showProject();
                 ?>
                 <tr>
                     <td><?php echo $paycart['pid']  ?> </td>
+                    <td><?php echo $paycart['name']  ?> </td>
                     <td><?php echo $paycart['price'] ?></td>
                     <td><?php echo $paycart['code'] ?></td>
                     <td><select class="status-select">
@@ -101,8 +111,8 @@ $product= $project->showProject();
                             <option value="2" style="background: #f29f33">over</option>
                         </select></td>
 
-                    <td><a href="add_product1.php?action=stocking&id=<?php echo $paycart['pid']  ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
-                    <td><a href="add_product1.php?action=over&id=<?php echo $paycart['pid']  ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
+                    <td><a href="add_product1.php?action=stocking&id=<?php echo $paycart['pid']  ?>" class=" myLink1 " hidden="hidden" onclick="return confirm('Do you want to change the status to stocking?')" >Done</a></td>
+                    <td><a href="add_product1.php?action=over&id=<?php echo $paycart['pid']  ?>" class=" myLink2 " hidden="hidden" onclick="return confirm('Do you want to change the status to over?')">Delivering</a></td>
                     <td><a href="update_product1.php?action=update&id=<?php echo $paycart['pid']  ?>&name=<?php echo $paycart['name']  ?>&price=<?php echo $paycart['price']  ?>" >Update product</a></td>
 
                 </tr>

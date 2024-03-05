@@ -86,10 +86,10 @@ if (isset($_GET['action']) && isset($_GET['username'])) {
                 <td><select class="status-select">
                         <option value=""><?php echo $paycart['status'] ?></option>
                         <option value="1" style="background: #07ff07">Working</option>
-                        <option value="2" style="background: #f29f33">Has retired</option>
+                        <option value="2" style="background: #f29f33">Retired</option>
                     </select></td>
-                <td><a href="employye_manager.php?action=working&username=<?php echo $paycart['username'] ?>" class=" myLink1 " hidden="hidden"  >Working</a></td>
-                <td><a href="employye_manager.php?action=retired&username=<?php echo $paycart['username'] ?>" class=" myLink2 " hidden="hidden" >Retired</a></td>
+                <td><a href="employye_manager.php?action=working&username=<?php echo $paycart['username'] ?>" class=" myLink1 " hidden="hidden" onclick="return confirm('Do you want to change the status to working?')" >Working</a></td>
+                <td><a href="employye_manager.php?action=retired&username=<?php echo $paycart['username'] ?>" class=" myLink2 " hidden="hidden" onclick="return confirm('Do you want to change the status to retired?')" >Retired</a></td>
 
             </tr>
         <?php endforeach; ?>

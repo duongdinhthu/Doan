@@ -30,6 +30,15 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete1' && isset($_GET['id']
 }
 if (!isset($_SESSION['executed'])) {
     if (isset($_GET['id'])  && isset($_GET['gia'])){
+        ?>
+        <script>
+        swal({
+            title: "Success",
+            text: "The order has been sent. Thank you for supporting the shop",
+            icon: "success",
+        });
+    </script>
+<?php
         $username=$_SESSION["username"];
         $sl ='1';
         $id = $_GET['id'];
