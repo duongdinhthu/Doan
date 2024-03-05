@@ -223,23 +223,23 @@ $totalcart = $project->totalShow($username);
         </div>
         <h3 style="text-align: center; margin-top: 10px">Payment Methods</h3>
         <label for="code"></label><input type="text" id="code" name="code" value="<?php echo $random_code ?>" required style="display: none">
-            <input style="margin-left: 30px" type="radio" id="cod" name="payment" value="COD" required >
-            <label for="payment">COD</label><br>
+        <input style="margin-left: 30px" type="radio" id="cod" name="payment" value="COD" required >
+        <label for="payment">COD</label><br>
         <div id="shipcod" style="display: none; margin-left: 50px" >
             <h6>Consignee information:</h6>
             <h6>Name:<?php echo $infor['name'] ?></h6>
             <h6>Phone:<?php echo $infor['phone'] ?></h6>
             <h6>Address:<?php echo $infor['address'] ?></h6><br>
         </div>
-            <input style="margin-left: 34px" type="radio" id="banking" name="payment" value="Internet Banking" required >
-            <label for="">Internet Banking</label>
+        <input style="margin-left: 34px" type="radio" id="banking" name="payment" value="Internet Banking" required >
+        <label for="">Internet Banking</label>
         <div id="internetbaking" style="display: none; margin-left: 50px" >
             <div style="display: flex">
-                <div style="margin-top: 30px">
+                <div>
                     <h6>Transfer information:</h6>
                     <h6>Military Bank (MB)</h6>
                     <h6>Number:8030103067001</h6>
-                    <h6>Name: Dương Đình Thứ</h6><br>
+                    <h6>    Name: Dương Đình Thứ</h6><br>
                 </div>
                 <div>
                     <img src="./img/bank.jpg" height="300px">
@@ -247,20 +247,13 @@ $totalcart = $project->totalShow($username);
             </div>
         </div>
         <br>
-            <input style="margin-left: 34px" type="radio" id="visa" name="payment" value="VISA, MasterCard" required >
-            <label for="payment">VISA, MasterCard</label><br>
+        <input style="margin-left: 34px" type="radio" id="visa" name="payment" value="VISA, MasterCard" required >
+        <label for="payment">VISA, MasterCard</label><br>
         <div id="visacard" style="display: none; margin-left: 50px" >
-            <div style="display: flex">
-                <div style="margin-top: 30px">
-                    <h6>Card Number:<input style="margin-left: 15px;width: 300px" required></h6>
-                    <h6>Card Holder:<input style="margin-left: 23px;width: 300px" required></h6>
-                    <h6>Expiration date:<input type="date" style="width: 300px" required></h6>
-                    <h6>CVV: <input style="margin-left: 75px;width:150px" required></h6><br>
-                </div>
-                <div>
-                    <img src="./img/signature-800x450.jpg" height="300px">
-                </div>
-            </div>
+            <h6>Card Number:<input style="margin-left: 15px;width: " ></h6>
+            <h6>Card Holder:<input style="margin-left: 23px"></h6>
+            <h6>Expiration date:<input type="date" ></h6>
+            <h6>CVV: <input style="margin-left: 75px"></h6><br>
         </div>
 
 
