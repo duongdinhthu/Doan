@@ -1,3 +1,6 @@
+body{
+    background-color: #FEF7EF;
+}
 .product-boxes{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
