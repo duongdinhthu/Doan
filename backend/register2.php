@@ -52,25 +52,25 @@ if(isset($username)&&isset($password)){
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
-                    <a href="../frontend/Trochoitreem.html">Kids</a>
-                    <a href="../frontend/Trochoigiadinh.html">Family</a>
-                    <a href="../frontend/Trochoinguoilon.html">Adults</a>
+                    <a href="../backend/Trochoitreem.php">Kids</a>
+                    <a href="../backend/Trochoigiadinh.php">Family</a>
+                    <a href="../backend/Trochoinguoilon.php">Adults</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Products</button>
                 <div class="dropdown-content">
-                    <a href="../frontend/Docanhan.html">Personal items</a>
-                    <a href="../frontend/Dothietyeu.html">Essentials</a>
-                    <a href="../frontend/Thucpham.html">Food</a>
+                    <a href="../backend/Docanhan.php">Personal items</a>
+                    <a href="../backend/Dothietyeu.php">Essentials</a>
+                    <a href="../backend/Thucpham.php">Food</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="../frontend/Dichvutrongoi.html">Packages</a>
-                    <a href="../frontend/Dichvutour.html"> Tours</a>
-                    <a href="../frontend/Dichvutochuc.html">Organizing</a>
+                    <a href="../backend/Dichvutrongoi.php">Packages</a>
+                    <a href="../backend/Dichvutour.php"> Tours</a>
+                    <a href="../backend/Dichvutochuc.php">Organizing</a>
                 </div>
             </div>
             <a href="../frontend/tintuc.html" class="btn btn-outline">News</a>
