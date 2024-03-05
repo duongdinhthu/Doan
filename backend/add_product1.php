@@ -103,6 +103,7 @@ $product= $project->showProject();
 
                     <td><a href="add_product1.php?action=stocking&id=<?php echo $paycart['pid']  ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
                     <td><a href="add_product1.php?action=over&id=<?php echo $paycart['pid']  ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
+                    <td><a href="update_product1.php?action=update&id=<?php echo $paycart['pid']  ?>&name=<?php echo $paycart['name']  ?>&price=<?php echo $paycart['price']  ?>" >Update product</a></td>
 
                 </tr>
             <?php endforeach; ?>

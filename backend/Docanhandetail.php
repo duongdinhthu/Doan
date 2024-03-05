@@ -34,14 +34,18 @@ if (isset($_GET['action']) && $_GET['action'] === 'add') {
         $sql="select * from cart where username='$username' and product_id='$id' and hidden = 1";
         $result = mysqli_query($conn,$sql);
         if($result->num_rows>0){
+            $sql2="UPDATE cart SET quantity = quantity + '$sl' WHERE product_id = '$id' and username = '$username';";
+            $result1 = mysqli_query($conn,$sql2);
+
             ?>
             <script>
                 swal({
-                    title: "Failed",
-                    text: "This item is already in the cart",
-                    icon: "error",
+                    title: "Success",
+                    text: "The item was successfully added to the cart",
+                    icon: "success",
                 });
             </script>
+                
             <?php
         }else{
             $sql1 = "insert into cart(username,product_id,quantity,list_price)values('$username','$id','$sl','$gia')";

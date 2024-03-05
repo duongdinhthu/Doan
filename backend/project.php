@@ -777,6 +777,13 @@ public function updateInforProduct($id,$name,$price,)
     header("Location: add_product.php");
 
 }
+    public function updateInforProduct1($id,$name,$price,)
+    {
+        $sql="update product set name ='$name' , price = '$price' where pid = '$id'";
+        $this->conn->query($sql);
+        header("Location: add_product1.php");
+
+    }
 public function showInforProduct($id)
 {
     $carts = [];
