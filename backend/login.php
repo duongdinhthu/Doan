@@ -17,7 +17,6 @@ if (isset($_GET['id'])  && isset($_GET['gia'])) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
