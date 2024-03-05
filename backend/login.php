@@ -16,7 +16,6 @@ if (isset($_GET['id'])  && isset($_GET['gia'])) {
         $loginPermissions->accountCustomer1($username,$password,$id,$gia);
     }
 }
-
 ?>
 
 <!DOCTYPE html>
