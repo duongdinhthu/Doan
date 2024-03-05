@@ -31,58 +31,7 @@ session_start();
                     <!-- Kết quả tìm kiếm hiển thị -->
                 </div>
             </label>
-
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    const searchInput = document.getElementById('search');
-                    const searchResultsContainer = document.getElementById('searchResults');
-
-                    // Event listener cho input tìm kiếm
-                    searchInput.addEventListener('input', function() {
-                        const searchQuery = searchInput.value.toLowerCase();
-                        if (searchQuery.length === 0) {
-                            // Nếu không có truy vấn tìm kiếm, xóa tất cả kết quả hiển thị
-                            searchResultsContainer.innerHTML = '';
-                            return;
-                        }
-                        // Gọi hàm tìm kiếm và hiển thị kết quả
-                        const searchResults = performSearch(searchQuery);
-                        displaySearchResults(searchResults);
-                    });
-
-                    // Hàm thực hiện tìm kiếm
-                    function performSearch(query) {
-                        const dummySearchResults = [
-                            { title: "Trochoitreem", url: "Trochoitreem.php" },
-                            { title: "Trochoinguoilon", url: "Trochoinguoilon.php" },
-                            { title: "Trochoigiadinh", url: "Trochoigiadinh.php" },
-                            { title: "Dichvutochuc", url: "Dichvutochuc.php" },
-                            { title: "Dichvutrongoi", url: "Dichvutrongoi.php" },
-                            { title: "Dichvutour", url: "Dichvutour.php" },
-                            { title: "Thucpham", url: "Thucpham.php" },
-                            { title: "Docanhan", url: "Docanhan.php" },
-                            { title: "Dothietyeu", url: "Dothietyeu.php" }
-
-                        ];
-                        // Lọc và trả về các kết quả phù hợp với truy vấn tìm kiếm
-                        return dummySearchResults.filter(result =>
-                            result.title.toLowerCase().includes(query)
-                        );
-                    }
-
-                    // Hàm hiển thị kết quả tìm kiếm
-                    function displaySearchResults(results) {
-                        // Xóa bất kỳ kết quả hiện có nào trước khi hiển thị kết quả mới
-                        searchResultsContainer.innerHTML = '';
-                        // Lặp qua mỗi kết quả và hiển thị nó trong phần tử searchResultsContainer
-                        results.forEach(result => {
-                            const resultItem = document.createElement('div');
-                            resultItem.innerHTML = `<a href="${result.url}">${result.title}</a>`;
-                            searchResultsContainer.appendChild(resultItem);
-                        });
-                    }
-                });
-            </script>
+            
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
 
