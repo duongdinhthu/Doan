@@ -1,5 +1,7 @@
-
-.img-header{
+body{
+    background-color: #FEF7EF;
+}
+.img_header{
     background-color: #FEF7EF;
     margin-top: 20px;
 }

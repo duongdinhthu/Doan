@@ -181,10 +181,10 @@ header{
     text-decoration: none;
     outline: none;
     border: none;
-    border-radius: 18px 0 0 18px;
+    border-radius: 10px 0 0 10px;
     padding-bottom: 10px;
     padding-top: 10px;
-    padding-right: 120px;
+    padding-right: 80px;
     padding-left: 20px;
 }
 .footer1 button{
@@ -192,7 +192,7 @@ header{
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 0 18px 18px 0;
+    border-radius: 0 10px 10px 0;
     padding-right: 15px;
     padding-left: 15px;
     position: absolute;

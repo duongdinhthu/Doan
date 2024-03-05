@@ -78,7 +78,7 @@ session_start();
     <h2>GAMES FOR ADULTS</h2>
     <hr/>
 </div>
-<div class="img-header">
+<div class="img_header">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -87,24 +87,24 @@ session_start();
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://gudgear.com/wp-content/uploads/2018/02/camping-activities-for-adults.jpg" class="d-block w-100" alt="...">
+                <img src="https://gudgear.com/wp-content/uploads/2018/02/camping-activities-for-adults.jpg" class="d-block w-100" alt="..." >
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Fpt Happy</h5>
                     <p>Experience a lively day of outdoor activities with games designed for adults, combining puzzles, team activities, and suburban fun.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQatPZOv88kmUUS0RRxrBXHZoF5Eb3oY5zANWV61epHxz8BSG6AJQ_tsyaqHh78nZEw36U&usqp=CAU" class="d-block w-100" alt="...">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQatPZOv88kmUUS0RRxrBXHZoF5Eb3oY5zANWV61epHxz8BSG6AJQ_tsyaqHh78nZEw36U&usqp=CAU" class="d-block w-100" alt="..." >
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Fpt Happy</h5>
                     <p>Discover new locations and enjoy the natural atmosphere with outdoor games for adults, providing a relaxing and stimulating experience.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://www.theordinaryadventurer.com/wp-content/uploads/2019/10/IMG_2531-1024x768.jpg" class="d-block w-100" alt="...">
+                <img src="https://www.theordinaryadventurer.com/wp-content/uploads/2019/10/IMG_2531-1024x768.jpg" class="d-block w-100" alt="..." >
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Fpt Happy</h5>
-                    <p>Create unique memories with friends through activities like camping, kayaking, and enjoying grilled food in the warm atmosphere of outdoor games.</p>
+                    <p>Create unique memories with friends through activities like camping, kayaking, and enjoying grilled food in the warm atmosphere of outdoor games</p>
                 </div>
             </div>
         </div>
