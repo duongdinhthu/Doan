@@ -52,6 +52,7 @@ $detail = $project->detailCodeOrder($username,$code);
             <th>Total Price($)</th>
             <th>Payment</th>
             <th>Status</th>
+            <th>Order Date</th>
         </tr>
         </thead>
         <tbody>
@@ -66,6 +67,7 @@ $detail = $project->detailCodeOrder($username,$code);
                 <td><?php echo $detail['SUM(c.total_price)'] ?></td>
                 <td><?php echo $detail['payment'] ?></td>
                 <td><?php echo $detail['status'] ?></td>
+                <td><?php echo $detail['trading_day'] ?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

@@ -491,7 +491,7 @@ class projectFptHappy
     public function getAllPay($username)
     {
         $carts = [];
-        $sql = "select p.image,c.product_id,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.hidden ,c.hidden_customer,c.status,c.payment,c.code from cart c join product p on c.product_id = p.pid where username = '$username'  and hidden = 1   GROUP BY product_id, username";
+        $sql = "select p.image,c.product_id,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.hidden ,c.hidden_customer,c.status,c.payment,c.code,c.trading_day from cart c join product p on c.product_id = p.pid where username = '$username'  and hidden = 1   GROUP BY product_id, username";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -667,7 +667,7 @@ public function addBook($name,$phone,$email,$address)
     public function detailCodeOrder($username,$code)
     {
         $orderDetail = [];
-        $sql = "select p.image,c.product_id,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.hidden ,c.hidden_customer,c.status,c.payment,c.code from cart c join product p on c.product_id = p.pid where username = '$username'  and hidden = 2 and c.code= '$code' GROUP BY product_id, username;";
+        $sql = "select p.image,c.product_id,p.name,c.list_price,SUM(c.quantity),SUM(c.total_price),c.hidden ,c.hidden_customer,c.status,c.payment,c.code,c.trading_day from cart c join product p on c.product_id = p.pid where username = '$username'  and hidden = 2 and c.code= '$code' GROUP BY product_id, username;";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){

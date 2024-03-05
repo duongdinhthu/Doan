@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // Hàm thực hiện tìm kiếm
     function performSearch(query) {
         const dummySearchResults = [
-            { title: "Kid's games", url: "Trochoitreem.html" },
-            { title: "Adult games", url: "Trochoinguoilon.html" },
-            { title: "Family game", url: "Trochoigiadinh.html" },
-            { title: "Organizational services", url: "Dichvutochuc.html" },
-            { title: "Service Package", url: "Dichvutrongoi.html" },
-            { title: "Tour service", url: "Dichvutour.html" },
-            { title: "Food", url: "Thucpham.html" },
-            { title: "Personal items", url: "Docanhan.html" },
-            { title: "Essential items", url: "Dothietyeu.html" }
+            { title: "Kid's games", url: "Trochoitreem.php" },
+            { title: "Adult games", url: "Trochoinguoilon.php" },
+            { title: "Family game", url: "Trochoigiadinh.php" },
+            { title: "Organizational services", url: "Dichvutochuc.php" },
+            { title: "Service Package", url: "Dichvutrongoi.php" },
+            { title: "Tour service", url: "Dichvutour.php" },
+            { title: "Food", url: "Thucpham.php" },
+            { title: "Personal items", url: "Docanhan.php" },
+            { title: "Essential items", url: "Dothietyeu.php" }
 
         ];
         // Lọc và trả về các kết quả phù hợp với truy vấn tìm kiếm

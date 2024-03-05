@@ -259,6 +259,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <p style="margin-left: 10px; color: #654145;"><?php echo  $totalcart; ?></p>
     </div>
 </div>
+</div>
 
 <div class="backhome">
     <a href="home.php?">Back to Home</a>

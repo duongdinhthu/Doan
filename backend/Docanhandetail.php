@@ -45,7 +45,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'add') {
                     icon: "success",
                 });
             </script>
-                
+
             <?php
         }else{
             $sql1 = "insert into cart(username,product_id,quantity,list_price)values('$username','$id','$sl','$gia')";
