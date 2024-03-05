@@ -38,7 +38,7 @@ strong{
     border-radius: 20px;
 }
 .img a{
-    text-decoration: none;
+    text-decoration: none !important;
     margin-top: 20px;
     color: white;
     background-color: #f29f33;
@@ -48,6 +48,7 @@ strong{
 }
 .img a:hover{
     background-color: #654145;
+    color: white;
 }
 .rules {
     text-align: left;
