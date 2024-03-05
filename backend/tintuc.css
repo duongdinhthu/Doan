@@ -1,22 +1,64 @@
-.allcard {
+.news{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.news h2{
+    font-weight: bold;
+    color: #F29F33;
+}
+.news hr{
+    width: 100px;
+    height: 1px;
+    background-color: #F29F33;
+}
+.all-new{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    margin-left: 13%;
+    margin-right: 13%;
 }
-
-.card {
-    width: 30%;
-    margin: 10px;
-    overflow: hidden; /* Ngăn chặn nội dung tràn ra khỏi card */
+.all-new1{
+    display: flex;
+    margin-left: 13%;
+    margin-right: 16%;
 }
-
-.card img {
-    max-width: 100%; /* Đặt chiều rộng tối đa của ảnh là 100% của ô card */
-    height: auto; /* Duy trì tỉ lệ khung hình */
+.new{
+    width: 35%;
+    padding: 20px;
 }
-
-
-
+.new img{
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.new h5{
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.new h5:hover{
+    color: #F29F33;
+}
+.new p{
+    color: grey;
+    font-weight: lighter;
+}
+.new h6 {
+    color: grey;
+}
+.new a strong{
+    color: #F29F33;
+}
+.new a{
+    color: black;
+    cursor: pointer;
+    text-decoration: none !important;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.new a:hover{
+    color: #F29F33;
+}
 .text{
     margin-top: 30px;
     text-align: center;

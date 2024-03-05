@@ -77,6 +77,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         padding: 5px 10px;
         border-radius: 10px;
     }
+    .status-select{
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
 </style>
 <body>
 <h2 style="color: #f29f33;margin-bottom: 50px; margin-top: 50px; text-align: center; font-weight: bold">WELCOME TO THE ADMIN AREA</h2>

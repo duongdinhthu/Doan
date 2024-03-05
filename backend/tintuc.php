@@ -72,78 +72,43 @@ session_start();
     <h2>NEWS</h2>
     <hr/>
 </div>
-<div class="allcard">
-    <div class="card text-center">
-        <div class="img-card">
-            <img src="imageTinTuc/img200.webp"/>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">ANNOUNCEMENT OF VIETNAM NATIONAL DAY HOLIDAY 2/9/2023
-            </h5>
-
-            <p class="card-text">  To our valued customers and partners, FPT HAPPY Company respectfully announces the schedule of the 2/9/2023 National Day holiday for its branches: Ho Chi Minh City branch: …</p>
-            <a href="cardtitle1.php" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
+<div class="all-new">
+    <div class="new">
+        <img src="imageTinTuc/img200.webp" alt="">
+        <h5>ANNOUNCEMENT OF VIETNAM NATIONAL DAY HOLIDAY 2/9/2023</h5>
+        <p>Dung Nguyen | October 25, 2023</p>
+        <h6>  To our valued customers and partners, FPT HAPPY Company respectfully announces the schedule of the 2/9/2023 National Day holiday...</h6>
+        <a href="cardtitle1.php">Read more <strong>-></strong></a>
     </div>
-    <div class="card text-center">
-        <div class="img-card">
-            <img src="imageTinTuc/img201.webp"/>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Camping Equipment Store – Ho Chi Minh City Outdoor Activities
-            </h5>
-            <p class="card-text">Camping and outdoor activities have long been familiar to many people. With outdoor activities focusing on nature, helping improve significantly mental and physical health, camping has becom... </p>
-            <a href="cardtitle2.php" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
+    <div class="new">
+        <img src="imageTinTuc/img201.webp" alt="">
+        <h5>Camping Equipment Store – Ho Chi Minh City Outdoor Activities</h5>
+        <p>Dung Nguyen | October 25, 2021</p>
+        <h6>Camping and outdoor activities have long been familiar to many people. With outdoor activities focusing on nature, helping improve...</h6>
+        <a href="cardtitle2.php">Read more <strong>-></strong></a>
     </div>
-    <div class="card text-center">
-        <div class="img-card">
-            <img src="imageTinTuc/img202.webp"/>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">FPT HAPPY Announces Lunar New Year Holiday Schedule of the Year of the Tiger 2022
-
-            </h5>
-            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Tiger 2022 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
-            <a href="cardtitle3.php" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
+    <div class="new">
+        <img src="imageTinTuc/img202.webp" alt="">
+        <h5>FPT HAPPY Announces Lunar New Year Holiday Schedule of the Year of the Tiger 2022</h5>
+        <p>Dung Nguyen | October 23, 2022</p>
+        <h6>Greetings, Joining in the atmosphere of welcoming the New Year of the Tiger 2022 nationwide, FPT HAPPY wishes you a New Year...</h6>
+        <a href="cardtitle3.php">Read more <strong>-></strong></a>
     </div>
-    <div class="card text-center">
-        <div class="img-card">
-            <img src="imageTinTuc/img203.webp"/>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Tet Nguyen Dan Lunar New Year Holiday Schedule of the Year of the Buffalo 2021
-            </h5>
-            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Buffalo 2021 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
-            <a href="cardtitle4.php" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
+</div>
+<div class="all-new1">
+    <div class="new">
+        <img src="imageTinTuc/img203.webp" alt="" style="width: 340px">
+        <h5>Tet Nguyen Dan Lunar New Year Holiday Schedule of the Year of the Buffalo 2021</h5>
+        <p>Dung Nguyen | October 23, 2021</p>
+        <h6>Greetings, Joining in the atmosphere of welcoming the New Year of the Buffalo 2021 nationwide, FPT HAPPY wishes you a New Year...</h6>
+        <a href="cardtitle4.php">Read more <strong>-></strong></a>
     </div>
-    <div class="card text-center">
-        <div class="img-card">
-            <img src="imageTinTuc/img204.webp"/>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Tet Canh Ty Lunar New Year Holiday Schedule of the Year of the Rat 2020
-            </h5>
-            <p class="card-text">Greetings, Joining in the atmosphere of welcoming the New Year of the Rat 2020 nationwide, FPT HAPPY wishes you a New Year full of Peace – Prosperity – Fortune… </p>
-            <a href="cardtitle5.php" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
+    <div class="new">
+        <img src="imageTinTuc/img204.webp" alt="" style="width: 340px">
+        <h5>Tet Canh Ty Lunar New Year Holiday Schedule of the Year of the Rat 2020</h5>
+        <p>Dung Nguyen | October 23, 2020</p>
+        <h6>Greetings, Joining in the atmosphere of welcoming the New Year of the Rat 2020 nationwide, FPT HAPPY wishes you a New Year...</h6>
+        <a href="cardtitle5.php">Read more <strong>-></strong></a>
     </div>
 </div>
 <div class="footer">
