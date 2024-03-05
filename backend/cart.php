@@ -30,9 +30,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete1' && isset($_GET['id']
 }
 if (!isset($_SESSION['executed'])) {
     if (isset($_GET['id'])  && isset($_GET['gia'])){
-        ?>
-
-<?php
         $username=$_SESSION["username"];
         $sl ='1';
         $id = $_GET['id'];

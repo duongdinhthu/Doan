@@ -123,7 +123,7 @@ $delete = $project->deleCode();
                     <tr>
                         <td><?php echo $code['code'] ?></td>
                         <td><?php echo $code['status'] ?></td>
-                        <td><a href="order_detail.php?code=<?php echo $code['code'] ?>" class="btn btn-warning">Order details</a></td>
+                        <td><a href="order_detail2.php?code=<?php echo $code['code'] ?>" class="btn btn-warning">Order details</a></td>
 
                     </tr>
                 <?php endforeach; ?>

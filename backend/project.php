@@ -770,4 +770,23 @@ public function statusProduct( $id ,$status)
     $sql="update product set status='$status' where pid = '$id' ";
     $this->conn->query($sql);
 }
+public function updateInforProduct($id,$name,$price,)
+{
+    $sql="update product set name ='$name' , price = '$price' where pid = '$id'";
+    $this->conn->query($sql);
+    header("Location: add_product.php");
+
+}
+public function showInforProduct($id)
+{
+    $carts = [];
+    $sql="select * from product where pid = '$id'";
+    $result = $this->conn->query($sql);
+    if($result->num_rows>0){
+        while($row=$result->fetch_assoc()){
+            $carts[]=$row;
+        }
+    }
+    return $carts;
+}
 }

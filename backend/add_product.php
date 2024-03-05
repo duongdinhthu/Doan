@@ -83,7 +83,8 @@ $product= $project->showProject();
             <thead>
             <tr>
                 <th>Product ID</th>
-                <th>Price($)</th>
+                <th>Product Name</th>
+                <th>Product Price($)</th>
                 <th>Type</th>
                 <th>Status</th>
             </tr>
@@ -93,6 +94,7 @@ $product= $project->showProject();
                 ?>
                 <tr>
                     <td><?php echo $paycart['pid']  ?> </td>
+                    <td><?php echo $paycart['name']  ?> </td>
                     <td><?php echo $paycart['price'] ?></td>
                     <td><?php echo $paycart['code'] ?></td>
                     <td><select class="status-select">
@@ -103,6 +105,8 @@ $product= $project->showProject();
 
                     <td><a href="add_product.php?action=stocking&id=<?php echo $paycart['pid']  ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
                     <td><a href="add_product.php?action=over&id=<?php echo $paycart['pid']  ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
+                    <td><a href="update_product.php?action=update&id=<?php echo $paycart['pid']  ?>&name=<?php echo $paycart['name']  ?>&price=<?php echo $paycart['price']  ?>" >Update product</a></td>
+
 
                 </tr>
             <?php endforeach; ?>

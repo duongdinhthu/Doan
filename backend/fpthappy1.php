@@ -137,7 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                         <option value="2" style="background: #f29f33">delivering</option>
                     </select></td>
 
-                <td><a href="order_detail2.php?action=detail&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>">Order Detail</a></td>
+                <td><a href="order_detail1.php?action=detail&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>">Order Detail</a></td>
                 <td><a href="fpthappy1.php?action=done&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink1 " hidden="hidden" >Done</a></td>
                 <td><a href="fpthappy1.php?action=delivering&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink2 " hidden="hidden">Delivering</a></td>
 

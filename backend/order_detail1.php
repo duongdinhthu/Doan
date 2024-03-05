@@ -7,7 +7,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])) {
 include "project.php";
 $project = new projectFptHappy();
 $code = $_GET['code'];
-$username = $_SESSION['username'];
+$username = $_GET['username'];
 $update = $project->updateTotalByCode($username,$code);
 
 $show = $project->totalShowByCode($username,$code);
