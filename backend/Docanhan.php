@@ -26,7 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
         $id = $_POST['id'];
         $gia = $_POST['gia'];
-        header("Location: http://localhost:63342/Doan/backend/login.php?gia=".$gia."&id=".$id);
+        $sl = $_POST['sl'];
+        header("Location: http://localhost:63342/Doan/backend/login.php?gia=".$gia."&id=".$id."&sl=".$sl);
         exit;
     }else{
         $username=$_SESSION["username"];

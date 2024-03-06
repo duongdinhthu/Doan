@@ -42,7 +42,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete1' && isset($_GET['id']
 if (!isset($_SESSION['executed'])) {
     if (isset($_GET['id'])  && isset($_GET['gia'])){
         $username=$_SESSION["username"];
-        $sl ='1';
+        $sl = $_GET['sl'];
         $id = $_GET['id'];
         $price = $_GET['gia'];
         $sql="select * from cart where username='$username' and product_id='$id' and hidden = 1";

@@ -12,8 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if (isset($_GET['id'])  && isset($_GET['gia'])) {
     $id=$_GET['id'];
     $gia=$_GET['gia'];
+    $sl=$_GET['sl'];
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $loginPermissions->accountCustomer1($username,$password,$id,$gia);
+        $loginPermissions->accountCustomer1($username,$password,$id,$gia,$sl);
     }
 }
 ?>

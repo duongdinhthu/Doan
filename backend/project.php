@@ -222,7 +222,7 @@ class projectFptHappy
             echo"login that bai, vui long  kiem tra lai<br>";
         }
     }
-    public function accountCustomer1($username,$password,$id,$gia)
+    public function accountCustomer1($username,$password,$id,$gia,$sl)
     {
         $sql = "SELECT * FROM account_customer where username = ? and password = ?";
         $stmt = $this->conn->prepare($sql);
@@ -234,7 +234,7 @@ class projectFptHappy
             $_SESSION['username']=$row['username'];
             $_SESSION['password']=$row['password'];
             echo"login thanh cong";
-            header("Location:http://localhost:63342/Doan/backend/cart.php?gia=".$gia."&id=".$id);
+            header("Location:http://localhost:63342/Doan/backend/cart.php?gia=".$gia."&id=".$id."&sl=".$sl);
             exit();
         }else{
             echo"login that bai, vui long  kiem tra lai<br>";
