@@ -13,7 +13,18 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
 $username = $_SESSION["username"];
 include "project.php";
 $carts = new projectFptHappy();
+$server = "Localhost:3306";    //your ip and port
+$user = "root";                            //username by default give it root
+$password = "";                                   // default password is empty
+$databse = "fpthappy";             // database name
 
+$conn = mysqli_connect($server, $user, $password, $databse);
+
+if ($conn) {
+    echo "<p hidden='hidden'>ok</p>";
+} else {
+    echo "";
+}
 if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id'])) {
     $id=$_GET['id'];
     $delete = $carts->deleteItemByCart($id);
@@ -30,23 +41,38 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete1' && isset($_GET['id']
 }
 if (!isset($_SESSION['executed'])) {
     if (isset($_GET['id'])  && isset($_GET['gia'])){
-        ?>
-        <script>
-        swal({
-            title: "Success",
-            text: "The order has been sent. Thank you for supporting the shop",
-            icon: "success",
-        });
-    </script>
-<?php
         $username=$_SESSION["username"];
         $sl ='1';
         $id = $_GET['id'];
         $price = $_GET['gia'];
-        $addcart=$carts->addCart2($username,$id,$sl,$price);
+        $sql="select * from cart where username='$username' and product_id='$id' and hidden = 1";
+        $result = mysqli_query($conn,$sql);
+        if($result->num_rows>0){
+            $sql2="UPDATE cart SET quantity = quantity + '$sl' WHERE product_id = '$id' and username = '$username';";
+            $result1 = mysqli_query($conn,$sql2);
 
-
-
+            ?>
+            <script>
+                swal({
+                    title: "Success",
+                    text: "The item was successfully added to the cart",
+                    icon: "success",
+                });
+            </script>
+            <?php
+        }else{
+            $sql1 = "insert into cart(username,product_id,quantity,list_price)values('$username','$id','$sl','$price')";
+            $result1 = mysqli_query($conn,$sql1);
+            ?>
+            <script>
+                swal({
+                    title: "Success",
+                    text: "The item was successfully added to the cart",
+                    icon: "success",
+                });
+            </script>
+            <?php
+        }
     }
     $_SESSION['executed'] = true;
 }
