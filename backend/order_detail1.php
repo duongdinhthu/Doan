@@ -38,7 +38,7 @@ $detail = $project->detailCodeOrder($username,$code);
     }
 </style>
 <body>
-<a style="margin-top: 50px; margin-bottom: 10px; margin-left: 220px; border-radius: 10px" class="btn btn-outline-primary" href="purchased_order.php">Back</a>
+<a style="margin-top: 50px; margin-bottom: 10px; margin-left: 220px; border-radius: 10px" class="btn btn-outline-primary" href="fpthappy1.php">Back</a>
 <div class="container">
     <table class="table">
         <h1 style="color: #f29f33; text-align: center">
