@@ -250,15 +250,15 @@ $totalcart = $project->totalShow($username);
         <input style="margin-left: 34px" type="radio" id="visa" name="payment" value="VISA, MasterCard" required >
         <label for="payment">VISA, MasterCard</label><br>
         <div id="visacard" style="display: none; margin-left: 50px" >
-            <h6>Card Number:<input style="margin-left: 15px;width: " ></h6>
-            <h6>Card Holder:<input style="margin-left: 23px"></h6>
-            <h6>Expiration date:<input type="date" ></h6>
-            <h6>CVV: <input style="margin-left: 75px"></h6><br>
+            <h6>Card Number:<input style="margin-left: 15px;width: " required></h6>
+            <h6>Card Holder:<input style="margin-left: 23px" required></h6>
+            <h6>Expiration date:<input type="date" required></h6>
+            <h6>CVV: <input style="margin-left: 75px" required></h6><br>
         </div>
 
 
         <br>
-        <button style="display: flex; justify-content: end; margin-right: 50px" class="order" type="submit" required>Order</button>
+        <button style="display: flex; justify-content: end; margin-left: 1000px" class="order" type="submit" required>Order</button>
     </form>
 </div>
 <div class="footer">
