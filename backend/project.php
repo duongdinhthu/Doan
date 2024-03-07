@@ -68,7 +68,7 @@ class projectFptHappy
             echo "Username $username already exists , please try again!\n";
         }
     }
-    public function addAccountCustomer($username, $password,$id,$gia,$sl)
+    public function addAccountCustomer($password,$username,$id,$gia,$sl)
     {
         if ($this->isUExists($username) == null) {
             if ($this->isUExists1($username) == null) {
@@ -77,7 +77,7 @@ class projectFptHappy
                     $stmt = $this->conn->prepare($sql);// thực hiện bảo vệ trước tân công
                     $stmt->bind_param("ss", $username, $password);
                     if ($stmt->execute()) {
-                        header("Location:http://localhost:63342/Doan/backend/cart.php?username=".$username."&gia=".$gia."&id=".$id."&sl=".$sl);
+                        header("Location:http://localhost:63342/Doan/backend/cart.php?username=".$username."&password=".$password."&gia=".$gia."&id=".$id."&sl=".$sl);
                     } else {
                         echo "Failed to add user: " . $stmt->error;
                     }
@@ -664,6 +664,42 @@ public function addBook($name,$phone,$email,$address)
         }
         return $carts;
     }
+    public function booktour1($ok)
+    {
+        $carts = [];
+        $sql = "select * from book_tour  where   status = '$ok'" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+    }
+    public function booktour2($ok)
+    {
+        $carts = [];
+        $sql = "select * from book_tour  where   status = '$ok'" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+    }
+    public function booktour3($ok)
+    {
+        $carts = [];
+        $sql = "select * from book_tour  where   status = '$ok'" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+    }
     public function statusDoneBook( $name ,$phone,$email,$address,$done,$day)
     {
         $sql = "update book_tour set status = '$done' where name = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$day' ";
@@ -732,6 +768,42 @@ public function addBook($name,$phone,$email,$address)
     {
         $carts = [];
         $sql = "SELECT DISTINCT code,username, payment,trading_day,status FROM cart" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+    }
+    public function oder10()
+    {
+        $carts = [];
+        $sql = "SELECT DISTINCT code,username, payment,trading_day,status FROM cart where status='done'" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+    }
+    public function oder11()
+    {
+        $carts = [];
+        $sql = "SELECT DISTINCT code,username, payment,trading_day,status FROM cart where status='delivering'" ;
+        $result = $this->conn->query($sql);
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+                $carts[]=$row;
+            }
+        }
+        return $carts;
+    }
+    public function oder12()
+    {
+        $carts = [];
+        $sql = "SELECT DISTINCT code,username, payment,trading_day,status FROM cart where status='pend processing'" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -945,6 +1017,4 @@ public function showInforProduct($id)
 
         return ['numRows' => $numRows, 'customers' => $customer];
     }
-
-
 }

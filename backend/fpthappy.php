@@ -25,14 +25,24 @@ if (isset($_GET['action']) && $_GET['action'] === 'delivering' && isset($_GET['c
     $statusdone = $project->statusDelivering( $code ,$username,$delivering,$day);
     echo "<h3>Change the status to delivery successfully</h3>";
 }
+
 $project = new projectFptHappy();
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $from = $_POST['search'];
     $to = $_POST['search1'];
     $status = $_POST['search2'];
     $paycart = $project->oder($to,$from,$status);
-}else{
-    $paycart = $project->oder3();
+}else if(isset($_GET['action'])&& $_GET['action'] === 'getall'){
+    $paycart=$project->oder3();
+}else if(isset($_GET['action'])&& $_GET['action'] === 'getSuc'){
+    $paycart=$project->oder10();
+}else if(isset($_GET['action'])&& $_GET['action'] === 'getShip'){
+    $paycart=$project->oder11();
+}else if(isset($_GET['action'])&& $_GET['action'] === 'getPen'){
+    $paycart=$project->oder12();
+}
+else{
+    $paycart=$project->oder3();
 }
 $loading=$project->loading();
 $numRows = $loading['numRows'];
@@ -124,6 +134,7 @@ $tile=($numBookSuc/$numBook)*100;
             ?>
         </h2>
         <h4>Total orders</h4>
+        <a href="fpthappy.php?action=getall#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
     </div>
     <div style="padding: 25px 40px 25px 10px; background-color: #28A745; color: white; border-radius: 10px; width: 20%">
         <h2>
@@ -132,6 +143,8 @@ $tile=($numBookSuc/$numBook)*100;
             ?>
         </h2>
         <h4>Successful ordered</h4>
+        <a href="fpthappy.php?action=getSuc#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+
     </div>
     <div style="padding: 25px 50px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20% ">
         <h2>
@@ -140,6 +153,8 @@ $tile=($numBookSuc/$numBook)*100;
             ?>
         </h2>
         <h4>Order is shipping</h4>
+        <a href="fpthappy.php?action=getShip#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+
     </div>
     <div style="padding: 25px 80px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20%">
         <h2>
@@ -147,7 +162,9 @@ $tile=($numBookSuc/$numBook)*100;
             echo $numPro;
             ?>
         </h2>
-        <h4>Order is pend <br>processing</h4>
+        <h4>Order is pend processing</h4>
+        <a href="fpthappy.php?action=getPen#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+
     </div>
 </div>
     <div class="all" style="display: flex; margin-top: 30px">
@@ -158,6 +175,7 @@ $tile=($numBookSuc/$numBook)*100;
                 ?>
             </h2>
             <h4>Total book<br> tour ordered</h4>
+            <a href="book_tour.php#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
         </div>
         <div style="padding: 25px 50px 25px 10px; background-color: #28A745; color: white; border-radius: 10px; width: 20%">
             <h2>
@@ -167,6 +185,8 @@ $tile=($numBookSuc/$numBook)*100;
                 ?>
             </h2>
             <h4>Successful book <br>tour ordered</h4>
+            <a href="book_tour.php?action=showSuc#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+
         </div>
         <div style="padding: 25px 25px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20%">
             <h2>
@@ -175,6 +195,8 @@ $tile=($numBookSuc/$numBook)*100;
                 ?>
             </h2>
             <h4>Book tour consulting</h4>
+            <a href="book_tour.php?action=showCon#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+
         </div>
         <div style="padding: 25px 65px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20% ">
             <h2>
@@ -183,6 +205,8 @@ $tile=($numBookSuc/$numBook)*100;
                 ?>
             </h2>
             <h4>Book tour pend <br>processing</h4>
+            <a href="book_tour.php?action=showPen#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+
         </div>
     </div>
 <div class="all" style="display: flex; margin-top: 30px">
@@ -193,9 +217,10 @@ $tile=($numBookSuc/$numBook)*100;
             ?>
         </h2>
         <h4>Total customers</h4>
+        <a href="infor_customer.php#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
     </div>
 </div>
-    <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
+    <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px" id="neo">
         Enter the date to search</h2>
     <form action="" method="post">
         <label for="search" >From </label>

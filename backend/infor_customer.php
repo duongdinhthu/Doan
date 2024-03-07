@@ -66,7 +66,7 @@ $customer=$project->inforCustomer();
         <button class="btn btn-outline-warning" type="submit"  style="border-radius: 10px">Search</button>
     </form>
     <br>
-    <table class="table">
+    <table class="table" id="neo">
         <h2  style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">List of customers</h2>
         <thead>
         <tr>

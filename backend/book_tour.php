@@ -28,12 +28,22 @@ if (isset($_GET['action']) && $_GET['action'] === 'done' && isset($_GET['name'])
     $statusdone = $project->statusDoneBook( $name ,$phone,$email,$address,$done,$day);
     echo "<h3>Change the status to done successfully</h3>";
 }
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $date = $_POST['search'];
     $datemonth = $_POST['search1'];
     $status = $_POST['search2'];
     $paycart = $project->booktour($date,$status);
-}else{
+}else if(isset($_GET['action'])&& $_GET['action'] === 'showSuc'){
+    $ok = 'done';
+    $paycart = $project->booktour1($ok);
+}else if(isset($_GET['action'])&& $_GET['action'] === 'showCon'){
+    $ok = 'consulting';
+    $paycart = $project->booktour2($ok);
+}else if(isset($_GET['action'])&& $_GET['action'] === 'showPen'){
+    $ok = 'pend processing';
+    $paycart = $project->booktour3($ok);
+} else{
     $paycart = $project->oder4();
 }
 
@@ -91,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         <button class="btn btn-outline-warning" type="submit"  style="border-radius: 10px">Search</button>
     </form>
     <br>
-    <table class="table">
+    <table class="table" id="neo">
         <h2 style="color: #f29f33; margin-bottom: 30px">List users</h2>
         <thead>
         <tr>
