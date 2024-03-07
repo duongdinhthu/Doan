@@ -796,4 +796,132 @@ public function showInforProduct($id)
     }
     return $carts;
 }
+    public function loading(){
+        $customer = [];
+        $sql = "select DISTINCT code from cart ";
+        $result = $this->conn->query($sql);
+        $numRows = $result->num_rows; // Lấy số hàng được lấy ra
+
+        if($numRows > 0){
+            while($row = $result->fetch_assoc()){
+                $customer[] = $row;
+            }
+        }
+
+        return ['numRows' => $numRows, 'customers' => $customer];
+    }
+    public function done(){
+        $customer = [];
+        $sql = "select DISTINCT code from cart where status='done'";
+        $result = $this->conn->query($sql);
+        $numRows = $result->num_rows; // Lấy số hàng được lấy ra
+
+        if($numRows > 0){
+            while($row = $result->fetch_assoc()){
+                $customer[] = $row;
+            }
+        }
+
+        return ['numRows' => $numRows, 'customers' => $customer];
+    }
+    public function delivering(){
+        $customer = [];
+        $sql = "select DISTINCT code from cart where status='delivering'";
+        $result = $this->conn->query($sql);
+        $numRows = $result->num_rows; // Lấy số hàng được lấy ra
+
+        if($numRows > 0){
+            while($row = $result->fetch_assoc()){
+                $customer[] = $row;
+            }
+        }
+
+        return ['numRows' => $numRows, 'customers' => $customer];
+    }
+    public function processing(){
+        $customer = [];
+        $sql = "select DISTINCT code from cart where status='pend processing'";
+        $result = $this->conn->query($sql);
+        $numRows = $result->num_rows; // Lấy số hàng được lấy ra
+
+        if($numRows > 0){
+            while($row = $result->fetch_assoc()){
+                $customer[] = $row;
+            }
+        }
+
+        return ['numRows' => $numRows, 'customers' => $customer];
+    }
+    public function customer(){
+        $customer = [];
+        $sql = "select username from account_customer";
+        $result = $this->conn->query($sql);
+        $numRows = $result->num_rows; // Lấy số hàng được lấy ra
+
+        if($numRows > 0){
+            while($row = $result->fetch_assoc()){
+                $customer[] = $row;
+            }
+        }
+
+        return ['numRows' => $numRows, 'customers' => $customer];
+    }
+    public function totalBook(){
+        $customer = [];
+        $sql = "select id from book_tour";
+        $result = $this->conn->query($sql);
+        $numRows = $result->num_rows; // Lấy số hàng được lấy ra
+
+        if($numRows > 0){
+            while($row = $result->fetch_assoc()){
+                $customer[] = $row;
+            }
+        }
+
+        return ['numRows' => $numRows, 'customers' => $customer];
+    }
+    public function totalBooksuc(){
+        $customer = [];
+        $sql = "select id from book_tour where status='done'";
+        $result = $this->conn->query($sql);
+        $numRows = $result->num_rows; // Lấy số hàng được lấy ra
+
+        if($numRows > 0){
+            while($row = $result->fetch_assoc()){
+                $customer[] = $row;
+            }
+        }
+
+        return ['numRows' => $numRows, 'customers' => $customer];
+    }
+    public function totalBookcon(){
+        $customer = [];
+        $sql = "select id from book_tour where status='consulting'";
+        $result = $this->conn->query($sql);
+        $numRows = $result->num_rows; // Lấy số hàng được lấy ra
+
+        if($numRows > 0){
+            while($row = $result->fetch_assoc()){
+                $customer[] = $row;
+            }
+        }
+
+        return ['numRows' => $numRows, 'customers' => $customer];
+    }
+    public function totalBookpen(){
+        $customer = [];
+        $sql = "select id from book_tour where status='pend processing'";
+        $result = $this->conn->query($sql);
+        $numRows = $result->num_rows; // Lấy số hàng được lấy ra
+
+        if($numRows > 0){
+            while($row = $result->fetch_assoc()){
+                $customer[] = $row;
+            }
+        }
+
+        return ['numRows' => $numRows, 'customers' => $customer];
+    }
+
+
 }

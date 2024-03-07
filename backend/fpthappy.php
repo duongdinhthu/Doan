@@ -34,8 +34,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 }else{
     $paycart = $project->oder3();
 }
-
-
+$loading=$project->loading();
+$numRows = $loading['numRows'];
+$done=$project->done();
+$numDone=$done['numRows'];
+$ship=$project->delivering();
+$numShip=$ship['numRows'];
+$process=$project->processing();
+$numPro=$process['numRows'];
+$customer=$project->customer();
+$numCus=$customer['numRows'];
+$totalbook=$project->totalBook();
+$numBook=$totalbook['numRows'];
+$sucBook=$project->totalBooksuc();
+$numBookSuc=$sucBook['numRows'];
+$conBook=$project->totalBookcon();
+$numBookCon=$conBook['numRows'];
+$penBook=$project->totalBookpen();
+$numBookPen=$penBook['numRows'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -93,8 +109,66 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <a href="employye_manager.php" class="btn btn-outline-secondary" style="border-radius: 10px">Employee manage</a>
     <a href="add_product.php" class="btn btn-outline-success" style="border-radius: 10px">Manage product</a>
 
-
-
+<div>
+    <div>
+        <h4>Total orders:</h4>
+        <?php
+        echo $numRows;
+        ?>
+    </div>
+    <div>
+        <h4>Successful orderss:</h4>
+        <?php
+        echo $numDone;
+        ?>
+    </div>
+    <div>
+        <h4>Order is shipping:</h4>
+        <?php
+        echo $numShip;
+        ?>
+    </div>
+    <div>
+        <h4>Order is pend processing:</h4>
+        <?php
+        echo $numPro;
+        ?>
+    </div>
+</div>
+    <div>
+        <div>
+            <h4>Total book tour ordered:</h4>
+            <?php
+            echo $numBook;
+            ?>
+        </div>
+        <div>
+            <h4>Successful book tour ordered:</h4>
+            <?php
+            echo $numBookSuc;
+            ?>
+        </div>
+        <div>
+            <h4>Book tour consulting:</h4>
+            <?php
+            echo $numBookCon;
+            ?>
+        </div>
+        <div>
+            <h4>Book tour pend processing:</h4>
+            <?php
+            echo $numBookPen;
+            ?>
+        </div>
+    </div>
+<div>
+    <div>
+        <h4>Total customers:</h4>
+        <?php
+        echo $numCus;
+        ?>
+    </div>
+</div>
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
         Enter the date to search</h2>
     <form action="" method="post">
@@ -145,6 +219,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <td><a href="fpthappy.php?action=delivering&code=<?php echo $paycart['code']; ?>&username=<?php echo $paycart['username'] ?>&day=<?php echo $paycart['trading_day'] ?>"  class=" myLink2 " hidden="hidden" onclick="return confirm('Do you want to change the status to Delivering?')">Delivering</a></td>
 
             </tr>
+
         <?php endforeach; ?>
         </tbody>
     </table>
