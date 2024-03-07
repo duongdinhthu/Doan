@@ -2,7 +2,7 @@
 <?php
 session_start();
 // Check session
-
+ini_set('display_errors', 'off');
 ?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

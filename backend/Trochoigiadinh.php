@@ -1,7 +1,7 @@
 <?php
 session_start();
 //kiểm tra session
-
+ini_set('display_errors', 'off');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,7 @@ session_start();
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
-                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
+                <a href="cart.php" class="btn btn-outline"><i style="margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">

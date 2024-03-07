@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+ini_set('display_errors', 'off');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,7 @@ session_start();
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
-                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
+                <a href="cart.php" class="btn btn-outline"><i style="margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -101,14 +101,14 @@ session_start();
 </div>
 <div class="all-new1">
     <div class="new">
-        <img src="imageTinTuc/img203.webp" alt="" style="width: 340px">
+        <img src="imageTinTuc/img203.webp" alt="">
         <h5>Tet Nguyen Dan Lunar New Year Holiday Schedule of the Year of the Buffalo 2021</h5>
         <p>Dung Nguyen | October 23, 2021</p>
         <h6>Greetings, Joining in the atmosphere of welcoming the New Year of the Buffalo 2021 nationwide, FPT HAPPY wishes you a New Year...</h6>
         <a href="cardtitle4.php">Read more <strong>-></strong></a>
     </div>
     <div class="new">
-        <img src="imageTinTuc/img204.webp" alt="" style="width: 340px">
+        <img src="imageTinTuc/img204.webp" alt="">
         <h5>Tet Canh Ty Lunar New Year Holiday Schedule of the Year of the Rat 2020</h5>
         <p>Dung Nguyen | October 23, 2020</p>
         <h6>Greetings, Joining in the atmosphere of welcoming the New Year of the Rat 2020 nationwide, FPT HAPPY wishes you a New Year...</h6>

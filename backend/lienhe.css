@@ -1,16 +1,18 @@
-
-.contact{
+body{
+    background-color: #FEF7EF;
+}
+.contact3{
     display: flex;
     width: 100%;
     flex-direction: row;
     justify-content: center;
     padding: 20px;
-    background-color: #FEF7EF;
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.contact div i{
+.contact1 i{
     padding-left: 10px;
+    color: #f29f33;
 }
 .contact1{
     background-color: white;
@@ -59,3 +61,43 @@ iframe{
     width: 100px;
     background-color: #f29f33;
 }
+.contact1 i{
+    font-size: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .text div a{
+        font-size: 14px;
+    }
+    .text div p{
+        font-size: 14px;
+    }
+    .text h2{
+        font-size: 26px;
+    }
+    .contact2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contact1 h2{
+        font-size: 20px;
+    }
+    .contact1 h5{
+        font-size: 18px;
+    }
+    .contact1 p{
+        font-size: 14px;
+    }
+    .contact1 i{
+        font-size: 32px;
+    }
+}
+
+
+
+
+
+
+
+

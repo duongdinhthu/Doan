@@ -68,6 +68,10 @@ header{
 .hotline p{
     color: #654145;
 }
+.hotline a i{
+    margin-left: 10px;
+    margin-top: 5px;
+}
 .d-flex{
     background-color: #654145;
     opacity: 0.9;
@@ -119,6 +123,8 @@ header{
     display: block;
 }
 .dropdown:hover .dropdown-content {display: block;}
+.dropdown:active .dropdown-content {display: block;}
+
 
 
 /*SLIDE*/
@@ -262,4 +268,111 @@ header{
     color: white;
     text-align: center;
     padding-bottom: 20px;
+}
+.img-combo a img{
+    width: 100%;
+    margin-left: -20px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    /*HEADER*/
+    .header1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: auto;
+    }
+
+    .header1 img {
+        width: 150px;
+        height: 100%;
+        margin-left: 5%;
+    }
+    .header1 label {
+        width: 40%;
+        margin: 5px 20px;
+        padding: 5px 15px;
+        border-radius: 10px;
+    }
+    .header1 label i{
+        display: none;
+    }
+    .hotline {
+        margin-top: 20px;
+    }
+    .hotline p{
+        font-size: 14px;
+    }
+    .hotline i, .hotline a i{
+        font-size: 20px;
+    }
+    .d-flex{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+    .d-flex a{
+        font-size: 14px;
+        margin: auto;
+    }
+    .dropdown{
+        margin: auto;
+    }
+    .d-flex button{
+        font-size: 14px;
+        margin: auto;
+    }
+
+
+    /*FOOTER*/
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer p{
+        font-size: 12px;
+    }
+    .footer1 img{
+        width: 50%;
+    }
+    .footer1 p{
+        font-size: 12px;
+    }
+    .footer1 label input{
+        padding: 5px 10px;
+    }
+    .footer1 label button{
+        padding: 5px 8px;
+        font-size: 16px;
+    }
+    .footer2{
+        margin-left: 55px;
+    }
+    .Support{
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+    .Support h3{
+        font-size: 14px;
+    }
+    .Support a{
+        font-size: 12px;
+    }
+    .icon i{
+        font-size: 20px;
+    }
+    .footer0 {
+        width: 100%;
+    }
+    .pay h3{
+        font-size: 14px;
+        margin-left: 15px;
+    }
+    .pay button{
+        padding: 15px 30px;
+    }
 }

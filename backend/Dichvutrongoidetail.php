@@ -1,6 +1,7 @@
 <?php
 session_start();
 //kiểm tra session
+ini_set('display_errors', 'off');
 include "project.php";
 $project = new projectFptHappy();
 $product = $project->getAllProduct6();

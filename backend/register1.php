@@ -1,7 +1,7 @@
 <?php
 
 //kiểm tra session
-
+ini_set('display_errors', 'off');
 
 include "project.php";
 $register = new projectFptHappy();

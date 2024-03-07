@@ -1,7 +1,7 @@
 <?php
 session_start();
 //kiểm tra session
-
+ini_set('display_errors', 'off');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,7 @@ session_start();
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
-                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
+                <a href="cart.php" class="btn btn-outline"><i style=" margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -121,7 +121,7 @@ session_start();
 <div class="product-boxes">
     <div>
         <a href="Trochoitreemchitiet.php">
-            <img src="https://www.cleanipedia.com/images/5iwkm8ckyw6v/5RHBi0UiJNDQ95B1sXp1ao/f767c121fee347d130c344dde308f931/Ymlnc3RvY2stZ2lybHMtaW4tcGlsbG93LWZvcnQtMTk3ODc4NjMwLmpwZw/900w/tr%C3%B2-ch%C6%A1i-trong-nh%C3%A0-cho-b%C3%A9.jpg" alt="" style="width: 280px;">
+            <img src="https://www.cleanipedia.com/images/5iwkm8ckyw6v/5RHBi0UiJNDQ95B1sXp1ao/f767c121fee347d130c344dde308f931/Ymlnc3RvY2stZ2lybHMtaW4tcGlsbG93LWZvcnQtMTk3ODc4NjMwLmpwZw/900w/tr%C3%B2-ch%C6%A1i-trong-nh%C3%A0-cho-b%C3%A9.jpg" alt="">
         </a>
         <a href="Trochoitreemchitiet.php" class="name">Building Forts Game</a>
         <h5 class="cost">

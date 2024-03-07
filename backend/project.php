@@ -1,6 +1,6 @@
 <?php
 setcookie("status", "active", time() + 3600, "/");
-
+ini_set('display_errors', 'off');
 class projectFptHappy
 {
     private $conn;

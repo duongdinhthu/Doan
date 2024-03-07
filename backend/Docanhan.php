@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+ini_set('display_errors', 'off');
 ?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dothietyeu.css">
+    <link rel="stylesheet" href="Docanhan.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
     <script src="search.js"></script>
@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div>
                     <form action="" method="post" >
                         <a href="Docanhandetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>">
-                            <img src="<?php echo $product["image"]; ?>" class="card-img-top"  alt="..." style="height: 300px">
+                            <img src="<?php echo $product["image"]; ?>" alt="...">
                         </a>
                         <a href="Docanhandetail.php?gia=<?php echo $product["price"]; ?>&id=<?php echo $product["pid"]; ?>" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">

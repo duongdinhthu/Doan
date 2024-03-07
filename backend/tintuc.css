@@ -90,3 +90,36 @@
     width: 100px;
     background-color: #f29f33;
 }
+.all-new1 img {
+    width: 340px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .text div a{
+        font-size: 14px;
+    }
+    .text div p{
+        font-size: 14px;
+    }
+    .text h2{
+        font-size: 26px;
+    }
+    .news {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .news h2{
+        font-size: 26px;
+    }
+    .new h5{
+        font-size: 14px;
+    }
+    .new p, .new h6{
+        font-size: 12px;
+    }
+    .new img{
+        width: 100%;
+    }
+}

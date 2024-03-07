@@ -1,7 +1,7 @@
 <?php
 session_start();
 //kiểm tra session
-
+ini_set('display_errors', 'off');
 ?>
 <!DOCTYPE html>
 <html lang="en">

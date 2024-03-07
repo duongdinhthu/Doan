@@ -1,7 +1,7 @@
 <?php
 session_start();
 //kiểm tra session
-
+ini_set('display_errors', 'off');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,7 @@ session_start();
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
-                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
+                <a href="cart.php" class="btn btn-outline"><i style="margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -129,21 +129,21 @@ session_start();
         </h5>
     </div>
     <div>
-        <img src="https://vteambuilding.com/wp-content/uploads/2018/01/8.-Ban-nh%E1%BA%A1c-h%C3%B2a-t%E1%BA%A5u-1024x683.jpg" alt="" style="width: 280px; height: 200px;">
-        <div class="name">Orchestra Harmony Game</div>
+        <img src="https://vteambuilding.com/wp-content/uploads/2018/01/8.-Ban-nh%E1%BA%A1c-h%C3%B2a-t%E1%BA%A5u-1024x683.jpg" alt="">
+        <a class="name">Orchestra Harmony Game</a>
         <h5 class="cost"><a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20ban%20nhac%20hoa%20tau.docx" download="file.dox" class="buy-button">View Detail</a>
         </h5>
     </div>
     <div>
-        <img src="https://bizweb.dktcdn.net/100/463/236/products/tro-choi-team-building-doan-ket-da-sua.png?v=1667918711933" alt="" style="width: 280px; height: 200px;">
-        <div class="name">Team Wheel Game</div>
+        <img src="https://bizweb.dktcdn.net/100/463/236/products/tro-choi-team-building-doan-ket-da-sua.png?v=1667918711933" alt="">
+        <a class="name">Team Wheel Game</a>
         <h5 class="cost">
             <a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20banh%20xe%20dong%20doi.docx"  download="file.dox" class="buy-button">View Detail</a>
         </h5>
     </div>
     <div>
-        <img src="https://cdn.tgdd.vn//GameApp/1388369//bit-mat-bat-de-cach-2-800x450.png" alt="" style="width: 280px; height: 200px;">
-        <div class="name">Blindfolded Goat Catching Game</div>
+        <img src="https://cdn.tgdd.vn//GameApp/1388369//bit-mat-bat-de-cach-2-800x450.png" alt="">
+        <a class="name">Blindfolded Goat Catching Game</a>
         <h5 class="cost">
             <a href="../frontend/Tro%20choi%20cho%20nguoi%20lon/Tro%20choi%20bit%20mat%20bat%20de.docx"  download="file.dox" class="buy-button">View Detail</a>
         </h5>

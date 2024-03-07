@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+ini_set('display_errors', 'off');
 if (!isset($_SESSION["username"]) && !isset($_SESSION['password'])) {
     header("Location: login.php");
     exit;

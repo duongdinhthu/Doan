@@ -430,3 +430,167 @@ body{
 .new a:hover{
     color: #F29F33;
 }
+
+@media screen and (max-width: 768px) {
+    /*MAIN CONTENT*/
+
+    .introduce {
+        text-align: center;
+    }
+    .introduce h2 {
+        font-size: 26px;
+    }
+    .introduce p{
+        font-size: 12px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 10%;
+        padding: 10px 10px;
+    }
+    .content img{
+        width: 80%;
+    }
+    .all-box{
+        padding: 10px 10px;
+    }
+    .content button {
+        width: 35%;
+        margin-left: 2%;
+    }
+    .box h5{
+        font-size: 16px;
+    }
+    .box2 h5{
+        font-size: 16px;
+    }
+    .service {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .service hr{
+        margin-left: 40%;
+    }
+    .text-box{
+        text-align: center;
+    }
+    .text-box h2{
+        font-size: 26px;
+        margin-left: 42%;
+    }
+    #viewAllBtn{
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+    #backToTopBtn{
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+    .service .text-box {
+        width: 100%;
+    }
+    .img-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 70%;
+    }
+    .service .img-box {
+        width: 45%;
+        margin: 10px 0;
+    }
+    .outstanding-product {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .outstanding-product h2{
+        font-size: 26px;
+    }
+    .product-boxes div {
+        width: 30%;
+        margin: 10px 0;
+    }
+    .product-boxes div a{
+        font-size: 14px;
+    }
+    .product-boxes button{
+        width: 50%;
+        margin-bottom: 60px;
+    }
+    .product-boxes button img{
+        width: 100%;
+    }
+    .product-boxes button h2{
+        display: none;
+    }
+    .exclusive-product {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .exclusive-product h2{
+        font-size: 26px;
+    }
+
+    .menu-product {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+    .menu-product a{
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .exclusive-product,.exclusive-boxes {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .exclusive-boxes img {
+        width: 40%;
+    }
+    .boxes div a{
+        font-size: 12px;
+    }
+    .combo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .combo h2{
+        font-size: 26px;
+    }
+    .img-combo{
+        display: flex;
+        flex-direction: row;
+    }
+    .img-combo a img{
+        width: 50%;
+        margin-left: -20px;
+    }
+    .img-combo img{
+        width: 50%;
+        margin-left: -290px;
+    }
+    .news {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .news h2{
+        font-size: 26px;
+    }
+    .new h5{
+        font-size: 14px;
+    }
+    .new p, .new h6{
+        font-size: 12px;
+    }
+}

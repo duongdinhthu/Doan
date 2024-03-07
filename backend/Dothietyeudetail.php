@@ -1,7 +1,7 @@
 <?php
 session_start();
 //kiểm tra session
-
+ini_set('display_errors', 'off');
 ?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

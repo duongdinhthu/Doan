@@ -1,6 +1,4 @@
-body{
-    background-color: #FEF7EF;
-}
+
 .img_header{
     background-color: #FEF7EF;
     margin-top: 20px;
@@ -92,4 +90,43 @@ body{
 .buy-button:hover{
     background-color: #654145 ;
     color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+    .text div a{
+        font-size: 14px;
+    }
+    .text div p{
+        font-size: 14px;
+    }
+    .text h2{
+        font-size: 26px;
+    }
+    .product-boxes{
+        display: flex;
+    }
+    .product-boxes div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-boxes div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .product-boxes div img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .product-boxes div a{
+        font-size: 12px;
+    }
+    .cost a{
+        font-size: 13px;
+        margin-left: 50px;
+        padding: 5px 10px;
+        border-radius: 6px;
+    }
 }

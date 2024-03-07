@@ -2,6 +2,7 @@
 
 session_start();
 //kiểm tra session
+ini_set('display_errors', 'off');
 if (!isset($_SESSION["username"]) && !isset($_SESSION['password'])) {
     header("Location:http://localhost:63342/Doan/backend/login.php");
     exit;

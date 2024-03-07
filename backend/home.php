@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+ini_set('display_errors', 'off');
 
 ?>
 
@@ -36,7 +36,7 @@ session_start();
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
-                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
+                <a href="cart.php" class="btn btn-outline"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -107,7 +107,7 @@ session_start();
     </div>
 </div>
 <div class="service">
-    <div class="text-box" style="margin-left:100px;">
+    <div class="text-box">
         <h2>SERVICES</h2>
         <hr/>
         <p>CAMP offers the most convenient and suitable services, making your trips hassle-free.</p>
@@ -119,7 +119,7 @@ session_start();
             <div class="text">
                 <p>Adventure gear<br>combo</p>
             </div>
-            <a href="Docanhandetail.php">
+            <a href="Docanhandetail.php?gia=3.98&id=17">
                 <img src="images(sanpham)/shopping.webp" alt="" style="border-radius:20px;">
             </a>
         </button>
@@ -127,7 +127,7 @@ session_start();
             <div class="text">
                 <p>Travel gear<br>rental</p>
             </div>
-            <a href="Dothietyeudetail.php">
+            <a href="Dothietyeudetail.php?gia=299.99&id=51">
                 <img src="images(sanpham)/img1.webp" alt="" style="border-radius:20px;">
             </a>
         </button>
@@ -135,7 +135,7 @@ session_start();
             <div class="text">
                 <p>Camping gear</p>
             </div>
-            <a href="Thucphamdetail.php">
+            <a href="Thucphamdetail.php?gia=2.99&id=1">
                 <img src="images(sanpham)/img2.png" alt="" style="border-radius:20px;">
             </a>
         </button>
@@ -219,10 +219,10 @@ session_start();
     <hr/>
     <div class="product-boxes">
         <div>
-            <a href="Dothietyeudetail.php">
+            <a href="Dothietyeudetail.php?gia=299.99&id=51">
                 <img src="img/sp5.webp" alt="">
             </a>
-            <a href="Dothietyeudetail.php">Self-inflating camping tent for 4-5 people, cool and airy, with sunroof...</a>
+            <a href="Dothietyeudetail.php?gia=299.99&id=51">Self-inflating camping tent for 4-5 people, cool and airy, with sunroof...</a>
             <h5 class="cost">
                 $50 <small><del>$60</del></small>
             </h5>
@@ -236,7 +236,7 @@ session_start();
         </div>
         <button>
             <h2>4-8 PERSON OUTDOOR COMBO<br><p>View now <strong>-></strong></p></h2>
-            <img src="img/img_banner_product_featured.webp" alt="" style="width:570px">
+            <img src="img/img_banner_product_featured.webp" alt="">
         </button>
     </div>
     <div class="product-boxes">
@@ -285,10 +285,10 @@ session_start();
         <img src="img/img_banner_product_tab.webp" alt="" class="banner">
         <div class="boxes">
             <div>
-                <a href="Docanhandetail.php">
+                <a href="Docanhandetail.php?gia=3.98&id=17">
                     <img src="images(sanpham)/shopping.webp" alt="">
                 </a>
-                <a href="Docanhandetail.php">Survival Knife</a>
+                <a href="Docanhandetail.php?gia=3.98&id=17">Survival Knife</a>
                 <h5 class="cost">$3.99 <small><del>$6</del></small></h5>
             </div>
             <div>
@@ -324,7 +324,7 @@ session_start();
     <hr/>
     <div class="img-combo">
         <a href="Dichvutochucdetail.php" style="margin-right: 20px">
-            <img src="img/image_combo_1.webp" alt="" style="width: 100%; margin-right: -25px">
+            <img src="img/image_combo_1.webp" alt="">
         </a>
         <img src="img/image_combo_2.webp" alt="">
     </div>
@@ -336,7 +336,7 @@ session_start();
     <hr/>
     <div class="all-new">
         <div class="new">
-            <img src="imageTinTuc/img200.webp" alt="" style="height: 215px">
+            <img src="imageTinTuc/img200.webp" alt="">
             <h5>ANNOUNCEMENT OF VIETNAM NATIONAL DAY HOLIDAY 2/9/2023</h5>
             <p>Dung Nguyen | October 25, 2021</p>
             <h6>  To our valued customers and partners, FPT HAPPY Company respectfully announces the schedule of the 2/9/2023 National Day holiday...</h6>
