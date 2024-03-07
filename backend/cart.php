@@ -6,7 +6,8 @@ ini_set('display_errors', 'off');
 
 <?php
 //kiểm tra session
-if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
+$_SESSION['username']=$_GET['username'];
+if (!isset($_SESSION["username"])){
     header("Location:http://localhost:63342/Doan/backend/login.php");
     exit;
 }

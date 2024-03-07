@@ -6,13 +6,24 @@ ini_set('display_errors', 'off');
 include "project.php";
 $register = new projectFptHappy();
 
-$username = $_POST['username'];
-$password= $_POST['password'];
-
-if(isset($username)&&isset($password)){
-    $student = $register->addAccountCustomer($username,$password);
-
+if (isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])){
+    $id=$_GET['id'];
+    $gia=$_GET['gia'];
+    $sl=$_GET['sl'];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $username = $_POST['username'];
+        $password= $_POST['password'];
+        $student = $register->addAccountCustomer($username,$password,$id,$gia,$sl);
+    }
+}else {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $student = $register->addAccountCustomer1($username, $password);
+    }
 }
+
+
 
 
 

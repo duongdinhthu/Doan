@@ -9,7 +9,7 @@ $password=$_POST['password'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $loginPermissions->accountAdmin($username,$password);
 }
-if (isset($_GET['id'])  && isset($_GET['gia'])) {
+if (isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])) {
     $id=$_GET['id'];
     $gia=$_GET['gia'];
     $sl=$_GET['sl'];
@@ -100,7 +100,7 @@ if (isset($_GET['id'])  && isset($_GET['gia'])) {
             <input name="password" placeholder="Password" type="password" id="password" required>
             <br>
             <div class="tag-a">
-                <a href="register2.php">Already have an account?<br> register</a>
+                <a href="register2.php?gia=<?php echo$gia ?>&id=<?php echo$id ?>&sl=<?php echo$sl ?>">Already have an account?<br> register</a>
             </div>
             <button type="submit" >Login</button>
         </form>

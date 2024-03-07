@@ -90,6 +90,8 @@ $infor=$project->inforByUserName($username);
         <?php foreach ($infor as $infor):?>
             <h2>Information</h2>
             <hr>
+            <p>Account: <strong><?php echo $username ?></strong></p>
+            <hr style="width: 150px">
             <p>Your name: <strong><?php echo $infor['name'] ?></strong></p>
             <hr style="width: 150px">
             <p>Your phone number: <strong><?php echo $infor['phone'] ?></strong></p>

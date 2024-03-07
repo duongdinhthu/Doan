@@ -68,7 +68,30 @@ class projectFptHappy
             echo "Username $username already exists , please try again!\n";
         }
     }
-    public function addAccountCustomer($username, $password)
+    public function addAccountCustomer($username, $password,$id,$gia,$sl)
+    {
+        if ($this->isUExists($username) == null) {
+            if ($this->isUExists1($username) == null) {
+                if ($this->isUExists2($username) == null) {
+                    $sql = "INSERT INTO account_customer(username,password) VALUES ( ?, ?)";
+                    $stmt = $this->conn->prepare($sql);// thực hiện bảo vệ trước tân công
+                    $stmt->bind_param("ss", $username, $password);
+                    if ($stmt->execute()) {
+                        header("Location:http://localhost:63342/Doan/backend/cart.php?username=".$username."&gia=".$gia."&id=".$id."&sl=".$sl);
+                    } else {
+                        echo "Failed to add user: " . $stmt->error;
+                    }
+                } else {
+                    echo " User name $username already exists ,please try again!\n";
+                }
+            } else {
+                echo " User name $username already exists ,please try again!\n";
+            }
+        }else{
+            echo "Username $username already exists , please try again!\n";
+        }
+    }
+    public function addAccountCustomer1($username, $password)
     {
         if ($this->isUExists($username) == null) {
             if ($this->isUExists1($username) == null) {
