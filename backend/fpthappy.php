@@ -117,7 +117,7 @@ $tile=($numBookSuc/$numBook)*100;
     <a href="add_product.php" class="btn btn-outline-success" style="border-radius: 10px">Manage product</a>
 
 <div class="all" style="display: flex; margin-top: 30px">
-    <div style="padding: 25px 90px 25px 10px; background-color: #17A2B8; color: white; border-radius: 10px">
+    <div style="padding: 25px 90px 25px 10px; background-color: #17A2B8; color: white; border-radius: 10px; width: 20%">
         <h2>
             <?php
             echo $numRows;
@@ -125,7 +125,7 @@ $tile=($numBookSuc/$numBook)*100;
         </h2>
         <h4>Total orders</h4>
     </div>
-    <div style="padding: 25px 40px 25px 10px; background-color: #28A745; color: white; border-radius: 10px">
+    <div style="padding: 25px 40px 25px 10px; background-color: #28A745; color: white; border-radius: 10px; width: 20%">
         <h2>
             <?php
             echo $numDone;
@@ -133,7 +133,7 @@ $tile=($numBookSuc/$numBook)*100;
         </h2>
         <h4>Successful ordered</h4>
     </div>
-    <div style="padding: 25px 50px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px ">
+    <div style="padding: 25px 50px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20% ">
         <h2>
             <?php
             echo $numShip;
@@ -141,7 +141,7 @@ $tile=($numBookSuc/$numBook)*100;
         </h2>
         <h4>Order is shipping</h4>
     </div>
-    <div style="padding: 25px 80px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px">
+    <div style="padding: 25px 80px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20%">
         <h2>
             <?php
             echo $numPro;
@@ -151,7 +151,7 @@ $tile=($numBookSuc/$numBook)*100;
     </div>
 </div>
     <div class="all" style="display: flex; margin-top: 30px">
-        <div style="padding: 25px 81px 25px 10px; background-color: #17A2B8; color: white; border-radius: 10px">
+        <div style="padding: 25px 81px 25px 10px; background-color: #17A2B8; color: white; border-radius: 10px; width: 20%">
             <h2>
                 <?php
                 echo $numBook;
@@ -159,7 +159,7 @@ $tile=($numBookSuc/$numBook)*100;
             </h2>
             <h4>Total book<br> tour ordered</h4>
         </div>
-        <div style="padding: 25px 50px 25px 10px; background-color: #28A745; color: white; border-radius: 10px">
+        <div style="padding: 25px 50px 25px 10px; background-color: #28A745; color: white; border-radius: 10px; width: 20%">
             <h2>
                 <?php
                 echo "$numBookSuc";
@@ -168,7 +168,7 @@ $tile=($numBookSuc/$numBook)*100;
             </h2>
             <h4>Successful book <br>tour ordered</h4>
         </div>
-        <div style="padding: 25px 25px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px">
+        <div style="padding: 25px 25px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20%">
             <h2>
                 <?php
                 echo $numBookCon;
@@ -176,7 +176,7 @@ $tile=($numBookSuc/$numBook)*100;
             </h2>
             <h4>Book tour consulting</h4>
         </div>
-        <div style="padding: 25px 65px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px ">
+        <div style="padding: 25px 65px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20% ">
             <h2>
                 <?php
                 echo $numBookPen;
@@ -186,7 +186,7 @@ $tile=($numBookSuc/$numBook)*100;
         </div>
     </div>
 <div class="all" style="display: flex; margin-top: 30px">
-    <div style="padding: 30px 60px 30px 10px; background-color: #17A2B8; color: white; border-radius: 10px">
+    <div style="padding: 30px 60px 30px 10px; background-color: #17A2B8; color: white; border-radius: 10px; width: 20%">
         <h2>
             <?php
             echo $numCus;
