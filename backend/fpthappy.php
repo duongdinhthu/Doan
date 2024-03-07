@@ -90,8 +90,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <a href="logout.php" class="btn btn-outline-danger" style="border-radius: 10px">Logout</a>
     <a href="book_tour.php" class="btn btn-outline-secondary" style="border-radius: 10px">Customers book tours</a>
     <a href="infor_customer.php" class="btn btn-outline-secondary" style="border-radius: 10px">Customer information</a>
-    <a href="employye_manager.php" class="btn btn-outline-secondary" style="border-radius: 10px">Employee manager</a>
-    <a href="add_product.php" class="btn btn-outline-success" style="border-radius: 10px">Add product</a>
+    <a href="employye_manager.php" class="btn btn-outline-secondary" style="border-radius: 10px">Employee manage</a>
+    <a href="add_product.php" class="btn btn-outline-success" style="border-radius: 10px">Manage product</a>
 
 
 
