@@ -77,7 +77,9 @@ class projectFptHappy
                     $stmt = $this->conn->prepare($sql);// thực hiện bảo vệ trước tân công
                     $stmt->bind_param("ss", $username, $password);
                     if ($stmt->execute()) {
-                        $this->accountCustomer1($username,$password,$id,$gia,$sl);
+                        $username=  $_SESSION['username'];
+                        $password=$_SESSION['password'];
+                        header("Location:http://localhost:63342/Doan/backend/login.php?gia=".$gia."&id=".$id."&sl=".$sl);
                     } else {
                         echo "Failed to add user: " . $stmt->error;
                     }
@@ -256,13 +258,13 @@ class projectFptHappy
             $row = $result->fetch_assoc();
             $_SESSION['username']=$row['username'];
             $_SESSION['password']=$row['password'];
-            echo"login thanh cong";
             header("Location:http://localhost:63342/Doan/backend/cart.php?gia=".$gia."&id=".$id."&sl=".$sl);
             exit();
         }else{
             echo"login that bai, vui long  kiem tra lai<br>";
         }
     }
+
     public function checkPermission($code)
     {
         $sql = "select * from code_permissions where id = ? ";
@@ -652,10 +654,10 @@ public function addBook($name,$phone,$email,$address)
     $sql = "insert into book_tour(name,phone,email,address)values('$name','$phone','$email','$address')";
     $this->conn->query($sql);
 }
-    public function booktour($date,$status)
+    public function booktour($date,$date1,$status)
     {
         $carts = [];
-        $sql = "select * from book_tour  where trading_day='$date' and status = '$status'" ;
+        $sql = "select * from book_tour  where   status = '$status' and trading_day  BETWEEN '$date' AND '$date1'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){

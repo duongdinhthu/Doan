@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+
 // Check session
 ini_set('display_errors', 'off');
 ?>

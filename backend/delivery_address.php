@@ -228,9 +228,9 @@ $totalcart = $project->totalShow($username);
         <label for="payment">COD</label><br>
         <div id="shipcod" style="display: none; margin-left: 50px" >
             <h6>Consignee information:</h6>
-            <h6>Name:<?php echo $infor['name'] ?></h6>
-            <h6>Phone:<?php echo $infor['phone'] ?></h6>
-            <h6>Address:<?php echo $infor['address'] ?></h6><br>
+            <h6 id="output1">Name:</h6>
+            <h6 id="output2" >Phone:</h6>
+            <h6 id="output3" >Address:</h6><br>
         </div>
         <input style="margin-left: 34px" type="radio" id="banking" name="payment" value="Internet Banking" required >
         <label for="">Internet Banking</label>
@@ -373,7 +373,27 @@ $totalcart = $project->totalShow($username);
     });
 </script>
 
+<script>
+    const input1 = document.getElementById('name');
+    const input2 = document.getElementById('phone');
+    const input3 = document.getElementById('address');
 
+    const output1 = document.getElementById('output1');
+    const output2 = document.getElementById('output2');
+    const output3 = document.getElementById('output3');
+
+    input1.addEventListener('input', function() {
+        output1.textContent = 'Name: ' + input1.value;
+    });
+
+    input2.addEventListener('input', function() {
+        output2.textContent = 'Phone : ' + input2.value;
+    });
+
+    input3.addEventListener('input', function() {
+        output3.textContent = 'Address: ' + input3.value;
+    });
+</script>
 
 <script src="trangchu.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

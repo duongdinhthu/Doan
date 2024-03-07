@@ -6,7 +6,10 @@ ini_set('display_errors', 'off');
 
 <?php
 //kiểm tra session
+if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id'])) {
 
+
+}
 if (!isset($_SESSION["username"])&&!isset($_SESSION["password"])){
     header("Location:http://localhost:63342/Doan/backend/login.php");
     exit;
@@ -178,8 +181,6 @@ $totalcart = $carts->totalShow($username);
     <h2>SHOPPING CART</h2>
     <hr/>
 </div>
-<a href="cart.php" class="btn-purchased" style="margin-left: 200px; margin-right: 10px">Cart</a>
-<a href="purchased_order.php" class="btn-purchased">Purchased order</a>
 <h1 style="text-align: center; color: #f29f33; margin-bottom: 20px;">
     Cart</h1>
 <div style="display:flex; align-items: center; justify-content: center">

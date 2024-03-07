@@ -24,6 +24,20 @@ $infor=$project->inforByUserName($username);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
     <script src="search.js"></script>
+    <style>
+        .btn-purchased {
+            background-color: #f29f33;
+            text-decoration: none !important;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        .btn-purchased:hover{
+            color: white;
+            background-color: #654145;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -84,6 +98,8 @@ $infor=$project->inforByUserName($username);
     </div>
     <h2>CUSTOMER INFORMATION</h2>
     <hr/>
+    <a href="purchased_order.php" class="btn-purchased">Purchased order</a>
+
 </div>
 <div class="div-infor">
     <div class="information">
