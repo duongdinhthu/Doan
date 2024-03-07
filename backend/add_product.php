@@ -52,6 +52,21 @@ $product= $project->showProject();
         border-radius: 10px;
         border: 1px solid grey;
     }
+    .table a{
+        text-decoration: none;
+        color: #f29f33;
+        border: 1px solid #f29f33;
+        padding: 8px 12px;
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+    }
+    .table a:hover{
+        background-color: #f29f33;
+        color: white;
+    }
+    .td{
+        width: 20%;
+    }
 </style>
 <body>
 <div>
@@ -114,9 +129,7 @@ $product= $project->showProject();
 
                     <td><a href="add_product.php?action=stocking&id=<?php echo $paycart['pid']  ?>" class=" myLink1 " hidden="hidden" onclick="return confirm('Do you want to change the status to stocking?')" >Done</a></td>
                     <td><a href="add_product.php?action=over&id=<?php echo $paycart['pid']  ?>" class=" myLink2 " hidden="hidden" onclick="return confirm('Do you want to change the status to over?')">Delivering</a></td>
-                    <td><a href="update_product.php?action=update&id=<?php echo $paycart['pid']  ?>&name=<?php echo $paycart['name']  ?>&price=<?php echo $paycart['price']  ?>" >Update product</a></td>
-
-
+                    <td class="td"><a href="update_product.php?action=update&id=<?php echo $paycart['pid']  ?>&name=<?php echo $paycart['name']  ?>&price=<?php echo $paycart['price']  ?>" >Update product</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

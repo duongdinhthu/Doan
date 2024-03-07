@@ -80,7 +80,7 @@ $product = $project->getAllProduct6();
     <p style="margin-left:50px"><strong>Price:</strong> $199</p>
     <p><strong>Duration:</strong> 1 day </p>
     <p><strong>Departure:</strong> 07/03/2024</p>
-    <a href="Thanhtoandichvutochuc.php" style="margin-bottom:15px">BOOK NOW</a>
+    <a href="Thanhtoandichvutrongoi.php" style="margin-bottom:15px">BOOK NOW</a>
 </div>
 
 <div class="images">

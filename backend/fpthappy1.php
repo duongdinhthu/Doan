@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <div class="container">
     <a href="logout.php" class="btn btn-outline-danger" style="border-radius: 10px">Logout</a>
     <a href="book_tour1.php" class="btn btn-outline-secondary" style="border-radius: 10px">Customers book tours</a>
-    <a href="add_product1.php" class="btn btn-outline-success" style="border-radius: 10px">Add product</a>
+    <a href="add_product1.php" class="btn btn-outline-success" style="border-radius: 10px">Manage product</a>
 
 
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">

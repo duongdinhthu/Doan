@@ -59,8 +59,8 @@ $price1 = $_GET['price'];
         <label for="price" >Product Price </label><br>
         <input name="price" type="text" id="price" required value="<?php echo$price1 ?>"><br>
         <br>
-        <button class="btn btn-outline-primary" type="submit" style="border-radius: 10px;">Edit</button>
-        <a href="add_product1.php" class="btn btn-outline-success" style="border-radius: 10px;">Back</a>
+        <button class="btn btn-outline-success" type="submit" style="border-radius: 10px;">Edit</button>
+        <a href="add_product1.php" class="btn btn-outline-primary" style="border-radius: 10px;">Back</a>
     </form>
 
     <br>
