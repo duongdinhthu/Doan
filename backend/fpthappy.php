@@ -99,6 +99,13 @@ $tile=($numBookSuc/$numBook)*100;
         padding: 5px 10px;
         border-radius: 10px;
     }
+    .all div{
+        margin-right: 5%;
+        border: 1px solid;
+    }
+    .all div h4{
+        font-size: 16px;
+    }
 </style>
 <body>
 <h2 style="color: #f29f33;margin-bottom: 50px; margin-top: 50px; text-align: center; font-weight: bold">WELCOME TO THE ADMIN AREA</h2>
@@ -110,33 +117,41 @@ $tile=($numBookSuc/$numBook)*100;
     <a href="employye_manager.php" class="btn btn-outline-secondary" style="border-radius: 10px">Employee manage</a>
     <a href="add_product.php" class="btn btn-outline-success" style="border-radius: 10px">Manage product</a>
 
-<div>
-    <div>
-        <h4>Total orders:</h4>
-        <?php
-        echo $numRows;
-        ?>
+<div class="all" style="display: flex; margin-top: 30px">
+    <div style="padding: 25px 90px 25px 10px; background-color: #17A2B8; color: white; border-radius: 10px">
+        <h2>
+            <?php
+            echo $numRows;
+            ?>
+        </h2>
+        <h4>Total orders</h4>
     </div>
-    <div>
-        <h4>Successful orderss:</h4>
-        <?php
-        echo $numDone;
-        ?>
+    <div style="padding: 25px 40px 25px 10px">
+        <h2>
+            <?php
+            echo $numDone;
+            ?>
+        </h2>
+        <h4>Successful ordered</h4>
     </div>
-    <div>
-        <h4>Order is shipping:</h4>
-        <?php
-        echo $numShip;
-        ?>
+    <div style="padding: 25px 50px 25px 10px">
+        <h2>
+            <?php
+            echo $numShip;
+            ?>
+        </h2>
+        <h4>Order is shipping</h4>
     </div>
-    <div>
-        <h4>Order is pend processing:</h4>
-        <?php
-        echo $numPro;
-        ?>
+    <div style="padding: 25px 80px 25px 10px">
+        <h2>
+            <?php
+            echo $numPro;
+            ?>
+        </h2>
+        <h4>Order is pend <br>processing</h4>
     </div>
 </div>
-    <div>
+    <div class="all" style="display: flex; margin-top: 30px">
         <div>
             <h4>Total book tour ordered:</h4>
             <?php
