@@ -115,6 +115,19 @@ $tile=($numBookSuc/$numBook)*100;
     .all div h4{
         font-size: 16px;
     }
+    .all div a{
+        color: white ;
+        background-color: rgba(0, 0, 0, .1);
+        width: 100%;
+        text-decoration: none !important;
+        outline: none;
+        border-radius: 0 0 10px 10px;
+        transition: 0.3s ease-in-out;
+    }
+    .all div a:hover{
+        background-color: rgba(0, 0, 0, .2);
+        color: white;
+    }
 </style>
 <body>
 <h2 style="color: #f29f33;margin-bottom: 50px; margin-top: 50px; text-align: center; font-weight: bold">WELCOME TO THE ADMIN AREA</h2>
@@ -127,97 +140,113 @@ $tile=($numBookSuc/$numBook)*100;
     <a href="add_product.php" class="btn btn-outline-success" style="border-radius: 10px">Manage product</a>
 
 <div class="all" style="display: flex; margin-top: 30px">
-    <div style="padding: 25px 90px 25px 10px; background-color: #17A2B8; color: white; border-radius: 10px; width: 20%">
-        <h2>
-            <?php
-            echo $numRows;
-            ?>
-        </h2>
-        <h4>Total orders</h4>
-        <a href="fpthappy.php?action=getall#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+    <div style="background-color: #17A2B8; color: white; border-radius: 10px; width: 20%;">
+        <div style="padding: 25px 90px 25px 10px;">
+            <h2>
+                <?php
+                echo $numRows;
+                ?>
+            </h2>
+            <h4>Total orders</h4>
+        </div>
+        <a href="fpthappy.php?action=getall#neo" style=" margin-top: 9% " class="btn">Detail</a>
     </div>
-    <div style="padding: 25px 40px 25px 10px; background-color: #28A745; color: white; border-radius: 10px; width: 20%">
-        <h2>
-            <?php
-            echo $numDone;
-            ?>
-        </h2>
-        <h4>Successful ordered</h4>
-        <a href="fpthappy.php?action=getSuc#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
-
+    <div style=" background-color: #28A745; color: white; border-radius: 10px; width: 20%">
+        <div style="padding: 25px 40px 25px 10px;">
+            <h2>
+                <?php
+                echo $numDone;
+                ?>
+            </h2>
+            <h4>Successful ordered</h4>
+        </div>
+        <a href="fpthappy.php?action=getSuc#neo" style="margin-top: 9%" class="btn">Detail</a>
     </div>
-    <div style="padding: 25px 50px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20% ">
-        <h2>
-            <?php
-            echo $numShip;
-            ?>
-        </h2>
-        <h4>Order is shipping</h4>
-        <a href="fpthappy.php?action=getShip#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
-
+    <div style=" background-color: #FFC107; color: black; border-radius: 10px; width: 20% ">
+        <div style="padding: 25px 50px 25px 10px;">
+            <h2>
+                <?php
+                echo $numShip;
+                ?>
+            </h2>
+            <h4>Order is shipping</h4>
+        </div>
+        <a href="fpthappy.php?action=getShip#neo" style="margin-top: 9%; color: black !important;" class="btn">Detail</a>
     </div>
-    <div style="padding: 25px 80px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20%">
-        <h2>
-            <?php
-            echo $numPro;
-            ?>
-        </h2>
-        <h4>Order is pend processing</h4>
-        <a href="fpthappy.php?action=getPen#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
-
+    <div style=" background-color: #FFC107; color: black; border-radius: 10px; width: 20%">
+       <div style="padding: 25px 80px 25px 10px;">
+           <h2>
+               <?php
+               echo $numPro;
+               ?>
+           </h2>
+           <h4>Order is pend processing</h4>
+        </div>
+        <a href="fpthappy.php?action=getPen#neo" style=" color: black !important;" class="btn">Detail</a>
     </div>
 </div>
+
+
     <div class="all" style="display: flex; margin-top: 30px">
-        <div style="padding: 25px 81px 25px 10px; background-color: #17A2B8; color: white; border-radius: 10px; width: 20%">
-            <h2>
-                <?php
-                echo $numBook;
-                ?>
-            </h2>
-            <h4>Total book<br> tour ordered</h4>
-            <a href="book_tour.php#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+        <div style="; background-color: #17A2B8; color: white; border-radius: 10px; width: 20%">
+            <div style="padding: 25px 81px 25px 10px">
+                <h2>
+                    <?php
+                    echo $numBook;
+                    ?>
+                </h2>
+                <h4>Total book<br> tour ordered</h4>
+            </div>
+            <a href="book_tour.php#neo" style="" class="btn">Detail</a>
         </div>
-        <div style="padding: 25px 50px 25px 10px; background-color: #28A745; color: white; border-radius: 10px; width: 20%">
-            <h2>
-                <?php
-                echo "$numBookSuc";
-                echo "(".number_format($tile,2) ."%)";
-                ?>
-            </h2>
-            <h4>Successful book <br>tour ordered</h4>
-            <a href="book_tour.php?action=showSuc#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+        <div style=" background-color: #28A745; color: white; border-radius: 10px; width: 20%">
+            <div style="padding: 25px 50px 25px 10px;">
+                <h2>
+                    <?php
+                    echo "$numBookSuc";
+                    echo "(".number_format($tile,2) ."%)";
+                    ?>
+                </h2>
+                <h4>Successful book <br>tour ordered</h4>
+            </div>
+            <a href="book_tour.php?action=showSuc#neo" style="" class="btn">Detail</a>
 
         </div>
-        <div style="padding: 25px 25px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20%">
-            <h2>
-                <?php
-                echo $numBookCon;
-                ?>
-            </h2>
-            <h4>Book tour consulting</h4>
-            <a href="book_tour.php?action=showCon#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
-
+        <div style=" background-color: #FFC107; color: black; border-radius: 10px; width: 20%">
+            <div style="padding: 25px 25px 25px 10px;">
+                <h2>
+                    <?php
+                    echo $numBookCon;
+                    ?>
+                </h2>
+                <h4>Book tour consulting</h4>
+            </div>
+            <a href="book_tour.php?action=showCon#neo" style="color: black !important; margin-top: 9%" class="btn">Detail</a>
         </div>
-        <div style="padding: 25px 65px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px; width: 20% ">
-            <h2>
-                <?php
-                echo $numBookPen;
-                ?>
-            </h2>
-            <h4>Book tour pend <br>processing</h4>
-            <a href="book_tour.php?action=showPen#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+        <div style=" background-color: #FFC107; color: black; border-radius: 10px; width: 20% ">
+            <div style="padding: 25px 65px 25px 10px;">
+                <h2>
+                    <?php
+                    echo $numBookPen;
+                    ?>
+                </h2>
+                <h4>Book tour pend <br>processing</h4>
+            </div>
+            <a href="book_tour.php?action=showPen#neo" style="color: black !important" class="btn">Detail</a>
 
         </div>
     </div>
 <div class="all" style="display: flex; margin-top: 30px">
-    <div style="padding: 30px 60px 30px 10px; background-color: #17A2B8; color: white; border-radius: 10px; width: 20%">
-        <h2>
-            <?php
-            echo $numCus;
-            ?>
-        </h2>
-        <h4>Total customers</h4>
-        <a href="infor_customer.php#neo" style="color: white;border: 1px solid" class="btn">Detail</a>
+    <div style="background-color: #17A2B8; color: white; border-radius: 10px; width: 20%">
+        <div style="padding: 30px 60px 30px 10px; ">
+            <h2>
+                <?php
+                echo $numCus;
+                ?>
+            </h2>
+            <h4>Total customers</h4>
+        </div>
+        <a href="infor_customer.php#neo" style="" class="btn">Detail</a>
     </div>
 </div>
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px" id="neo">
