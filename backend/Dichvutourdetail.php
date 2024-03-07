@@ -75,37 +75,24 @@ $product = $project->getAllProduct6();
     </div>
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
-<h2>Tour Information</h2>
-<div class="servicedetail">
-    <p style="margin-left:50px"><strong>Price:</strong> 4,400,000đ</p>
-    <p><strong>Duration:</strong> 1 day </p>
-    <p><strong>Departure:</strong> 07/03/2024</p>
-    <a href="Thanhtoandichvutour.php" style="margin-bottom:15px">BOOK NOW</a>
+<div class="service-detail">
+    <h2>Tour Information</h2>
+    <div class="servicedetail">
+        <p style="margin-left:50px"><strong>Price:</strong> 4,400,000đ</p>
+        <p><strong>Duration:</strong> 1 day</p>
+        <p><strong>Departure:</strong> 07/03/2024</p>
+        <a href="Thanhtoandichvutochuc.php" style="margin-bottom:15px">BOOK NOW</a>
+    </div>
 </div>
 
 <div class="images">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
-        <ol class="carousel-indicators" >
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
-                <img src="./img(dvtourdetail)/img1.jpg" class="d-block w-100" alt="...">
-
-            </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1">
-                <img src="./img(dvtourdetail)/img2.jpg" class="d-block w-100" alt="...">
-
-            </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2">
-                <img src="./img(dvtourdetail)/img3.jpg" class="d-block w-100" alt="...">
-
-            </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3">
-                <img src="./img(dvtourdetail)/img4.jpg" class="d-block w-100" alt="...">
-
-            </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4">
-                <img src="./img(dvtourdetail)/img5.jpg" class="d-block w-100" alt="...">
-
-            </li>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -134,26 +121,25 @@ $product = $project->getAllProduct6();
         </a>
     </div>
 </div>
-<div class="one">
+
+<div class="tour-details">
     <h3>Tour Program</h3>
-    <p>Transportation: Car (7 seats) </p>
-    <p>Time: day</p>
+    <p>Transport: Car (7-seater)</p>
+    <p>Time: 1 day</p>
     <p>Departure Date: 07/03/2024</p>
-    <ul>
-
-    </ul>
-
-    <h3>Tour Services</h3>
 </div>
-<div>
+
+<div class="preparation">
+    <h3>Package Services</h3>
     <h3>Preparation</h3>
     <ul>
-        <li><strong>Camping Equipment</strong>:
+        <li>
+            <strong>Camping Equipment:</strong>
             <ul>
-                <li>Quality camping tent with enough room for everyone.</li>
-                <li>Camping drill for setting up the tent.</li>
-                <li>Sleeping bag and tent mat.</li>
-                <li>Headlamp or flashlight for easy movement in the dark.</li>
+                <li>Quality camping tent with enough space for everyone.</li>
+                <li>Camping drill to set up the tent.</li>
+                <li>Sleeping bags and tent mats.</li>
+                <li>Headlamp or portable lamp for easy movement in the dark.</li>
             </ul>
         </li>
         <li><strong>Food and Water</strong>:
@@ -193,41 +179,42 @@ $product = $project->getAllProduct6();
     </ul>
     <div class="card-deck">
         <div class="card" style="width:200px;height:300px; margin-left:50px">
-            <img src="https://www.nature-hike.vn/wp-content/uploads/2020/11/d%E1%BB%93-dung-c%E1%BA%A7n-thi%E1%BA%BFt-khi-di-c%E1%BA%AFm-tr%E1%BA%A1i-04.jpg" class="card-img-top" alt="...">
-
+            <img src="https://chothueleutrai.com/wp-content/uploads/2021/09/thiet-bi-can-thiet-khi-di-cam-trai.jpg" class="card-img-top" alt="...">
         </div>
         <div class="card" style="width:200px;height:300px;">
-            <img src="https://orco.com.vn/wp-content/uploads/2021/10/1564062802-ius.webp" class="card-img-top" alt="...">
-
+            <img src="https://armyhaus.com/wp-content/uploads/2019/01/Complete-camping-essentials-810x402.jpg" class="card-img-top" alt="...">
         </div>
         <div class="card" style="width:200px;height:300px; margin-right:50px">
-            <img src="https://vfa.gov.vn/storage/upload/23-2255184.png" class="card-img-top" alt="...">
+            <img src="https://duylinhfood.com/wp-content/uploads/2021/05/z2506097803692_38e60b1934c6ea59b860822351ab4580-533x400.jpg" class="card-img-top" alt="...">
         </div>
     </div>
 </div>
 
-<div class="two">
+
+
+<div class="day-one">
     <h3>Camping Itinerary at Dau Tieng Lake - Day 1: Move to Dau Tieng Lake and camp overnight</h3>
-    <p><strong>Morning:</strong></p>
     <ul>
+        <p><strong>Morning:</strong></p>
         <li>From 6:30 to 7:30: Wake up early, have breakfast and pack luggage at Hoang Mai hotel (Tay Ninh).</li>
         <li>From 7:45 to 8:45: We will pick you up to prepare for the move (by family car) to Dau Tieng Lake. Estimated travel time is about 1 hour (from 7:45 to 8:45).</li>
         <li>From 8:45 to 9:00: After arriving at the lake, everyone prepares their luggage and boards the boat to the campsite.</li>
         <li>From 9:00 to 10:00: Enjoy, explore the beautiful scenery of the lake area.</li>
     </ul>
+
     <div class="text-center">
         <img src="https://tropiad.com/wp-content/uploads/2022/09/Kinh-nghie%CC%A3%CC%82m-du-li%CC%A3ch-Ho%CC%82%CC%80-Da%CC%82%CC%80u-Tie%CC%82%CC%81ng.jpg" class="rounded" alt="...">
     </div>
 </div>
-<div class="three">
+
+<div class="day-two">
     <p><strong>Noon - Afternoon:</strong></p>
     <ul>
         <li>From 10:00 to 12:30: After arriving at the lake shore, everyone eats lunch together, which has been prepared in advance, or you can also buy some specialties from Tay Ninh at the nearby store to enjoy. After lunch, you and your group will set up the Dau Tieng Lake Camp, change clothes, and take pictures "live" with the beautiful lake view.</li>
         <li>From 13:00 to 16:30: In the afternoon, everyone can row a boat on the lake and participate in fishing with local people. If you want to swim, you can also immerse yourself in the clear water of Dau Tieng Lake. Note when swimming in the lake, you should wear a life jacket and safety equipment for your body.</li>
         <li>From 16:30 to 17:30: Back to the camp, you can go cycling, collect firewood, and prepare dinner together under the guidance of the organizers. In particular, if you love photography, do not miss the beautiful moment of sunset on the lake.</li>
     </ul>
-</div>
-<div class="four">
+
     <p><strong>Evening:</strong></p>
     <ul>
         <li>From 17:30 to 19:00: In the evening, everyone participates in BBQ party activities by the lake. Experience the feeling of being a chef, and enjoy your own delicious barbecue dishes in the midst of nature. After dinner, everyone will gather around the campfire to share stories, sing and play team building games.</li>
@@ -235,10 +222,9 @@ $product = $project->getAllProduct6();
         <li>From 21:00 onwards: Good night everyone, rest and prepare for the next morning's activities.</li>
     </ul>
     <div class="text-center">
-        <img src="https://storage.googleapis.com/tnnt2018/1-2019/3-2019/ky-nghi-he-1.jpg" class="rounded" alt="...">
+        <img src="https://goldencoto.vn/wp-content/uploads/2022/03/nha-hang-sua-khu-tiec-bbq-bai-bien-3.png" class="rounded" alt="...">
     </div>
 </div>
-
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
