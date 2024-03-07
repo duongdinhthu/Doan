@@ -101,7 +101,6 @@ $tile=($numBookSuc/$numBook)*100;
     }
     .all div{
         margin-right: 5%;
-        border: 1px solid;
     }
     .all div h4{
         font-size: 16px;
@@ -126,7 +125,7 @@ $tile=($numBookSuc/$numBook)*100;
         </h2>
         <h4>Total orders</h4>
     </div>
-    <div style="padding: 25px 40px 25px 10px">
+    <div style="padding: 25px 40px 25px 10px; background-color: #28A745; color: white; border-radius: 10px">
         <h2>
             <?php
             echo $numDone;
@@ -134,7 +133,7 @@ $tile=($numBookSuc/$numBook)*100;
         </h2>
         <h4>Successful ordered</h4>
     </div>
-    <div style="padding: 25px 50px 25px 10px">
+    <div style="padding: 25px 50px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px ">
         <h2>
             <?php
             echo $numShip;
@@ -142,7 +141,7 @@ $tile=($numBookSuc/$numBook)*100;
         </h2>
         <h4>Order is shipping</h4>
     </div>
-    <div style="padding: 25px 80px 25px 10px">
+    <div style="padding: 25px 80px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px">
         <h2>
             <?php
             echo $numPro;
@@ -152,38 +151,48 @@ $tile=($numBookSuc/$numBook)*100;
     </div>
 </div>
     <div class="all" style="display: flex; margin-top: 30px">
-        <div>
-            <h4>Total book tour ordered:</h4>
-            <?php
-            echo $numBook;
-            ?>
+        <div style="padding: 25px 81px 25px 10px; background-color: #17A2B8; color: white; border-radius: 10px">
+            <h2>
+                <?php
+                echo $numBook;
+                ?>
+            </h2>
+            <h4>Total book<br> tour ordered</h4>
         </div>
-        <div>
-            <h4>Successful book tour ordered:</h4>
-            <?php
-            echo "$numBookSuc<br>";
-            echo "(".number_format($tile,2) ."%)";
-            ?>
+        <div style="padding: 25px 50px 25px 10px; background-color: #28A745; color: white; border-radius: 10px">
+            <h2>
+                <?php
+                echo "$numBookSuc";
+                echo "(".number_format($tile,2) ."%)";
+                ?>
+            </h2>
+            <h4>Successful book <br>tour ordered</h4>
         </div>
-        <div>
-            <h4>Book tour consulting:</h4>
-            <?php
-            echo $numBookCon;
-            ?>
+        <div style="padding: 25px 25px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px">
+            <h2>
+                <?php
+                echo $numBookCon;
+                ?>
+            </h2>
+            <h4>Book tour consulting</h4>
         </div>
-        <div>
-            <h4>Book tour pend processing:</h4>
-            <?php
-            echo $numBookPen;
-            ?>
+        <div style="padding: 25px 65px 25px 10px; background-color: #FFC107; color: black; border-radius: 10px ">
+            <h2>
+                <?php
+                echo $numBookPen;
+                ?>
+            </h2>
+            <h4>Book tour pend <br>processing</h4>
         </div>
     </div>
-<div>
-    <div>
-        <h4>Total customers:</h4>
-        <?php
-        echo $numCus;
-        ?>
+<div class="all" style="display: flex; margin-top: 30px">
+    <div style="padding: 30px 60px 30px 10px; background-color: #17A2B8; color: white; border-radius: 10px">
+        <h2>
+            <?php
+            echo $numCus;
+            ?>
+        </h2>
+        <h4>Total customers</h4>
     </div>
 </div>
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
