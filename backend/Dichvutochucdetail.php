@@ -74,11 +74,11 @@ $project = new projectFptHappy();
     <img src="https://bizweb.dktcdn.net/100/440/011/themes/894889/assets/img_banner_brea_col.jpg?1702953098418" alt="" style="width: 100%; background-color: #FEF7EF">
 </header>
 
-<h2>Tour Information</h2>
-<div class="servicedetail">
-    <p style="margin-left:50px"><strong>Price:</strong> 4,400,000đ</p>
-    <p><strong>Duration:</strong> 1 day </p>
-    <p><strong>Departure:</strong> 07/03/2024</p>
+<div class="service-detail">
+    <h2>Tour Information</h2>
+    <p style="margin-left:50px"><strong>Price:</strong> $2,400,000</p>
+    <p><strong>Duration:</strong> 1 day</p>
+    <p><strong>Departure:</strong> 03/07/2024</p>
     <a href="Thanhtoandichvutochuc.php" style="margin-bottom:15px">BOOK NOW</a>
 </div>
 
@@ -133,45 +133,45 @@ $project = new projectFptHappy();
         </a>
     </div>
 </div>
-<div class="one">
-    <h3>Tour Itinerary</h3>
-    <p>Transport: Family Car (6 seats) </p>
-    <p>Duration: 1 day</p>
-    <p>Departure Date: 03/07/2024</p>
-    <ul>
+<div class="tour-details">
+    <h3>Tour Program</h3>
+    <p><strong>Transport:</strong> Car (7-seater)</p>
+    <p><strong>Time:</strong> 1 day</p>
+    <p><strong>Departure Date:</strong> 07/03/2024</p>
+</div>
 
-    </ul>
-
+<div class="preparation">
     <h3>Game Organization Services</h3>
     <h3>Preparation</h3>
     <ul>
         <li>Each kayaker needs an appropriate-sized and fitting life jacket.</li>
-        <li>Helmet: A helmet helps protect your head when navigating waters.</li>
-        <li>Boat Control Tools:
+        <li><strong>Helmet:</strong> A helmet helps protect your head when navigating waters.</li>
+        <li><strong>Boat Control Tools:</strong>
             <ul>
                 <li>Kayak paddle or double-bladed paddle for more precise control.</li>
             </ul>
         </li>
-        <li>Safety and Repair Equipment:
+        <li><strong>Safety and Repair Equipment:</strong>
             <ul>
                 <li>Spray bottle to dry the kayak if it gets waterlogged.</li>
                 <li>Waterproof bag for discreet water storage.</li>
                 <li>First aid kit.</li>
                 <li>Kayak repair kit, including patches, glue, and waterproof tape.</li>
-                <li>Waterproof Bag: Waterproof bag to protect mobile phones, cameras, or other important items.</li>
-                <li>Storage Container: Container or waterproof bag to protect belongings from water.</li>
-                <li>Appropriate Clothing:
+                <li><strong>Waterproof Bag:</strong> Waterproof bag to protect mobile phones, cameras, or other important items.</li>
+                <li><strong>Storage Container:</strong> Container or waterproof bag to protect belongings from water.</li>
+                <li><strong>Appropriate Clothing:</strong>
                     <ul>
                         <li>Waterproof or quick-drying clothing.</li>
                         <li>Hat to protect against sunlight.</li>
-                        <li>Sunglasses: Sunglasses help protect the eyes from the sun's glare.</li>
-                        <li>Sunscreen: Sunscreen to protect the skin from UV rays.</li>
+                        <li><strong>Sunglasses:</strong> Sunglasses help protect the eyes from the sun's glare.</li>
+                        <li><strong>Sunscreen:</strong> Sunscreen to protect the skin from UV rays.</li>
                     </ul>
                 </li>
                 <li>Map and Compass if kayaking in areas with no GPS signal.</li>
             </ul>
         </li>
-        <li>Food and Water:
+        <li><strong>Food and Water:</strong>
+
             <ul>
                 <li>Enough drinking water to maintain health.</li>
                 <li>Light and easy-to-prepare food.</li>
@@ -184,42 +184,45 @@ $project = new projectFptHappy();
             </ul>
         </li>
     </ul>
+
+    <div class="card-deck">
+        <div class="card">
+            <img src="https://contents.mediadecathlon.com/p1820354/k$388329140c56ac8e23c0baf651813bde/image.jpg?f=250x250&format=auto" class="card-img-top" alt="...">
+        </div>
+        <div class="card">
+            <img src="https://geos-nature.org/wp-content/uploads/2018/10/pic-niclago-negro-620x412.jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card">
+            <img src="https://bmyc.vn/wp-content/uploads/2022/07/2.jpg" class="card-img-top" alt="...">
+        </div>
+    </div>
 </div>
-<div class="card-deck">
-    <div class="card">
-        <img src="https://contents.mediadecathlon.com/p1820354/k$388329140c56ac8e23c0baf651813bde/image.jpg?f=250x250&format=auto" class="card-img-top" alt="...">
-    </div>
-    <div class="card">
-        <img src="https://geos-nature.org/wp-content/uploads/2018/10/pic-niclago-negro-620x412.jpg" class="card-img-top" alt="...">
-    </div>
-    <div class="card">
-        <img src="https://bmyc.vn/wp-content/uploads/2022/07/2.jpg" class="card-img-top" alt="...">
-    </div>
-</div>
-<div class="two">
+
+<div class="day-one">
     <h3>Schedule</h3>
-    <p>- Morning</p>
+    <p><strong>- Morning</strong></p>
     <ul>
-        <li>From 8:30 to 9:00: The tour company's car and guide pick up guests at the hotel in the Hanoi Old Quarter. Then depart to Ha Long Bay, stop in Hai Duong province for rest and sightseeing.</li>
-        <li>12:30: Arrive at Tuan Chau port, board the boat and enjoy various delicious drinks, then have lunch with traditional Vietnamese dishes. The boat starts moving, cruising on the bay to reach the legendary fishing village.</li>
+        <li><strong>From 8:30 to 9:00:</strong> The tour company's car and guide pick up guests at the hotel in the Hanoi Old Quarter. Then depart to Ha Long Bay, stop in Hai Duong province for rest and sightseeing.</li>
+        <li><strong>12:30:</strong> Arrive at Tuan Chau port, board the boat and enjoy various delicious drinks, then have lunch with traditional Vietnamese dishes. The boat starts moving, cruising on the bay to reach the legendary fishing village.</li>
     </ul>
+    <div class="text-center">
+        <img src="https://ik.imagekit.io/tvlk/blog/2023/06/dong-thien-cung-12-1024x768.jpg?tr=dpr-2,w-675" class="rounded" alt="...">
+    </div>
 </div>
-<div class="text-center">
-    <img src="https://vivuhalong.com/wp-content/uploads/2022/12/buffet-hai-san-hl.jpg" class="rounded" alt="...">
-</div>
-<div class="three">
-    <p>- Afternoon</p>
+
+<div class="day-two">
+    <p><strong>- Afternoon</strong></p>
     <ul>
-        <li>1:00 PM: Guests experience kayaking or bamboo boat exploring the Thien Cung Cave. This place is known as the "paradise on earth" with surreal, magnificent beauty.</li>
+        <li><strong>1:00 PM:</strong> Guests experience kayaking or bamboo boat exploring the Thien Cung Cave. This place is known as the "paradise on earth" with surreal, magnificent beauty.</li>
         <li>The next destination in the 1-day Halong Bay tour is Stone Dog Island. This is a very famous place in Halong Bay, attracting tourists because of its unique and strange shape.</li>
         <li>If time permits, guests can take a small tour around the bay, admire the magnificent natural scenery, and enjoy the cool, fresh air.</li>
         <li>Then, return to Tuan Chau International Port by boat.</li>
-        <li>4:30 PM: Guests are taken back to Hanoi, with a 25-minute stop in Hai Duong.</li>
-        <li>Approximately 8:30 PM: Arrive in Hanoi, drop off guests at the hotel in the Old Quarter. The tour guide says goodbye and see you again in other journeys.</li>
+        <li><strong>4:30 PM:</strong> Guests are taken back to Hanoi, with a 25-minute stop in Hai Duong.</li>
+        <li><strong>Approximately 8:30 PM:</strong> Arrive in Hanoi, drop off guests at the hotel in the Old Quarter. The tour guide says goodbye and see you again in other journeys.</li>
     </ul>
-</div>
-<div class="text-center">
-    <img src="https://ik.imagekit.io/tvlk/blog/2023/06/dong-thien-cung-12-1024x768.jpg?tr=dpr-2,w-675" class="rounded" alt="...">
+    <div class="text-center">
+        <img src="https://ik.imagekit.io/tvlk/blog/2023/06/dong-thien-cung-12-1024x768.jpg?tr=dpr-2,w-675" class="rounded" alt="...">
+    </div>
 </div>
 
 <div class="footer">
