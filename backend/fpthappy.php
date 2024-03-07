@@ -162,7 +162,7 @@ $tile=($numBookSuc/$numBook)*100;
             <h4>Successful book tour ordered:</h4>
             <?php
             echo "$numBookSuc<br>";
-            echo "(". $tile."%)";
+            echo "(".number_format($tile,2) ."%)";
             ?>
         </div>
         <div>
