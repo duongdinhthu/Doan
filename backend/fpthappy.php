@@ -52,6 +52,7 @@ $conBook=$project->totalBookcon();
 $numBookCon=$conBook['numRows'];
 $penBook=$project->totalBookpen();
 $numBookPen=$penBook['numRows'];
+$tile=($numBookSuc/$numBook)*100;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -145,7 +146,8 @@ $numBookPen=$penBook['numRows'];
         <div>
             <h4>Successful book tour ordered:</h4>
             <?php
-            echo $numBookSuc;
+            echo "$numBookSuc<br>";
+            echo "(". $tile."%)";
             ?>
         </div>
         <div>
