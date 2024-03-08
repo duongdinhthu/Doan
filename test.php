@@ -1,35 +1,30 @@
 <?php
+// Require the Composer autoloader
 require 'vendor/autoload.php';
 
-// Sử dụng các namespace của PHPMailer
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+// Create a new PHPMailer instance
+$mail = new PHPMailer\PHPMailer\PHPMailer();
 
-$mail = new PHPMailer(true);
+// SMTP configuration for Gmail
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'thuddth2307004@fpt.edu.vn'; // Thay 'your_email@gmail.com' bằng địa chỉ email Gmail của bạn
+$mail->Password = 'Thu456258'; // Thay 'your_password' bằng mật khẩu email Gmail của bạn
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;
 
-try {
-    // Cấu hình server
-    $mail->isSMTP();
-    $mail->Host = 'smtp.example.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'duongthutb941@gmail.com';
-    $mail->Password = 'Thu456258';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+// Set up the email details
+$mail->setFrom('thuddth2307004@fpt.edu.vn', 'Duong thu'); // Thay 'your_email@gmail.com' và 'Your Name' bằng thông tin của bạn
+$mail->addAddress('duongthutb941@gmail.com', 'duongthutb941@gmail.com'); // Thay 'recipient@example.com' và 'Recipient Name' bằng địa chỉ email người nhận
+$mail->Subject = 'Test Email from PHPMailer';
+$mail->Body = 'This is a test email sent from PHPMailer.';
 
-    // Người gửi và người nhận
-    $mail->setFrom('duongthutb941@gmail.com', 'Your Name');
-    $mail->addAddress('duongthutb94@gmail.com', 'Recipient Name');
-
-    // Nội dung email
-    $mail->isHTML(true);
-    $mail->Subject = 'Subject';
-    $mail->Body = 'This is the HTML message body <b>in bold!</b>';
-
-    // Gửi email
-    $mail->send();
-    echo 'Email đã được gửi thành công';
-} catch (Exception $e) {
-    echo "Không thể gửi email. Lỗi: {$mail->ErrorInfo}";
+// Send the email
+if ($mail->send()) {
+    echo 'Email sent successfully!';
+} else {
+    echo 'Email could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
 ?>
