@@ -86,3 +86,34 @@
     width: 100px;
     background-color: #f29f33;
 }
+
+@media screen and (max-width: 768px) {
+    body{
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    .text div a{
+        font-size: 14px;
+    }
+    .text div p{
+        font-size: 14px;
+    }
+    .text h2{
+        font-size: 26px;
+    }
+    form a{
+        font-size: 12px;
+    }
+    form img{
+        width: 50%;
+    }
+    .product-boxes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 7%;
+    }
+}
