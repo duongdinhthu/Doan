@@ -50,7 +50,7 @@ $mail->Port = 587;
 // Set up the email details
 $mail->setFrom('thuddth2307004@fpt.edu.vn', 'Dương Thứ - FPT aptech');
 $mail->addAddress("$email", 'duongthutb941@gmail.com');
-$mail->Subject = 'Xác nhn thanh toán';
+$mail->Subject = 'Confirm order payment';
 $mail->Body = "Hello [$name],
 Congratulations! Your purchase on [Team3_FPTaptech.edu.vn] was successfully processed. Your order is now being prepared. You will be receiving shipping updates soon.
 
