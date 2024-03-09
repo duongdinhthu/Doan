@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $address = $_POST['address'];
     $sql = "insert into book_tour(name,phone,email,address)values('$name','$phone','$email','$address')";
     $result = mysqli_query($conn,$sql);
+
 ?>
     <script>
         swal({

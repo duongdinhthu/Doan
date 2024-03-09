@@ -112,6 +112,8 @@ $infor=$project->inforByUserName($username);
             <hr style="width: 150px">
             <p>Your phone number: <strong><?php echo $infor['phone'] ?></strong></p>
             <hr style="width: 150px">
+            <p>Email: <strong><?php echo $infor['email'] ?></strong></p>
+            <hr style="width: 150px">
             <p>Your address: <strong><?php echo $infor['address'] ?></strong></p>
             <hr style="width: 150px">
         <?php endforeach; ?>

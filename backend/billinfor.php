@@ -26,16 +26,55 @@ if ($conn) {
 }
 $username=$_SESSION['username'];
 $paycart = $project->getAllPay($username);
-
+$email=$_POST['email'];
 $name = $_POST['name'];
 $phone=$_POST['phone'];
 $address= $_POST['address'];
 $cod = $_POST['payment'];
 $totalcart=$_POST['totalcart'];
 $code = $_POST['code'];
+require '../vendor/autoload.php';
+
+// Create a new PHPMailer instance
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+
+// SMTP configuration for Gmail
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'thuddth2307004@fpt.edu.vn'; // Thay 'your_email@gmail.com' bằng địa chỉ email Gmail của bạn
+$mail->Password = 'azxn xlif gxof abkh'; // Thay 'your_password' bằng mật khẩu email Gmail của bạn
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
+
+// Set up the email details
+$mail->setFrom('thuddth2307004@fpt.edu.vn', 'Dương Thứ - FPT aptech');
+$mail->addAddress("$email", 'duongthutb941@gmail.com');
+$mail->Subject = 'Xác nhn thanh toán';
+$mail->Body = "Hello [$name],
+Congratulations! Your purchase on [Team3_FPTaptech.edu.vn] was successfully processed. Your order is now being prepared. You will be receiving shipping updates soon.
+
+How was it to shop at [Team3_FPTaptech.edu.vn]? Help us serve you better, click here to take a quick survey. (It won’t take you more than a minute – we promise!).
+
+Here’s your order confirmation:
+
+Order code: $code
+Payment method: $cod
+Total: $totalcart
+
+
+Thank you for shopping with FptAptech,
+Duong Thu";
+
+
+// Send the email
+$mail->send();
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = "update cart set hidden = 2, hidden_customer = 4,name='$name',phone='$phone',address='$address',payment='$cod',code='$code' where username = '$username' and hidden = 1";
     $result = mysqli_query($conn,$sql);
+
 ?>
     <script>
         swal({
@@ -217,9 +256,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="customer">
     <h5 style="">Customer Detail: </h5>
     <p style="">
-        - Name:<?php echo  $name; ?><br><br>
-        - Phone Number:<?php echo  $phone; ?><br><br>
-        - Address:<?php echo  $address; ?>
+        - Name: <?php echo  $name; ?><br><br>
+        - Phone Number: <?php echo  $phone; ?><br><br>
+        - Email: <?php echo  $email; ?><br><br>
+        - Address: <?php echo  $address; ?>
     </p>
     <hr style="">
     </div>

@@ -184,6 +184,8 @@ $totalcart = $project->totalShow($username);
             <input style="margin-left: 30px" name="name" type="text" id="name"  value="<?php echo $infor['name'] ?>" required><br>
             <label style="margin-left: 30px" for="phone">Phone</label><br>
             <input style="margin-left: 30px" name="phone" type="text" id="phone"  value="<?php echo $infor['phone'] ?>" required><br>
+            <label style="margin-left: 30px" for="email">Email</label><br>
+            <input style="margin-left: 30px" name="email" type="text" id="email"  value="<?php echo $infor['email'] ?>" required><br>
             <label style="margin-left: 30px" for="address">Address</label><br>
             <input style="margin-left: 30px" name="address" type="text" id="address"  value="<?php echo $infor['address'] ?>" required><br>
             <br>

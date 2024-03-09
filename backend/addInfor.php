@@ -28,7 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name1 = $_POST['name'];
     $phone1 = $_POST['phone'];
     $address1 = $_POST['address'];
-    $sql = "update account_customer set name='$name1',phone='$phone1',address='$address1' where username = '$username' ";
+    $email1 = $_POST['email'];
+    $sql = "update account_customer set name='$name1',phone='$phone1',address='$address1',email='$email1' where username = '$username' ";
     $result = mysqli_query($conn,$sql);
     ?>
     <script>
@@ -122,6 +123,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div>
             <label for="phone" style="display: none">Your phone number:</label>
             <input type="text" placeholder="Phone number" id="phone" name="phone" required>
+        </div>
+        <div>
+            <label for="email" style="display: none">Email:</label>
+            <input type="text" placeholder="duongthu@gmail.com" id="email" name="email" required>
         </div>
         <div>
             <label for="address" style="display: none">Your address:</label>
