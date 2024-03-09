@@ -96,7 +96,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'add') {
                 <i class="fa-solid fa-phone"></i>
 
                 <p>Hotline<br>78910JQKA</p>
-                <a href="cart.php" class="btn btn-outline"><i style="font-size: 30px; margin-top: 1px; margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
+                <a href="cart.php" class="btn btn-outline"><i style="margin-left: 10px; outline: none !important;" class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="d-flex">
@@ -140,77 +140,77 @@ if (isset($_GET['action']) && $_GET['action'] === 'add') {
     <h2>DETAIL PERSONAL PRODUCT</h2>
     <hr/>
 </div>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
-    <ol class="carousel-indicators" >
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQgDWChicrowlj6bO226xeUhUf5V2IENeyUHihm_mfdsJpG9sTJB_HIHwWzDq6ZaoohHwvQzjVQ_rOrdyf07RbIoSiTJmx8WwlTTLlXcW-v8Jm3S0x1sdEWNQ" class="d-block w-100" alt="...">
+<div class="product-information">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:300px;height:200px;margin-top:30px">
+        <ol class="carousel-indicators" >
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQgDWChicrowlj6bO226xeUhUf5V2IENeyUHihm_mfdsJpG9sTJB_HIHwWzDq6ZaoohHwvQzjVQ_rOrdyf07RbIoSiTJmx8WwlTTLlXcW-v8Jm3S0x1sdEWNQ" class="d-block w-100" alt="...">
 
-        </li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ_yugGs7imEey27hNzXNAdyyJcN12YsUAoLS1YSrfTIlg8x6ql7OzOEBjkChYY0N66HI0sdQXPk9jCrw6xQfiXpH7OSXIuIMlhU31eQpDG--gfJLdf4q9b" class="d-block w-100" alt="...">
+            </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ_yugGs7imEey27hNzXNAdyyJcN12YsUAoLS1YSrfTIlg8x6ql7OzOEBjkChYY0N66HI0sdQXPk9jCrw6xQfiXpH7OSXIuIMlhU31eQpDG--gfJLdf4q9b" class="d-block w-100" alt="...">
 
-        </li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2">
-            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQkPqMQLfUbMUAFFWMM0tS5uIfb2BH2A099XJWfiVJdUl-YdD801SGs2ZjHuije75f-iUCRePSSD8MHWyfX-nCSSt2wkZEedzsMyAgnaECZpCNrU_KQQBqa7Q" class="d-block w-100" alt="...">
+            </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQkPqMQLfUbMUAFFWMM0tS5uIfb2BH2A099XJWfiVJdUl-YdD801SGs2ZjHuije75f-iUCRePSSD8MHWyfX-nCSSt2wkZEedzsMyAgnaECZpCNrU_KQQBqa7Q" class="d-block w-100" alt="...">
 
-        </li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="3">
-            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTMNoHHFyAFUeu_qwDIM23XkXHrY3ZZdg4n_5MBQ9sZNhfad2Ief5-PV0emIoYyS9D_a5G1xVROMRqRXvTnhZfchRokGBof&usqp=CAY" class="d-block w-100" alt="...">
+            </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTMNoHHFyAFUeu_qwDIM23XkXHrY3ZZdg4n_5MBQ9sZNhfad2Ief5-PV0emIoYyS9D_a5G1xVROMRqRXvTnhZfchRokGBof&usqp=CAY" class="d-block w-100" alt="...">
 
-        </li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="4">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcROrb5hRfIez416Szu9MnQ8dSEss9S3YG8MSaxL-9cZIiEAalvv0bEV2sFy6fSkIgRcpbTrSZFjVjwRkCzvN6O26EOBFl2-&usqp=CAY" class="d-block w-100" alt="...">
+            </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcROrb5hRfIez416Szu9MnQ8dSEss9S3YG8MSaxL-9cZIiEAalvv0bEV2sFy6fSkIgRcpbTrSZFjVjwRkCzvN6O26EOBFl2-&usqp=CAY" class="d-block w-100" alt="...">
 
-        </li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQgDWChicrowlj6bO226xeUhUf5V2IENeyUHihm_mfdsJpG9sTJB_HIHwWzDq6ZaoohHwvQzjVQ_rOrdyf07RbIoSiTJmx8WwlTTLlXcW-v8Jm3S0x1sdEWNQ" class="d-block w-100" alt="...">
+            </li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQgDWChicrowlj6bO226xeUhUf5V2IENeyUHihm_mfdsJpG9sTJB_HIHwWzDq6ZaoohHwvQzjVQ_rOrdyf07RbIoSiTJmx8WwlTTLlXcW-v8Jm3S0x1sdEWNQ" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ_yugGs7imEey27hNzXNAdyyJcN12YsUAoLS1YSrfTIlg8x6ql7OzOEBjkChYY0N66HI0sdQXPk9jCrw6xQfiXpH7OSXIuIMlhU31eQpDG--gfJLdf4q9b" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQkPqMQLfUbMUAFFWMM0tS5uIfb2BH2A099XJWfiVJdUl-YdD801SGs2ZjHuije75f-iUCRePSSD8MHWyfX-nCSSt2wkZEedzsMyAgnaECZpCNrU_KQQBqa7Q" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTMNoHHFyAFUeu_qwDIM23XkXHrY3ZZdg4n_5MBQ9sZNhfad2Ief5-PV0emIoYyS9D_a5G1xVROMRqRXvTnhZfchRokGBof&usqp=CAY" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcROrb5hRfIez416Szu9MnQ8dSEss9S3YG8MSaxL-9cZIiEAalvv0bEV2sFy6fSkIgRcpbTrSZFjVjwRkCzvN6O26EOBFl2-&usqp=CAYkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkljhgkgdfvhjklhgdfhjklgdfvkjlm,hygklyghkm,luio7y6trdgfvjkldgfvbc nmk,jl;yutrewdsqaxcfghjkm,lo;pi98p98kjluyhtrgfdvre3wdsqaader34gftvhyjmk,l.o;pp9kiuhgytjrfvnjk" class="d-block w-100" alt="...">
+            </div>
         </div>
-        <div class="carousel-item">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ_yugGs7imEey27hNzXNAdyyJcN12YsUAoLS1YSrfTIlg8x6ql7OzOEBjkChYY0N66HI0sdQXPk9jCrw6xQfiXpH7OSXIuIMlhU31eQpDG--gfJLdf4q9b" class="d-block w-100" alt="...">
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="product-detail" style="margin-top:10px">
+        <div class="product-title">Morakniv Companion Spark Stainless Steel Survival Knife - Black</div>
+        <div class="price">$3,99<span class="discount-price">$6</span></div>
+        <div class="product-info">
+            <p><strong>Type:</strong> Survival knife</p>
+            <p><strong>Manufacturer:</strong> Updating</p>
+            <p><strong>Delivery:</strong> Nationwide</p>
+            <p><strong>Payment:</strong> Cash on delivery</p>
+            <p><strong>Return/Exchange Policy:</strong> Free</p>
+            <p><strong>Warranty:</strong> 10 years</p>
         </div>
-        <div class="carousel-item">
-            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQkPqMQLfUbMUAFFWMM0tS5uIfb2BH2A099XJWfiVJdUl-YdD801SGs2ZjHuije75f-iUCRePSSD8MHWyfX-nCSSt2wkZEedzsMyAgnaECZpCNrU_KQQBqa7Q" class="d-block w-100" alt="...">
+        <div class="availability">
+            <p><strong>Status:</strong> Stocking</p>
         </div>
-        <div class="carousel-item">
-            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTMNoHHFyAFUeu_qwDIM23XkXHrY3ZZdg4n_5MBQ9sZNhfad2Ief5-PV0emIoYyS9D_a5G1xVROMRqRXvTnhZfchRokGBof&usqp=CAY" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcROrb5hRfIez416Szu9MnQ8dSEss9S3YG8MSaxL-9cZIiEAalvv0bEV2sFy6fSkIgRcpbTrSZFjVjwRkCzvN6O26EOBFl2-&usqp=CAYkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkljhgkgdfvhjklhgdfhjklgdfvkjlm,hygklyghkm,luio7y6trdgfvjkldgfvbc nmk,jl;yutrewdsqaxcfghjkm,lo;pi98p98kjluyhtrgfdvre3wdsqaader34gftvhyjmk,l.o;pp9kiuhgytjrfvnjk" class="d-block w-100" alt="...">
+
+        <div class="buttons">
+            <a href="Docanhandetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn" id="showSuccessForm">Add to cart</a>
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
 </div>
-
-<div class="product-detail" style="margin-top:10px">
-    <div class="product-title">Morakniv Companion Spark Stainless Steel Survival Knife - Black</div>
-    <div class="price">$3,99<span class="discount-price">$6</span></div>
-    <div class="product-info">
-        <p><strong>Type:</strong> Survival knife</p>
-        <p><strong>Manufacturer:</strong> Updating</p>
-        <p><strong>Delivery:</strong> Nationwide</p>
-        <p><strong>Payment:</strong> Cash on delivery</p>
-        <p><strong>Return/Exchange Policy:</strong> Free</p>
-        <p><strong>Warranty:</strong> 10 years</p>
-    </div>
-    <div class="availability">
-        <p><strong>Status:</strong> Out of stock <span class="out-of-stock">(Contact for more details)</span></p>
-    </div>
-
-    <div class="buttons">
-        <a href="Docanhandetail.php?action=add&id=<?php echo$id ?>&<?php echo$sl ?>&gia=<?php echo$gia ?>" class="btn" id="showSuccessForm">Add to cart</a>
-    </div>
-
-</div>
-
 <div class="navigation-bar">
     <a onclick="showContent('product-info')" style="color:#ffffff; cursor: pointer">Product Information</a>
     <a onclick="showContent('shipping-policy')" style="color:#ffffff; cursor: pointer">Shipping Policy</a>
@@ -353,7 +353,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'add') {
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
-            <img src="../frontend/img/logo.webp" alt="">
+            <img src="img/logo.webp" alt="">
             <div class="icon">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-facebook"></i>

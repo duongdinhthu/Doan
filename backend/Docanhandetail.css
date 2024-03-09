@@ -182,3 +182,41 @@
     width: 100px;
     background-color: #f29f33;
 }
+
+
+@media screen and (max-width: 768px) {
+    body{
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    .text div a{
+        font-size: 14px;
+    }
+    .text div p{
+        font-size: 14px;
+    }
+    .text h2{
+        font-size: 26px;
+    }
+    #carouselExampleIndicators{
+        margin: 5% 15% 15% 30%;
+    }
+    .product-information{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-title, .price, .discount-price{
+        font-size: 16px;
+    }
+    .product-detail div p{
+        font-size: 14px;
+    }
+    .btn{
+        font-size: 14px;
+        padding: 5px 1  0px;
+        border-radius: 10px;
+    }
+}
