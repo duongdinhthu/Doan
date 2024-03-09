@@ -72,7 +72,7 @@ $mail->send();
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $sql = "update cart set hidden = 2, hidden_customer = 4,name='$name',phone='$phone',address='$address',payment='$cod',code='$code' where username = '$username' and hidden = 1";
+    $sql = "update cart set hidden = 2, hidden_customer = 4,name='$name',phone='$phone',address='$address',payment='$cod',code='$code',email='$email' where username = '$username' and hidden = 1";
     $result = mysqli_query($conn,$sql);
 
 ?>
