@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                         <option value="1" style="background: #07ff07">done</option>
                         <option value="2" style="background: #f29f33">consulting</option>
                     </select></td>
-                <td><a href="book_tour.php?action=done&name=<?php echo $paycart['name_']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>&id=<?php echo $paycart['pid'] ?>" class=" myLink1 "   onclick="return confirm('Do you want to change the status to done?')" >Done</a></td>
+                <td><a href="book_tour.php?action=done&name=<?php echo $paycart['name_']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>&id=<?php echo $paycart['pid'] ?>" class=" myLink1 " hidden="hidden"  onclick="return confirm('Do you want to change the status to done?')" >Done</a></td>
                 <td><a href="book_tour.php?action=consulting&name=<?php echo $paycart['name_']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>&id=<?php echo $paycart['pid'] ?>" class=" myLink2 " hidden="hidden" onclick="return confirm('Do you want to change the status to consulting?')">Consulting</a></td>
             </tr>
         <?php endforeach; ?>

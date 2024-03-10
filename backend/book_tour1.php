@@ -15,7 +15,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'consulting' && isset($_GET['n
     $address = $_GET['address'];
     $day=$_GET['day'];
     $consulting= $_GET['action'];
-    $statusdone = $project->statusDeliveringBook($name ,$phone,$email,$address,$consulting,$day);
+    $id=$_GET['id'];
+    $statusdone = $project->statusDeliveringBook($name ,$phone,$email,$address,$consulting,$day,$id);
     echo "<h3>Change the status to consulting successfully</h3>";
 }
 if (isset($_GET['action']) && $_GET['action'] === 'done' && isset($_GET['name'])&& isset($_GET['phone'])&& isset($_GET['email'])&& isset($_GET['address'])) {
@@ -25,15 +26,26 @@ if (isset($_GET['action']) && $_GET['action'] === 'done' && isset($_GET['name'])
     $email = $_GET['email'];
     $address = $_GET['address'];
     $day=$_GET['day'];
-    $statusdone = $project->statusDoneBook( $name ,$phone,$email,$address,$done,$day);
+    $id=$_GET['id'];
+    $statusdone = $project->statusDoneBook( $name ,$phone,$email,$address,$done,$day,$id);
     echo "<h3>Change the status to done successfully</h3>";
 }
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $date = $_POST['search'];
     $date1 = $_POST['search1'];
     $status = $_POST['search2'];
     $paycart = $project->booktour($date,$date1,$status);
-}else{
+}else if(isset($_GET['action'])&& $_GET['action'] === 'showSuc'){
+    $ok = 'done';
+    $paycart = $project->booktour1($ok);
+}else if(isset($_GET['action'])&& $_GET['action'] === 'showCon'){
+    $ok = 'consulting';
+    $paycart = $project->booktour2($ok);
+}else if(isset($_GET['action'])&& $_GET['action'] === 'showPen'){
+    $ok = 'pend processing';
+    $paycart = $project->booktour3($ok);
+} else{
     $paycart = $project->oder4();
 }
 
@@ -91,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         <button class="btn btn-outline-warning" type="submit"  style="border-radius: 10px">Search</button>
     </form>
     <br>
-    <table class="table">
+    <table class="table" id="neo">
         <h2 style="color: #f29f33; margin-bottom: 30px">List users</h2>
         <thead>
         <tr>
@@ -100,7 +112,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             <th>Phone</th>
             <th>Email</th>
             <th>Address</th>
-            <th>Day</th>
             <th>Status</th>
         </tr>
         </thead>
@@ -113,14 +124,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <td><?php echo $paycart['phone']  ?> </td>
                 <td><?php echo $paycart['email'] ?></td>
                 <td><?php echo $paycart['address'] ?></td>
-                <td><?php echo $paycart['trading_day'] ?></td>
+                <td><?php echo $paycart['status'] ?></td>
                 <td><select class="status-select">
                         <option value=""><?php echo $paycart['status'] ?></option>
                         <option value="1" style="background: #07ff07">done</option>
                         <option value="2" style="background: #f29f33">consulting</option>
                     </select></td>
-                <td><a href="book_tour1.php?action=done&name=<?php echo $paycart['name_']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink1 " hidden="hidden" onclick="return confirm('Do you want to change the status to done?')" >Done</a></td>
-                <td><a href="book_tour1.php?action=consulting&name=<?php echo $paycart['name_']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink2 " hidden="hidden" onclick="return confirm('Do you want to change the status to consulting?')">Consulting</a></td>
+                <td><a href="book_tour.php?action=done&name=<?php echo $paycart['name_']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>&id=<?php echo $paycart['pid'] ?>" class=" myLink1 " hidden="hidden"  onclick="return confirm('Do you want to change the status to done?')" >Done</a></td>
+                <td><a href="book_tour.php?action=consulting&name=<?php echo $paycart['name_']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>&id=<?php echo $paycart['pid'] ?>" class=" myLink2 " hidden="hidden" onclick="return confirm('Do you want to change the status to consulting?')">Consulting</a></td>
             </tr>
         <?php endforeach; ?>
         </tbody>
