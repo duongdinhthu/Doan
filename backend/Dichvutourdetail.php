@@ -78,7 +78,7 @@ $product = $project->getAllProduct6();
 <div class="service-detail">
     <h2>Tour Information</h2>
     <div class="servicedetail">
-        <p style="margin-left:50px"><strong>Price:</strong> 4,400,000đ</p>
+        <p style="margin-left:50px"><strong>Price:</strong> 99$</p>
         <p><strong>Duration:</strong> 1 day</p>
         <p><strong>Departure:</strong> 07/03/2024</p>
         <a href="Thanhtoandichvutour.php?id=<?php echo $id ?>" style="margin-bottom:15px">BOOK NOW</a>
@@ -228,7 +228,7 @@ $product = $project->getAllProduct6();
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
-            <img src="img/logo_footer.webp" alt="">
+            <img src="img/logo.webp" alt="">
             <div class="icon">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-facebook"></i>

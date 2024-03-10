@@ -25,6 +25,9 @@ $infor=$project->inforByUserName($username);
     <title>Home</title>
     <script src="search.js"></script>
     <style>
+        body{
+            background-color: #FEF7EF;
+        }
         .btn-purchased {
             background-color: #f29f33;
             text-decoration: none !important;
@@ -99,7 +102,6 @@ $infor=$project->inforByUserName($username);
     <h2>CUSTOMER INFORMATION</h2>
     <hr/>
     <a href="purchased_order.php" class="btn-purchased">Purchased order</a>
-
 </div>
 <div class="div-infor">
     <div class="information">

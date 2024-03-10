@@ -228,7 +228,7 @@ $id = $_GET['id'];
 <div class="footer">
     <div class="footer0">
         <div class="footer1">
-            <img src="img/logo_footer.webp" alt="">
+            <img src="img/logo.webp" alt="">
             <div class="icon">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-facebook"></i>

@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+
 // Check session
 ini_set('display_errors', 'off');
 ?>
@@ -22,14 +23,17 @@ if ($conn) {
     echo "";
 }
 $id=$_GET['id'];
+$name = $_POST['full_name'];
+$phone = $_POST['phone_number'];
+$email = $_POST['email'];
+$address = $_POST['address'];
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['full_name'];
-    $phone = $_POST['phone_number'];
-    $email = $_POST['email'];
-    $address = $_POST['address'];
+
     $sql = "insert into book_tour(name_,phone,email,address,pid)values('$name','$phone','$email','$address','$id')";
     $result = mysqli_query($conn,$sql);
-    ?>
+
+?>
     <script>
         swal({
             title: "Success",
@@ -37,8 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             icon: "success",
         });
     </script>
-    <?php
+
+<?php
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -170,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="right-column">
         <h2>PRODUCT / SERVICE INFORMATION</h2>
-        <p>Adventure Camping in Ha Long: Kayak Tour in Ha Long-Discovering Thien Cung Cave</p>
+        <p>Powder Passing Game in the Thung Lung Vang (Dalat)</p>
         <p>Departure Date: 03/07/2024</p>
         <p>Available Seats: 15</p>
         <img src="https://phongnhatrips.com/wp-content/uploads/2022/06/2-5.jpeg" style="width:500px;height:300px;">

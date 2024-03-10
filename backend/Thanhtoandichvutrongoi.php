@@ -170,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="right-column">
         <h2>PRODUCT / SERVICE INFORMATION</h2>
-        <p>Golden Stream Lake, Lonely Pine Tree: Kayak Tour in Ha Long-Discovering Thien Cung Cave</p>
+        <p>Golden Stream Lake, Lonely Pine Tree</p>
         <p>Departure Date: 03/07/2024</p>
         <p>Available Seats: 15</p>
         <img src="https://kenhhomestay.com/wp-content/uploads/2022/06/cay-thong-co-don-da-lat-1.jpg" style="width:500px;height:300px;">
