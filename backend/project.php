@@ -215,7 +215,7 @@ class projectFptHappy
     }
     public function accountStaff($username,$password)
     {
-        $sql = "SELECT * FROM account_staffs where username = ? and password = ?";
+        $sql = "SELECT * FROM account_staffs where username = ? and password = ? and status ='working'";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();

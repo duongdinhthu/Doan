@@ -183,7 +183,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     .backhome {
         text-align: right;
     }
-
     .backhome a {
         background-color: #f29f33;
         color: white;
@@ -193,7 +192,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
     .backhome a:hover {
         background-color: #654145;
     }
