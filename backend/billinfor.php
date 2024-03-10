@@ -48,13 +48,12 @@ $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 
 // Set up the email details
-$mail->setFrom('thuddth2307004@fpt.edu.vn', 'Dương Thứ - FPT aptech');
+$mail->setFrom('thuddth2307004@fpt.edu.vn', 'Duong Thu - FPT aptech');
 $mail->addAddress("$email", 'duongthutb941@gmail.com');
 $mail->Subject = 'Confirm order payment';
 $mail->Body = "Hello [$name],
 Congratulations! Your purchase on [Team3_FPTaptech.edu.vn] was successfully processed. Your order is now being prepared. You will be receiving shipping updates soon.
 
-How was it to shop at [Team3_FPTaptech.edu.vn]? Help us serve you better, click here to take a quick survey. (It won’t take you more than a minute – we promise!).
 
 Here’s your order confirmation:
 
@@ -62,9 +61,13 @@ Order code: $code
 Payment method: $cod
 Total: $totalcart
 
+ If you have any questions or requests, please do not hesitate to contact us via email or the phone number below.
+ 
 
 Thank you for shopping with FptAptech,
-Duong Thu";
+Thank you and see you soon!
+
+Best regards, [Duong Thu] [Admin] [Contact Information: duongthutb94@gmail.com , phone number : 0981300594]";
 
 
 // Send the email
