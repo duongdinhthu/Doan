@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = $_POST['phone_number'];
     $email = $_POST['email'];
     $address = $_POST['address'];
-    $sql = "insert into book_tour(name,phone,email,address,pid)values('$name','$phone','$email','$address','501')";
+    $sql = "insert into book_tour(name_,phone,email,address,pid)values('$name','$phone','$email','$address','501')";
     $result = mysqli_query($conn,$sql);
 
 ?>
