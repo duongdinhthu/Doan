@@ -87,7 +87,7 @@ if (isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])) {
     <div class="login">
         <div class="text">
             <div>
-                <a href="../frontend/home.html">Home  > </a>
+                <a href="home.php">Home  > </a>
                 <p>Account</p>
             </div>
             <h2>LOGIN QUICK</h2>

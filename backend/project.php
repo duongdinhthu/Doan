@@ -213,6 +213,23 @@ class projectFptHappy
             $this->accountStaff($username,$password);
         }
     }
+    public function accountAdmin1($username,$password)
+    {
+        $sql = "SELECT * FROM account_admin where username = ? and password = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if($result->num_rows==1){
+            $_SESSION['username']=$username;
+            $_SESSION['password']=$password;
+
+            echo"login thanh cong";
+            header("Location:fpthappy.php");
+        }else{
+            echo"login that bai";
+        }
+    }
     public function accountStaff($username,$password)
     {
         $sql = "SELECT * FROM account_staffs where username = ? and password = ? and status ='working'";
@@ -228,6 +245,23 @@ class projectFptHappy
             header("Location:fpthappy1.php");
         }else{
             $this->accountCustomer($username,$password);
+        }
+    }
+    public function accountStaff1($username,$password)
+    {
+        $sql = "SELECT * FROM account_staffs where username = ? and password = ? and status ='working'";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if($result->num_rows>0){
+            $row = $result->fetch_assoc();
+            $_SESSION['username']=$row['username'];
+            $_SESSION['password']=$row['password'];
+            echo"login thanh cong";
+            header("Location:fpthappy1.php");
+        }else{
+            echo"login that bai";
         }
     }
     public function accountCustomer($username,$password)
