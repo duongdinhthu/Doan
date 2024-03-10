@@ -702,14 +702,14 @@ public function addBook($name,$phone,$email,$address)
         }
         return $carts;
     }
-    public function statusDoneBook( $name ,$phone,$email,$address,$done,$day)
+    public function statusDoneBook( $name ,$phone,$email,$address,$done,$day,$id)
     {
-        $sql = "update book_tour set status = '$done' where name_ = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$day' ";
+        $sql = "update book_tour set status = '$done' where name_ = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$day' and pid='$id' ";
         $this->conn->query($sql);
     }
-    public function statusDeliveringBook($name ,$phone,$email,$address,$consulting,$day)
+    public function statusDeliveringBook($name ,$phone,$email,$address,$consulting,$day,$id)
     {
-        $sql = "update book_tour set status = '$consulting' where name_ = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$day' ";
+        $sql = "update book_tour set status = '$consulting' where name_ = '$name' and phone = '$phone' and email='$email' and address='$address' and trading_day='$day' and pid='$id' ";
         $this->conn->query($sql);
     }
     public function codeOderCart($username)
@@ -817,7 +817,7 @@ public function addBook($name,$phone,$email,$address)
     public function oder4()
     {
         $carts = [];
-        $sql = " select bt.name_,bt.phone,bt.email,bt.address,bt.status,p.name,bt.trading_day FROM book_tour bt join product p on bt.pid = p.pid" ;
+        $sql = " select bt.pid,bt.name_,bt.phone,bt.email,bt.address,bt.status,p.name,bt.trading_day FROM book_tour bt join product p on bt.pid = p.pid" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
