@@ -67,7 +67,9 @@ Total: $totalcart
 Thank you for shopping with FptAptech,
 Thank you and see you soon!
 
-Best regards, [Duong Thu] [Admin] [Contact Information: duongthutb94@gmail.com , phone number : 0981300594]";
+Best regards, Duong Thu-Admin 
+Contact Information: duongthutb94@gmail.com 
+Phone number : 0981300594";
 
 
 // Send the email
