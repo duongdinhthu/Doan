@@ -95,6 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         <h2 style="color: #f29f33; margin-bottom: 30px">List users</h2>
         <thead>
         <tr>
+            <th>Service</th>
             <th>Name</th>
             <th>Phone</th>
             <th>Email</th>
@@ -108,6 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             ?>
             <tr>
                 <td><?php echo $paycart['name']  ?> </td>
+                <td><?php echo $paycart['name_']  ?> </td>
                 <td><?php echo $paycart['phone']  ?> </td>
                 <td><?php echo $paycart['email'] ?></td>
                 <td><?php echo $paycart['address'] ?></td>
@@ -117,8 +119,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                         <option value="1" style="background: #07ff07">done</option>
                         <option value="2" style="background: #f29f33">consulting</option>
                     </select></td>
-                <td><a href="book_tour1.php?action=done&name=<?php echo $paycart['name']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink1 " hidden="hidden" onclick="return confirm('Do you want to change the status to done?')" >Done</a></td>
-                <td><a href="book_tour1.php?action=consulting&name=<?php echo $paycart['name']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink2 " hidden="hidden" onclick="return confirm('Do you want to change the status to consulting?')">Consulting</a></td>
+                <td><a href="book_tour1.php?action=done&name=<?php echo $paycart['name_']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink1 " hidden="hidden" onclick="return confirm('Do you want to change the status to done?')" >Done</a></td>
+                <td><a href="book_tour1.php?action=consulting&name=<?php echo $paycart['name_']; ?>&phone=<?php echo $paycart['phone'] ?>&email=<?php echo $paycart['email'] ?>&address=<?php echo $paycart['address'] ?>&day=<?php echo $paycart['trading_day'] ?>" class=" myLink2 " hidden="hidden" onclick="return confirm('Do you want to change the status to consulting?')">Consulting</a></td>
             </tr>
         <?php endforeach; ?>
         </tbody>
