@@ -657,7 +657,7 @@ public function addBook($name,$phone,$email,$address)
     public function booktour($date,$date1,$status)
     {
         $carts = [];
-        $sql = "select * from book_tour  where   status = '$status' and trading_day  BETWEEN '$date' AND '$date1'";
+        $sql = "select bt.name_,bt.phone,bt.email,bt.address,bt.status,p.name,bt.trading_day FROM book_tour bt join product p on bt.pid = p.pid  where   bt.status = '$status' and bt.trading_day  BETWEEN '$date' AND '$date1'";
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -669,7 +669,7 @@ public function addBook($name,$phone,$email,$address)
     public function booktour1($ok)
     {
         $carts = [];
-        $sql = "select * from book_tour  where   status = '$ok'" ;
+        $sql = " select bt.name_,bt.phone,bt.email,bt.address,bt.status,p.name,bt.trading_day FROM book_tour bt join product p on bt.pid = p.pid  where   bt.status = '$ok'" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -681,7 +681,7 @@ public function addBook($name,$phone,$email,$address)
     public function booktour2($ok)
     {
         $carts = [];
-        $sql = "select * from book_tour  where   status = '$ok'" ;
+        $sql = " select bt.name_,bt.phone,bt.email,bt.address,bt.status,p.name,bt.trading_day FROM book_tour bt join product p on bt.pid = p.pid  where   bt.status = '$ok'" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
@@ -693,7 +693,7 @@ public function addBook($name,$phone,$email,$address)
     public function booktour3($ok)
     {
         $carts = [];
-        $sql = "select * from book_tour  where   status = '$ok'" ;
+        $sql = " select bt.name_,bt.phone,bt.email,bt.address,bt.status,p.name,bt.trading_day FROM book_tour bt join product p on bt.pid = p.pid  where   bt.status = '$ok'" ;
         $result = $this->conn->query($sql);
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){

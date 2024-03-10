@@ -4,8 +4,7 @@ session_start();
 ini_set('display_errors', 'off');
 include "project.php";
 $project = new projectFptHappy();
-$product = $project->getAllProduct6();
-
+$id=$_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +79,7 @@ $product = $project->getAllProduct6();
     <p style="margin-left:50px"><strong>Price:</strong> $199</p>
     <p><strong>Duration:</strong> 1 day </p>
     <p><strong>Departure:</strong> 07/03/2024</p>
-    <a href="Thanhtoandichvutrongoi.php" style="margin-bottom:15px">BOOK NOW</a>
+    <a href="Thanhtoandichvutrongoi.php?id=<?php echo $id ?>" style="margin-bottom:15px">BOOK NOW</a>
 </div>
 
 <div class="images">

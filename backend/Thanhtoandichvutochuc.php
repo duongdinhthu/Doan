@@ -22,12 +22,13 @@ if ($conn) {
 } else {
     echo "";
 }
+$id=$_GET['id'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['full_name'];
     $phone = $_POST['phone_number'];
     $email = $_POST['email'];
     $address = $_POST['address'];
-    $sql = "insert into book_tour(name_,phone,email,address,pid)values('$name','$phone','$email','$address','501')";
+    $sql = "insert into book_tour(name_,phone,email,address,pid)values('$name','$phone','$email','$address','$id')";
     $result = mysqli_query($conn,$sql);
 
 ?>

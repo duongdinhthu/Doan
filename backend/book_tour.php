@@ -31,9 +31,9 @@ if (isset($_GET['action']) && $_GET['action'] === 'done' && isset($_GET['name'])
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $date = $_POST['search'];
-    $datemonth = $_POST['search1'];
+    $date1 = $_POST['search1'];
     $status = $_POST['search2'];
-    $paycart = $project->booktour($date,$status);
+    $paycart = $project->booktour($date,$date1,$status);
 }else if(isset($_GET['action'])&& $_GET['action'] === 'showSuc'){
     $ok = 'done';
     $paycart = $project->booktour1($ok);

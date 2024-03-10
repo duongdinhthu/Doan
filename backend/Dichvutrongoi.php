@@ -4,6 +4,8 @@ session_start();
 ini_set('display_errors', 'off');
 include "project.php";
 $project = new projectFptHappy();
+
+
 $product = $project->getAllProduct5();
 
 ?>
@@ -17,7 +19,7 @@ $product = $project->getAllProduct5();
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dichvutrongoi.css">
+    <link rel="stylesheet" href="Dichvutour.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
     <script src="search.js"></script>
@@ -77,9 +79,9 @@ $product = $project->getAllProduct5();
 <div class="text">
     <div>
         <a href="home.php">Home  > </a>
-        <p>Service Package</p>
+        <p>Tour service</p>
     </div>
-    <h2>SERVICE PACKAGE</h2>
+    <h2>TOUR SERVICE</h2>
     <hr/>
 </div>
 <table >
@@ -93,10 +95,10 @@ $product = $project->getAllProduct5();
             <div class="product-item">
                 <div>
                     <form action="" method="post">
-                        <a href="Dichvutrongoidetail.php">
+                        <a href="Dichvutrongoidetail.php?id=<?php echo $product["pid"]; ?>">
                             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="..." style="height: 280px">
                         </a>
-                        <a href="Dichvutrongoidetail.php" class="name"><?php echo $product["name"]; ?></a>
+                        <a href="Dichvutrongoidetail.php?id=<?php echo $product["pid"]; ?>" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">
                             <label for="sl" style="display: none">Số lượng</label>
                             <input value="1" style="width: 90px; display: none" id="sl" name="sl">
@@ -105,7 +107,7 @@ $product = $project->getAllProduct5();
                             <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
                             <label for="id" style="display: none">ID</label>
                             <input value="<?php echo $product["pid"]; ?>" style="display: none" id="id" name="id">
-                            <button type="submit" class="buy-button"><a style="color: white;text-decoration: none" href="Thanhtoandichvutrongoi.php">Contact Us</a></button>
+                            <button type="submit" class="buy-button"><a href="Thanhtoandichvutour.php?id=<?php echo $product["pid"]; ?>" style="color: white; text-decoration: none">Contact Us</a></button>
                         </h5>
                     </form>
                 </div>

@@ -95,10 +95,10 @@ $product = $project->getAllProduct4();
             <div class="product-item">
                 <div>
                     <form action="" method="post">
-                        <a href="Dichvutourdetail.php">
+                        <a href="Dichvutourdetail.php?id=<?php echo $product["pid"]; ?>">
                             <img src="<?php echo $product["image"]; ?>" class="card-img-top" alt="..." style="height: 280px">
                         </a>
-                        <a href="Dichvutourdetail.php" class="name"><?php echo $product["name"]; ?></a>
+                        <a href="Dichvutourdetail.php?id=<?php echo $product["pid"]; ?>" class="name"><?php echo $product["name"]; ?></a>
                         <h5 class="cost">
                             <label for="sl" style="display: none">Số lượng</label>
                             <input value="1" style="width: 90px; display: none" id="sl" name="sl">
@@ -107,7 +107,7 @@ $product = $project->getAllProduct4();
                             <?php echo "$" . $product["price"]; ?><small><del>$6</del></small>
                             <label for="id" style="display: none">ID</label>
                             <input value="<?php echo $product["pid"]; ?>" style="display: none" id="id" name="id">
-                            <button type="submit" class="buy-button"><a href="Thanhtoandichvutour.php" style="color: white; text-decoration: none">Contact Us</a></button>
+                            <button type="submit" class="buy-button"><a href="Thanhtoandichvutour.php?id=<?php echo $product["pid"]; ?>" style="color: white; text-decoration: none">Contact Us</a></button>
                         </h5>
                     </form>
                 </div>

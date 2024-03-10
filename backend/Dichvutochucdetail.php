@@ -2,7 +2,7 @@
 ini_set('display_errors', 'off');
 include "project.php";
 $project = new projectFptHappy();
-
+$id = $_GET['id'];
 
 
 ?>
@@ -79,7 +79,7 @@ $project = new projectFptHappy();
     <p style="margin-left:50px"><strong>Price:</strong> $2,400,000</p>
     <p><strong>Duration:</strong> 1 day</p>
     <p><strong>Departure:</strong> 03/07/2024</p>
-    <a href="Thanhtoandichvutochuc.php" style="margin-bottom:15px">BOOK NOW</a>
+    <a href="Thanhtoandichvutochuc.php?id=<?php echo $id ?>" style="margin-bottom:15px">BOOK NOW</a>
 </div>
 
 <div class="images">
