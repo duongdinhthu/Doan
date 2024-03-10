@@ -1050,7 +1050,6 @@ public function showInforProduct($id)
                 $customer[] = $row;
             }
         }
-
         return ['numRows' => $numRows, 'customers' => $customer];
     }
 }

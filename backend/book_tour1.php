@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <a href="logout.php" class="btn btn-outline-danger" style="border-radius: 10px">Logout</a>
     <a href="fpthappy1.php" class="btn btn-outline-primary" style="border-radius: 10px">Back</a>
     <h2 style="margin-top: 30px; color: #f29f33">
-        Enter the date to search</h2>
+        Enter the date and status of your tour booking to search</h2>
     <form action="" method="post">
         <label for="search" >From </label>
         <input name="search" type="date" id="search" required value="2024-02-28">

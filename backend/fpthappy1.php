@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 
     <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">
-        Enter the date to search</h2>
+        Enter date and order status to search</h2>
     <form action="" method="post">
         <label for="search" >From </label>
         <input name="search" type="date" id="search" required value="2024-02-28">
@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     </form>
     <br>
     <table class="table">
-        <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">List users</h2>
+        <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">List order</h2>
         <thead>
         <tr>
             <th>Account</th>
