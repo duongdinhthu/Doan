@@ -5,8 +5,13 @@ ini_set('display_errors', 'off');
 
 include "project.php";
 $register = new projectFptHappy();
-
-if (isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])){
+if(isset($_GET['id'])&&$_GET['id']===''  && isset($_GET['gia'])&&$_GET['gia']==='' && isset($_GET['sl'])&&$_GET['sl']==='') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $student = $register->addAccountCustomer1($username, $password);
+    }
+}else if (isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])){
     $id=$_GET['id'];
     $gia=$_GET['gia'];
     $sl=$_GET['sl'];
@@ -15,18 +20,7 @@ if (isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])){
         $password= $_POST['password'];
         $student = $register->addAccountCustomer($username,$password,$id,$gia,$sl);
     }
-}else {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $student = $register->addAccountCustomer1($username, $password);
-    }
 }
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +54,7 @@ if (isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])){
             </div>
         </div>
         <div class="d-flex">
-            <a href="../frontend/home.html" class="btn btn-outline">Home</a>
+            <a href="home.php" class="btn btn-outline">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Games</button>
                 <div class="dropdown-content">
@@ -85,8 +79,8 @@ if (isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])){
                     <a href="../backend/Dichvutochuc.php">Organizing</a>
                 </div>
             </div>
-            <a href="../frontend/tintuc.html" class="btn btn-outline">News</a>
-            <a href="../frontend/lienhe.html" class="btn btn-outline">Contact</a>
+            <a href="tintuc.php" class="btn btn-outline">News</a>
+            <a href="lienhe.php" class="btn btn-outline">Contact</a>
             <a href="login.php" class="btn btn-outline">Account</a>
         </div>
     </div>
@@ -96,7 +90,7 @@ if (isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])){
 <div class="login">
     <div class="text">
         <div>
-            <a href="../frontend/home.html">Home  > </a>
+            <a href="home.php">Home  > </a>
             <p>Account</p>
         </div>
         <h2>REGISTER QUICK</h2>

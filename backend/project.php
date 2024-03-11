@@ -1,6 +1,7 @@
 <?php
 setcookie("status", "active", time() + 3600, "/");
 ini_set('display_errors', 'off');
+
 class projectFptHappy
 {
     private $conn;
@@ -77,9 +78,8 @@ class projectFptHappy
                     $stmt = $this->conn->prepare($sql);// thực hiện bảo vệ trước tân công
                     $stmt->bind_param("ss", $username, $password);
                     if ($stmt->execute()) {
-                        $username=  $_SESSION['username'];
-                        $password=$_SESSION['password'];
-                        header("Location:http://localhost:63342/Doan/backend/login.php?gia=".$gia."&id=".$id."&sl=".$sl);
+
+                        header("Location:http://localhost:63342/Doan/backend/login.php?action=login&gia=".$gia."&id=".$id."&sl=".$sl."&user=".$username);
                     } else {
                         echo "Failed to add user: " . $stmt->error;
                     }
@@ -102,7 +102,7 @@ class projectFptHappy
                     $stmt = $this->conn->prepare($sql);// thực hiện bảo vệ trước tân công
                     $stmt->bind_param("ss", $username, $password);
                     if ($stmt->execute()) {
-                        echo "User name $username added successfully";
+                        header("Location:http://localhost:63342/Doan/backend/login.php?action=login1&user=".$username);
                     } else {
                         echo "Failed to add user: " . $stmt->error;
                     }

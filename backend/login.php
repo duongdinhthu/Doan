@@ -1,9 +1,24 @@
 <?php
 session_start();
 ini_set('display_errors', 'off');
+?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+<?php
 include "project.php";
 $loginPermissions = new projectFptHappy();
+$server = "Localhost:3306";    //your ip and port
+$user = "root";                            //username by default give it root
+$password = "";                                   // default password is empty
+$databse = "fpthappy";             // database name
+
+$conn = mysqli_connect($server, $user, $password, $databse);
+
+if ($conn) {
+    echo "<p hidden='hidden'>ok</p>";
+} else {
+    echo "";
+}
 $username=$_POST['username'];
 $password=$_POST['password'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -16,6 +31,37 @@ if (isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])) {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $loginPermissions->accountCustomer1($username,$password,$id,$gia,$sl);
     }
+}
+
+if (isset($_GET['action'])&&isset($_GET['id'])  && isset($_GET['gia']) && isset($_GET['sl'])) {
+    $id=$_GET['id'];
+    $gia=$_GET['gia'];
+    $sl=$_GET['sl'];
+    $use=$_GET['user']
+    ?>
+    <script>
+        swal({
+            title: "Success",
+            text: "Congratulations, you have successfully registered an account named <?php echo $use?>, please log in",
+            icon: "success",
+        });
+    </script>
+    <?php
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $loginPermissions->accountCustomer1($username,$password,$id,$gia,$sl);
+    }
+}else if(isset($_GET['action'])&&$_GET['action']==='login1'){
+    $use=$_GET['user'];
+    ?>
+    <script>
+        swal({
+            title: "Success",
+            text: "Congratulations, you have successfully registered an account named <?php echo $use?>, please log in",
+            icon: "success",
+        });
+    </script>
+    <?php
 }
 ?>
 <!DOCTYPE html>
