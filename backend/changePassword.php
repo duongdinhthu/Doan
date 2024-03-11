@@ -11,7 +11,6 @@ include "project.php";
 $studentManager = new projectFptHappy();
 $username = $_POST['username'];
 $password = $_POST['password'];
-
 $password2 = $_POST['password2'];
 $password3 = $_POST['password3'];
 if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2'])&&isset($_POST['password3'])){
@@ -55,7 +54,6 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
             </label>
             <div class="hotline">
                 <i class="fa-solid fa-phone"></i>
-
                 <p>Hotline<br>78910JQKA</p>
             </div>
         </div>
