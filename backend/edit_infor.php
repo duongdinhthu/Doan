@@ -11,11 +11,13 @@ $username = $_GET['username'];
 $name = $_GET['name'];
 $phone = $_GET['phone'];
 $address = $_GET['address'];
+$email1 = $_GET['email'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name1 = $_POST['name'];
     $phone1 = $_POST['phone'];
     $address1 = $_POST['address'];
-    $update = $project->updateInforCustomer($name1,$phone1,$address1,$username);
+    $email = $_POST['email'];
+    $update = $project->updateInforCustomer($name1,$phone1,$address1,$username,$email);
 
 }
 
@@ -58,6 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input name="phone" type="text" id="phone" required value="<?php echo$phone ?>"><br>
         <label for="address" >Address </label><br>
         <input name="address" type="text" id="address" required value="<?php echo$address ?>"><br>
+        <label for="email" >Email </label><br>
+        <input name="email" type="text" id="email" required value="<?php echo$email1 ?>"><br>
         <br>
         <button class="btn btn-outline-primary" type="submit" style="border-radius: 10px;">Edit</button>
         <a href="infor_customer.php" class="btn btn-outline-success" style="border-radius: 10px;">Back</a>

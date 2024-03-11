@@ -6,41 +6,13 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location:http://localhost:63342/Doan/frontend/home.html");
     exit;
 }
-?>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<?php
+
 include "project.php";
 $project = new projectFptHappy();
-$username = $_SESSION["username"];
-$server = "Localhost:3306";    //your ip and port
-$user = "root";                            //username by default give it root
-$password = "";                                   // default password is empty
-$databse = "fpthappy";             // database name
+$username=$_SESSION['username'];
 
-$conn = mysqli_connect($server, $user, $password, $databse);
+$infor=$project->inforByUserName($username);
 
-if ($conn) {
-    echo "<p hidden='hidden'>ok</p>";
-} else {
-    echo "";
-}
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name1 = $_POST['name'];
-    $phone1 = $_POST['phone'];
-    $address1 = $_POST['address'];
-    $email1 = $_POST['email'];
-    $sql = "update account_customer set name='$name1',phone='$phone1',address='$address1',email='$email1' where username = '$username' ";
-    $result = mysqli_query($conn,$sql);
-    ?>
-    <script>
-        swal({
-            title: "Success",
-            text: "Thank you for leaving your information. We will contact you as soon as possible for advice",
-            icon: "success",
-        });
-    </script>
-    <?php
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,27 +85,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>ADD INFORMATION</h2>
     <hr/>
 </div>
+<?php foreach ($infor as $infor):?>
+
 <div class="addinfor">
     <h3>More information to become <br>a member and receive attractive offers</h3>
-    <form action="" method="post">
+    <form action="user.php" method="post">
         <div>
             <label for="name" style="display: none">Your name:</label>
-            <input type="text" placeholder="Name" id="name" name="name" required>
+            <input type="text" value="<?php echo $infor['name'] ?>" id="name" name="name" required>
         </div>
         <div>
             <label for="phone" style="display: none">Your phone number:</label>
-            <input type="text" placeholder="Phone number" id="phone" name="phone" required>
+            <input type="text" value="<?php echo $infor['phone'] ?>" id="phone" name="phone" required>
         </div>
         <div>
             <label for="email" style="display: none">Email:</label>
-            <input type="text" placeholder="duongthu@gmail.com" id="email" name="email" required>
+            <input type="text" value="<?php echo $infor['email'] ?>" id="email" name="email" required>
         </div>
         <div>
             <label for="address" style="display: none">Your address:</label>
-            <input type="text" placeholder="Address" id="address" name="address" required>
+            <input type="text" value="<?php echo $infor['address'] ?>" id="address" name="address" required>
         </div>
+        <?php endforeach; ?>
+
         <button type="submit">Submit</button>
-        <a href="home.php">Back home</a>
     </form>
 </div>
 <div class="footer">

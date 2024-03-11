@@ -74,6 +74,7 @@ $customer=$project->inforCustomer();
             <th>Customer Name</th>
             <th>Phone</th>
             <th>Address</th>
+            <th>Email</th>
         </tr>
         </thead>
         <tbody>
@@ -84,7 +85,8 @@ $customer=$project->inforCustomer();
                 <td><?php echo $customer['name']  ?> </td>
                 <td><?php echo $customer['phone'] ?></td>
                 <td><?php echo $customer['address'] ?></td>
-                <td><a href="edit_infor.php?action=edit&username=<?php echo $customer['username']  ?>&name=<?php echo $customer['name']  ?>&phone=<?php echo $customer['phone']  ?>&address=<?php echo $customer['address']  ?>">Edit Infor</a></td>
+                <td><?php echo $customer['email'] ?></td>
+                <td><a href="edit_infor.php?action=edit&username=<?php echo $customer['username']  ?>&name=<?php echo $customer['name']  ?>&phone=<?php echo $customer['phone']  ?>&address=<?php echo $customer['address']  ?>&email=<?php echo $customer['email']  ?>">Edit Infor</a></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

@@ -647,9 +647,9 @@ class projectFptHappy
         }
         return $customer;
     }
-    public function updateInforCustomer($name1,$phone1,$address1,$username)
+    public function updateInforCustomer($name1,$phone1,$address1,$username,$email)
     {
-        $sql = "update account_customer set name='$name1',phone='$phone1',address='$address1' where username = '$username' ";
+        $sql = "update account_customer set name='$name1',phone='$phone1',address='$address1',email='$email' where username = '$username' ";
         $this->conn->query($sql);
 
     }
