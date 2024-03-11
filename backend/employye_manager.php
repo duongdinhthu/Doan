@@ -69,21 +69,17 @@ if (isset($_GET['action']) && isset($_GET['username'])) {
         <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">List users</h2>
         <thead>
         <tr>
-            <th>Staff id</th>
             <th>Account name</th>
             <th>Password</th>
-            <th>Name</th>
-
+            <th>Status</th>
         </tr>
         </thead>
         <tbody>
         <?php foreach ($staff as $paycart):
             ?>
             <tr>
-                <td><?php echo $paycart['staff_id']  ?> </td>
                 <td><?php echo $paycart['username'] ?></td>
                 <td><?php echo $paycart['password'] ?></td>
-                <td><?php echo $paycart['name'] ?></td>
                 <td><select class="status-select">
                         <option value=""><?php echo $paycart['status'] ?></option>
                         <option value="1" style="background: #07ff07">Working</option>
