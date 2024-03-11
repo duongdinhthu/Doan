@@ -18,7 +18,7 @@ ini_set('display_errors', 'off');
     <script src="search.js"></script>
 
 </head>
-<body>
+<body style="background-color: #FEF7EF">
 <header>
     <div class="header">
         <div class="header1">
