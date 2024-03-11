@@ -6,6 +6,7 @@ if (!isset($_SESSION["username"])&&!isset($_SESSION['password'])){
     header("Location: login.php");
     exit;
 }
+$usern=$_SESSION["username"];
 include "project.php";
 $studentManager = new projectFptHappy();
 $username = $_POST['username'];
@@ -95,7 +96,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
 </header>
 <div class="text">
     <div>
-        <a href="../frontend/home.html">Home  > </a>
+        <a href="home.php">Home  > </a>
         <p>Accounts</p>
     </div>
     <h2>CHANGE PASSWORD</h2>
@@ -105,7 +106,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['password2
     <form action="" method="post" >
         <input type="hidden" name="choice" value="2">
         <label for="username" style="display: none">Username:</label>
-        <input name="username" placeholder="Username" type="text" id="username" required><br>
+        <input name="username" value="<?php echo $usern ?>" type="text" id="username" required><br>
         <label for="password" style="display: none">Old password:</label>
         <input name="password" placeholder="Old password" type="password" id="password" required><br>
         <label for="password2" style="display: none">Enter your new password:</label>
