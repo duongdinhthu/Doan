@@ -92,19 +92,19 @@ $infor=$project->inforByUserName($username);
     <form action="user.php" method="post">
         <div>
             <label for="name" style="display: none">Your name:</label>
-            <input type="text" value="<?php echo $infor['name'] ?>" id="name" name="name" required>
+            <input type="text" value="<?php echo $infor['name'] ?>" placeholder="Name" id="name" name="name" required>
         </div>
         <div>
             <label for="phone" style="display: none">Your phone number:</label>
-            <input type="text" value="<?php echo $infor['phone'] ?>" id="phone" name="phone" required>
+            <input type="text" value="<?php echo $infor['phone'] ?>" placeholder="Phone number" id="phone" name="phone" required>
         </div>
         <div>
             <label for="email" style="display: none">Email:</label>
-            <input type="text" value="<?php echo $infor['email'] ?>" id="email" name="email" required>
+            <input type="text" value="<?php echo $infor['email'] ?>" placeholder="Email" id="email" name="email" required>
         </div>
         <div>
             <label for="address" style="display: none">Your address:</label>
-            <input type="text" value="<?php echo $infor['address'] ?>" id="address" name="address" required>
+            <input type="text" value="<?php echo $infor['address'] ?>" placeholder="Address" id="address" name="address" required>
         </div>
         <?php endforeach; ?>
 

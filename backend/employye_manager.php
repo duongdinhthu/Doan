@@ -71,6 +71,7 @@ if (isset($_GET['action']) && isset($_GET['username'])) {
         <tr>
             <th>Account name</th>
             <th>Password</th>
+            <th>Name</th>
             <th>Status</th>
         </tr>
         </thead>
@@ -80,6 +81,7 @@ if (isset($_GET['action']) && isset($_GET['username'])) {
             <tr>
                 <td><?php echo $paycart['username'] ?></td>
                 <td><?php echo $paycart['password'] ?></td>
+                <td><?php echo $paycart['name'] ?></td>
                 <td><select class="status-select">
                         <option value=""><?php echo $paycart['status'] ?></option>
                         <option value="1" style="background: #07ff07">Working</option>
