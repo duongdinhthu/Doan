@@ -66,7 +66,7 @@ if (isset($_GET['action']) && isset($_GET['username'])) {
     <a href="fpthappy.php" class="btn btn-outline-primary" style="border-radius: 10px">Back</a>
 
     <table class="table">
-        <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">List users</h2>
+        <h2 style="color: #f29f33; margin-bottom: 30px; margin-top: 30px">List staffs</h2>
         <thead>
         <tr>
             <th>Account name</th>
